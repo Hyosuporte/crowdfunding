@@ -1,0 +1,30 @@
+.navbar{
+    background-color: #D0DAFA;
+}
+
+.main{
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+    background-color: F3F3F3;
+}
+
+.formulario{
+    background-color: azure;
+    border-radius: 1em;
+}
+
+.campo{
+    margin-top: 1rem;
+}
+
+.finalButton{
+    background-color: #D0DAFA;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
