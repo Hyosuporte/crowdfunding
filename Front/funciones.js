@@ -33,7 +33,6 @@ window.onload = function(){
     }
     final_date.max=anoFIN+"-"+mesFIN+"-"+diaFIN;
 }
-
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 const expresiones = {
@@ -43,3 +42,72 @@ const expresiones = {
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
+
+const campos ={
+    telefono: false
+}
+
+const validarFormulario = (e) =>{
+    switch(e.target.name){
+        case "pagina":{
+            
+            break;
+        }
+        case "telefono":{
+            if(expresiones.telefono.test(e.target.value)){
+                console.log('exitoso telefono');
+                document.getElementById('telefono').classList.remove('formulario-incorrecto');
+                document.getElementById('telefono').classList.add('formulario-correcto');
+            }else{
+                console.log('no exitoso telefono');
+                document.getElementById('telefono').classList.add('formulario-incorrecto');
+                document.getElementById('telefono').classList.remove('formulario-correcto');
+            }
+           //validarCampo(e.telefono, e.target, 'iconoTelefono');
+           break;
+        }
+        case "redes":{
+            break;
+        }
+        case "video":{
+            break;
+        }
+        case "keywords":{
+            break;
+        }
+        case "info":{
+            break;
+        }
+        case "titulo":{
+            break;
+        }
+        case "impacto":{
+            break;
+        }
+        case "monto":{
+            break;
+        }
+        case "cuenta":{
+            break;
+        }
+    }
+}
+
+const validarCampo = (expresion, input, campo) =>{
+    if(expresion.test(input.value)){
+        document.querySelector(`#${campo}`).classList.add('fa-check-circle');
+		document.querySelector(`#${campo}`).classList.remove('fa-times-circle');
+    }else{
+        document.querySelector(`#${campo}`).classList.remove('fa-check-circle');
+		document.querySelector(`#${campo}`).classList.add('fa-times-circle');
+    }
+}
+
+inputs.forEach((input) =>{
+    input.addEventListener('keyup',validarFormulario);
+    input.addEventListener('blur',validarFormulario);
+});
+
+formulario.addEventListener('submit',(e) =>{
+    e.preventDefault();
+});
