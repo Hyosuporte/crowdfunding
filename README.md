@@ -20,5 +20,5 @@ Crowdfunding es una plataforma de ayuda a la población de las mujeres colombian
 
 # 🐱 Autores 🐱 
 
-| [<img src="https://avatars.githubusercontent.com/u/99928498?v=4" width="115"><br><sub>Desarrollador Lider</sub>](https://github.com/Hyosuporte) | [<img src="https://avatars.githubusercontent.com/u/65200948?v=4" width="115"><br><sub>Desarrollador Front-end</sub>](https://github.com/DanndxFull) |
-| :---: | :---: |
+| [<img src="https://avatars.githubusercontent.com/u/114668871?v=4" width="115"><br><sub>Lider del Proyecto</sub>](https://github.com/jjleon22) | [<img src="https://avatars.githubusercontent.com/u/99928498?v=4" width="115"><br><sub>Desarrollador Lider</sub>](https://github.com/Hyosuporte) | [<img src="https://avatars.githubusercontent.com/u/65200948?v=4" width="115"><br><sub>Desarrollador Front-end</sub>](https://github.com/DanndxFull) |
+| :---: | :---: | :---: |
