@@ -33,7 +33,9 @@ window.onload = function(){
     }
     final_date.max=anoFIN+"-"+mesFIN+"-"+diaFIN;
 }
-const formulario = document.getElementById('formulario');
+
+
+/*const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
@@ -58,6 +60,8 @@ const validarFormulario = (e) =>{
                 console.log('exitoso telefono');
                 document.getElementById('telefono').classList.remove('formulario-incorrecto');
                 document.getElementById('telefono').classList.add('formulario-correcto');
+                document.getElementById('iconoTelefono').classList.remove('formulario__validacion-estado-incorrecto');
+                document.getElementById('iconoTelefono').classList.add('formulario__validacion-estado-correcto');
             }else{
                 console.log('no exitoso telefono');
                 document.getElementById('telefono').classList.add('formulario-incorrecto');
@@ -110,4 +114,4 @@ inputs.forEach((input) =>{
 
 formulario.addEventListener('submit',(e) =>{
     e.preventDefault();
-});
+});*/
