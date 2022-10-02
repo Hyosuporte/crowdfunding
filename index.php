@@ -1,6 +1,6 @@
 <?php
 require_once 'Config/Config.php';
-$ruta = !empty($_GET['url']) ? $_GET['url'] : "home/index";
+$ruta = !empty($_GET['url']) ? $_GET['url'] : "Home/index";
 $array = explode("/", $ruta);
 $controller = ucfirst($array[0]);
 $metodo = "index";
@@ -19,6 +19,7 @@ if (!empty($array[2])) {
     }
 }
 require_once 'Config/App/Autoload.php';
+require_once 'Config/Helpers.php';
 $dirControllers = "Controller/" . $controller . ".php";
 if (file_exists($dirControllers)) {
     require_once $dirControllers;

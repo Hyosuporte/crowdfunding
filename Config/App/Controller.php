@@ -5,6 +5,7 @@ class Controller{
         $this->views = new Views();
         $this->cargarModel();
     }
+    
     public function cargarModel()
     {
         $model = get_class($this)."DAO";
