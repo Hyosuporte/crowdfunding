@@ -21,6 +21,8 @@ class Home extends Controller
 
     public function registro()
     {
-        $this->views->getView($this, "pruebaRegistro");
+        $this->views->getView($this, "registro");
     }
+
+
 }

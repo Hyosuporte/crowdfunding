@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/Assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Registro</title>
 </head>
@@ -68,8 +68,11 @@
             <button class="btn btn-primary mb-3 mt-2" type="submit" style="width: 250px; ;height: 50px;" id="btnContinuar">Enviar</button>
         </div>
     </form>
-    <script src="../Assets/js/registroUsuario.js"></script>
-    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        const base_url = "<?php echo BASE_URL; ?>"
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>/Assets/js/login.js"></script>
     <script src="https://kit.fontawesome.com/b2831985f5.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>

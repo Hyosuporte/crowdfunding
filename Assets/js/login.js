@@ -26,3 +26,31 @@ function frmLogin(e) {
     };
   }
 }
+
+document.addEventListener('onLoad',listarPais(),true);
+
+function listarPais(e){
+  
+  const url = base_url+"pais/obtenerPaises";
+  const selectorPais = $("#pais");
+  const http = new XMLHttpRequest();
+  http.open("GET",url,true);
+  http.send();
+  http.onreadystatechange = function () {
+    if(this.readyState == 4 && this.status == 200){
+      const res = JSON.parse(this.responseText);
+      res.forEach(element => {
+        
+        selectorPais.append($('<option />',{
+          text: element.pais,
+          value: element.id_pais
+        }));
+        console.log(element.pais);
+      });
+      console.log(res);
+    }
+  };
+};
+
+  
+

@@ -8,7 +8,11 @@
 </head>
 <body>
     <h1>PAGINA EN MATENIMIENTO</h1>
-    <img src="../Assets/img/40796.jpg" alt="">
-    <a href="login.html"><button>Login</button></a>
+    <img src="<?php echo BASE_URL;?>Assets/img/40796.jpg" alt="" width="100vhz">
+    <a href="<?php echo BASE_URL;?>/View/login.html"><button>Login</button></a>
+    <div>
+        <p class="mb-0">¿No tienes una cuenta? <a href="<?php echo BASE_URL; ?>Home/registro/" class="text-white-50 fw-bold"> Registrar</a>
+        </p>
+    </div>
 </body>
 </html>
