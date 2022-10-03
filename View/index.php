@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>PAGINA EN MATENIMIENTO</h1>
-    <img src="../Assets/img/40796.jpg" alt="">
-    <a href="login.html"><button>Login</button></a>
+    <img src="<?php echo BASE_URL;?>Assets/img/40796.jpg" alt="" width="100vhz">
+    <a href="<?php echo BASE_URL;?>/View/login.html"><button>Login</button></a>
 </body>
 </html>

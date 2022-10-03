@@ -26,3 +26,22 @@ function frmLogin(e) {
     };
   }
 }
+
+window.onload = function (){
+  var opciones = {
+    "nombre":nombre
+}
+$ajax({
+    data:opciones,
+    url: base_url+'pais/obtenerPaises',
+    type: 'get',
+    dataType: "json",
+    success: function(response){
+        response.forEach(element => {
+            $("#pais").append("<option>"+element.nombre+"</option>");
+        });            
+    }
+});
+}
+  
+
