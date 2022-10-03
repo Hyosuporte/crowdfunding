@@ -13,8 +13,14 @@ class Home extends Controller
         }
         parent::__construct();
     }
+
     public function index()
     {
         $this->views->getView($this, "index");
+    }
+
+    public function registro()
+    {
+        $this->views->getView($this, "pruebaRegistro");
     }
 }

@@ -1,12 +1,25 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 03, 2022 at 03:50 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Database: `bd_crowdfundig`
+--
 CREATE DATABASE IF NOT EXISTS `bd_crowdfundig` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `bd_crowdfundig`;
 
@@ -18,10 +31,43 @@ USE `bd_crowdfundig`;
 
 DROP TABLE IF EXISTS `ciudad`;
 CREATE TABLE `ciudad` (
-  `id_ciudad` int(11) NOT NULL,
+  `id_ciudad` varchar(15) NOT NULL,
   `ciudad` varchar(30) NOT NULL,
   `id_pais` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ciudad`
+--
+
+INSERT INTO `ciudad` (`id_ciudad`, `ciudad`, `id_pais`) VALUES
+('Arg-1', 'Buenos Aires', 3),
+('Bah-1', 'Nasu', 4),
+('Bar-1', 'Bridgetown', 5),
+('Belic-1', 'Belmopan', 6),
+('Boli-1', 'La paz', 7),
+('Bra-1', 'Brasilia', 8),
+('Chi-1', 'Santiago', 9),
+('Col-1', 'Bogota', 1),
+('Cub-1', 'La Habana', 11),
+('Ecu-1', 'Quito', 12),
+('Gra-1', ' Andalucía', 14),
+('Gua-1', 'Ciudad de Guatemala', 15),
+('Guy-1', 'Guayaquil', 16),
+('Hai-1', 'Puerto Príncipe', 17),
+('Hon-1', 'Tegucigalpa', 18),
+('Jai-1', 'Kingston', 19),
+('Lucia-1', 'Castries', 25),
+('Mex-1', 'Ciudad de México', 20),
+('Nic-1', 'Managua', 21),
+('Pan-1', 'Ciudad de Panamá', 22),
+('Par-1', 'Asuncion', 23),
+('Peru-', 'Lima', 24),
+('Rica-1', 'San jose', 10),
+('Sal-1', 'San Salvador', 13),
+('Suri-1', 'Paramaribo', 26),
+('uru-1', 'Montevideo', 27),
+('Ven-1', 'Caracas', 2);
 
 -- --------------------------------------------------------
 
@@ -37,6 +83,12 @@ CREATE TABLE `direccion` (
   `calle` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `direccion`
+--
+
+INSERT INTO `direccion` (`id_direccion`, `barrio`, `casa`, `calle`) VALUES
+(1, 'bosa', 'roja', 'kr 1');
 
 -- --------------------------------------------------------
 
@@ -98,7 +150,32 @@ CREATE TABLE `pais` (
 
 INSERT INTO `pais` (`id_pais`, `pais`) VALUES
 (1, 'Colombia'),
-(2, 'Venezuela');
+(2, 'Venezuela'),
+(3, 'Argentina'),
+(4, 'Bahamas'),
+(5, 'Barbados'),
+(6, 'Belice'),
+(7, 'Bolivia'),
+(8, 'Brasil'),
+(9, 'Chile'),
+(10, 'Costa Rica'),
+(11, 'Cuba'),
+(12, 'Ecuador'),
+(13, 'El Salvador'),
+(14, 'Granada'),
+(15, 'Guatemala'),
+(16, 'Guyana'),
+(17, 'Haití'),
+(18, 'Honduras'),
+(19, 'Jamaica'),
+(20, 'Mexico'),
+(21, 'Nicaragua'),
+(22, 'Panama'),
+(23, 'Paraguay'),
+(24, 'Peru'),
+(25, 'Santa Lucia'),
+(26, 'Surinam'),
+(27, 'Uruguay');
 
 -- --------------------------------------------------------
 
@@ -160,11 +237,18 @@ CREATE TABLE `usuarios` (
   `primer_apellido` varchar(20) NOT NULL,
   `correo` varchar(40) NOT NULL,
   `password` varchar(15) NOT NULL,
-  `id_ciudad` int(11) NOT NULL,
+  `id_ciudad` varchar(15) NOT NULL,
   `id_pais` int(11) NOT NULL,
   `rol` int(11) NOT NULL,
   `id_direccion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `primer_nombre`, `primer_apellido`, `correo`, `password`, `id_ciudad`, `id_pais`, `rol`, `id_direccion`) VALUES
+(1, 'Daniel', 'Torres', 'daniel@gmail.com', '1234', 'Col-1', 1, 2, 1);
 
 --
 -- Indexes for dumped tables
@@ -270,9 +354,9 @@ ALTER TABLE `telefono`
 -- Constraints for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_ciudad`) REFERENCES `ciudad` (`id_ciudad`) ON DELETE CASCADE,
   ADD CONSTRAINT `usuarios_ibfk_2` FOREIGN KEY (`id_direccion`) REFERENCES `direccion` (`id_direccion`) ON DELETE CASCADE,
-  ADD CONSTRAINT `usuarios_ibfk_3` FOREIGN KEY (`id_pais`) REFERENCES `pais` (`id_pais`) ON DELETE CASCADE;
+  ADD CONSTRAINT `usuarios_ibfk_3` FOREIGN KEY (`id_pais`) REFERENCES `pais` (`id_pais`) ON DELETE CASCADE,
+  ADD CONSTRAINT `usuarios_ibfk_4` FOREIGN KEY (`id_ciudad`) REFERENCES `ciudad` (`id_ciudad`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
