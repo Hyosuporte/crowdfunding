@@ -5,9 +5,10 @@ class Controller{
         $this->views = new Views();
         $this->cargarModel();
     }
+    
     public function cargarModel()
     {
-        $model = get_class($this);
+        $model = get_class($this)."DAO";
         $ruta = "Model/".$model.".php";
         if (file_exists($ruta)) {
             require_once $ruta;
