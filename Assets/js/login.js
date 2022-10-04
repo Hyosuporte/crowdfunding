@@ -45,12 +45,7 @@ function listarPais(e){
           text: element.pais,
           value: element.id_pais
         }));
-        console.log(element.pais);
       });
-      console.log(res);
     }
   };
 };
-
-  
-

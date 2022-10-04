@@ -19,6 +19,11 @@ class Home extends Controller
         $this->views->getView($this, "index");
     }
 
+    public function login()
+    {
+        $this->views->getView($this, "login");
+    }
+
     public function registro()
     {
         $this->views->getView($this, "registro");
