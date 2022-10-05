@@ -1,6 +1,6 @@
 <?php
 class Home extends Controller
-{
+{    
     public function __construct()
     {
         session_start();
@@ -21,8 +21,12 @@ class Home extends Controller
 
     public function registro()
     {
-        $this->views->getView($this, "registro");
+        $data["title"]="Registro Usuario";
+        $this->views->getView($this, "registro",$data);
     }
 
-
+    public function login()
+    {
+        $this->views->getView($this, "login");
+    }
 }

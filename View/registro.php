@@ -23,7 +23,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="input-group mb-3">                    
-                            <span class="input-group-text">Primer Nombre</span>
+                            <span class="input-group-text">Primere Nombre</span>
                             <input type="text" class="form-control" placeholder="Primer Nombre" id="nombre" required>                            
                         </div>       
                         <div class="input-group mb-3">                    
