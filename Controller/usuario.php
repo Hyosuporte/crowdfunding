@@ -29,9 +29,20 @@ class usuario extends Controller
         die();
     }
 
+    public function registrar()
+    {
+        if ($this->valid_email($_POST['correo'])) {
+            $msg = "correo valido";
+        } else {
+            $msg = "Ingresa un correo valido";
+        }
+        echo json_encode($msg, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
     public function valid_email($str)
     {
-        return (false !== filter_var($str,FILTER_VALIDATE_EMAIL));
+        return (false !== filter_var($str, FILTER_VALIDATE_EMAIL));
     }
 
     public function salir()
