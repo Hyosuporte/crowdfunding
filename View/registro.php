@@ -44,21 +44,14 @@
                         </div>       
                         <div class="input-group mb-3">
                             <span class="input-group-text">Pais</span>
-                            <select name="pais" id="pais" style="margin-right: 13rem; border-radius: 10px;">
+                            <select name="pais" id="pais" style="margin-right: 13rem; border-radius: 10px;" onchange="listarCiudad()">
                                
                               </select>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Ciudad</span>
-                            <select name="ciudad" id="ciudad" style="margin-right: 13rem;">
+                            <select name="ciudad" id="ciudad" style="margin-right: 13rem; border-radius: 10px;">
                               </select>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">ROL</span>
-                            <select name="rol" id="rol" style="margin-right: 13rem; border-radius: 10px;">
-                                <option value="admin">Admin</option>
-                                <option value="cliente">Cliente</option>
-                            </select>
                         </div>
                     </div>
                 </div>
