@@ -6,20 +6,21 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         </div>
-       </nav> 
-    <div class="container">
+    </nav>
+    <form  id="frmLogin">
+        <div class="container">
         <form action="" method="post">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Correo</span>
-                <input type="email" class="form-control" placeholder="Correo" id="email">
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Contraseña</span>
-                <input type="password" class="form-control" placeholder="Correo" id="password">
-            </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" type="submit">Login</button>
-            </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Correo</span>
+                    <input type="email" class="form-control" placeholder="Correo" name="email" id="email">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Contraseña</span>
+                    <input type="password" class="form-control" placeholder="Correo" name="password" id="password">
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="button" onclick="frmLogin();">Login</button>
+                </div>
         </form>
     </div>
 
