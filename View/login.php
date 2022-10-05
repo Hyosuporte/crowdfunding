@@ -21,17 +21,19 @@
     </nav>
     <form  id="frmLogin">
         <div class="container">
-            <div class="input-group mb-3">
-                <span class="input-group-text">Correo</span>
-                <input type="email" class="form-control" placeholder="Correo" name="email" id="email">
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text">Contraseña</span>
-                <input type="password" class="form-control" placeholder="Correo" name="password" id="password">
-            </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" type="button" onclick="frmLogin();">Login</button>
-            </div>
+        <form action="" method="post">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Correo</span>
+                    <input type="email" class="form-control" placeholder="Correo" name="email" id="email">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Contraseña</span>
+                    <input type="password" class="form-control" placeholder="Correo" name="password" id="password">
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="button" onclick="frmLogin();">Login</button>
+                </div>
+        </form>
         </div>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

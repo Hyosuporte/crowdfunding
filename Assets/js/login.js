@@ -39,11 +39,33 @@ function listarPais(e){
   http.onreadystatechange = function () {
     if(this.readyState == 4 && this.status == 200){
       const res = JSON.parse(this.responseText);
-      res.forEach(element => {
-        
+      res.forEach(element => {        
         selectorPais.append($('<option />',{
           text: element.pais,
           value: element.id_pais
+        }));
+      });
+    }
+  };
+};
+
+function listarCiudad(e){
+  const id_pais = document.getElementById("pais").value;
+  const selectorCiudad = $("#ciudad");
+  for (let i = selectorCiudad.children.length;i>=0;i--){
+    document.getElementById("ciudad").remove(i);
+  }
+  const url = base_url+"ciudad/obtenerCiudades?id_pais="+id_pais;  
+  const http = new XMLHttpRequest();
+  http.open("GET",url,true);
+  http.send(null);
+  http.onreadystatechange = function () {
+    if(this.readyState == 4 && this.status == 200){
+      const res = JSON.parse(this.responseText);
+      res.forEach(element => {
+        selectorCiudad.append($('<option />', {
+          text: element.ciudad,
+          value: element.id_ciudad
         }));
       });
     }
