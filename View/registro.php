@@ -17,7 +17,7 @@
         </button>
         </div>
        </nav>  
-    <form action="" method="post">
+    <form action="" method="post" id="frmRegistro" >
         <div class="formulario">
             <div class="container mt-2">
                 <div class="card">
@@ -65,7 +65,7 @@
             </div>
         </div>
         <div class=" finalButton">
-            <button class="btn btn-primary mb-3 mt-2" type="submit" style="width: 250px; ;height: 50px;" id="btnContinuar">Enviar</button>
+            <button class="btn btn-primary mb-3 mt-2" type="button" style="width: 250px; ;height: 50px;" id="btnContinuar">Enviar</button>
         </div>
     </form>
     <script>

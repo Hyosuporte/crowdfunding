@@ -29,6 +29,11 @@ class usuario extends Controller
         die();
     }
 
+    public function valid_email($str)
+    {
+        return (false !== filter_var($str,FILTER_VALIDATE_EMAIL));
+    }
+
     public function salir()
     {
         session_destroy();
