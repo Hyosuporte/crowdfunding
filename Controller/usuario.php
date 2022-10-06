@@ -9,19 +9,22 @@ class usuario extends Controller
 
     public function validar()
     {
+        $email = strClean($_POST['email']);
+        $password = strClean($_POST['password']);
         if (empty($_POST['email']) || empty($_POST['password'])) {
             $msg = "Error campos vacios";
         } else {
-            $email = strClean($_POST['email']);
-            $password = strClean($_POST['password']);
-            $hash = hash("SHA256", $password);
-            $data = $this->model->getLogin($email, $hash);
+            $data = $this->model->getEmail($email);
             if ($data) {
-                $_SESSION['id'] = $data['id_usuario'];
-                $_SESSION['nombre'] = $data['primer_nombre'];
-                $_SESSION['usuario'] = $data['correo'];
-                $_SESSION['rol'] = $data['rol'];
-                $msg = $data['rol'];
+                if (password_verify($password, $data['password'])) {
+                    $_SESSION['id'] = $data['id_usuario'];
+                    $_SESSION['nombre'] = $data['primer_nombre'];
+                    $_SESSION['usuario'] = $data['correo'];
+                    $_SESSION['rol'] = $data['rol'];
+                    $msg = $data['rol'];
+                } else {
+                    $msg = "Usuario o contraseña incorrecta";
+                }
             } else {
                 $msg = "Usuario o contraseña incorrecta";
             }
@@ -47,7 +50,10 @@ class usuario extends Controller
                 if ($password !== $passwordConf) {
                     $msg = "Las contraseñas no coinciden";
                 } else {
-                    $hash = hash("SHA256", $password);
+                    $opciones = [
+                        'cost' => 12,
+                    ];
+                    $hash = password_hash($password, PASSWORD_BCRYPT, $opciones);
                     $data = $this->model->registrarUsuario($nombre, $apellido, $correo, $hash, $ciudad, $pais, $direccion);
                     if ($data === "ok") {
                         $msg = "registrado";
@@ -79,7 +85,11 @@ class usuario extends Controller
             $data = $this->model->getEmail($email);
             if ($data) {
                 $auxiliarPass = bin2hex(openssl_random_pseudo_bytes(4));
-                $actualizarPass = $this->model->modificarPass($auxiliarPass, $data['id_usuario']);
+                $opciones = [
+                    'cost' => 12,
+                ];
+                $hash = password_hash($auxiliarPass, PASSWORD_BCRYPT, $opciones);
+                $actualizarPass = $this->model->modificarPass($hash, $data['id_usuario']);
                 if ($actualizarPass === 1) {
                     if (email($data, $auxiliarPass)) {
                         echo "Mensaje enviado con exito";

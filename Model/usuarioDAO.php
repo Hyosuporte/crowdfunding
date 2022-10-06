@@ -14,13 +14,6 @@ class usuarioDAO extends Query
         return $data;
     }
 
-    public function getLogin(string $email, string $password)
-    {
-        $sql = "SELECT * FROM usuarios WHERE correo = '$email' AND password = '$password'";
-        $data = $this->select($sql);
-        return $data;
-    }
-
     public function getEmail(string $email)
     {
         $sql = "SELECT * FROM usuarios WHERE correo = '$email' ";

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2022 at 10:19 PM
+-- Generation Time: Oct 07, 2022 at 01:48 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `bd_crowdfunding`
 --
+CREATE DATABASE IF NOT EXISTS `bd_crowdfunding` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `bd_crowdfunding`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +29,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `ciudad`
 --
 
+DROP TABLE IF EXISTS `ciudad`;
 CREATE TABLE `ciudad` (
   `id_ciudad` varchar(15) NOT NULL,
   `ciudad` varchar(30) NOT NULL,
@@ -72,6 +75,7 @@ INSERT INTO `ciudad` (`id_ciudad`, `ciudad`, `id_pais`) VALUES
 -- Table structure for table `donacion`
 --
 
+DROP TABLE IF EXISTS `donacion`;
 CREATE TABLE `donacion` (
   `id_donacion` int(11) NOT NULL,
   `monto` double NOT NULL,
@@ -86,6 +90,7 @@ CREATE TABLE `donacion` (
 -- Table structure for table `estado`
 --
 
+DROP TABLE IF EXISTS `estado`;
 CREATE TABLE `estado` (
   `id_estado` int(11) NOT NULL,
   `estado` varchar(20) NOT NULL
@@ -97,6 +102,7 @@ CREATE TABLE `estado` (
 -- Table structure for table `organizacion`
 --
 
+DROP TABLE IF EXISTS `organizacion`;
 CREATE TABLE `organizacion` (
   `id_organizacion` int(11) NOT NULL,
   `nombre_org` varchar(30) CHARACTER SET utf8 NOT NULL,
@@ -113,6 +119,7 @@ CREATE TABLE `organizacion` (
 -- Table structure for table `pais`
 --
 
+DROP TABLE IF EXISTS `pais`;
 CREATE TABLE `pais` (
   `id_pais` int(11) NOT NULL,
   `pais` varchar(30) NOT NULL
@@ -157,6 +164,7 @@ INSERT INTO `pais` (`id_pais`, `pais`) VALUES
 -- Table structure for table `proyecto`
 --
 
+DROP TABLE IF EXISTS `proyecto`;
 CREATE TABLE `proyecto` (
   `id_proyecto` int(11) NOT NULL,
   `camara_comercio` varchar(255) NOT NULL,
@@ -181,6 +189,7 @@ CREATE TABLE `proyecto` (
 -- Table structure for table `telefono`
 --
 
+DROP TABLE IF EXISTS `telefono`;
 CREATE TABLE `telefono` (
   `id_telefono` int(11) NOT NULL,
   `id_usuario_telefono` bigint(255) NOT NULL
@@ -192,6 +201,7 @@ CREATE TABLE `telefono` (
 -- Table structure for table `tipos_organizacion`
 --
 
+DROP TABLE IF EXISTS `tipos_organizacion`;
 CREATE TABLE `tipos_organizacion` (
   `id_tipos` int(11) NOT NULL,
   `tipos` varchar(20) NOT NULL
@@ -203,12 +213,13 @@ CREATE TABLE `tipos_organizacion` (
 -- Table structure for table `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id_usuario` bigint(255) NOT NULL,
   `primer_nombre` varchar(20) NOT NULL,
   `primer_apellido` varchar(20) NOT NULL,
   `correo` varchar(40) NOT NULL,
-  `password` varchar(15) NOT NULL,
+  `password` varchar(250) NOT NULL,
   `id_ciudad` varchar(15) NOT NULL,
   `id_pais` int(11) NOT NULL,
   `rol` int(11) NOT NULL,
@@ -220,8 +231,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `primer_nombre`, `primer_apellido`, `correo`, `password`, `id_ciudad`, `id_pais`, `rol`, `direccion`) VALUES
-(1, 'Carlos Andres', 'Cuervo Galeano', 'cacuervog@correo.udistrital.edu.co', '1234', 'Col-1', 1, 2, 'Calle 93 sur # 14 B BIS 52'),
-(3, 'Kevin Alberto', 'Gonzales Garzon', 'kevin@gmail.com', '03ac674216f3e15', 'Hai-1', 17, 2, 'KR 8 # 64 A 78');
+(1, 'Carlos Andres', 'Cuervo Galeano', 'cacuervo120@gmail.com', '$2y$12$BJaAPuxFNHQAmhgIGmjOpexMOYN/3wV/NTVUrTtfvUBvCz.BLd4eW', 'Chi-1', 9, 2, 'calle 93 sur #14 B BIS 52');
 
 --
 -- Indexes for dumped tables
@@ -296,7 +306,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
