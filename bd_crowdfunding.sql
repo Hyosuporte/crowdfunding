@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2022 at 03:50 AM
+-- Generation Time: Oct 06, 2022 at 10:19 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -18,10 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bd_crowdfundig`
+-- Database: `bd_crowdfunding`
 --
-CREATE DATABASE IF NOT EXISTS `bd_crowdfundig` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `bd_crowdfundig`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `bd_crowdfundig`;
 -- Table structure for table `ciudad`
 --
 
-DROP TABLE IF EXISTS `ciudad`;
 CREATE TABLE `ciudad` (
   `id_ciudad` varchar(15) NOT NULL,
   `ciudad` varchar(30) NOT NULL,
@@ -72,36 +69,15 @@ INSERT INTO `ciudad` (`id_ciudad`, `ciudad`, `id_pais`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `direccion`
---
-
-DROP TABLE IF EXISTS `direccion`;
-CREATE TABLE `direccion` (
-  `id_direccion` int(11) NOT NULL,
-  `barrio` varchar(11) NOT NULL,
-  `casa` varchar(11) NOT NULL,
-  `calle` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `direccion`
---
-
-INSERT INTO `direccion` (`id_direccion`, `barrio`, `casa`, `calle`) VALUES
-(1, 'bosa', 'roja', 'kr 1');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `donacion`
 --
 
-DROP TABLE IF EXISTS `donacion`;
 CREATE TABLE `donacion` (
   `id_donacion` int(11) NOT NULL,
   `monto` double NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  `id_proyecto` int(11) NOT NULL
+  `id_usuario` bigint(255) NOT NULL,
+  `id_proyecto` int(11) NOT NULL,
+  `fecha_donacion` timestamp(6) NOT NULL DEFAULT current_timestamp(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -110,7 +86,6 @@ CREATE TABLE `donacion` (
 -- Table structure for table `estado`
 --
 
-DROP TABLE IF EXISTS `estado`;
 CREATE TABLE `estado` (
   `id_estado` int(11) NOT NULL,
   `estado` varchar(20) NOT NULL
@@ -122,9 +97,9 @@ CREATE TABLE `estado` (
 -- Table structure for table `organizacion`
 --
 
-DROP TABLE IF EXISTS `organizacion`;
 CREATE TABLE `organizacion` (
   `id_organizacion` int(11) NOT NULL,
+  `nombre_org` varchar(30) CHARACTER SET utf8 NOT NULL,
   `pagina_web` varchar(250) NOT NULL,
   `redes_sociales` int(150) NOT NULL,
   `telefono_contacto` varchar(10) NOT NULL,
@@ -138,7 +113,6 @@ CREATE TABLE `organizacion` (
 -- Table structure for table `pais`
 --
 
-DROP TABLE IF EXISTS `pais`;
 CREATE TABLE `pais` (
   `id_pais` int(11) NOT NULL,
   `pais` varchar(30) NOT NULL
@@ -183,14 +157,15 @@ INSERT INTO `pais` (`id_pais`, `pais`) VALUES
 -- Table structure for table `proyecto`
 --
 
-DROP TABLE IF EXISTS `proyecto`;
 CREATE TABLE `proyecto` (
   `id_proyecto` int(11) NOT NULL,
   `camara_comercio` varchar(255) NOT NULL,
   `keywords` varchar(100) NOT NULL,
-  `tiempo_ejecucion` date NOT NULL,
+  `tiempo_ejecucion` varchar(15) NOT NULL,
   `titulo` varchar(50) NOT NULL,
-  `foto` varchar(255) NOT NULL,
+  `foto` int(255) NOT NULL,
+  `duracion_campana` varchar(10) NOT NULL,
+  `fecha_comienzo` date NOT NULL DEFAULT current_timestamp(),
   `fecha_final` date NOT NULL,
   `abstrac` varchar(150) NOT NULL,
   `indicador_impacto` varchar(80) NOT NULL,
@@ -206,10 +181,9 @@ CREATE TABLE `proyecto` (
 -- Table structure for table `telefono`
 --
 
-DROP TABLE IF EXISTS `telefono`;
 CREATE TABLE `telefono` (
   `id_telefono` int(11) NOT NULL,
-  `id_usuario_telefono` int(11) NOT NULL
+  `id_usuario_telefono` bigint(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -218,7 +192,6 @@ CREATE TABLE `telefono` (
 -- Table structure for table `tipos_organizacion`
 --
 
-DROP TABLE IF EXISTS `tipos_organizacion`;
 CREATE TABLE `tipos_organizacion` (
   `id_tipos` int(11) NOT NULL,
   `tipos` varchar(20) NOT NULL
@@ -230,9 +203,8 @@ CREATE TABLE `tipos_organizacion` (
 -- Table structure for table `usuarios`
 --
 
-DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
-  `id_usuario` int(11) NOT NULL,
+  `id_usuario` bigint(255) NOT NULL,
   `primer_nombre` varchar(20) NOT NULL,
   `primer_apellido` varchar(20) NOT NULL,
   `correo` varchar(40) NOT NULL,
@@ -240,15 +212,16 @@ CREATE TABLE `usuarios` (
   `id_ciudad` varchar(15) NOT NULL,
   `id_pais` int(11) NOT NULL,
   `rol` int(11) NOT NULL,
-  `id_direccion` int(11) NOT NULL
+  `direccion` varchar(250) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `primer_nombre`, `primer_apellido`, `correo`, `password`, `id_ciudad`, `id_pais`, `rol`, `id_direccion`) VALUES
-(1, 'Daniel', 'Torres', 'daniel@gmail.com', '1234', 'Col-1', 1, 2, 1);
+INSERT INTO `usuarios` (`id_usuario`, `primer_nombre`, `primer_apellido`, `correo`, `password`, `id_ciudad`, `id_pais`, `rol`, `direccion`) VALUES
+(1, 'Carlos Andres', 'Cuervo Galeano', 'cacuervog@correo.udistrital.edu.co', '1234', 'Col-1', 1, 2, 'Calle 93 sur # 14 B BIS 52'),
+(3, 'Kevin Alberto', 'Gonzales Garzon', 'kevin@gmail.com', '03ac674216f3e15', 'Hai-1', 17, 2, 'KR 8 # 64 A 78');
 
 --
 -- Indexes for dumped tables
@@ -260,12 +233,6 @@ INSERT INTO `usuarios` (`id_usuario`, `primer_nombre`, `primer_apellido`, `corre
 ALTER TABLE `ciudad`
   ADD PRIMARY KEY (`id_ciudad`),
   ADD KEY `id_pais` (`id_pais`);
-
---
--- Indexes for table `direccion`
---
-ALTER TABLE `direccion`
-  ADD PRIMARY KEY (`id_direccion`);
 
 --
 -- Indexes for table `donacion`
@@ -317,9 +284,19 @@ ALTER TABLE `tipos_organizacion`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`),
-  ADD KEY `id_ciudad` (`id_ciudad`,`id_pais`,`id_direccion`),
-  ADD KEY `id_direccion` (`id_direccion`),
+  ADD UNIQUE KEY `correo` (`correo`),
+  ADD KEY `id_ciudad` (`id_ciudad`,`id_pais`),
   ADD KEY `id_pais` (`id_pais`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
@@ -335,8 +312,8 @@ ALTER TABLE `ciudad`
 -- Constraints for table `donacion`
 --
 ALTER TABLE `donacion`
-  ADD CONSTRAINT `donacion_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE,
-  ADD CONSTRAINT `donacion_ibfk_2` FOREIGN KEY (`id_proyecto`) REFERENCES `proyecto` (`id_proyecto`) ON DELETE CASCADE;
+  ADD CONSTRAINT `donacion_ibfk_2` FOREIGN KEY (`id_proyecto`) REFERENCES `proyecto` (`id_proyecto`) ON DELETE CASCADE,
+  ADD CONSTRAINT `donacion_ibfk_3` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `organizacion`
@@ -354,7 +331,6 @@ ALTER TABLE `telefono`
 -- Constraints for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_2` FOREIGN KEY (`id_direccion`) REFERENCES `direccion` (`id_direccion`) ON DELETE CASCADE,
   ADD CONSTRAINT `usuarios_ibfk_3` FOREIGN KEY (`id_pais`) REFERENCES `pais` (`id_pais`) ON DELETE CASCADE,
   ADD CONSTRAINT `usuarios_ibfk_4` FOREIGN KEY (`id_ciudad`) REFERENCES `ciudad` (`id_ciudad`) ON DELETE CASCADE;
 COMMIT;

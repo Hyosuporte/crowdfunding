@@ -29,5 +29,9 @@ class Home extends Controller
         $this->views->getView($this, "registro");
     }
 
+    public function recuperar()
+    {
+        $this->views->getView($this, "recuperar");
+    }
 
 }
