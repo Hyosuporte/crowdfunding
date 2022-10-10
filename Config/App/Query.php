@@ -47,4 +47,30 @@ class Query extends Conexion{
         }
         return $res;
     }
+    public function editar(string $sql, array $datos)
+    {
+        $this->sql = $sql;
+        $this->datos = $datos;
+        $update = $this->con->prepare($this->sql);
+        $data = $update->execute($this->datos);
+        if ($data) {
+            $data = $update->fetch(PDO::FETCH_ASSOC);
+        } else {
+            $res = 0;
+        }
+        return $res;
+    }
+    public function eliminar(string $sql, array $datos)
+    {
+        $this->sql = $sql;
+        $this->datos = $datos;
+        $delete = $this->con->prepare($this->sql);
+        $data = $delete->execute($this->datos);
+        if ($data) {
+            $res = $this->con->lastInsertId();
+        } else {
+            $res = 0;
+        }
+        return $res;
+    }
 }

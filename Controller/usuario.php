@@ -29,9 +29,51 @@ class usuario extends Controller
         die();
     }
 
+<<<<<<< Updated upstream
+=======
+    public function valid_email($str)
+    {
+        return (false !== filter_var($str, FILTER_VALIDATE_EMAIL));
+    }
+
+    public function recuperarPassword()
+    {
+        if (empty($_POST['email'])) {
+            echo "Error email vacio";
+        } else {
+            $email = strClean($_POST['email']);
+            $data = $this->model->getEmail($email);
+            if ($data) {
+                $auxiliarPass = bin2hex(openssl_random_pseudo_bytes(4));
+                $opciones = [
+                    'cost' => 12,
+                ];
+                $hash = password_hash($auxiliarPass, PASSWORD_BCRYPT, $opciones);
+                $actualizarPass = $this->model->modificarPass($hash, $data['id_usuario']);
+                if ($actualizarPass === 1) {
+                    if (email($data, $auxiliarPass)) {
+                        echo "Mensaje enviado con exito";
+                    } else {
+                        echo "Error al enviar el correo";
+                    }
+                } else {
+                    echo "Error al enviar el correo por favor intentelo de nuevo mas tarde";
+                }
+            } else {
+                echo "Error usuario no encontrado";
+            }
+        }
+    }
+/*
+>>>>>>> Stashed changes
     public function salir()
     {
         session_destroy();
         header("location: " . BASE_URL);
     }
+<<<<<<< Updated upstream
 }
+=======
+    */
+}
+>>>>>>> Stashed changes

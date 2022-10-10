@@ -1,7 +1,7 @@
 <?php
 class Home extends Controller
 {
-    public function __construct()
+   /* public function __construct()
     {
         session_start();
         if (!empty($_SESSION['rol'])) {
@@ -13,7 +13,7 @@ class Home extends Controller
         }
         parent::__construct();
     }
-
+*/
     public function index()
     {
         $this->views->getView($this, "index");
