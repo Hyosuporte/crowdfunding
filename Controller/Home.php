@@ -29,9 +29,4 @@ class Home extends Controller
         $data["title"]="Registro Usuario";
         $this->views->getView($this, "registro",$data);
     }
-
-    public function login()
-    {
-        $this->views->getView($this, "login");
-    }
 }

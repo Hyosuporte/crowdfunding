@@ -94,8 +94,22 @@ function frmRegistro(e) {
     ciudad.value == ""
   ) {
     //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
+    Swal.fire({
+      position: 'center',
+      icon: 'warning',
+      title: 'Todos los campos son obligatorios',
+      showConfirmButton: false,
+      timer: 1500
+    })
   } else if (password.value !== passwordConf.value) {
     //TODO: Agregar css para indicar que las contraseñas deben ser iguales
+    Swal.fire({
+      position: 'top-end',
+      icon: 'error',
+      title: 'Las contraseñas no coinciden',
+      showConfirmButton: false,
+      timer: 1500
+    })
   } else {
     const url = base_url + "usuario/registrar";
     const frm = document.getElementById("frmRegistro");
@@ -107,10 +121,31 @@ function frmRegistro(e) {
         const res = JSON.parse(this.responseText);
         if (res === "registrado") {
           //TODO: Agregar notificacion de registro exitoso
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Registrado exitosamente',
+            showConfirmButton: false,
+            timer: 1500
+          })
         } else if (res === "Ya existe el usuario") {
           //TODO: Agregar notificacion de que ya existe el usuario
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'El usuario ya existe',
+            showConfirmButton: false,
+            timer: 1500
+          })
         } else{
           //TODO: Agregar notificacion de que hubo un error al registrar
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Hubo un error al registrarse',
+            showConfirmButton: false,
+            timer: 1500
+          })
         }
       }
     };

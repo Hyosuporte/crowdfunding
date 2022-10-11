@@ -54,7 +54,7 @@
                             <span class="input-group-text">@</span>
                             <input type="text" class="form-control" placeholder="Redes Sociales" required id="redes" name="redes">
                             <span class="input-group-text">Pagina WEB</span>
-                            <input type="text" class="form-control" placeholder="Pagina WEB" id="pagina" required>    
+                            <input type="text" class="form-control" placeholder="Pagina WEB" id="pagina" name="pagina" required>    
                         </div>
                         <div class="input-group">
                             <span class="input-group-text">Numero de cuenta</span>
@@ -92,7 +92,7 @@
                                         <label for="final">Fecha Final Campaña</label>
                                         <div class="input-group mb-3">   
                                             <span class="input-group-text"><i class="fa-solid fa-calendar-check"></i></span>
-                                            <input  type="date" class="form-control"  id="final">
+                                            <input  type="date" class="form-control"  id="final" name="final">
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
                                         <label for="ejecucion">Tiempo de ejecucion</label>
                                         <div class="input-group mb-3">   
                                             <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
-                                            <input  type="date" class="form-control"  id="ejecucion">
+                                            <input  type="date" class="form-control"  id="ejecucion" name="ejecucion">
                                         </div>
                                     </div> 
                                 </div>
@@ -116,7 +116,7 @@
                             <input type="text" class="form-control" placeholder="Video" required id="video" name="video">
                          </div> 
                          <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="Informacion Adicional" id="info" style="height: 150px"></textarea>
+                            <textarea class="form-control" placeholder="Informacion Adicional" id="info" name="info" style="height: 150px"></textarea>
                             <label for="floatingTextarea">Informacion Adicional</label>
                         </div>  
                         <div class="input-group mb-3">
@@ -124,7 +124,7 @@
                                 <div class="card-body">
                                     <div class=" mb-3">                    
                                         <label for="camara" class="form-label" >Camara de comercio</label>
-                                        <input class="form-control" type="file" id="camara" required itemid="camara">
+                                        <input class="form-control" type="file" id="camara" name="camara" required itemid="camara">
                                     </div> 
                                 </div>
                             </div>
@@ -134,9 +134,11 @@
             </div>
         </div>
         <div class=" finalButton">
-            <button class="btn btn-primary mb-3 mt-2" type="submit" style="width: 250px; ;height: 50px;" id="btnContinuar">Enviar</button>
+            <button class="btn btn-primary mb-3 mt-2" type="submit" style="width: 250px; ;height: 50px;" id="btnContinuar" onclick="validar()">Enviar</button>
         </div>
        </form>
+       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" crossorigin="anonymous"></script>
+       <script  src="https://code.jquery.com/jquery-3.6.1.js"  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="  crossorigin="anonymous"></script>
        <script src="../Assets/js/funciones.js"></script>
        <script src="https://kit.fontawesome.com/b2831985f5.js" crossorigin="anonymous"></script>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
