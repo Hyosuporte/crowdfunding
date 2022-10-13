@@ -1,5 +1,27 @@
 .navbar{
+    position: fixed;
+    top: 0;
     background-color: #D0DAFA;
+}
+
+.navbarLogo{
+    width: 157px;
+    height: 77px;
+    left: 1%;
+    top: 16px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+}
+
+.navbarContent{
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
 }
 
 .main{
@@ -63,4 +85,47 @@
     border-right-width: 3px;
     border-bottom-width: 3px;
     border-left-width: 3px;
+}
+
+.botonLogin{
+    position: absolute;
+    width: 20%;
+    height: 80%;
+    right: 1%;
+    top: 7%;
+    font-size: larger;
+    border: 0px;
+    
+    background: #D9D9D9;
+}
+
+#bannerLanding{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    left: 0px;
+
+    border: 1px solid #000000;
+}
+
+.Bloque{
+    margin-top: 5%;
+    position: relative;
+    display: flex;
+    margin-left: 5%;
+}
+.content{
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.valor{
+    position: relative;
+    left: 10%;
+    width: 300px;
+    height: 139px;
+    margin: 15px;
+    text-align: center;
+    background: #D9D9D9;
 }
