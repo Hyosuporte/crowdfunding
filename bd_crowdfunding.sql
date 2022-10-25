@@ -73,11 +73,11 @@ INSERT INTO `ciudad` (`id_ciudad`, `ciudad`, `id_pais`) VALUES
 
 --
 -- Table structure for table `donacion`
---
+-- FIXME: Revisar la parte de ID donacion
 
 DROP TABLE IF EXISTS `donacion`;
 CREATE TABLE `donacion` (
-  `id_donacion` int(11) NOT NULL,
+  `id_donacion` int(255) NOT NULL,
   `monto` double NOT NULL,
   `id_usuario` bigint(255) NOT NULL,
   `id_proyecto` int(11) NOT NULL,
@@ -87,10 +87,9 @@ CREATE TABLE `donacion` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `estado`
+-- Estructura de tabla para la tabla `estado`
 --
 
-DROP TABLE IF EXISTS `estado`;
 CREATE TABLE `estado` (
   `id_estado` int(11) NOT NULL,
   `estado` varchar(20) NOT NULL
@@ -99,10 +98,9 @@ CREATE TABLE `estado` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `organizacion`
+-- Estructura de tabla para la tabla `organizacion`
 --
 
-DROP TABLE IF EXISTS `organizacion`;
 CREATE TABLE `organizacion` (
   `id_organizacion` int(11) NOT NULL,
   `nombre_org` varchar(30) CHARACTER SET utf8 NOT NULL,
@@ -186,22 +184,20 @@ CREATE TABLE `proyecto` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `telefono`
+-- Estructura de tabla para la tabla `telefono`
 --
 
-DROP TABLE IF EXISTS `telefono`;
 CREATE TABLE `telefono` (
   `id_telefono` int(11) NOT NULL,
-  `id_usuario_telefono` bigint(255) NOT NULL
+  `id_usuario_telefono` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipos_organizacion`
+-- Estructura de tabla para la tabla `tipos_organizacion`
 --
 
-DROP TABLE IF EXISTS `tipos_organizacion`;
 CREATE TABLE `tipos_organizacion` (
   `id_tipos` int(11) NOT NULL,
   `tipos` varchar(20) NOT NULL
@@ -319,14 +315,14 @@ ALTER TABLE `ciudad`
   ADD CONSTRAINT `ciudad_ibfk_1` FOREIGN KEY (`id_pais`) REFERENCES `pais` (`id_pais`) ON DELETE CASCADE;
 
 --
--- Constraints for table `donacion`
+-- Filtros para la tabla `donacion`
 --
 ALTER TABLE `donacion`
-  ADD CONSTRAINT `donacion_ibfk_2` FOREIGN KEY (`id_proyecto`) REFERENCES `proyecto` (`id_proyecto`) ON DELETE CASCADE,
-  ADD CONSTRAINT `donacion_ibfk_3` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE;
+  ADD CONSTRAINT `donacion_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE,
+  ADD CONSTRAINT `donacion_ibfk_2` FOREIGN KEY (`id_proyecto`) REFERENCES `proyecto` (`id_proyecto`) ON DELETE CASCADE;
 
 --
--- Constraints for table `organizacion`
+-- Filtros para la tabla `organizacion`
 --
 ALTER TABLE `organizacion`
   ADD CONSTRAINT `organizacion_ibfk_1` FOREIGN KEY (`id_tipo`) REFERENCES `tipos_organizacion` (`id_tipos`) ON DELETE CASCADE;
