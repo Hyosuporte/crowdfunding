@@ -104,7 +104,6 @@ class usuario extends Controller
             }
         }
     }
-
     public function salir()
     {
         session_destroy();
