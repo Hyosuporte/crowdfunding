@@ -1,24 +1,23 @@
 <?php
-class orgDAO extends Query
+class organizacionDAO extends Query
 {
     public function __construct()
         {
             parent::__construct();
         }    
 
-  function insertarorg($id_org,$nombre_org,$pagina_web,$redes_sociales,$telefono_contacto,$id_tipo,$nro_cuenta)
+  public function insertarorg($id_org,$nombre_org,$pagina_web,$redes_sociales,$telefono_contacto,$id_tipo,$nro_cuenta)
   {
-    $sql = "INSERT INTO organizacion(id_organizacion,nombre_org,pagina_web,redes_sociales,telefono_contacto,id_tipo,nro_cuenta) 
-    VALUES(:id_organizacion,:nombre_org,:pagina_web,:redes_sociales,:telefono_contacto,:id_tipo,:nro_cuenta)";
+    $sql = "INSERT INTO organizacion(id_organizacion, nombre_org, pagina_web, redes_sociales, telefono_contacto, id_tipo, nro_cuenta) VALUES (?,?,?,?,?,?,?)";
             $datos = array($id_org,$nombre_org,$pagina_web,$redes_sociales,$telefono_contacto,$id_tipo,$nro_cuenta);
-            return $datos;
             $data = $this->save($sql,$datos);
             if($data == 1){
                 $res = "ok";
             } else {
                 $res = "error";
             }
-        }    
+            return $res;
+  }    
 
   function editarorg($id_org,$nombre_org,$pagina_web,$redes_sociales,$telefono_contacto,$id_tipo,$nro_cuenta)
 {

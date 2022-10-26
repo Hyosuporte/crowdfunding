@@ -14,8 +14,10 @@ class organizacion extends Controller
         $pagina_web = strClean($_POST['pagina']);
         $redes_sociales = strClean($_POST['redes']);
         $telefono_contacto = strClean($_POST['telefono']);
-        $id_tipo = strClean($_POST['organizacion']); //pendiente actualizar
+        $id_tipo = intval(strClean($_POST['organizacion'])); //pendiente actualizar
         $nro_cuenta = strClean($_POST['cuenta']); //pendiente actualizar
+
+        echo var_dump($id_tipo);
 
         if (
             empty($id_org) || empty($nombre_org) || empty($pagina_web) || empty($redes_sociales) || empty($telefono_contacto) ||

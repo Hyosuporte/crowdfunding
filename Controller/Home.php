@@ -34,4 +34,9 @@ class Home extends Controller
         $this->views->getView($this, "recuperar");
     }
 
+    public function SubirProyecto()
+    {
+        $this->views->getView($this, "formulario");
+    }
+
 }
