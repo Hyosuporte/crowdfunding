@@ -29,4 +29,9 @@ class Home extends Controller
         $data["title"]="Registro Usuario";
         $this->views->getView($this, "registro",$data);
     }
+
+    public function dashboardAdmin()
+    {
+        $this->views->getView($this,"Dashboard");
+    }
 }

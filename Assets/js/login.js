@@ -21,6 +21,13 @@ function frmLogin(e) {
           window.location = base_url + "cliente";
         } else {
           //TODO: Agregar css para indicar al usuario porque fallo la validacion
+          Swal.fire({
+            position: 'center',
+            icon: 'warning',
+            title: 'Fallo la validacion',
+            showConfirmButton: false,
+            timer: 1500
+          })
         }
       }
     };
