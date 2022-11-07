@@ -30,5 +30,10 @@ function strClean($cadena)
     return $string;
 }
 
-
-?>
+function email($data,$auxiliarPass){
+    $para = $data['correo'];
+    $titulo = "Recuperacion de contraseña de CrowdFunding";
+    $mensaje = "Respetado " . $data['primer_nombre'] . " esta es su contraseña temporal de accesso: " .$auxiliarPass ;
+    $cabeceras = "From: cacuervo120@gmail.com";
+    return (mail($para,$titulo,$mensaje,$cabeceras));
+}

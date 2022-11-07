@@ -98,7 +98,8 @@ function frmRegistro(e) {
     password.value == "" ||
     direccion.value == "" ||
     pais.value == "" ||
-    ciudad.value == ""
+    ciudad.value == "" ||
+    passwordConf.value == ""
   ) {
     //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
     Swal.fire({
@@ -126,6 +127,7 @@ function frmRegistro(e) {
     http.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         const res = JSON.parse(this.responseText);
+        console.log(res);
         if (res === "registrado") {
           //TODO: Agregar notificacion de registro exitoso
           Swal.fire({

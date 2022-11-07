@@ -26,33 +26,33 @@
                     <div class="card-body">
                         <div class="input-group mb-3">
                             <span class="input-group-text">Primer Nombre</span>
-                            <input type="text" class="form-control" placeholder="Primer Nombre" id="nombre" name="nombre" required>
+                            <input type="text" class="form-control" placeholder="Primer Nombre" id="nombre" name="nombre" required max="20" >
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Primer Apellido</span>
-                            <input type="text" class="form-control" placeholder="Primer Apellido" id="apellido" name="apellido" required>
+                            <input type="text" class="form-control" placeholder="Primer Apellido" id="apellido" name="apellido" required max="20">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Correo</span>
-                            <input type="email" class="form-control" placeholder="Correo Electronico" id="correo" name="correo" required>
+                            <input type="email" class="form-control" placeholder="Correo Electronico" id="correo" name="correo" required max="40">
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text">Contraseña</span>
-                                    <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" required>
+                                    <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" required max="15">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text">Confirmar Contraseña</span>
-                                    <input type="password" class="form-control" placeholder="Contraseña" id="passwordConf" name="passwordConf" required>
+                                    <input type="password" class="form-control" placeholder="Contraseña" id="passwordConf" name="passwordConf" required max="15">
                                 </div>
                             </div>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Dirección</span>
-                            <input type="text" class="form-control" placeholder="Direccion" id="direccion" name="direccion" required>
+                            <input type="text" class="form-control" placeholder="Direccion" id="direccion" name="direccion" required max="200">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Pais</span>
