@@ -104,6 +104,15 @@ class usuario extends Controller
             }
         }
     }
+
+    public function obtenerUsuario()
+    {
+        $id_usuario = $_GET['id_usuario'];
+        $data = $this->model->getUsuario($id_usuario);
+        echo json_encode($data,JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
     public function salir()
     {
         session_destroy();

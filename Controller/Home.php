@@ -1,7 +1,7 @@
 <?php
 class Home extends Controller
 {
-   /* public function __construct()
+   public function __construct()
     {
         session_start();
         if (!empty($_SESSION['rol'])) {
@@ -13,30 +13,30 @@ class Home extends Controller
         }
         parent::__construct();
     }
-*/
+
     public function index()
     {
-        $this->views->getView($this, "index");
+        $this->views->getView("Home", "index");
     }
 
     public function login()
     {
-        $this->views->getView($this, "login");
+        $this->views->getView("Home", "login");
     }
 
     public function registro()
     {
-        $this->views->getView($this, "registro");
+        $this->views->getView("Home", "registro");
     }
 
     public function recuperar()
     {
-        $this->views->getView($this, "recuperar");
+        $this->views->getView("Home", "recuperar");
     }
 
     public function SubirProyecto()
     {
-        $this->views->getView($this, "formulario");
+        $this->views->getView("Home", "formulario");
     }
 
 }
