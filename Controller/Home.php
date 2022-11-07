@@ -16,7 +16,8 @@ class Home extends Controller
 
     public function index()
     {
-        $this->views->getView("Home", "index");
+        $data['title'] = "Principal";
+        $this->views->getView("Home", "index", $data);
     }
 
     public function login()

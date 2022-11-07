@@ -24,7 +24,7 @@ function frmLogin(e) {
           Swal.fire({
             position: 'center',
             icon: 'warning',
-            title: 'Fallo la validacion',
+            title: res,
             showConfirmButton: false,
             timer: 1500
           })

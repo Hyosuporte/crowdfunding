@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -30,7 +35,7 @@
 .main {
     padding-top: 8rem;
     padding-bottom: 5rem;
-    background-color: azure;
+
 }
 
 .formulario {
@@ -495,7 +500,7 @@
     font-weight: 900;
     font-size: 20px;
     line-height: 29px;
-    width: 220px;
+    width: 25vh;
     height: 50px;
     border-width: 0px;
     background: #DCF763;
@@ -503,6 +508,7 @@
     display: block;
     align-items: center;
     color: #031C54;
+    margin: auto;
 }
 
 .bannerLanding2 {
@@ -628,8 +634,8 @@
     border-radius: 30px;
 }
 
-.tituloFormFooter{
-    
+.tituloFormFooter {
+
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -706,11 +712,98 @@
     color: #031C54;
 }
 
-.progress{
+.progress {
     width: 80%;
 }
 
-.caruselTexto{
+.caruselTexto {
     margin-top: 10%;
     margin-left: 10%;
+}
+
+.formLogin {
+    width: 100vh;
+    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+    border-radius: 30px;
+    display: block;
+}
+
+.bloqueLogin {
+    margin-top: 10%;
+    margin-bottom: 8%;
+    display: flex;
+    padding: 5%;
+}
+
+.textoLoginIzquierda {
+    position: absolute;
+    margin: auto;
+    width: 20vh;
+    margin-top: 25%;
+    margin-left: 2%;
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #F5F0F5;
+}
+
+.formLoginTitulo {
+    margin: auto;
+    width: 50vh;
+    font-family: 'FatFrank';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+
+    color: #F5F0F5;
+}
+
+.linkRegistrarse {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    color: #FFFFFF;
+}
+
+.formLoginInput {
+    background: #FFFFFF;
+    border: 1px solid #031C54;
+    border-radius: 30px;
+    width: 95%;
+    margin-left: 2%;
+    height: 15%;
+    margin-top: 5%;
+    font-size: 2rem;
+}
+
+.formInputCheck {
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+label {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.olvidoContrasena{
+    color: #FFFFFF;
+    float: right;
+    margin-right: 5%;
 }

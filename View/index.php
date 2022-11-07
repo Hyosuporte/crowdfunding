@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Crowfunding</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">-->
-</head>
-
-<body>
-    <nav class="navbar fixed-top">
-        <ul class="navbarList">
-            <li>
-                <span class="navbar-brand navbarLogo"><img src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></span>
-            </li>
-            <li>
-                <a href="">Ver Proyectos</a>
-            </li>
-            <li>
-                <a href="">Subir Proyecto</a>
-            </li>
-            <li>
-                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonLogin" type="button">Llamado accion</button></a></div>
-            </li>
-        </ul>
-    </nav>
+<?php require_once("View/Template/header.php") ?>
 
     <div class="content">
         <div class="bannerLanding">
@@ -349,19 +315,8 @@
         </div>
 
     </div>
-    <!--<script>
-        const base_url = "<?php echo BASE_URL; ?>"
-    </script>-->
-    <script src="https://kit.fontawesome.com/b2831985f5.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-
+    <?php require_once("View/Template/footer.php") ?>
     <script src="<?php echo BASE_URL; ?>Assets/js/index.js"></script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
 
 </body>
 
