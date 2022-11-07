@@ -21,6 +21,13 @@ function frmLogin(e) {
           window.location = base_url + "cliente";
         } else {
           //TODO: Agregar css para indicar al usuario porque fallo la validacion
+          Swal.fire({
+            position: 'center',
+            icon: 'warning',
+            title: 'Fallo la validacion',
+            showConfirmButton: false,
+            timer: 1500
+          })
         }
       }
     };
@@ -95,9 +102,22 @@ function frmRegistro(e) {
     passwordConf.value == ""
   ) {
     //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
+    Swal.fire({
+      position: 'center',
+      icon: 'warning',
+      title: 'Todos los campos son obligatorios',
+      showConfirmButton: false,
+      timer: 1500
+    })
   } else if (password.value !== passwordConf.value) {
     //TODO: Agregar css para indicar que las contraseñas deben ser iguales
-    console.log("Las contraseñas deben coincidir");
+    Swal.fire({
+      position: 'top-end',
+      icon: 'error',
+      title: 'Las contraseñas no coinciden',
+      showConfirmButton: false,
+      timer: 1500
+    })
   } else {
     const url = base_url + "usuario/registrar";
     const frm = document.getElementById("frmRegistro");
@@ -109,13 +129,32 @@ function frmRegistro(e) {
         const res = JSON.parse(this.responseText);
         console.log(res);
         if (res === "registrado") {
-          //TODO: Agregar notificaicon de registro exitoso y rediccionamiento a inicio
-        } else if (res === "Usuario no disponible") {
-          //TODO: Agregar notificacion de que el usuario no esta disponible
-        } else if (res === "Error") {
-          //TODO: Agregar notificacion de que se presento un error al registrar el usuario
-        } else {
-          //TODO: Agregar notificacion de que se debe ingresar un email valido,
+          //TODO: Agregar notificacion de registro exitoso
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Registrado exitosamente',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        } else if (res === "Ya existe el usuario") {
+          //TODO: Agregar notificacion de que ya existe el usuario
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'El usuario ya existe',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        } else{
+          //TODO: Agregar notificacion de que hubo un error al registrar
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Hubo un error al registrarse',
+            showConfirmButton: false,
+            timer: 1500
+          })
         }
       }
     };
