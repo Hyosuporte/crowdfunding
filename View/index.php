@@ -11,11 +11,13 @@
 <body>
     <h1>PAGINA EN MATENIMIENTO</h1>
     <img src="<?php echo BASE_URL; ?>Assets/img/40796.jpg" alt="" width="100vhz">
-    <a href="<?php echo BASE_URL; ?>Home/login/"><button>Login</button></a>
+    <a href="<?php echo BASE_URL; ?>Home/login"><button>Login</button></a>
     <div>
-        <p class="mb-0">¿No tienes una cuenta? <a href="<?php echo BASE_URL; ?>Home/registro/" class="text-white-50 fw-bold"> Registrar</a>
+        <p class="mb-0">¿No tienes una cuenta? <a href="<?php /* echo BASE_URL; */ ?>Home/registro/" class="text-white-50 fw-bold"> Registrar</a>
         </p>
         <p class="mb-0">¿Se le olvido la contraseña? <a href="<?php echo BASE_URL; ?>Home/recuperar/" class="text-white-50 fw-bold"> recuperar</a>
+        </p>
+        <p class="mb-0">Subir proyecto <a href="<?php echo BASE_URL; ?>Home/SubirProyecto" class="text-white-50 fw-bold"> Subir proyecto</a>
         </p>
     </div>
 </body>

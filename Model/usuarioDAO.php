@@ -9,7 +9,9 @@ class usuarioDAO extends Query
 
     public function getUsuario($id)
     {
-        $sql = "SELECT * FROM usuarios WHERE id_usuario = '$id'";
+        $sql = "SELECT u.correo, u.primer_nombre, u.primer_apellido, u.direccion, c.ciudad, p.pais 
+        FROM usuarios AS u LEFT JOIN ciudad AS c ON u.id_ciudad = c.id_ciudad
+        LEFT JOIN pais AS p ON c.id_pais = p.id_pais WHERE u.id_usuario = '$id'";
         $data = $this->select($sql);
         return $data;
     }
