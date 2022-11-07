@@ -21,7 +21,8 @@ class Home extends Controller
 
     public function login()
     {
-        $this->views->getView("Home", "login");
+        $data['title'] = "Login";
+        $this->views->getView("Home", "login",$data);
     }
 
     public function registro()
