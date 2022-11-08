@@ -23,7 +23,7 @@
         </form>
     </div>
 </div>
-
+<!-- Cambio de emergencia --->
 <?php require_once("View/Template/footer.php") ?>
 <script src="<?php echo BASE_URL; ?>Assets/js/login.js"></script>
 </body>
