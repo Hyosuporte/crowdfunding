@@ -1,3 +1,7 @@
+document
+  .getElementById("configPerfil")
+  .addEventListener("onLoad", listarDatos(), true);
+
 $(document).ready(function () {
     
     $('#tblProyectos').DataTable({
@@ -39,15 +43,9 @@ function consultarProyectos(){
   http.send();
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      const res = JSON.parse(this.responseText);
-      console.log(res);
-      document.getElementById("newCorreo").value = res.correo;
-      document.getElementById("nombreCompleto").value = res.primer_nombre + " " + res.primer_apellido ;
-      document.getElementById("correo").value = res.correo;
-      document.getElementById("pais").value = res.pais;
-      document.getElementById("ciudad").value = res.ciudad;
-      document.getElementById("direccion").value = res.direccion;
-      document.getElementById("telefono").value = res.id_usuario;
+      const res = JSON.parse(this.responseText);      
+    }else{
+
     }
   };
 }

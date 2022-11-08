@@ -488,15 +488,14 @@ body {
     font-weight: 900;
     font-size: 20px;
     line-height: 29px;
-    width: 25vh;
+    width: 30vh;
     height: 50px;
     border-width: 0px;
     background: #DCF763;
     border-radius: 30px;
-    display: block;
+    display: flex;
     align-items: center;
     color: #031C54;
-    margin: auto;
 }
 
 .bannerLanding2 {
@@ -879,10 +878,30 @@ label {
     text-align: left;
 }
 
-.active{
+.active {
     color: #CC59D2 !important;
 }
 
-.tablaDonados{
+.tablita{
+    text-align: center;
+}
+
+.tablita th {
     border-width: 1px;
+    border-color: #031C54;
+}
+
+.tablita td {
+    border-width: 1px;
+    border-color: #031C54;
+    color: #031C54;
+}
+
+.tablita label {
+    border-width: 1px;
+    color: #031C54;
+}
+
+.bloqueDashboard {
+    background: #bcbcbc;
 }

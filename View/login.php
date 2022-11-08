@@ -7,7 +7,7 @@
         <p class="textoLoginIzquierda">Es momento de crear y aportar. Inicia sesión y comienza a conectar con nuevas oportunidades.</p>
     </div>
     <div class="formLogin">
-        <p class="formLoginTitulo">Iniciar Sesion</p>
+        <p class="formLoginTitulo">Iniciar Sesión</p>
         <div class="linkRegistrarse">
             <p>¿Aún no tienes una cuenta? <a href="<?php echo BASE_URL; ?>Home/registro/">REGISTRATE</a></p>
         </div>

@@ -27,7 +27,7 @@
                 <a href="">Subir Proyecto</a>
             </li>
             <li>
-                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonLogin" type="button">Llamado accion</button></a></div>
+                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonLogin" type="button">Llamado acción</button></a></div>
             </li>
         </ul>
     </nav>
