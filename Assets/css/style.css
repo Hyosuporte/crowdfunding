@@ -3,6 +3,10 @@ a {
     color: #FFFFFF;
 }
 
+body {
+    background-color: #F5F0F5;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -38,11 +42,6 @@ a {
 
 }
 
-.formulario {
-    background-color: azure;
-    border-radius: 1em;
-}
-
 .campo {
     margin-top: 1rem;
 }
@@ -54,18 +53,6 @@ a {
     z-index: 100;
     font-size: 16px;
     opacity: 1;
-}
-
-.finalButton {
-    background-color: #D0DAFA;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
 }
 
 .formulario__validacion-estado-correcto {
@@ -118,6 +105,7 @@ a {
 .content {
     margin-top: 10rem;
     margin-bottom: 8%;
+
 }
 
 .valor {
@@ -753,7 +741,7 @@ a {
 .formLoginTitulo {
     margin: auto;
     width: 50vh;
-    font-family: 'FatFrank';
+    font-family: 'Signika Negative', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
@@ -802,8 +790,99 @@ label {
     color: #FFFFFF;
 }
 
-.olvidoContrasena{
+.olvidoContrasena {
     color: #FFFFFF;
     float: right;
     margin-right: 5%;
+}
+
+.inputsRegistro {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.inputsRegistro input {
+    margin-top: 1%;
+    margin-left: 1%;
+    border-radius: 30px;
+}
+
+.tableDashboard {
+    width: 90%;
+    background: #FFFFFF;
+    border-radius: 30px;
+}
+
+.tableDashboardTitulo {
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 55px;
+    text-align: center;
+
+    color: #031C54;
+
+}
+
+.bloqueAunSinProyectos {
+    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+    border-radius: 30px;
+}
+
+.bloqueAunSinProyectosTitulo {
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 62px;
+    line-height: 74px;
+    text-align: center;
+
+    color: #F5F0F5;
+}
+
+.bloqueAunSinProyectosTexto {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+
+    color: #F5F0F5;
+}
+
+.bloqueAunSinProyectosBoton {
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 29px;
+    width: 50vh;
+    height: 50px;
+    border-width: 0px;
+    background: #DCF763;
+    border-radius: 30px;
+    display: block;
+    align-items: center;
+    color: #031C54;
+    margin: auto;
+}
+
+.botonTab {
+    border-width: 0px;
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+}
+
+.active{
+    color: #CC59D2 !important;
+}
+
+.tablaDonados{
+    border-width: 1px;
 }
