@@ -16,12 +16,14 @@ class Home extends Controller
 
     public function index()
     {
-        $this->views->getView("Home", "index");
+        $data['title'] = "Principal";
+        $this->views->getView("Home", "index", $data);
     }
 
     public function login()
     {
-        $this->views->getView("Home", "login");
+        $data['title'] = "Login";
+        $this->views->getView("Home", "login",$data);
     }
 
     public function registro()
@@ -36,7 +38,12 @@ class Home extends Controller
 
     public function SubirProyecto()
     {
-        $this->views->getView("Home", "formulario");
+        $data['title'] = "Subir Proyecto";
+        $this->views->getView("Home", "formulario",$data);
     }
 
+    public function dashboardAdmin()
+    {
+        $this->views->getView($this,"Dashboard");
+    }
 }
