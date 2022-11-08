@@ -38,7 +38,8 @@ class Home extends Controller
 
     public function SubirProyecto()
     {
-        $this->views->getView("Home", "formulario");
+        $data['title'] = "Subir Proyecto";
+        $this->views->getView("Home", "formulario",$data);
     }
 
     public function dashboardAdmin()

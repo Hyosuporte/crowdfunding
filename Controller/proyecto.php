@@ -26,22 +26,33 @@ class proyecto extends Controller
         die();
     }
 
+    public function subirArchivo($name)
+    {
+        $fichero_subido = dir_subida . basename($_FILES[$name]['name']);
+        echo '<pre>';
+        echo $_FILES[$name]['name'];
+        if (move_uploaded_file($_FILES[$name]['tmp_name'], $fichero_subido)) {
+            echo "El fichero es válido y se subió con éxito.\n";
+        } else {
+            echo "¡Posible ataque de subida de ficheros!\n";
+        }
+        return $fichero_subido;
+    }
+
     public function insertarproyecto()
     {
-        $camara = strClean($_POST['camara']);
         $keywords = strClean($_POST['keywords']);
         $tiempo_ejecucion = strClean($_POST['ejecucion']);
         $titulo = strClean($_POST['titulo']);
-        $foto = strClean($_POST['foto']);
-        $duracion_campaña = strClean($_POST['direccion']); //pendiente actualizar
-        $fecha_comienzo = strClean($_POST['']); //pendiente actualizar
+        $duracion_campaña = strClean($_POST['ejecucion']); //pendiente actualizar
+        $fecha_comienzo = strClean($_POST['ejecucion']); //pendiente actualizar
         $fecha_final = strClean($_POST['final']);
         $abstrac = strClean($_POST['Abstract']);
         $indicador = strClean($_POST['impacto']);
         $monto = strClean($_POST['monto']);
         $video = strClean($_POST['video']);
         $info_adicional = strClean($_POST['info']);
-
+        $camara = $this->subirArchivo('camara');
         if (
             empty($camara) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
             empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
@@ -63,13 +74,13 @@ class proyecto extends Controller
 
     public function editarproyecto()
     {
-        $camara = strClean($_POST['camara']);
+        $camara = $_FILES[$_POST['camara']];
         $keywords = strClean($_POST['keywords']);
         $tiempo_ejecucion = strClean($_POST['ejecucion']);
         $titulo = strClean($_POST['titulo']);
-        $foto = strClean($_POST['foto']);
-        $duracion_campaña = strClean($_POST['direccion']); //pendiente actualizar
-        $fecha_comienzo = strClean($_POST['']); //pendiente actualizar
+        $foto = $_FILES[$_POST['foto']];
+        $duracion_campaña = strClean($_POST['comienzo']); //pendiente actualizar
+        $fecha_comienzo = strClean($_POST['comienzo']); //pendiente actualizar
         $fecha_final = strClean($_POST['final']);
         $abstrac = strClean($_POST['Abstract']);
         $indicador = strClean($_POST['impacto']);
@@ -105,5 +116,4 @@ class proyecto extends Controller
             $msg = "Error";
         }
     }
-    
 }
