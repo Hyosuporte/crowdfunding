@@ -13,9 +13,9 @@ class proyecto extends Controller
             $keywords = strClean($_POST['keywords']);
             $tiempo_ejecucion = strClean($_POST['ejecucion']);
             $titulo = strClean($_POST['titulo']);
-            $foto = strClean($_POST['foto']);
-            $duracion_campaña = strClean($_POST['direccion']); //pendiente actualizar
-            $fecha_comienzo = strClean($_POST['']); //pendiente actualizar
+            $foto = getimagesize($_FILES["image"]["foto"]);
+            $duracion_campaña = strClean($_POST['ejecucion']); //pendiente actualizar
+            $fecha_comienzo = strClean($_POST['comienzo']); //pendiente actualizar
             $fecha_final = strClean($_POST['final']);
             $abstrac = strClean($_POST['Abstract']);
             $indicador = strClean($_POST['impacto']);

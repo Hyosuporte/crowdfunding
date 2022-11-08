@@ -86,7 +86,7 @@
         <button class="btn btn-primary mb-3 mt-2" type="submit" style="width: 250px; ;height: 50px; margin:auto;" id="btnContinuar">Guardar</button>
       </div>
     </form>
-    <form action="proyecto/insertarproyecto" method="post">
+    <form action="<?php echo BASE_URL; ?>proyecto/insertarproyecto" method="post">
       <div class="formulario">
         <div class="card">
                     <div class="card-header">
@@ -114,12 +114,19 @@
                         <div class="input-group mb-3">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="input-group">
+                                        </div>
+                                        <div class="input-group">
+                                        <label for="final">Fecha Comienzo Campaña</label>
+                                        <div class="input-group mb-3">   
+                                            <span class="input-group-text"><i class="fa-solid fa-calendar-check"></i></span>
+                                            <input  type="date" class="form-control"  id="comienzo" name="comienzo">
+                                        </div>
+                                        </div>
+                                        <div class="input-group">
                                         <label for="final">Fecha Final Campaña</label>
                                         <div class="input-group mb-3">   
                                             <span class="input-group-text"><i class="fa-solid fa-calendar-check"></i></span>
                                             <input  type="date" class="form-control"  id="final" name="final">
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +136,7 @@
                                         <label for="ejecucion">Tiempo de ejecucion</label>
                                         <div class="input-group mb-3">   
                                             <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
-                                            <input  type="date" class="form-control"  id="ejecucion" name="ejecucion">
+                                            <input  type="number" class="form-control"  id="ejecucion" name="ejecucion">
                                         </div>
                                     </div> 
                                 </div>
