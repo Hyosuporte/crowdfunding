@@ -5,7 +5,7 @@
         <div class="oneColumnBanner mt-5">
             <div class="titulo">Crowfunding para mujeres de la industria creativa</div>
             <div class="textoBannerLanding">Es momento de financiar tu proyecto de forma colectiva.</div>
-            <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonBannerLanding" type="button">Llamado acción</button></a>
+            <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonBannerLanding" type="button">Quiero aportar</button></a>
             </div>
         </div>
         <div class="twoColumnBanner">
@@ -36,7 +36,7 @@
                         <img src="<?php echo BASE_URL; ?>Assets/img/caruselImagen.svg" alt="">
                     </div>
                     <div class="caruselTexto">
-                        <p class="caruselTitulo">Hola soy pepe</p>
+                        <p class="caruselTitulo">Nombre del Proyecto</p>
                         <p class="subirProyectoTexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                             interdum, arcu eget blandit suscipit, ex magna
                             pharetra ante, ut convallis neque ipsum eu nisi.Lorem ipsum dolor sit amet, consectetur
@@ -46,7 +46,7 @@
                         <div class="progress">
                             <div class="progress-bar bg-primary" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <button type="button" class="botonCardDestacado mt-5">Llamado acción</button>
+                        <button type="button" class="botonCardDestacado mt-5">Ver Proyecto</button>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                         <div class="progress">
                             <div class="progress-bar bg-primary" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <button type="button" class="botonCardDestacado mt-5">Llamado acción</button>
+                        <button type="button" class="botonCardDestacado mt-5">Ver Proyecto</button>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                         <div class="progress">
                             <div class="progress-bar bg-primary" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <button type="button" class="botonCardDestacado mt-5">Llamado acción</button>
+                        <button type="button" class="botonCardDestacado mt-5">Ver Proyecto</button>
                     </div>
                 </div>
             </div>
@@ -104,17 +104,17 @@
     <div class="beneficios">
         <div class="oneColumnBeneficio">
             <img class="imagenBeneficio" src="<?php echo BASE_URL; ?>Assets/img/Beneficio.svg" alt="">
-            <p class="beneficioTitulo1">Beneficio1</p>
+            <p class="beneficioTitulo1">Proyectos reales y de gran impacto</p>
             <p class="beneficioTexto">Verificamos la veracidad de cada proyecto previamente y te asesoramos gratis
                 para ayudarte y garantizar el éxito de tu financiación.</p>
         </div>
         <div class="twoColumnBeneficio">
-            <p class="beneficioTitulo2">Beneficio2</p>
+            <p class="beneficioTitulo2">Conectamos la creatividad</p>
             <p class="beneficioTexto2">Construimos puentes de oportunidades y de monetización para el sector
                 cultural, artístico y turístico.</p>
         </div>
         <div class="threeColumnBeneficio">
-            <p class="beneficioTitulo3">Beneficio3</p>
+            <p class="beneficioTitulo3">Hecho por y para mujeres</p>
             <p class="beneficioTexto3">Queremos disminuir la brecha de género y apoyar a aquellas mujeres que están
                 iniciando o fortaleciendo su idea creativa, para impulsarlas y materializarlos en proyectos
                 sostenibles y rentables.</p>
@@ -134,7 +134,7 @@
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p class="metaCardDestacado">Meta $11.000.000</p>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardDestacado">Llamado acción <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
+                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
                 </div>
             </div>
             <div class="card">
@@ -146,7 +146,7 @@
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p class="metaCardDestacado">Meta $11.000.000</p>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardDestacado">Llamado acción <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
+                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
                 </div>
             </div>
             <div class="card">
@@ -158,7 +158,7 @@
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p class="metaCardDestacado">Meta $11.000.000</p>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardDestacado">Llamado acción <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
+                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
                 </div>
             </div>
             <div class="card">
@@ -170,7 +170,7 @@
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p class="metaCardDestacado">Meta $11.000.000</p>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardDestacado">Llamado acción <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
+                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
                 </div>
             </div>
         </div>
@@ -197,14 +197,14 @@
 
                 Puedes financiar tu proyecto turístico (Promoción, infraestructura, sostenibilidad, educación, etc)
             </div>
-            <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonBannerLanding" type="button">Llamado acción</button></a>
+            <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonBannerLanding" type="button">Conoce más</button></a>
             </div>
         </div>
     </div>
 
     <div class="bloqueSubirProyecto">
         <div class="subirFirstColumn">
-            <p class="subirProyectoTitulo">Subir Proyecto</p>
+            <p class="subirProyectoTitulo">¿Cómo puedo subir mi proyecto?</p>
             <p class="subirProyectoTexto">Sigue este paso a paso para empezar a materializar tu proyecto:</p>
             <ul>
                 <li>
@@ -212,39 +212,39 @@
                         <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                         <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                     </div>
-                    <p>Beneficio1</p>
+                    <p>Registrate e Inicia Sesión</p>
                 </li>
                 <li>
                     <div class="">
                         <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                         <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                     </div>
-                    <p>Beneficio2</p>
+                    <p>En tu perfil, Ingresa a la sección de proyectos subidos y da click en subir proyecto</p>
                 </li>
                 <li>
                     <div class="">
                         <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                         <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                     </div>
-                    <p>Beneficio3</p>
+                    <p>Llena el formulario con tus datos y descripción del proyecto.</p>
                 </li>
                 <li>
                     <div class="">
                         <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                         <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                     </div>
-                    <p>Beneficio4</p>
+                    <p>Se verificará la veracidad de la organización o persona a cargo del proyecto, este proceso tarda de 15 días a 1 mes en aprobación del equipo experto.</p>
                 </li>
                 <li>
                     <div class="">
                         <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                         <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                     </div>
-                    <p>Beneficio5</p>
+                    <p>En caso de ser aprobado se subirá inmediatamente tu proyecto. En caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer cambios a tu proyecto. Este tendrá un tiempo determinado para su revisión.</p>
                 </li>
                 <div>
-                    <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonBannerLanding" type="button">Llamado acción
-                        </button>
+                    <a href="<?php echo BASE_URL; ?>Home/login/">
+                        <button class="botonBannerLanding" type="button">Subir Proyecto </button>
                     </a>
                 </div>
             </ul>
@@ -272,9 +272,9 @@
                 </div>
             </div>
             <div class="subirSecondColumn" style="margin-top: 10%;">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Llamado acción</button></a>
+                <p>Sigue en contacto con nosotros, escribe tu correo aquí.</p>
+                <input placeholder="Correo electronico" type="text" name="correo" id="correo">
+                <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar conectado</button></a>
             </div>
         </div>
         <div class="bloqueInfoFooter">
