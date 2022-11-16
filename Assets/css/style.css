@@ -2,25 +2,45 @@ a {
     text-decoration: none;
     color: #FFFFFF;
 }
-
 body {
     background-color: #F5F0F5;
 }
+.activeNavbar {
+    color: #CC59D2 !important;
+    text-decoration: underline !important;
+}
+
+.boton {
+    width: 50vh;
+    height: 6vh;
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vh;
+    line-height: 29px;
+    border-width: 0;
+    background: #DCF763;
+    border-radius: 30px;
+    color: #031C54;
+    right: 0;
+}
 
 .navbar {
+    padding-left: 10%;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 20%;
+    height: 20vh;
     background-color: #f5f0f5 !important;
     display: flex;
 }
 
+.navbarText {
+    font-size: 10vh;
+}
+
 .navbarLogo {
-    width: 30%;
-    height: 77px;
-    left: 1%;
-    top: 16px;
+    width: 50vh;
 
     font-family: 'Inter';
     font-style: normal;
@@ -42,8 +62,17 @@ body {
 
 }
 
+.formulario {
+    background-color: azure;
+    border-radius: 1em;
+}
+
 .campo {
     margin-top: 1rem;
+}
+
+.imagenCarusel {
+    width: 100vh;
 }
 
 .formulario__validacion-estado-incorrecto {
@@ -83,7 +112,7 @@ body {
 }
 
 .botonLogin {
-    width: 100%;
+    width: 50vh;
     height: 60px;
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
@@ -103,7 +132,7 @@ body {
 }
 
 .content {
-    margin-top: 10rem;
+    margin-top: 10%;
     margin-bottom: 8%;
 
 }
@@ -142,10 +171,12 @@ body {
 .navbarList {
     display: flex;
     list-style: none;
+
 }
 
 .navbarList li {
     margin: auto;
+    margin-left: 2%;
 }
 
 .bannerLanding {
@@ -163,6 +194,17 @@ body {
     grid-auto-rows: minmax(200px, auto);
 }
 
+.bannerLanding-2 {
+    padding-left: 5rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+    border-radius: 30px;
+    z-index: -1;
+}
+
 .bannerLanding div {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
@@ -176,7 +218,6 @@ body {
     line-height: 29px;
     text-decoration: none;
     margin-top: 1rem;
-    margin-left: 3rem;
 
 
     color: #031C54;
@@ -188,8 +229,22 @@ body {
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 56px;
+    font-size: 10vh;
     line-height: 100%;
+
+    color: #F5F0F5;
+}
+
+
+
+.titulo-2 {
+    margin-top: 2%;
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 8vh;
+    line-height: 100%;
+    text-align: center;
 
     color: #F5F0F5;
 }
@@ -199,7 +254,7 @@ body {
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 3vh;
     line-height: 26px;
 
     color: #F5F0F5;
@@ -523,7 +578,7 @@ body {
 .twoColumnBanner2 {
     grid-column: 2/ 3;
     grid-row: 1;
-    margin-top: 80%;
+    margin-top: 60%;
 }
 
 .threeColumnBanner2 {
@@ -566,7 +621,7 @@ body {
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 3vh;
     line-height: 26px;
     /* identical to box height */
 
@@ -586,6 +641,13 @@ body {
 
 .bloqueSubirProyecto li p {
     margin-left: 2%;
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #031C54;
 }
 
 .checkCirculo {
@@ -616,7 +678,8 @@ body {
     grid-template-columns: 2fr 2fr 1fr;
     gap: 5rem;
     grid-auto-rows: minmax(200px, auto);
-    width: 90%;
+    width: 180vh;
+    height: 30vh;
     background: #F5F0F5;
     border-radius: 30px;
 }
@@ -626,8 +689,8 @@ body {
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 62px;
-    line-height: 74px;
+    font-size: 46px;
+    line-height: 54px;
 
     color: #031C54;
 }
@@ -670,7 +733,6 @@ body {
 .bloqueInfoFooter {
     font-family: 'Signika Negative', sans-serif;
     margin-top: 5%;
-    margin-left: 5%;
     display: flex;
     color: #F5F0F5;
 }
@@ -683,7 +745,7 @@ body {
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 46px;
+    font-size: 10vh;
     line-height: 55px;
 
     color: #031C54;
@@ -704,7 +766,7 @@ body {
 }
 
 .caruselTexto {
-    margin-top: 10%;
+    margin-top: 20vh;
     margin-left: 10%;
 }
 
@@ -789,119 +851,8 @@ label {
     color: #FFFFFF;
 }
 
-.olvidoContrasena {
+.olvidoContrasena{
     color: #FFFFFF;
     float: right;
     margin-right: 5%;
-}
-
-.inputsRegistro {
-    width: 80%;
-    margin-left: 10%;
-}
-
-.inputsRegistro input {
-    margin-top: 1%;
-    margin-left: 1%;
-    border-radius: 30px;
-}
-
-.tableDashboard {
-    width: 90%;
-    background: #FFFFFF;
-    border-radius: 30px;
-}
-
-.tableDashboardTitulo {
-    font-family: 'Signika Negative', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 46px;
-    line-height: 55px;
-    text-align: center;
-
-    color: #031C54;
-
-}
-
-.bloqueAunSinProyectos {
-    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
-    border-radius: 30px;
-}
-
-.bloqueAunSinProyectosTitulo {
-    font-family: 'Signika Negative', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 62px;
-    line-height: 74px;
-    text-align: center;
-
-    color: #F5F0F5;
-}
-
-.bloqueAunSinProyectosTexto {
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-
-    color: #F5F0F5;
-}
-
-.bloqueAunSinProyectosBoton {
-    font-family: 'Signika Negative', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 29px;
-    width: 50vh;
-    height: 50px;
-    border-width: 0px;
-    background: #DCF763;
-    border-radius: 30px;
-    display: block;
-    align-items: center;
-    color: #031C54;
-    margin: auto;
-}
-
-.botonTab {
-    border-width: 0px;
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
-    text-align: left;
-}
-
-.active {
-    color: #CC59D2 !important;
-}
-
-.tablita{
-    text-align: center;
-}
-
-.tablita th {
-    border-width: 1px;
-    border-color: #031C54;
-}
-
-.tablita td {
-    border-width: 1px;
-    border-color: #031C54;
-    color: #031C54;
-}
-
-.tablita label {
-    border-width: 1px;
-    color: #031C54;
-}
-
-.bloqueDashboard {
-    background: #bcbcbc;
 }
