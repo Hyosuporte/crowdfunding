@@ -2,9 +2,11 @@ a {
     text-decoration: none;
     color: #FFFFFF;
 }
+
 body {
     background-color: #F5F0F5;
 }
+
 .activeNavbar {
     color: #CC59D2 !important;
     text-decoration: underline !important;
@@ -12,7 +14,7 @@ body {
 
 .boton {
     width: 50vh;
-    height: 6vh;
+    height: 5vh;
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -851,8 +853,98 @@ label {
     color: #FFFFFF;
 }
 
-.olvidoContrasena{
+.olvidoContrasena {
     color: #FFFFFF;
     float: right;
     margin-right: 5%;
+}
+
+.bannerProyecto {
+    width: 100%;
+}
+
+.bloqueVistaProyecto {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    padding: 1%;
+
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
+    border-radius: 30px;
+}
+
+.informacionVistaProyecto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "donaciones fechas diasRestantes";
+}
+
+.donaciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "montoDonacion"
+        "montoDonadores";
+    grid-area: donaciones;
+}
+
+.montoDonacion {
+    grid-area: montoDonacion;
+}
+
+.montoDonadores {
+    display: flex;
+    grid-area: montoDonadores;
+}
+
+.fechas {
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "fechaInicio"
+        "fechaCierre";
+    grid-area: fechas;
+}
+
+.fechaInicio {
+    grid-area: fechaInicio;
+}
+
+.fechaCierre {
+    grid-area: fechaCierre;
+}
+
+.diasRestantes {
+    grid-area: diasRestantes;
+}
+
+.cantidadDonar{
+    width: 50vh;
+    border-radius: 30px;
+}
+
+.inputsDonar {
+    display: flex;
+}
+
+.tablaDonador{
+    width: 95%;
+    text-align: center;
+    border: 1px solid;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.tablaDonador th,td{
+    border: 1px solid;
+    
 }
