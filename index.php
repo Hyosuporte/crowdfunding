@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <?php
 require_once 'Config/Config.php';
 $ruta = !empty($_GET['url']) ? $_GET['url'] : "Home/index";
@@ -20,6 +19,7 @@ if (!empty($array[2])) {
     }
 }
 require_once 'Config/App/Autoload.php';
+require_once 'config/Helpers.php';
 $dirControllers = "Controller/" . $controller . ".php";
 if (file_exists($dirControllers)) {
     require_once $dirControllers;
@@ -32,40 +32,4 @@ if (file_exists($dirControllers)) {
 } else {
     header('Location: ' . BASE_URL . 'errors');
 }
-=======
-<?php
-require_once 'Config/App/Conexion.php';
-$ruta = !empty($_GET['url']) ? $_GET['url'] : "Home/index";
-$array = explode("/", $ruta);
-$controller = ucfirst($array[0]);
-$metodo = "index";
-$parametro = "";
-if (!empty($array[1])) {
-    if (!empty($array[1] != "")) {
-        $metodo = $array[1];
-    }
-}
-if (!empty($array[2])) {
-    if (!empty($array[2] != "")) {
-        for ($i = 2; $i < count($array); $i++) {
-            $parametro .= $array[$i] . ",";
-        }
-        $parametro = trim($parametro, ",");
-    }
-}
-require_once 'Config/App/Autoload.php';
-require_once 'Config/Helpers.php';
-$dirControllers = "Controller/" . $controller . ".php";
-if (file_exists($dirControllers)) {
-    require_once $dirControllers;
-    $controller = new $controller();
-    if (method_exists($controller, $metodo)) {
-        $controller->$metodo($parametro);
-    } else {
-        //header('Location: ' . BASE_URL . 'errors');
-    }
-} else {
-    //header('Location: ' . BASE_URL . 'errors');
-}
->>>>>>> Stashed changes
 ?>
