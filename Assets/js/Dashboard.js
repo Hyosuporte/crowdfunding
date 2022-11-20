@@ -1,3 +1,7 @@
+document
+  .getElementById("configPerfil")
+  .addEventListener("onLoad", listarDatos(), true);
+
 $(document).ready(function () {
     
     $('#tblProyectos').DataTable({
@@ -31,6 +35,20 @@ $(document).ready(function () {
     });
     console.log("cambia la puta madre")
 });
+
+function consultarProyectos(){
+  const url = base_url +"proyecto/obtenerProyectos";
+  const http = new XMLHttpRequest();
+  http.open("GET", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);      
+    }else{
+
+    }
+  };
+}
 
 /* function registrar(){
     const table = document.getElementById("proyectos");

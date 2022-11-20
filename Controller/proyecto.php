@@ -38,7 +38,7 @@ class proyecto extends Controller
                     <option value="enRevision">EnRevision</option>
                 </select>';
             $data[$i]['observaciones'] = '<div>
-                <textarea name="observaciones" id="observaciones" cols="30" rows="5"></textarea>    </div>';
+                <textarea name="observaciones" id="observaciones" cols="15" rows="3"></textarea>    </div>';
         }
         //print(json_encode($data,JSON_UNESCAPED_UNICODE));
         echo json_encode($data, JSON_UNESCAPED_UNICODE);

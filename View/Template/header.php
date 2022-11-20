@@ -18,16 +18,16 @@
 <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <span class="navbar-brand navbarLogo"><img src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></span>
+                <a href="<?php echo BASE_URL; ?>Home/index"><span class="navbar-brand navbarLogo"><img src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></span></a>
             </li>
             <li>
-                <a href="">Ver Proyectos</a>
+                <a href="">Descubre</a>
             </li>
             <li>
-                <a href="">Subir Proyecto</a>
+                <a href="">Aplica</a>
             </li>
             <li>
-                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonLogin" type="button">Llamado accion</button></a></div>
+                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonLogin" type="button">Iniciar Sesión</button></a></div>
             </li>
         </ul>
     </nav>

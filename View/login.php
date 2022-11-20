@@ -7,9 +7,9 @@
         <p class="textoLoginIzquierda">Es momento de crear y aportar. Inicia sesión y comienza a conectar con nuevas oportunidades.</p>
     </div>
     <div class="formLogin">
-        <p class="formLoginTitulo">Iniciar Sesion</p>
+        <p class="formLoginTitulo">Iniciar Sesión</p>
         <div class="linkRegistrarse">
-            <p>¿Aún no tienes una cuenta? <a href="">REGISTRATE</a></p>
+            <p>¿Aún no tienes una cuenta? <a href="<?php echo BASE_URL; ?>Home/registro/">REGISTRATE</a></p>
         </div>
         <form action="" id="frmLogin">
             <input type="text" placeholder="Email" class="formLoginInput" id="email" name="email">
@@ -21,6 +21,7 @@
             </div>
             <button type="button" class="botonCardDestacado mt-5" onclick="frmLogin()">Llamado acción</button>
         </form>
+        <a href="/crowdfunding/View/cliente/perfil.php">Cliente</a>
     </div>
 </div>
 <!-- Cambio de emergencia --->
