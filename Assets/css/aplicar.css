@@ -1,5 +1,32 @@
+.bannerLandingAplicar {
+    padding-left: 5rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+    border-radius: 30px;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    gap: 5rem;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+
+
 .pasosSubirProyectos {
-    margin-top: 20vh;
+    margin-top: 80vh;
+}
+
+.subirProyectoTitulo {
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 5vh;
+    line-height: 67px;
+
+    color: #031C54;
 }
 
 .tituloPasos {
@@ -27,8 +54,16 @@
     color: #031C54;
 }
 
+.textoPasos {
+    font-size: 2vh;
+    font-size: 2vw;
+    margin: 1vw;
+}
+
 .paso1 {
     display: flex;
+    width: 100%;
+    margin-top: 20vh;
 }
 
 .paso2 {
@@ -45,6 +80,96 @@
     border-radius: 30px 30px 0px 0px;
 }
 
-.cabeceraCardDudas p{
+.cabeceraCardDudas p {
     font-size: 3vh;
+}
+
+.proyectosFila {
+    margin-left: 20vh;
+    display: flex;
+}
+
+.imagenBannerPasos1 {
+    width: 50vh;
+    height: 50vh;
+}
+
+.textoImagenBannerProyecto {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2vh;
+    line-height: 38px;
+}
+
+.posicionTextoImagenBannerProyecto1 {
+    margin-top: 1vh;
+    margin-left: 1vw;
+    font-size: 4vh;
+}
+
+.colorTextoImagenBanner2 {
+    color: #DCF763;
+}
+
+.colorTextoImagenBanner1 {
+    color: #031C54;
+}
+
+.backGroundImage {
+    background-image: url("/Assets/img/imagenBannerSubirProyecto1.svg");
+    background-repeat: no-repeat;
+    height: 45vh;
+    width: 120%;
+    background-size: auto;
+}
+
+.backGroundImage2 {
+    background-image: url("/Assets/img/imagenBannerSubirProyecto2.svg");
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 120%;
+    background-size: auto;
+}
+
+.backGroundImage3 {
+    background-image: url("/Assets/img/imagenBannerSubirProyecto3.svg");
+    background-repeat: no-repeat;
+    height: 45vh;
+    width: 250%;
+    background-size: auto;
+}
+
+.backGroundImage4 {
+    background-image: url("/Assets/img/imagenBannerSubirProyecto4.svg");
+    background-repeat: no-repeat;
+    height: 45vh;
+    width: 250%;
+    background-size: auto;
+}
+
+.bannerLandingAplicar {
+    padding-left: 5rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+    border-radius: 30px;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 5rem;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.textoImagenBannerAplicar {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vh;
+    line-height: 26px;
+    margin-top: 28vh;
+    margin-left: 1vw;
+    color: #F5F0F5;
 }
