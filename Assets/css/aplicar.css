@@ -13,7 +13,31 @@
     grid-auto-rows: minmax(200px, auto);
 }
 
+.oneColumnBanner {
+    grid-column: 1/7;
+    grid-row: 1;
+    
+}
 
+.twoColumnBanner {
+    grid-column: 2/ 3;
+    grid-row: 1;
+    width: 25vw;
+}
+
+.twoColumnBanner img {
+    margin-top: 5%;
+}
+
+.threeColumnBanner {
+    grid-column: 3 / 3;
+    grid-row: 1;
+    margin-top: 10rem;
+}
+
+.threeColumnBanner img {
+    margin-top: 5%;
+}
 
 .pasosSubirProyectos {
     margin-top: 80vh;

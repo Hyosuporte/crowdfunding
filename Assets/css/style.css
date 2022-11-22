@@ -7,6 +7,16 @@ body {
     background-color: #F5F0F5;
 }
 
+.inputFormularioRegistrar{
+    margin: 1vh;
+    width: 95%;
+}
+
+.inputFormularioRegistrarGrupo{
+    margin: 1vh;
+    width: 80% !important;
+}
+
 .activeNavbar {
     color: #CC59D2 !important;
     text-decoration: underline !important;
@@ -185,7 +195,7 @@ body {
     padding-top: 1rem;
     padding-right: 1rem;
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 30px;
     z-index: -1;
@@ -271,7 +281,7 @@ body {
 }
 
 .oneColumnBanner {
-    grid-column: 1/7;
+    grid-column: 1/3;
     grid-row: 1;
     
 }
