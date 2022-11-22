@@ -53,6 +53,7 @@ class proyecto extends Controller
         $video = strClean($_POST['video']);
         $info_adicional = strClean($_POST['info']);
         $camara = $this->subirArchivo('camara');
+        $foto = $this->subirArchivo('camara');
         if (
             empty($camara) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
             empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
