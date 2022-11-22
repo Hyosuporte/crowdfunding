@@ -21,10 +21,10 @@
                 <a href="<?php echo BASE_URL; ?>Home/index"><span class="navbar-brand navbarLogo"><img src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></span></a>
             </li>
             <li>
-                <a href="">Descubre</a>
+                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos">Descubre</a>
             </li>
             <li>
-                <a href="">Aplica</a>
+                <a href="<?php echo BASE_URL; ?>Home/aplicar">Aplica</a>
             </li>
             <li>
                 <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonLogin" type="button">Iniciar Sesión</button></a></div>

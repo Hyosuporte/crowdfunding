@@ -9,30 +9,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
-    <title>bannerLanding</title>
+    <title><?php echo $data['title']; ?></title>
 </head>
 
 <body>
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href=""><img class="navbarLogo" src="/Assets/img/LOGO_21.svg" alt=""></a>
+                <a href=""><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
-                <a href="" class="navbarText activeNavbar">Descubre</a>
+                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText activeNavbar">Descubre</a>
             </li>
             <li>
-                <a href="" class="navbarText">Aplica</a>
+                <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
             </li>
             <li>
-                <a href="/Home/SubirProyecto" class="navbarText">Aprende</a>
+                <a href="<?php echo BASE_URL; ?>Home/SubirProyecto" class="navbarText">Aprende</a>
             </li>
             <li>
-                <div><a href="/Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
+                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
             </li>
         </ul>
     </nav>
@@ -51,27 +51,27 @@
         <div class="proyectosFila">
             <div class="card">
                 <div>
-                    <img  class="imageDestacado" src="/Assets/img/Destacados.svg" alt="">
+                    <img  class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
                 </div>
                 <div class="card-body">
                     <h5 class="tituloCardDestacado">Nombre</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p class="metaCardDestacado">Meta $11.000.000</p>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="/Assets/img/Ojo.svg"
+                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
                             width="20" alt=""></button>
                 </div>
             </div>
             <div class="card">
                 <div>
-                    <img class="imageDestacado" src="/Assets/img/Destacados.svg" alt="">
+                    <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
                 </div>
                 <div class="card-body">
                     <h5 class="tituloCardDestacado">Nombre</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p class="metaCardDestacado">Meta $11.000.000</p>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="/Assets/img/Ojo.svg"
+                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
                             width="20" alt=""></button>
                 </div>
             </div>
@@ -79,27 +79,27 @@
         <div class="proyectosFila">
             <div class="card">
                 <div>
-                    <img  class="imageDestacado" src="/Assets/img/Destacados.svg" alt="">
+                    <img  class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
                 </div>
                 <div class="card-body">
                     <h5 class="tituloCardDestacado">Nombre</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p class="metaCardDestacado">Meta $11.000.000</p>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="/Assets/img/Ojo.svg"
+                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
                             width="20" alt=""></button>
                 </div>
             </div>
             <div class="card">
                 <div>
-                    <img class="imageDestacado" src="/Assets/img/Destacados.svg" alt="">
+                    <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
                 </div>
                 <div class="card-body">
                     <h5 class="tituloCardDestacado">Nombre</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p class="metaCardDestacado">Meta $11.000.000</p>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="/Assets/img/Ojo.svg"
+                    <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
                             width="20" alt=""></button>
                 </div>
             </div>
@@ -111,36 +111,36 @@
                 <ul>
                     <li>
                         <div class="">
-                            <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                            <img src="/Assets/img/circulo.svg" alt="">
+                            <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
                         <p class="textoInstruccionesSubir">Registrate e Inicia Sesión</p>
                     </li>
                     <li>
                         <div class="">
-                            <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                            <img src="/Assets/img/circulo.svg" alt="">
+                            <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
                         <p class="textoInstruccionesSubir">En tu perfil, Ingresa a la sección de proyectos subidos y da click en subir proyecto</p>
                     </li>
                     <li>
                         <div class="">
-                            <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                            <img src="/Assets/img/circulo.svg" alt="">
+                            <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
                         <p class="textoInstruccionesSubir">Llena el formulario con tus datos y descripción del proyecto.</p>
                     </li>
                     <li>
                         <div class="">
-                            <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                            <img src="/Assets/img/circulo.svg" alt="">
+                            <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
                         <p class="textoInstruccionesSubir">Se verificará la veracidad de la organización o persona a cargo del proyecto, este proceso tarda de 15 días a 1 mes en aprobación del equipo experto.</p>
                     </li>
                     <li>
                         <div class="">
-                            <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                            <img src="/Assets/img/circulo.svg" alt="">
+                            <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
                         <p class="textoInstruccionesSubir">En caso de ser aprobado se subirá inmediatamente tu proyecto. En caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer cambios a tu proyecto. Este tendrá un tiempo determinado para su revisión.</p>
                     </li>
@@ -148,7 +148,7 @@
                 </ul>
             </div>
             <div class="subirSecondColumn">
-                <img src="/Assets/img/subirProyecto.svg" alt="">
+                <img src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
             </div>
         </div>
     
@@ -172,7 +172,7 @@
             </div>
             <div class="bloqueInfoFooter">
                 <div>
-                    <img src="/Assets//img//logoFooter.svg" alt="">
+                    <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
                 </div>
                 <div style="margin-left: 10%;">
                     <h2>Nosotros</h2>
@@ -213,7 +213,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-    <script src="/Assets/js/index.js"></script>
+    <script src="<?php echo BASE_URL; ?>Assets/js/index.js"></script>
 
 </body>
 

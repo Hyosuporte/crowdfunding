@@ -36,8 +36,8 @@ class usuario extends Controller
     public function registrar()
     {
         if ($this->valid_email($_POST['correo'])) {
-            $nombre = strClean($_POST['nombre']);
-            $apellido = strClean($_POST['apellido']);
+            $nombre = strClean($_POST['primer_nombre']);
+            $apellido = strClean($_POST['primer_apellido']);
             $correo = strClean($_POST['correo']);
             $password = strClean($_POST['password']);
             $passwordConf = strClean($_POST['passwordConf']);

@@ -9,31 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Assets/css/style.css">
-    <link rel="stylesheet" href="/Assets/css/aplicar.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/aplicar.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
-    <title>bannerLanding</title>
+    <title><?php echo $data['title']; ?></title>
 </head>
 
 <body>
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href=""><img class="navbarLogo" src="/Assets/img/LOGO_21.svg" alt=""></a>
+                <a href=""><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
-                <a href="" class="navbarText ">Descubre</a>
+                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText ">Descubre</a>
             </li>
             <li>
-                <a href="" class="navbarText">Aplica</a>
+                <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
             </li>
             <li>
-                <a href="/Home/SubirProyecto" class="navbarText">Aprende</a>
+                <a href="<?php echo BASE_URL; ?>Home/aprende" class="navbarText">Aprende</a>
             </li>
             <li>
-                <div><a href="/Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
+                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
             </li>
         </ul>
     </nav>
@@ -46,14 +46,14 @@
             </div>
             <div class="twoColumnBanner">
                 <div>
-                    <img src="/Assets/img/imagenBanner.svg" alt="">
-                    <img src="/Assets/img/imagenBanner1.svg" alt="">
+                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner.svg" alt="">
+                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner1.svg" alt="">
                 </div>
             </div>
             <div class="threeColumnBanner">
                 <div>
-                    <img src="/Assets/img/imagenBanner4.svg" alt="">
-                    <img src="/Assets/img/IMG3.svg" alt="">
+                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner4.svg" alt="">
+                    <img src="<?php echo BASE_URL; ?>Assets/img/IMG3.svg" alt="">
                 </div>
             </div>
         </div>
@@ -70,31 +70,31 @@
                         <ul>
                             <li>
                                 <div class="">
-                                    <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                                    <img src="/Assets/img/circulo.svg" alt="">
+                                    <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                                    <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
                                 <p>Datos e información sobre el proyecto (Nombre y descripción), página web, redes
                                     sociales, contacto. Foto y vídeo del proyecto.</p>
                             </li>
                             <li>
                                 <div class="">
-                                    <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                                    <img src="/Assets/img/circulo.svg" alt="">
+                                    <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                                    <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
                                 <p>Cámara de comercio de la organización que postula con mínimo 30 días.</p>
                             </li>
                             <li>
                                 <div class="">
-                                    <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                                    <img src="/Assets/img/circulo.svg" alt="">
+                                    <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                                    <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
                                 <p>Tiempo de la campaña y monto de financiación (Por el momento sólo permitimos
                                     financiar proyectos hasta $30,000,000)</p>
                             </li>
                             <li>
                                 <div class="">
-                                    <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                                    <img src="/Assets/img/circulo.svg" alt="">
+                                    <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                                    <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
                                 <p>Certificado de cuenta bancaria con mínimo 30 días</p>
                             </li>
@@ -106,7 +106,7 @@
                         </ul>
                     </div>
                     <div class="subirSecondColumn">
-                        <img src="/Assets/img/imgSubirPaso1.svg" alt="">
+                        <img src="<?php echo BASE_URL; ?>Assets/img/imgSubirPaso1.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -114,12 +114,12 @@
                 <div class="bannerLanding">
                     <div class="oneColumnBanner2">
                         <div>
-                            <img src="/Assets/img/imagenBanner2.svg" alt="">
+                            <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner2.svg" alt="">
                         </div>
                     </div>
                     <div class="twoColumnBanner2">
                         <div>
-                            <img src="/Assets/img/imagenBanner2.svg" alt="">
+                            <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner2.svg" alt="">
                         </div>
                     </div>
                     <div class="threeColumnBanner2">
@@ -146,22 +146,22 @@
                         <ul>
                             <li>
                                 <div class="">
-                                    <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                                    <img src="/Assets/img/circulo.svg" alt="">
+                                    <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                                    <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
                                 <p>El proyecto una vez aprobado no podrá ser editado.</p>
                             </li>
                             <li>
                                 <div class="">
-                                    <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                                    <img src="/Assets/img/circulo.svg" alt="">
+                                    <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                                    <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
                                 <p>Para que el proyecto sea aprobado debe ser liderado por una mujer, estar enmarcado en el sector artístico, cultural o turístico. La experiencia en el sector no es determinante pero sí brindará criterios de confianza para el equipo evaluador de TFI.</p>
                             </li>
                             <li>
                                 <div class="">
-                                    <img class="checkCirculo" src="/Assets/img/checkCirculo.svg" alt="">
-                                    <img src="/Assets/img/circulo.svg" alt="">
+                                    <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
+                                    <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
                                 <p>En caso de que el proyecto no realice los cambios y observaciones por el equipo evaluador en el tiempo previsto, este será borrado y deberá iniciar una nueva aplicación.</p>
                             </li>
@@ -173,7 +173,7 @@
                         </ul>
                     </div>
                     <div class="subirSecondColumn">
-                        <img src="/Assets/img/imgSubirPaso3.svg" alt="">
+                        <img src="<?php echo BASE_URL; ?>Assets/img/imgSubirPaso3.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -222,7 +222,7 @@
             </div>
             <div class="bloqueInfoFooter">
                 <div>
-                    <img src="/Assets//img//logoFooter.svg" alt="">
+                    <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
                 </div>
                 <div style="margin-left: 10%;">
                     <h2>Nosotros</h2>
@@ -263,7 +263,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-    <script src="/Assets/js/index.js"></script>
+    <script src="<?php echo BASE_URL; ?>Assets/js/index.js"></script>
 
 </body>
 

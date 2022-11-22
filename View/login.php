@@ -17,7 +17,7 @@
             <div class="mt-3">
                 <input type="checkbox" name="recordarme" id="recordarme" class="formInputCheck">
                 <label for="recordamer">Recordarme</label>
-                <a href="" class="olvidoContrasena">Olvide mi contraseña</a>
+                <a href="<?php echo BASE_URL; ?>Home/recuperar" class="olvidoContrasena">Olvide mi contraseña</a>
             </div>
             <button type="button" class="botonCardDestacado mt-5" onclick="frmLogin()">Llamado acción</button>
         </form>

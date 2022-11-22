@@ -70,6 +70,7 @@ function listarCiudad(e) {
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
+      console.log(res)
       res.forEach((element) => {
         selectorCiudad.append(
           $("<option />", {
@@ -100,7 +101,8 @@ function frmRegistro(e) {
     pais.value == "" ||
     ciudad.value == "" ||
     passwordConf.value == ""
-  ) {
+  ) 
+  {
     //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
     Swal.fire({
       position: 'center',
@@ -137,7 +139,10 @@ function frmRegistro(e) {
             showConfirmButton: false,
             timer: 1500
           })
-        } else if (res === "Ya existe el usuario") {
+          setTimeout(function(){
+            location.replace(base_url+"Home/login")
+          },2000)
+        } else if (res === "Usuario no disponible") {
           //TODO: Agregar notificacion de que ya existe el usuario
           Swal.fire({
             position: 'top-end',
