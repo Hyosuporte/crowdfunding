@@ -52,5 +52,11 @@ class proyectoDAO extends Query
     return $data;
   }
    
+  public function getProyectos(){
+    $sql = "SELECT * FROM proyecto";
+    $data = $this->selectAll($sql);
+    return $data;
+  }
+
 } 
 ?>

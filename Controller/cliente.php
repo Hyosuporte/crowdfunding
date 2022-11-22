@@ -9,7 +9,8 @@ class cliente extends Controller
 
     public function index(){
         if($_SESSION['rol'] == "2" ){
-            $this->views->getView("cliente", "perfil");
+            $data['title'] = "Cliente";
+            $this->views->getView("cliente", "perfil",$data);
         }else{
             header("location: " . BASE_URL );
         }

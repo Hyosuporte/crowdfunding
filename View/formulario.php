@@ -62,50 +62,53 @@
             </center>
         </div>
     </form>
-
-    <br><br><br>
-    <center>
-        <h3>Datos de proyecto</h3>
-    </center>
-    <form action="<?php echo BASE_URL; ?>proyecto/insertarproyecto" method="post" enctype="multipart/form-data">
-        <div class="card-body">
-            <div class="input-group mb-3">
-                <span class="input-group-text">Titulo del Proyecto</span>
-                <input type="text" class="form-control" placeholder="Titulo del Proyecto" id="titulo" name="titulo" size="90rem" required>
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-                <input type="text" class="form-control" placeholder="KeyWords" required id="keywords" name="keywords">
-            </div>
-            <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Abstract" id="Abstract" name="Abstract" style="height: 150px"></textarea>
-                <label for="floatingTextarea">Abstract</label>
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text">Indicador Impacto</span>
-                <input type="number" class="form-control" placeholder="Indicador Impacto" id="impacto" name="impacto" style="margin-right: rem;" required>
-                <span class="input-group-text">Monto financiero</span>
-                <input type="number" class="form-control" placeholder="Monto financiero" id="monto" name="monto" required>
-            </div>
-            <div class="input-group mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="input-group">
-                            <label for="final">Fecha Final Campaña</label>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="fa-solid fa-calendar-check"></i></span>
-                                <input type="date" class="form-control" id="final" name="final" name="final">
-                            </div>
-                        </div>
+    <form action="proyecto/insertarproyecto" method="post">
+      <div class="formulario">
+        <div class="card">
+                    <div class="card-header">
+                        Datos del Proyecto
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="input-group">
-                            <label for="ejecucion">Tiempo de ejecucion</label>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
-                                <input type="date" class="form-control" id="ejecucion" name="ejecucion" name="ejecucion">
+                    <div class="card-body">        
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Titulo del Proyecto</span>
+                            <input type="text" class="form-control" placeholder="Titulo del Proyecto" id="titulo" name="titulo" size="90rem" required>
+                        </div>   
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                            <input type="text" class="form-control" placeholder="KeyWords"  required id="keywords" name="keywords">
+                        </div>    
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Abstract" id="Abstract" name="Abstract" style="height: 150px"></textarea>
+                            <label for="floatingTextarea">Abstract</label>
+                        </div>    
+                        <div class="input-group mb-3" >                    
+                            <span class="input-group-text" >Indicador Impacto</span>
+                            <input type="number" class="form-control" placeholder="Indicador Impacto" id="impacto" name="impacto"  style="margin-right: rem;" required>
+                            <span class="input-group-text">Monto financiero</span>
+                            <input type="number" class="form-control" placeholder="Monto financiero" id="monto" name="monto" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="input-group">
+                                        <label for="final">Fecha Final Campaña</label>
+                                        <div class="input-group mb-3">   
+                                            <span class="input-group-text"><i class="fa-solid fa-calendar-check"></i></span>
+                                            <input  type="date" class="form-control"  id="final" name="final">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="input-group">
+                                        <label for="ejecucion">Tiempo de ejecucion</label>
+                                        <div class="input-group mb-3">   
+                                            <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
+                                            <input  type="date" class="form-control"  id="ejecucion" name="ejecucion">
+                                        </div>
+                                    </div> 
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,25 @@ class proyecto extends Controller
     {
         parent::__construct();
     }
+    public function subirbinariocamara()
+    {
+        $camara = ($_FILES['camara']);
+        $rutaDeSubidas = __DIR__ . "/subidas";
+        if (!is_dir($rutaDeSubidas)) {
+            mkdir($rutaDeSubidas, 0777, true);
+        }
+        $ubicacionTemporal = $camara["tmp_name"];
+        $nombreArchivo = $camara["camara"];
+        $nuevaUbicacion = $rutaDeSubidas . "/" . $nombreArchivo;
+        $resultado = move_uploaded_file($ubicacionTemporal, $nuevaUbicacion);
+        if ($resultado === true) {
+            echo "Archivo subido correctamente";
+        } else {
+            echo "Error al subir archivo";
+        }
+    }
+    public function subirbinariofoto()
+    {
 
     public function obtenerProyectos()
     {
@@ -19,7 +38,7 @@ class proyecto extends Controller
                     <option value="enRevision">EnRevision</option>
                 </select>';
             $data[$i]['observaciones'] = '<div>
-                <textarea name="observaciones" id="observaciones" cols="30" rows="5"></textarea>    </div>';
+                <textarea name="observaciones" id="observaciones" cols="15" rows="3"></textarea>    </div>';
         }
         //print(json_encode($data,JSON_UNESCAPED_UNICODE));
         echo json_encode($data, JSON_UNESCAPED_UNICODE);

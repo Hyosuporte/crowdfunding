@@ -28,7 +28,8 @@ class Home extends Controller
 
     public function registro()
     {
-        $this->views->getView("Home", "registro");
+        $data['title'] = "Registro";
+        $this->views->getView("Home", "registro", $data);
     }
 
     public function recuperar()
@@ -44,6 +45,7 @@ class Home extends Controller
 
     public function dashboardAdmin()
     {
-        $this->views->getView($this,"Dashboard");
+        $data['title'] = "Dashboard";
+        $this->views->getView("Home","Dashboard",$data);
     }
 }

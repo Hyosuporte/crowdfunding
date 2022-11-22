@@ -1,0 +1,73 @@
+.bannerAprender {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(245, 240, 245, 0.2) 0%, #031C54 100%), url(.jpg);
+}
+
+.bannerAprender img {
+    width: 100%;
+}
+
+.principalAprende {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "menu cartas";
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.cartas {
+    grid-area: cartas;
+}
+
+.card li {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #031C54;
+}
+
+.filaTemas {
+    display: flex;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+.tituloTema {
+    font-family: 'FatFrank';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: #031C54;
+}
+
+.botonCardTema {
+    margin-left: 10vh;
+    padding-left: 10vh;
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 29px;
+    width: 30vh;
+    height: 50px;
+    border-width: 0px;
+    background: #DCF763;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    color: #031C54;
+}
+
+.botonCardTema img{
+    margin-left: 1vh;
+}

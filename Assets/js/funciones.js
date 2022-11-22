@@ -2,7 +2,7 @@ document
   .getElementById("configPerfil")
   .addEventListener("onLoad", listarDatos(), true);
 
-window.onload = function () {
+/*window.onload = function () {
   var fecha = new Date();
   var mes = fecha.getMonth() + 1;
   var dia = fecha.getDate();
@@ -54,4 +54,4 @@ function listarDatos(e) {
       document.getElementById("telefono").value = res.id_usuario;
     }
   };
-}
+}*/
