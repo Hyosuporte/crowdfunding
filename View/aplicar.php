@@ -38,29 +38,44 @@
         </ul>
     </nav>
     <div class="content">
-        <div class="bannerLanding">
+        <div class="bannerLandingAplicar">
             <div class="oneColumnBanner mt-5">
-                <div class="titulo">¿Por qué subir un proyecto? </div>
+                <div class="titulo">¿Por qué subir <br> un proyecto? </div>
                 <div><a href=""><button class="botonBannerLanding" type="button">Subir Proyecto</button></a>
                 </div>
             </div>
             <div class="twoColumnBanner">
                 <div>
-                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner.svg" alt="">
-                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner1.svg" alt="">
+                    <div class="backGroundImage">
+                        <p class="textoImagenBannerProyecto posicionTextoImagenBannerProyecto1  colorTextoImagenBanner2">
+                            Financia tu proyecto</p>
+                        <p class="textoImagenBannerAplicar">Nos preocupamos por ayudarte y asesorarte para garantizar el éxito de tu campaña.</p>
+                    </div>
+                    <div class="backGroundImage2">
+                        <p class="textoImagenBannerProyecto posicionTextoImagenBannerProyecto1  colorTextoImagenBanner1">
+                            Recibe acompañamiento gratuito </p>
+                            <p class="textoImagenBannerAplicar">Una oportunidad para recibir aportes colectivos y recursos confiables sin interés o préstamos de por medio.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="threeColumnBanner">
-                <div>
-                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner4.svg" alt="">
-                    <img src="<?php echo BASE_URL; ?>Assets/img/IMG3.svg" alt="">
+                <div class="threeColumnBanner">
+                    <div>
+                        <div class="backGroundImage3">
+                            <p class="textoImagenBannerProyecto posicionTextoImagenBannerProyecto1  colorTextoImagenBanner1">Construye una comunidad
+                            <p class="textoImagenBannerAplicar">Intercambia con otras mujeres de la industria, comunica y da a conocer tu proyecto.</p>
+                        </p>
+                    </div>
+                    <div class="backGroundImage4">
+                        <p class="textoImagenBannerProyecto posicionTextoImagenBannerProyecto1  colorTextoImagenBanner2">Aprende sobre fondeo</p>
+                        <p class="textoImagenBannerAplicar">Gestionar recursos es todo un arte. Inicia este camino de la mano del expertise de TFI.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
 
         <div class="pasosSubirProyectos">
-            <p class="tituloPasos">Paso a paso para subir proyecto</p>
+            <p class="tituloPasos">Paso a paso para subir  proyecto</p>
             <div class="paso1">
                 <div class="bloqueSubirProyecto">
                     <div class="subirFirstColumn">
@@ -73,7 +88,8 @@
                                     <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                                     <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
-                                <p>Datos e información sobre el proyecto (Nombre y descripción), página web, redes
+                                <p class="textoPasos">Datos e información sobre el proyecto (Nombre y descripción),
+                                    página web, redes
                                     sociales, contacto. Foto y vídeo del proyecto.</p>
                             </li>
                             <li>
@@ -81,14 +97,16 @@
                                     <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                                     <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
-                                <p>Cámara de comercio de la organización que postula con mínimo 30 días.</p>
+                                <p class="textoPasos">Cámara de comercio de la organización que postula con mínimo 30
+                                    días.</p>
                             </li>
                             <li>
                                 <div class="">
                                     <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                                     <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
-                                <p>Tiempo de la campaña y monto de financiación (Por el momento sólo permitimos
+                                <p class="textoPasos">Tiempo de la campaña y monto de financiación (Por el momento sólo
+                                    permitimos
                                     financiar proyectos hasta $30,000,000)</p>
                             </li>
                             <li>
@@ -96,7 +114,7 @@
                                     <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                                     <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
-                                <p>Certificado de cuenta bancaria con mínimo 30 días</p>
+                                <p class="textoPasos">Certificado de cuenta bancaria con mínimo 30 días</p>
                             </li>
                             <div>
                                 <a href="/Home/login/">
@@ -106,7 +124,7 @@
                         </ul>
                     </div>
                     <div class="subirSecondColumn">
-                        <img src="<?php echo BASE_URL; ?>Assets/img/imgSubirPaso1.svg" alt="">
+                        <img class="imagenBannerPasos1" src="<?php echo BASE_URL; ?>Assets/img/imgSubirPaso1.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -114,12 +132,12 @@
                 <div class="bannerLanding">
                     <div class="oneColumnBanner2">
                         <div>
-                            <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner2.svg" alt="">
+                            <img src="/Assets/img/imagenBanner2.svg" alt="">
                         </div>
                     </div>
                     <div class="twoColumnBanner2">
                         <div>
-                            <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner2.svg" alt="">
+                            <img src="/Assets/img/imagenBanner2.svg" alt="">
                         </div>
                     </div>
                     <div class="threeColumnBanner2">
@@ -142,7 +160,9 @@
                 <div class="bloqueSubirProyecto">
                     <div class="subirFirstColumn">
                         <p class="subirProyectoTitulo">Paso 3</p>
-                        <p class="subirProyectoTexto">En caso de ser aprobado se subirá inmediatamente tu proyecto. En caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer cambios a tu proyecto. Este tendrá un tiempo determinado para su revisión. Ten presente que: </p>
+                        <p class="subirProyectoTexto">En caso de ser aprobado se subirá inmediatamente tu proyecto. En
+                            caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer cambios
+                            a tu proyecto. Este tendrá un tiempo determinado para su revisión. Ten presente que: </p>
                         <ul>
                             <li>
                                 <div class="">
@@ -156,14 +176,19 @@
                                     <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                                     <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
-                                <p>Para que el proyecto sea aprobado debe ser liderado por una mujer, estar enmarcado en el sector artístico, cultural o turístico. La experiencia en el sector no es determinante pero sí brindará criterios de confianza para el equipo evaluador de TFI.</p>
+                                <p>Para que el proyecto sea aprobado debe ser liderado por una mujer, estar enmarcado en
+                                    el sector artístico, cultural o turístico. La experiencia en el sector no es
+                                    determinante pero sí brindará criterios de confianza para el equipo evaluador de
+                                    TFI.</p>
                             </li>
                             <li>
                                 <div class="">
                                     <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
                                     <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                                 </div>
-                                <p>En caso de que el proyecto no realice los cambios y observaciones por el equipo evaluador en el tiempo previsto, este será borrado y deberá iniciar una nueva aplicación.</p>
+                                <p>En caso de que el proyecto no realice los cambios y observaciones por el equipo
+                                    evaluador en el tiempo previsto, este será borrado y deberá iniciar una nueva
+                                    aplicación.</p>
                             </li>
                             <div>
                                 <a href="/Home/login/">
@@ -195,7 +220,8 @@
                         <p>¿Qué pasa si no cumplo con la meta propuesta?</p>
                     </div>
                     <div class="card-body">
-                        <h5 class="tituloCardDestacado">La plataforma te hará envío de los recursos recaudados, una vez se cumpla el tiempo propuesto.</h5>
+                        <h5 class="tituloCardDestacado">La plataforma te hará envío de los recursos recaudados, una vez
+                            se cumpla el tiempo propuesto.</h5>
                     </div>
                 </div>
             </div>

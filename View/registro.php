@@ -36,7 +36,7 @@
                 <input type="checkbox" name="recordarme" id="terminos" name="terminos" class="formInputCheck">
                 <label for="terminos">Acepto terminos y condiciones de TFI</label>
             </div>
-            <button type="button" class="botonCardDestacado mt-5" onclick="frmRegistro()">Llamado acción</button>
+            <button type="button" class="botonCardDestacado mt-5" onclick="frmRegistro()">Enviar</button>
             <div class="linkRegistrarse">
                 <p>¿Ya tienes una cuenta? <a href="<?php echo BASE_URL; ?>Home/login/">INICIA SESIÓN</a></p>
             </div>
