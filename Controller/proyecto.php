@@ -6,44 +6,6 @@ class proyecto extends Controller
     {
         parent::__construct();
     }
-    public function subirbinariocamara()
-    {
-        $camara = ($_FILES['camara']);
-        $rutaDeSubidas = __DIR__ . "/subidas";
-        if (!is_dir($rutaDeSubidas)) {
-            mkdir($rutaDeSubidas, 0777, true);
-        }
-        $ubicacionTemporal = $camara["tmp_name"];
-        $nombreArchivo = $camara["camara"];
-        $nuevaUbicacion = $rutaDeSubidas . "/" . $nombreArchivo;
-        $resultado = move_uploaded_file($ubicacionTemporal, $nuevaUbicacion);
-        if ($resultado === true) {
-            echo "Archivo subido correctamente";
-        } else {
-            echo "Error al subir archivo";
-        }
-    }
-    public function subirbinariofoto()
-    {
-
-    public function obtenerProyectos()
-    {
-        $data = $this->model->getProyectos();
-        for ($i = 0; $i < count($data); $i++) {
-            $data[$i]['acciones'] = '
-               <select name="acciones" id="acciones">
-                    <option value="">-</option>
-                    <option value="aprobado">Aprobado</option>
-                    <option value="noAprobado">NoAprobado</option>
-                    <option value="enRevision">EnRevision</option>
-                </select>';
-            $data[$i]['observaciones'] = '<div>
-                <textarea name="observaciones" id="observaciones" cols="15" rows="3"></textarea>    </div>';
-        }
-        //print(json_encode($data,JSON_UNESCAPED_UNICODE));
-        echo json_encode($data, JSON_UNESCAPED_UNICODE);
-        die();
-    }
 
     public function subirArchivo($name)
     {
@@ -72,7 +34,8 @@ class proyecto extends Controller
         $video = strClean($_POST['video']);
         $info_adicional = strClean($_POST['info']);
         $camara = $this->subirArchivo('camara');
-        $foto = $this->subirArchivo('camara');
+        print_r($_FILES);
+        $foto = $this->subirArchivo('foto');
         if (
             empty($camara) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
             empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
@@ -84,7 +47,7 @@ class proyecto extends Controller
             if ($data === "ok") {
                 $msg = "registrado";
             } else {
-                $msg = "Error";
+                $msg = $data;
             }
         }
 
