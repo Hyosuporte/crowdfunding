@@ -2,7 +2,7 @@
 // SDK de Mercado Pago
 require __DIR__ .  '/vendor/autoload.php';
 // Agrega credenciales
-MercadoPago\SDK::setAccessToken('TEST-5266226948659448-110816-6aea6b9808bcb46adc9c2237700cb0f6-1217455549'); //key private access
+MercadoPago\SDK::setAccessToken(''); //key private access
 $preference = new MercadoPago\Preference();
 $item = new MercadoPago\Item();
 $item->title = 'Titulo del Item';
