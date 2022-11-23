@@ -141,7 +141,7 @@
 }
 
 .backGroundImage {
-    background-image: url("/Assets/img/imagenBannerSubirProyecto1.svg");
+    
     background-repeat: no-repeat;
     height: 45vh;
     width: 120%;
@@ -149,7 +149,7 @@
 }
 
 .backGroundImage2 {
-    background-image: url("/Assets/img/imagenBannerSubirProyecto2.svg");
+    
     background-repeat: no-repeat;
     height: 50vh;
     width: 120%;
@@ -157,7 +157,7 @@
 }
 
 .backGroundImage3 {
-    background-image: url("/Assets/img/imagenBannerSubirProyecto3.svg");
+    
     background-repeat: no-repeat;
     height: 45vh;
     width: 250%;
@@ -165,7 +165,7 @@
 }
 
 .backGroundImage4 {
-    background-image: url("/Assets/img/imagenBannerSubirProyecto4.svg");
+    
     background-repeat: no-repeat;
     height: 45vh;
     width: 250%;
@@ -196,4 +196,8 @@
     margin-top: 28vh;
     margin-left: 1vw;
     color: #F5F0F5;
+}
+
+.card img{
+    border-radius: 30px;
 }

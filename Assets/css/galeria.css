@@ -139,22 +139,49 @@
 .textoInstruccionesSubir{
     font-size: 50vh;
     margin: 1vh;
+    
 }
 
 .pasosSubirProyecto{
     width: 2vh;
+    margin-right: 1vw;
 }
 
 .botonSubirProyecto{
     width: 40vh;
-    height: 6vh;
+    height: 8vh;
     color: #031C54;
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 2vh;
+    font-size: 4vh;
     line-height: 2vh;
     border-width: 0;
     background: #DCF763;
     border-radius: 30vh;
+    margin-left: 40vw;
+}
+
+
+.subirProyectoTitulo{
+    color: #031C54;
+    font-size: 10vh;
+}
+
+.botonGaleriaProyecto{
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 29px;
+    width: 30vh;
+    height: 50px;
+    border-width: 0px;
+    background: #DCF763;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    color: #031C54;
+    padding-left: 2vw;
+    margin-left: 8vw;
 }
