@@ -56,7 +56,7 @@
                         <img src="<?php echo BASE_URL; ?>Assets/img/caruselImagen.svg" alt="">
                     </div>
                     <div class="caruselTexto">
-                        <p class="caruselTitulo">Hola soy pepe</p>
+                        <p class="caruselTitulo">Nombre del Proyecto</p>
                         <p class="subirProyectoTexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                             interdum, arcu eget blandit suscipit, ex magna
                             pharetra ante, ut convallis neque ipsum eu nisi.Lorem ipsum dolor sit amet, consectetur
@@ -76,7 +76,7 @@
                         <img src="<?php echo BASE_URL; ?>Assets/img/caruselImagen.svg" alt="">
                     </div>
                     <div class="caruselTexto">
-                        <p class="caruselTitulo">Hola soy pepe</p>
+                        <p class="caruselTitulo">Nombre del Proyecto</p>
                         <p class="subirProyectoTexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                             interdum, arcu eget blandit suscipit, ex magna
                             pharetra ante, ut convallis neque ipsum eu nisi.Lorem ipsum dolor sit amet, consectetur
@@ -260,50 +260,56 @@
     </div>
 
     <div class="bannerFooter">
-        <div class="formFooter">
-            <div class="subirFirstColumn">
-                <p class="tituloFormFooter">Frase de conexion comunidad</p>
-                <div class="iconosFooter">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-facebook"></i>
+            <div class="formFooter">
+                <div class="subirFirstColumn">
+                    <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa
+                    </p>
+                    <div class="iconosFooter">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="subirSecondColumn" style="margin-top: 10%;">
+                    <p>Sigue en contacto con nosotros, escribe tu correo aquí.</p>
+                    <input type="text" name="" id="">
+                    <a href="/Home/login/"><button class="botonFormFooter" type="button">Quiero estar
+                            conectado</button></a>
                 </div>
             </div>
-            <div class="subirSecondColumn" style="margin-top: 10%;">
-                <p>Sigue en contacto con nosotros, escribe tu correo aquí.</p>
-                <input placeholder="Correo electronico" type="text" name="correo" id="correo">
-                <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar conectado</button></a>
+            <div class="bloqueInfoFooter">
+                <div>
+                    <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
+                </div>
+                <div style="margin-left: 10%;">
+                    <h2>Nosotros</h2>
+                    <ul>
+                        <li>
+                            Sobre TFI
+                        </li>
+                        <li>
+                            Aprende más
+                        </li>
+                        <li>
+                            ¿Cómo funciona?
+                        </li>
+                        <li>
+                            Términos y condiciones
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin-left: 50%;">
+                    <h3>Contáctanos</h3> <br>
+                    <ul>
+                        <li>Telefono</li>
+                        <li>Whatsapp</li>
+                        <li>info@fundtur.com</li>
+                        <li>Cr 13 # 90 - 17, Bogotá D.C.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="bloqueInfoFooter">
-            <div>
-                <h1>Logo</h1>
-            </div>
-            <div style="margin-left: 10%;">
-                <h2>Sección</h2>
-                <ul>
-                    <li>
-                        Sobre TFI
-                    </li>
-                    <li>
-                        Aprende más
-                    </li>
-                    <li>
-                        ¿Cómo funciona?
-                    </li>
-                    <li>
-                        Términos y condiciones
-                    </li>
-                </ul>
-            </div>
-            <div style="margin-left: 50%;">
-                <h3>Sección</h3> <br>
-                info@fundtur.com
-            </div>
-        </div>
-    </div>
 
 </div>
 <?php require_once("View/Template/footer.php") ?>

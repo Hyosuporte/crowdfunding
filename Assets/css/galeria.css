@@ -1,0 +1,187 @@
+.botonBuscar{
+    border: 0px;
+    width: 20vh;
+    height: 5vh;
+    font-size: 2vh;
+}
+
+.botonesGaleria{
+    width: 100%;
+    margin-left: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex
+}
+
+.bloqueBotonBuscar{
+    padding-left: 1vh;
+    width: 40vh;
+    height: 10%;
+    border-radius: 30vh;
+    margin-right: 100vh;
+    background-color: white;
+}
+
+.proyectosFila{
+    display: flex;
+    width: 500vh;
+    margin-left: 15%;
+}
+
+.card{
+    width: auto;
+    height: auto;
+}
+
+
+
+.imagenCard{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.botonCardGaleria{
+    margin-left: 5vh;
+    margin-top: 1vh;
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2vh;
+    line-height: 29px;
+    width: 30vh;
+    height: 5vh;
+    border-width: 0px;
+    background: #DCF763;
+    border-radius: 30vh;
+    display: flex;
+    align-items: center;
+    color: #031C54;
+    padding-left: 8vh;
+}
+
+.tituloCardGaleria{
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vh;
+    line-height: 38px;
+    margin: 1vh;
+    color: #031C54;
+}
+
+.textoCardGaleria{
+    color: #031C54;
+    font-size: 2vh;
+    margin: 1vh;
+}
+
+.metaCardGaleria{
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3vh;
+    line-height: 3vh;
+    margin: 1vh;
+    color: #031C54;
+}
+
+.barraProgresoCardGaleria{
+    width: 10vh;
+    height: 1vh;
+    background: #CC59D2;
+    border-radius: 20px;
+}
+
+.organizar{
+    border-radius: 30vh;
+    width: 20vh;
+    height: 3vh;
+    font-size: 2vh;
+}
+
+.bannerLanding-2 {
+    padding-left: 5rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+    border-radius: 5vh;
+    z-index: -1;
+}
+
+.subirProyectoTitulo {
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 5vh;
+    line-height: 67px;
+
+    color: #031C54;
+}
+
+
+
+.subirProyectoTexto {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vh;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    color: #031C54;
+}
+
+.textoInstruccionesSubir{
+    font-size: 50vh;
+    margin: 1vh;
+    
+}
+
+.pasosSubirProyecto{
+    width: 2vh;
+    margin-right: 1vw;
+}
+
+.botonSubirProyecto{
+    width: 40vh;
+    height: 8vh;
+    color: #031C54;
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vh;
+    line-height: 2vh;
+    border-width: 0;
+    background: #DCF763;
+    border-radius: 30vh;
+    margin-left: 40vw;
+}
+
+
+.subirProyectoTitulo{
+    color: #031C54;
+    font-size: 10vh;
+}
+
+.botonGaleriaProyecto{
+    font-family: 'Signika Negative', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 29px;
+    width: 30vh;
+    height: 50px;
+    border-width: 0px;
+    background: #DCF763;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    color: #031C54;
+    padding-left: 2vw;
+    margin-left: 8vw;
+}

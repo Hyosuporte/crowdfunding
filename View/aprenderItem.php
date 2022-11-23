@@ -9,37 +9,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Assets/css/style.css">
-    <link rel="stylesheet" href="/Assets/css/aprender.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/aprender.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
-    <title>bannerLanding</title>
+    <title><?php echo $data['title']; ?></title>
 </head>
 
 <body>
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href=""><img class="navbarLogo" src="/Assets/img/LOGO_21.svg" alt=""></a>
+                <a href=""><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
-                <a href="" class="navbarText ">Descubre</a>
+                <a href="<?php echo BASE_URL; ?>Home/galeriaProyecyod" class="navbarText ">Descubre</a>
             </li>
             <li>
-                <a href="" class="navbarText">Aplica</a>
+                <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
             </li>
             <li>
-                <a href="/Home/SubirProyecto" class="navbarText">Aprende</a>
+                <a href="<?php echo BASE_URL; ?>Home/SubirProyecto" class="navbarText">Aprende</a>
             </li>
             <li>
-                <div><a href="/Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
+                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
             </li>
         </ul>
     </nav>
     <div class="content">
         <div class="bannerAprender">
-            <img src="/Assets/img/bannerAprender.svg" alt="">
+            <img src="<?php echo BASE_URL; ?>Assets/img/bannerAprender.svg" alt="">
         </div>
         <div class="principalAprende">
             <div class="menu">
@@ -103,7 +103,7 @@
             </div>
             <div class="bloqueInfoFooter">
                 <div>
-                    <img src="/Assets//img//logoFooter.svg" alt="">
+                    <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
                 </div>
                 <div style="margin-left: 10%;">
                     <h2>Nosotros</h2>
@@ -144,7 +144,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-    <script src="/Assets/js/index.js"></script>
+    <script src="<?php echo BASE_URL; ?>Assets/js/index.js"></script>
 
 </body>
 

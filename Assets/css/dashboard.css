@@ -1,0 +1,129 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Menu contenido";
+}
+
+.Menu {
+    grid-area: Menu;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
+    border-radius: 30px;
+}
+
+.contenido {
+    grid-area: contenido;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
+    border-radius: 30px;
+    width: 80%;
+    padding: 3vh;
+    margin-left: 1vw;
+}
+
+.formulario {
+    width: 100%;
+}
+
+.inputGrandeForm {
+    width: 100%;
+    height: 5vh;
+    border-radius: 30px;
+    border: 1px solid #031C54;
+    padding-left: 2vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    color: #031C54;
+}
+.inputGrandeFormArea {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: 1px solid #031C54;
+    padding-left: 2vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    color: #031C54;
+}
+
+
+.tituloFormSubirProyecto {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2vw;
+    line-height: 2vh;
+    /* identical to box height */
+
+
+    color: #031C54;
+}
+
+.subtituloFormSubirProyecto {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vh;
+    line-height: 1vh;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #540D6E;
+}
+
+.grupoInputsForm {
+    display: flex;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 100%;
+}
+
+.grupoInput1 {
+    border-radius: 30px;
+    border: 1px solid #031C54;
+    padding-left: 2vw;
+    height: 5vh;
+    color: #031C54;
+    width: 100%;
+}
+
+.botonForm {
+    background: #DCF763;
+    border-radius: 30px;
+    border: 0px;
+    width: 15vw;
+    height: 6vh;
+    color: #031C54;
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3vh;
+    margin-left: 20vw;
+    margin-top: 3vh;
+}
+
+.textoPaso {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1vw;
+    line-height: 35px;
+    margin-left: 39vw ;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #540D6E;
+}
+
+.headerForm {
+    display: flex;
+    align-items: center;
+}

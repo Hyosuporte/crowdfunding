@@ -21,7 +21,16 @@
 }
 
 .cartas {
+    width: auto;
     grid-area: cartas;
+}
+.imagenTema{
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.card{
+    width: 90%;
 }
 
 .card li {
