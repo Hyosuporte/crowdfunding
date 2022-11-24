@@ -1,7 +1,6 @@
 .bannerLandingAplicar {
-    padding-left: 5rem;
+
     padding-top: 1rem;
-    padding-right: 1rem;
     width: 100%;
     height: 60vh;
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
@@ -13,10 +12,46 @@
     grid-auto-rows: minmax(200px, auto);
 }
 
+.bannerLandingAplicar2 {
+
+    padding-top: 1rem;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+    border-radius: 30px;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    gap: 5rem;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.imagenBannerAplicar1 {
+    margin-left: 10vw;
+}
+
+.imagenBannerAplicar2 {
+    margin-top: 20vh;
+}
+
+.tituloBannerAplicar {
+    margin-right: 25rem;
+    margin-top: 30vh;
+    margin-bottom: 4vh;
+    flex-wrap: wrap;
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10vh;
+    line-height: 100%;
+    width: 70%;
+    color: #F5F0F5;
+}
+
 .oneColumnBanner {
-    grid-column: 1/7;
+    grid-column: 1/3;
     grid-row: 1;
-    
+
 }
 
 .twoColumnBanner {
@@ -40,7 +75,7 @@
 }
 
 .pasosSubirProyectos {
-    margin-top: 80vh;
+    margin-top: 20vh;
 }
 
 .subirProyectoTitulo {
@@ -78,6 +113,16 @@
     color: #031C54;
 }
 
+.textoBannerPaso2 {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    margin: 1vw;
+
+    color: #F5F0F5;
+}
+
 .textoPasos {
     font-size: 2vh;
     font-size: 2vw;
@@ -87,12 +132,13 @@
 .paso1 {
     display: flex;
     width: 100%;
-    margin-top: 20vh;
+    margin: 10vh;
 }
 
 .paso2 {
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 30px;
+    margin: 10vh;
 }
 
 .cabeceraCardDudas {
@@ -123,11 +169,10 @@
     font-style: normal;
     font-weight: 900;
     font-size: 2vh;
-    line-height: 38px;
 }
 
 .posicionTextoImagenBannerProyecto1 {
-    margin-top: 1vh;
+    margin-top: 5vh;
     margin-left: 1vw;
     font-size: 4vh;
 }
@@ -141,39 +186,23 @@
 }
 
 .backGroundImage {
-    
+    margin-left: 10vw;
     background-repeat: no-repeat;
     height: 45vh;
-    width: 120%;
-    background-size: auto;
+    width: 30vw;
+    background-size: 30vw;
 }
 
 .backGroundImage2 {
-    
-    background-repeat: no-repeat;
-    height: 50vh;
-    width: 120%;
-    background-size: auto;
-}
-
-.backGroundImage3 {
-    
+    margin-left: 15vw;
     background-repeat: no-repeat;
     height: 45vh;
-    width: 250%;
-    background-size: auto;
-}
-
-.backGroundImage4 {
-    
-    background-repeat: no-repeat;
-    height: 45vh;
-    width: 250%;
-    background-size: auto;
+    width: 30vw;
+    background-size: 30vw;
 }
 
 .bannerLandingAplicar {
-    padding-left: 5rem;
+    padding-left: 1rem;
     padding-top: 1rem;
     padding-right: 1rem;
     width: 100%;
@@ -193,11 +222,31 @@
     font-weight: 400;
     font-size: 3vh;
     line-height: 26px;
-    margin-top: 28vh;
+    margin-top: 20vh;
     margin-left: 1vw;
     color: #F5F0F5;
 }
 
-.card img{
+.card img {
     border-radius: 30px;
+}
+
+.subirProyectoTexto {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 26px;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+
+    color: #031C54;
+}
+.pasosLista{
+    margin: 1vw;
+}
+
+.textoPaso{
+    margin-top: 1vw;
+    
 }

@@ -1,5 +1,5 @@
 .botonBuscar{
-    border: 0px;
+    border: 0;
     width: 20vh;
     height: 5vh;
     font-size: 2vh;
@@ -7,10 +7,10 @@
 
 .botonesGaleria{
     width: 100%;
-    margin-left: 10vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
-    display: flex
+    display: flex;
+    padding-left: 10vw;
 }
 
 .bloqueBotonBuscar{
@@ -24,8 +24,10 @@
 
 .proyectosFila{
     display: flex;
-    width: 500vh;
-    margin-left: 15%;
+    width: 90vw;
+    margin: auto;
+    margin-left: 10vw;
+    margin-bottom: 2vh;
 }
 
 .card{
@@ -43,7 +45,7 @@
 }
 
 .botonCardGaleria{
-    margin-left: 5vh;
+    margin: auto;
     margin-top: 1vh;
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
@@ -87,6 +89,10 @@
     color: #031C54;
 }
 
+.meta{
+    display: flex;
+}
+
 .barraProgresoCardGaleria{
     width: 10vh;
     height: 1vh;
@@ -102,9 +108,7 @@
 }
 
 .bannerLanding-2 {
-    padding-left: 5rem;
-    padding-top: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
     width: 100%;
     height: 30vh;
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
@@ -117,7 +121,7 @@
     font-style: normal;
     font-weight: 900;
     font-size: 5vh;
-    line-height: 67px;
+    line-height: 9vh;
 
     color: #031C54;
 }
@@ -159,7 +163,7 @@
     border-width: 0;
     background: #DCF763;
     border-radius: 30vh;
-    margin-left: 40vw;
+    margin-left: 10vw;
 }
 
 
@@ -182,6 +186,28 @@
     display: flex;
     align-items: center;
     color: #031C54;
-    padding-left: 2vw;
-    margin-left: 8vw;
+}
+
+.card{
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
+    border-radius: 30px;
+}
+
+.imagenOjo{
+    margin-left: 1vw;
+}
+
+.textoCard{
+    font-family: 'Be Vietnam';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+
+color: #031C54;
+}
+
+.cardGaleria{
+    width: 40vw;
 }
