@@ -9,19 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <style>
+        @font-face {
+            font-family: 'TT Norms';
+            src: url('<?php echo BASE_URL; ?>Assets/fonts/TT-Norms-Black/TTNorms-Black.otf');
+            font-style: normal;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 38px;
+        }
+        @font-face {
+            font-family: 'Be Vietnam';
+            src: url('<?php echo BASE_URL; ?>Assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+
+            color: #031C54;
+        }        
+    </style>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/galeria.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
-    <title><?php echo $data['title']; ?></title>
+    <title>Galeria</title>
 </head>
 
 <body>
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href=""><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
+                <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText activeNavbar">Descubre</a>
@@ -30,7 +50,7 @@
                 <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
             </li>
             <li>
-                <a href="<?php echo BASE_URL; ?>Home/SubirProyecto" class="navbarText">Aprende</a>
+                <a href="<?php echo BASE_URL; ?>Home/aprende" class="navbarText">Aprende</a>
             </li>
             <li>
                 <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
@@ -52,59 +72,70 @@
             </select>
         </div>
         <div class="proyectosFila">
-            <div class="card">
+            <div class="card cardGaleria">
                 <div>
                     <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
                 </div>
                 <div class="card-body">
-                    <h5 class="tituloCardDestacado">Nombre</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="metaCardDestacado">Meta $11.000.000</p>
+                    <h5 class="tituloCardDestacado">Nombre <p style="text-indent: 22vw;"><img src="<?php echo BASE_URL; ?>Assets/img/personas.svg" alt=""> 55/D</p></h5>
+                    <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="meta">
+                        <p class="metaCardDestacado">Recibido $11.000.000 </p> <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
+                    </div>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonGaleriaProyecto">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
+                    <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
                             width="20" alt=""></button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card cardGaleria">
                 <div>
                     <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
                 </div>
                 <div class="card-body">
-                    <h5 class="tituloCardDestacado">Nombre</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="metaCardDestacado">Meta $11.000.000</p>
+                    <h5 class="tituloCardDestacado">Nombre <p style="text-indent: 22vw;"><img src="<?php echo BASE_URL; ?>Assets/img/personas.svg" alt=""> 55/D</p></h5>
+                    <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="meta">
+                        <p class="metaCardDestacado">Recibido $11.000.000 </p> <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
+                    </div>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonGaleriaProyecto">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
+                    <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
                             width="20" alt=""></button>
                 </div>
             </div>
         </div>
         <div class="proyectosFila">
-            <div class="card">
+            <div class="card cardGaleria">
                 <div>
                     <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
                 </div>
                 <div class="card-body">
-                    <h5 class="tituloCardDestacado">Nombre</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="metaCardDestacado">Meta $11.000.000</p>
+                    <h5 class="tituloCardDestacado">Nombre <p style="text-indent: 22vw;"><img src="<?php echo BASE_URL; ?>Assets/img/personas.svg" alt=""> 55/D</p></h5>
+                    <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="meta">
+                        <p class="metaCardDestacado">Recibido $11.000.000 </p> <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
+                    </div>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonGaleriaProyecto">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" alt=""  width="20"></button>
+                    <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
+                            width="20" alt=""></button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card cardGaleria">
                 <div>
                     <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
                 </div>
                 <div class="card-body">
-                    <h5 class="tituloCardDestacado">Nombre</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="metaCardDestacado">Meta $11.000.000</p>
+                    <h5 class="tituloCardDestacado">Nombre <p style="text-indent: 22vw;"><img src="<?php echo BASE_URL; ?>Assets/img/personas.svg" alt=""> 55/D</p></h5>
+                    <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="meta">
+                        <p class="metaCardDestacado">Recibido $11.000.000 </p> <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
+                    </div>
                     <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonGaleriaProyecto">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" alt=""  width="20"></button>
+                    <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
+                            width="20" alt=""></button>
                 </div>
             </div>
         </div>
+        
         <div class="bloqueSubirProyecto">
             <div class="subirFirstColumn">
                 <p class="subirProyectoTitulo">¿Cómo puedo subir mi proyecto?</p>
@@ -165,16 +196,15 @@
             <div class="subirFirstColumn">
                 <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa</p>
                 <div class="iconosFooter">
+                    <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
                 </div>
             </div>
             <div class="subirSecondColumn" style="margin-top: 10%;">
-                <p>Sigue en contacto con nosotros, escribe tu correo aquí.</p>
-                <input type="text" name="" id="">
+                <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
+                <input type="text" name="correo" id="correo" placeholder="Correo Electronico">
                 <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar conectado</button></a>
             </div>
         </div>
@@ -199,7 +229,7 @@
                     </li>
                 </ul>
             </div>
-            <div style="margin-left: 50%;">
+            <div style="margin-left: 30vw;">
                 <h3>Contáctanos</h3> <br>
                 <ul>
                     <li>Telefono</li>
