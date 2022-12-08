@@ -1,5 +1,5 @@
 <?php
-require_once 'Config/Config.php';
+require_once 'Config/Conexion.php';
 $ruta = !empty($_GET['url']) ? $_GET['url'] : "Home/index";
 $array = explode("/", $ruta);
 $controller = ucfirst($array[0]);
@@ -27,9 +27,9 @@ if (file_exists($dirControllers)) {
     if (method_exists($controller, $metodo)) {
         $controller->$metodo($parametro);
     } else {
-        header('Location: ' . BASE_URL . 'errors');
+        //header('Location: ' . BASE_URL . 'errors');
     }
 } else {
-    header('Location: ' . BASE_URL . 'errors');
+    //header('Location: ' . BASE_URL . 'errors');
 }
 ?>

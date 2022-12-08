@@ -127,3 +127,7 @@
     display: flex;
     align-items: center;
 }
+
+.bloqueDashboard{
+    background-color: #FFFFFF;
+}
