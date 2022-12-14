@@ -3,29 +3,110 @@
   <div class="d-flex flex-row text-white">
     <div class="col-2">
       <div class="list-group">
-        <a href="#cuenta" class=" list-group-item-action active nav-link" data-bs-toggle="tab" aria-selected="true" role="tab">Proyectos subidos</a>
-        <a href="#perfil" class=" list-group-item-action" data-bs-toggle="tab" aria-selected="false" role="tab">Proyectos Donados</a>
-        <a href="#misProtectos" class=" list-group-item-action" data-bs-toggle="tab" aria-selected="false" role="tab">Actualización Datos</a>
+        <a href="#cuenta" class=" list-group-item-action active nav-link" data-bs-toggle="tab" aria-selected="true" role="tab" onclick="aparecerVista('cuenta')">Proyectos subidos</a>
+        <a href="#perfil" class=" list-group-item-action" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2'])">Proyectos Donados</a>
+        <a href="#misProtectos" class=" list-group-item-action" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2'])">Actualización Datos</a>
       </div>
     </div>
     <div class="col-10  tab-content bloqueDashboard bg-primary" id="configPerfil">
       <div class="tab-pane fade active show " role="tabpanel1" id="cuenta">
-        <table id="tblProyectos" class="display tablita" style="width:100%">
-          <thead>
-            <tr>
-              <!--id, nombre, boton-->
-              <th>Id</th>
-              <th>Título</th>
-              <th>Comienzo</th>
-              <th>Final</th>
-              <th>Estado</th>
-              <th>Acciones</th>
-              <th>Observaciones</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+      <?php if(!isset($_SESSION["datos"]["numProyects"])){?>  
+      <div>
+          <p class="tableDashboardTitulo">Aun no tines ningun proyecto subido</p>
+          <div class="bloqueAunSinProyectos">
+            <p class="bloqueAunSinProyectosTitulo">Frase trigger</p>
+            <p class="bloqueAunSinProyectosTexto">Recuerda leer el paso a paso y tener todo lo que necesitas a la mano para subir tu proyecto. <br>
+              Una vez se suba nuestro equipo se comunicará para verificar la veracidad de tu proyecto y te brindará asesoría para garantizar el éxito de tu campaña. <br>
+              Ver condiciones para subir proyecto</p>
+            <div class="list-group"><a href="#v-pills-subir-proyecto-1" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVista('cuenta'),aparecerVista('v-pills-subir-proyecto-1')">Subir Proyecto</a></div>
+          </div>
+        </div>
+        <?php } else { ?>
+        <div>
+          <table id="tblProyectos" class="display tablita" style="width:100%">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Título</th>
+                <th>Comienzo</th>
+                <th>Final</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+                <th>Observaciones</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <?php } ?>
+      </div>
+      <div class="tab-pane fade  bg-primary" id="tablaProyectosSubidos" role="tabpanel" aria-labelledby="v-pills-subir-proyecto-1" tabindex="0">
+      </div>
+      <div class="tab-pane fade  bg-primary" id="v-pills-subir-proyecto-1" role="tabpanel" aria-labelledby="v-pills-subir-proyecto-1" tabindex="0">
+        <div class="contenido">
+          <form action="">
+            <div class="headerForm">
+              <p class="tituloFormSubirProyecto">Subir Proyecto </p>
+              <p class="textoPaso">Paso 1 de 2</p>
+            </div>
+            <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
+            <input class="inputGrandeForm" type="text" name="nombre" id="nombre" placeholder="Nombre de la organización*">
+            <div class="grupoInputsForm">
+              <select class="grupoInput1" name="organizacion" id="organizacion" style="margin-right: 3rem;">
+                <option value="">Organizacion</option>
+                <option value="1">ONG</option>
+                <option value="2">OSC</option>
+                <option value="3">Empresa</option>
+                <option value="4">Persona Natural</option>
+                <option value="5">Academia</option>
+                <option value="6">Grupos No Constituidos</option>
+              </select>
+              <input type="number" class="grupoInput1" placeholder="Telefono Responsable*" required id="telefono" name="telefono" onkeydown="filtro()">
+              <script>
+                function filtro() {
+                  var tecla = event.key;
+                  if (['.', 'e'].includes(tecla))
+                    event.preventDefault()
+                }
+              </script>
+            </div>
+            <input class="inputGrandeForm" type="text" name="web" id="web" placeholder="Sitio WEB">
+            <input class="inputGrandeForm" type="text" name="redes" id="redes" placeholder="Redes Sociales*">
+            <div class="grupoInputsForm">
+              <input class="grupoInput1" type="text" name="banco" id="banco" placeholder="Banco*">
+              <input class="grupoInput1" type="text" name="cuenta" id="cuenta" placeholder="Cuenta*">
+            </div>
+            <div class="list-group"><a href="#v-pills-subir-proyecto-2" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVista('v-pills-subir-proyecto-1'),aparecerVista('v-pills-subir-proyecto-2')">Subir Proyecto</a></div>
+            <!--<button class="botonForm" type="button" onclick="validar()">Siguiente Paso</button>-->
+          </form>
+        </div>
+      </div>
+      <div class="tab-pane fade bg-primary" role="tabpanel1" id="v-pills-subir-proyecto-2">
+        <div class="contenido">
+          <form action="">
+            <div class="headerForm">
+              <p class="tituloFormSubirProyecto">Subir Proyecto </p>
+              <p class="textoPaso">Paso 2 de 2</p>
+            </div>
+            <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
+            <input class="inputGrandeForm" type="text" name="titulo" id="titulo" placeholder="Titulo del proyecto*">
+            <div class="grupoInputsForm">
+              <input type="text" class="grupoInput1" placeholder="Palabras Clave**" required id="palabras" name="palabras">
+              <input type="number" class="grupoInput1" placeholder="Indicador Impacto*" required id="impacto" name="impacto">
+            </div>
+            <textarea class="inputGrandeFormArea" name="resumen" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
+            <div class="grupoInputsForm">
+              <input class="grupoInput1 " type="file" name="foto" id="foto">
+              <input class="grupoInput1" type="text" name="video" id="video" placeholder="URL Video*">
+            </div>
+            <div class="grupoInputsForm">
+              <input class="grupoInput1" type="text" name="banco" id="banco" placeholder="Monto a Recaudar">
+              <input type="date" class="grupoInput1" id="final" name="final" name="final">
+            </div>
+            <button class="botonForm" type="button">Siguiente Paso</button>
+          </form>
+        </div>
       </div>
       <div class="tab-pane fade" role="tabpanel1" id="perfil">
         <table class=" tablita" style="width:100%">
@@ -92,7 +173,7 @@
           </form>
         </div>
         <div class="container">
-          <form >
+          <form>
             <div class="row justify-content-center mt-4">
               <div class="col-md-5">
                 <div class="form-group">
@@ -142,9 +223,6 @@
             </div>
           </form>
         </div>
-      </div>
-      <div class="tab-pane fade bg-primary" role="tabpanel1" id="proyectosApoyados">
-        <p>Panel 4</p>
       </div>
     </div>
   </div>

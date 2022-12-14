@@ -51,6 +51,27 @@ function consultarProyectos(){
   };
 }
 
+function aparecerVista(panel){
+    element = document.getElementById(panel);
+    element.style.display='block';
+}
+function aparecerVistas(panel){
+    panel.forEach(i => {
+        element = document.getElementById(i);
+        element.style.display='block';        
+    });    
+}
+function desaparecerVista(panel){
+    element = document.getElementById(panel);
+    element.style.display='none';
+}
+function desaparecerVistas(panel){
+    panel.forEach(i => {
+        element = document.getElementById(i);
+        element.style.display='none';        
+    });    
+}
+
 /* function registrar(){
     const table = document.getElementById("proyectos");
     const url = base_url + "proyecto/obtenerProyectos";
