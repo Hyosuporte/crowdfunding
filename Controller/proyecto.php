@@ -6,25 +6,7 @@ class proyecto extends Controller
     {
         parent::__construct();
     }
-    public function subirbinariocamara()
-    {
-        $camara = ($_FILES['camara']);
-        $rutaDeSubidas = __DIR__ . "/subidas";
-        if (!is_dir($rutaDeSubidas)) {
-            mkdir($rutaDeSubidas, 0777, true);
-        }
-        $ubicacionTemporal = $camara["tmp_name"];
-        $nombreArchivo = $camara["camara"];
-        $nuevaUbicacion = $rutaDeSubidas . "/" . $nombreArchivo;
-        $resultado = move_uploaded_file($ubicacionTemporal, $nuevaUbicacion);
-        if ($resultado === true) {
-            echo "Archivo subido correctamente";
-        } else {
-            echo "Error al subir archivo";
-        }
-    }
-    public function subirbinariofoto()
-    {
+
 
     public function obtenerProyectos()
     {
@@ -72,6 +54,8 @@ class proyecto extends Controller
         $video = strClean($_POST['video']);
         $info_adicional = strClean($_POST['info']);
         $camara = $this->subirArchivo('camara');
+        print_r($_FILES);
+        $foto = $this->subirArchivo('foto');
         if (
             empty($camara) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
             empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
@@ -83,7 +67,7 @@ class proyecto extends Controller
             if ($data === "ok") {
                 $msg = "registrado";
             } else {
-                $msg = "Error";
+                $msg = $data;
             }
         }
 
@@ -135,4 +119,12 @@ class proyecto extends Controller
             $msg = "Error";
         }
     }
+
+    public function listarProyectos()
+    {
+        $data = $this->model->getGaleriaP();
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
 }

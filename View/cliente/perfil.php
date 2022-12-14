@@ -8,7 +8,7 @@
         <a href="#misProtectos" class=" list-group-item-action" data-bs-toggle="tab" aria-selected="false" role="tab">Actualización Datos</a>
       </div>
     </div>
-    <div class="col-10  tab-content bloqueDashboard" id="configPerfil">
+    <div class="col-10  tab-content bloqueDashboard bg-primary" id="configPerfil">
       <div class="tab-pane fade active show " role="tabpanel1" id="cuenta">
         <table id="tblProyectos" class="display tablita" style="width:100%">
           <thead>
@@ -46,48 +46,53 @@
           </tbody>
         </table>
       </div>
-      <div class="tab-pane  fade" role="tabpanel1" id="misProtectos">
+      <div class="tab-pane  fade bg-primary" role="tabpanel1" id="misProtectos">
         <div class="container">
           <div class="row mt-4">
             <div class="col-md-6">
-              <div class="form-group">
-                <label for="newCorreo">Correo Actual</label>
-                <input id="newCorreo" class="form-control" type="email" name="newCorreo" />
-                <button type="button" class="btn btn-success mt-3">
-                  Cambiar Correo
-                </button>
-              </div>
+              <form id="frmUpdateCorreo">
+                <div class="form-group">
+                  <label for="newCorreo">Correo Actual</label>
+                  <input id="newCorreo" class="form-control" type="email" name="newCorreo" />
+                  <input id="ActCorreo" class="form-control" type="hidden" name="ActCorreo" />
+                  <button type="button" class="btn btn-success mt-3" onclick="UpdateCorreo()">
+                    Cambiar Correo
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-          <div class="row flex-row mt-4">
-            <h4>Contraseña</h4>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="passwordNow">Contraseña actual</label>
-                <input id="passwordNow" class="form-control" type="password" name="passwordNow" />
+          <form id="frmUpdatePassword">
+            <div class="row flex-row mt-4">
+              <h4>Contraseña</h4>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="passwordNow">Contraseña actual</label>
+                  <input id="passwordNow" class="form-control" type="password" name="passwordNow" />
+                </div>
+                <div>
+                  <button type="button" class="btn btn-success mt-3 mb-4" onclick="UpdatePassword();">
+                    Cambiar Contraseña
+                  </button>
+                </div>
               </div>
-              <div>
-                <button type="button" class="btn btn-success mt-3 mb-4">
-                  Cambiar Contraseña
-                </button>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="newPassword">Nueva contraseña</label>
+                  <input id="newPassword" class="form-control" type="password" name="newPassword" />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="newPasswordTry">Vuelve a escribir la contraseña</label>
+                  <input id="newPasswordTry" class="form-control" type="password" name="newPasswordTry" />
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="newPassword">Nueva contraseña</label>
-                <input id="newPassword" class="form-control" type="password" name="newPassword" />
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="newPasswordTry">Vuelve a escribir la contraseña</label>
-                <input id="newPasswordTry" class="form-control" type="password" name="newPasswordTry" />
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
         <div class="container">
-          <form action="" method="post">
+          <form >
             <div class="row justify-content-center mt-4">
               <div class="col-md-5">
                 <div class="form-group">
@@ -98,7 +103,7 @@
               <div class="col-md-5">
                 <div class="form-group">
                   <label for="correo">Dirrecion de Correo Electrónico</label>
-                  <input id="correo" class="form-control" type="email" name="correo" disabled value="cacuervo120@gmail.com" />
+                  <input id="correo" class="form-control" type="email" name="correo" disabled value="<?php echo $_SESSION['usuario']; ?>" />
                 </div>
               </div>
             </div>
@@ -138,7 +143,7 @@
           </form>
         </div>
       </div>
-      <div class="tab-pane fade" role="tabpanel1" id="proyectosApoyados">
+      <div class="tab-pane fade bg-primary" role="tabpanel1" id="proyectosApoyados">
         <p>Panel 4</p>
       </div>
     </div>
