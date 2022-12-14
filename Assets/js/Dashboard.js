@@ -43,7 +43,8 @@ function consultarProyectos(){
   http.send();
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      const res = JSON.parse(this.responseText);      
+      const res = JSON.parse(this.responseText);
+      console.log(res)     
     }else{
 
     }
