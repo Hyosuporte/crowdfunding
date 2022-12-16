@@ -36,7 +36,7 @@
     </nav>
 <div class="bloqueLogin">
     <div class="bannerRegistro">
-        <img class="" src="/Assets/img/registro.svg" alt="" height="530">
+        <img class="" src="/Assets/img/registro.svg" alt="" height="720">
         <p class="beneficioTitulo1">¡Bienvenid@!</p>
         <p class="textoLoginIzquierda">Es momento de crear y aportar. Inicia sesión y comienza a conectar con nuevas oportunidades.</p>
     </div>
@@ -62,7 +62,7 @@
                         <select name="pais" id="pais" class="form-control"  onclick="listarCiudad();" >
                         </select>
                     </div>
-                    <div class="grupoInputsRegistroSimbolo">
+                    <div class="grupoInputsRegistroSimbolo" style="margin-left: 0.5vh;">
                         <span class="input-group-text">Ciudad</span>
                         <select name="ciudad" id="ciudad" class="form-control">
                         </select>
@@ -73,7 +73,7 @@
                     <input type="password" class="form-control inputFormularioRegistro" placeholder="Confirmar Contraseña" id="passwordConf" name="passwordConf" required max="15">
                 </div>
                 <input type="checkbox" name="recordarme" id="terminos" name="terminos" class="formInputCheck">
-                <label for="terminos">Acepto terminos y condiciones de TFI</label>
+                <label class="recordarme" for="terminos">Acepto terminos y condiciones de TFI</label>
             <button type="button" class="botonFormRegistro mt-5 " onclick="frmRegistro()">Enviar</button>
             <div class="linkRegistrarse">
                 <p>¿Ya tienes una cuenta? <a href="/Home/login/">INICIA SESIÓN</a></p>

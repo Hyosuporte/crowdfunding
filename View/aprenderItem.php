@@ -24,7 +24,7 @@
                 <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li class="descubre">
-                <a href="<?php echo BASE_URL; ?>Home/galeriaProyecyod" class="navbarText ">Descubre</a>
+                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText ">Descubre</a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
@@ -112,10 +112,10 @@
                             Sobre TFI
                         </li>
                         <li>
-                            Aprende más
+                            <a href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
                         </li>
                         <li>
-                            ¿Cómo funciona?
+                            <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
                         </li>
                         <li>
                             Términos y condiciones

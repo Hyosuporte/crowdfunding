@@ -77,34 +77,34 @@ svg circle {
     transform: translate(5px, 5px);
 }
 
-svg circle:nth-child(2){
+svg circle:nth-child(2) {
     stroke-dasharray: 220;
     stroke-dashoffset: 220;
 }
 
-.carta:nth-child(1) svg circle:nth-child(2){
-    stroke:#D9D9D9;
+.carta:nth-child(1) svg circle:nth-child(2) {
+    stroke: #D9D9D9;
 }
 
 .percent p {
-    margin-top: -7.5vw;
-    margin-left: 4.5vw;
+    margin-top: -8.5vw;
+    margin-left: 10vw;
+    font-family: 'TT Norms';
 }
 
-.fechas{
+.fechas {
     margin-left: 1vw;
     width: 150%;
-    
+
 }
 
-.colorBarraProgreso{
+.colorBarraProgreso {
     background-color: #CC59D2;
 }
 
 .tablaDonador {
-    width: 95%;
+    width: 100%;
     text-align: center;
-    border: 1px solid;
     margin-top: 1%;
     margin-left: 1%;
     
@@ -112,18 +112,77 @@ svg circle:nth-child(2){
 
 .tablaDonador th,
 td {
-    border: 1px solid;
-
+    border: 0.2vh solid #031C54;
 }
 
-.fuentePrincipal{
+tr td, th { 
+    border-top-right-radius: 0;               
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0; 
+}
+
+table { 
+    border-collapse: separate; 
+}
+
+th:first-child { 
+    border-top-left-radius: 1vw; 
+}
+th:last-child {   
+    border-top-right-radius: 1vw; 
+}
+tr:last-child td:first-child { 
+    border-bottom-left-radius: 1vw; 
+}
+tr:last-child td:last-child { 
+    border-bottom-right-radius: 1vw; 
+}
+
+.textoVistaProyecto {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1.5vw;
+
+    color: #031C54;
+}
+
+
+.fuentePrincipal {
     font-family: 'TT Norms';
     color: #031C54;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
-.fuenteSecundaria{
+.fuenteSecundaria {
     font-family: 'Be Vietnam';
     color: #031C54;
-    font-size: 1vw;
+    font-size: 1.5vw;
+}
+
+.progress {
+    margin-top: 2vw;
+}
+
+.cantidadDonar {
+    width: 40vw;
+    border-radius: 30px;
+}
+
+.botonDonar {
+    width: 80vh;
+    height: 7vh;
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vh;
+    line-height: 29px;
+    border-width: 0;
+    background: #DCF763;
+    border-radius: 3vw;
+    color: #031C54;
+    margin-top: 2vw;
+    margin-left: 1vw;
 }

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/Assets/css/vistaProyecto.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@2000&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'TT Norms';
@@ -53,7 +53,7 @@
                 <a href="/Home/SubirProyecto" class="navbarText">Aprende</a>
             </li>
             <li>
-                <div><a href="/Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
+                <div><a href="/Home/login/"><button class="botonNavbar" type="button">Iniciar Sesión</button></a></div>
             </li>
         </ul>
     </nav>
@@ -65,7 +65,7 @@
 
         <div class="bloqueVistaProyecto">
             <p class="tituloVistaProyecto" id="nombre" name="nombre">Nombre Proyecto</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum, arcu eget blandit suscipit, ex
+            <p class="textoVistaProyecto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum, arcu eget blandit suscipit, ex
                 magna pharetra ante, ut convallis neque ipsum eu nisi. Phasellus at arcu vitae diam faucibus imperdiet.
                 Proin eu tortor purus. Vivamus purus nunc, feugiat et vestibulum id, cursus non felis. Nullam elementum
                 at augue non hendrerit. Nullam semper, nunc ut fermentum placerat, purus nunc vestibulum sem, ut varius
@@ -88,7 +88,7 @@
                             </div>
                             <div class="progress">
                                 <div class="progress-bar colorBarraProgreso" style="width: 25%" role="progressbar"
-                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="200"></div>
                             </div>
                         </div>
                     </div>
@@ -96,8 +96,8 @@
                     <div class="Donadores">
                         <div class="montoDonadores">
                             <img src="/Assets/img/people.svg" alt="" width="50">
-                            <p style="margin-left: 5%; font-size: 20px;">55 Donadores</p>
-                            <p style="margin-left: 15%;margin-top: 2%;">Ver todos</p>
+                            <p class="fuentePrincipal" style="margin-top: 1vw; margin-left: 1vw;">55 Donadores</p>
+                            <p class="fuenteSecundaria" style="margin-left: 1vw;margin-top: 1vw;">Ver todos</p>
                             <img style="margin-left: 15%;" src="/Assets/img/compartir.svg" alt="" width="40">
                         </div>
                     </div>
@@ -120,8 +120,8 @@
                             <div class="box">
                                 <div class="percent">
                                     <svg>
-                                        <circle cx="70" cy="70" r="50"></circle>
-                                        <circle cx="70" cy="70" r="50"></circle>
+                                        <circle cx="200" cy="100" r="100"></circle>
+                                        <circle cx="200" cy="100" r="100"></circle>
                                     </svg>
                                     <p>15</p>
                                 </div>
@@ -133,10 +133,10 @@
             </div>
             <div class="inputsDonar">
                 <div>
-                    <p>Cantidad. $ COP</p>
+                    <p class="fuenteSecundaria">Cantidad. $ COP</p>
                     <input class="cantidadDonar" type="text" name="cantidad" id="cantidad">
                 </div>
-                <a href=""><button style="margin-left: 50%;" class="boton" type="button">Donar</button></a>
+                <a href=""><button  class="botonDonar" type="button">Donar</button></a>
             </div>
             <div>
                 <table class="tablaDonador">
@@ -160,11 +160,10 @@
                     <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa
                     </p>
                     <div class="iconosFooter">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
                     </div>
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
@@ -178,25 +177,25 @@
                 <div>
                     <img src="/Assets//img//logoFooter.svg" alt="">
                 </div>
-                <div style="margin-left: 10%;">
+                <div class="linksFooter" style="margin-left: 10%;">
                     <h2>Nosotros</h2>
                     <ul>
                         <li>
                             Sobre TFI
                         </li>
                         <li>
-                            <a href="/Home/SubirProyecto">Aprende más</a>
+                            <a class="linksFooter" href="/Home/SubirProyecto">Aprende más</a>
                         </li>
                         <li>
-                            <a href="/Home/aplicar">¿Cómo funciona?</a>
+                            <a class="linksFooter" href="/Home/aplicar">¿Cómo funciona?</a>
                         </li>
                         <li>
                             Términos y condiciones
                         </li>
                     </ul>
                 </div>
-                <div style="margin-left: 20%;">
-                    <h3>Contáctanos</h3> <br>
+                <div class="linksFooter" style="margin-left: 20%;">
+                    <h3>Contáctanos</h3>
                     <ul>
                         <li>Telefono</li>
                         <li>Whatsapp</li>

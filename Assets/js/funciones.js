@@ -5,9 +5,8 @@ document
 if (document.getElementById("configPerfil") != null) {
   document
     .getElementById("configPerfil")
-    .addEventListener("onLoad", listarGaleria(), true);
+    .addEventListener("onLoad", listarDatos(), true);
 }
-
 
 
 function listarGaleria() {

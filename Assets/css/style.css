@@ -86,12 +86,29 @@ body {
     width: 80% !important;
 }
 
+.linksFooter{
+    font-size: 1.5vw;
+}
+
 .activeNavbar {
     color: #CC59D2 !important;
     text-decoration: underline !important;
 }
 
 .boton {
+    width: 50vh;
+    height: 5vh;
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vh;
+    line-height: 29px;
+    border-width: 0;
+    background: #DCF763;
+    border-radius: 30px;
+    color: #031C54;
+}
+.botonNavbar {
     width: 50vh;
     height: 5vh;
     font-family: 'TT Norms', sans-serif;
@@ -170,7 +187,8 @@ body {
     align-items: center;
     color: #031C54;
     margin: auto;
-    padding-left: 5vw;
+    margin-bottom: 1vw;
+    padding-left: 6vw;
 }
 
 .formulario__validacion-estado-incorrecto {
@@ -434,10 +452,23 @@ body {
     border-radius: 30px;
 }
 
+.subitutiloFomrRegistrar{
+    font-family: 'Be Vietnam';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 35px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #F5F0F5;
+}
+
 .beneficioTitulo1 {
     position: absolute;
-    margin-top: 6%;
-    margin-left: 2%;
+    margin-top: 6vh;
+    margin-left: 2vw;
     width: 40%;
     height: 10%;
 
@@ -840,7 +871,8 @@ body {
 
 .bloqueInfoFooter {
     font-family: 'TT Norms', sans-serif;
-    margin-top: 5%;
+    margin-top: 5vw;
+    margin-bottom: 3%;
     display: flex;
     color: #F5F0F5;
 }
@@ -907,12 +939,17 @@ body {
 
 .formLogin {
     width: 50vw;
-    height: 85vh;
+    height: 76vh;
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 30px;
     display: block;
     padding: 1vw;
     padding-right: 3vw;
+}
+
+.aunRegistrarse{
+    font-family: 'TT Norms', sans-serif;
+    font-size: 1.5vw;
 }
 
 .grupoInputsRegistro{
@@ -921,6 +958,11 @@ body {
     margin: 1vw;
     margin-left: 3vw;
 }
+
+.grupoInputsRegistro input{
+    margin: 0.2vw;
+}
+
 .grupoInputsRegistroSimbolo{
     display: flex;
     width: 20vw;
@@ -954,14 +996,19 @@ body {
     position: absolute;
     margin: auto;
     width: 50vw;
-    margin-top: 25%;
+    margin-top: 68vh;
     margin-left: 2%;
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1vw;
     line-height: 26px;
-
+    
+    color: #F5F0F5;
+}
+.recordarme{
+    font-family: 'Be Vietnam';
+    font-size: 1vw;
     color: #F5F0F5;
 }
 
@@ -971,7 +1018,7 @@ body {
     font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 2vw;
     line-height: 38px;
     text-align: center;
     
@@ -983,11 +1030,12 @@ body {
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.5vw;
     line-height: 26px;
     align-items: center;
     text-align: center;
     margin: auto;
+    margin-top: 1vh;
     color: #FFFFFF;
 }
 
@@ -1021,6 +1069,8 @@ label {
     color: #FFFFFF;
     float: right;
     margin-right: 5%;
+    margin-top: 1vw;
+    font-size: 1.5vw;
 }
 
 
@@ -1029,10 +1079,7 @@ label {
 
 
 
-.cantidadDonar {
-    width: 50vh;
-    border-radius: 30px;
-}
+
 
 .inputsDonar {
     display: flex;
@@ -1044,7 +1091,7 @@ label {
     font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
-    font-size: 46px;
+    font-size: 3vw;
     line-height: 54px;
 
     color: #031C54;
