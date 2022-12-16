@@ -1,6 +1,6 @@
 document
   .getElementById("bodyGaleria")
-  .addEventListener("OnLoad", listarProyectos(), false);
+  .addEventListener("OnLoad", listarGaleria(), false);
 
 if (document.getElementById("configPerfil") != null) {
   document
@@ -8,11 +8,7 @@ if (document.getElementById("configPerfil") != null) {
     .addEventListener("onLoad", listarGaleria(), true);
 }
 
-if (document.getElementById("vistaProyecto") != null) {
-  document
-    .getElementById("vistaProyecto")
-    .addEventListener("onLoad", listarDatos(), true);
-}
+
 
 function listarGaleria() {
   const url = base_url + "proyecto/listarProyectos";
@@ -80,7 +76,7 @@ function creacionCardBody(element) {
   let h5 = document.createElement("h5");
   let p1 = document.createElement("p");
   let p2 = document.createElement("p");
-  let ver = document.createElement("button");
+  let ver = document.createElement("a");
   divBody.setAttribute("class", "card-body");
   h5.setAttribute("class", "tituloCardDestacado");
   h5.innerHTML =
@@ -101,7 +97,7 @@ function creacionCardBody(element) {
   ver.setAttribute("class", "botonCardGaleria");
   ver.setAttribute("value", element.id_proyecto);
   ver.setAttribute("type", "submit");
-  ver.setAttribute("href", `${base_url}proyecto/listarProyecto`);
+  ver.setAttribute("href", `${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`);
   ver.innerHTML = `Ver Proyecto <img class="imagenOjo" src="${base_url}Assets/img/Ojo.svg" width="20" alt="">`;
   divBody.appendChild(h5);
   divBody.appendChild(p1);
