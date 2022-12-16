@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-11-2022 a las 01:37:33
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 7.4.30
+-- Tiempo de generación: 16-12-2022 a las 02:44:42
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,12 +30,12 @@ SET time_zone = "+00:00";
 CREATE TABLE `proyecto` (
   `id_proyecto` int(11) NOT NULL,
   `camara_comercio` varchar(255) NOT NULL,
-  `RUT` varchar(255) NOT NULL,
-  `existencia` varchar(255) NOT NULL,
-  `cedula` varchar(255) NOT NULL,
-  `bancario` varchar(255) NOT NULL,
-  `aprobacion` varchar(255) NOT NULL,
-  `declaraciones` varchar(255) NOT NULL,
+  `RUT` varchar(250) NOT NULL,
+  `rep_legal` varchar(250) NOT NULL,
+  `cedula` varchar(250) NOT NULL,
+  `bancario` varchar(250) NOT NULL,
+  `aprob_donacion` varchar(250) NOT NULL,
+  `form_declaraciones` varchar(250) NOT NULL,
   `keywords` varchar(100) NOT NULL,
   `tiempo_ejecucion` varchar(15) NOT NULL,
   `titulo` varchar(50) NOT NULL,
@@ -49,7 +49,14 @@ CREATE TABLE `proyecto` (
   `video` varchar(250) NOT NULL,
   `id_estado` int(11) NOT NULL,
   `informacion_adicional` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `proyecto`
+--
+
+INSERT INTO `proyecto` (`id_proyecto`, `camara_comercio`, `RUT`, `rep_legal`, `cedula`, `bancario`, `aprob_donacion`, `form_declaraciones`, `keywords`, `tiempo_ejecucion`, `titulo`, `foto`, `duracion_campana`, `fecha_comienzo`, `fecha_final`, `abstrac`, `indicador_impacto`, `monto_financiacion`, `video`, `id_estado`, `informacion_adicional`) VALUES
+(1, '', '', '', '', '', '', '', 'territorio', '3', 'mi proyecto', 0, '3', '2022-10-19', '2022-12-20', 'hGASFJGfjFS', '3', 45000, '', 2, 'SDFSDFCSC');
 
 --
 -- Índices para tablas volcadas
