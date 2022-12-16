@@ -6,6 +6,9 @@ class proyectoDAO extends Query
             parent::__construct();
         }    
 
+
+  }
+
   function insertarproyecto($camara,$keywords,$tiempo_ejecucion,$titulo,$foto,$duracion_campaña,$fecha_comienzo,$fecha_final,$abstrac,$indicador,$monto,$video,$info_adicional)
   {
     $sql = "INSERT INTO proyecto(camara_comercio,keywords,tiempo_ejecucion,titulo,foto,duracion_campaña,fecha_comienzo,fecha_final,abstrac,indicador_impacto,monto_financiacion,video,informacion_adicional) 
@@ -58,5 +61,5 @@ class proyectoDAO extends Query
     return $data;
   }
 
-} 
+
 ?>
