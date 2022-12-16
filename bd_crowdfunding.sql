@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2022 at 01:48 AM
+-- Generation Time: Dec 16, 2022 at 04:24 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `bd_crowdfunding`
 --
-CREATE DATABASE IF NOT EXISTS `bd_crowdfunding` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `bd_crowdfunding`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `bd_crowdfunding`;
 -- Table structure for table `ciudad`
 --
 
-DROP TABLE IF EXISTS `ciudad`;
 CREATE TABLE `ciudad` (
   `id_ciudad` varchar(15) NOT NULL,
   `ciudad` varchar(30) NOT NULL,
@@ -73,21 +70,22 @@ INSERT INTO `ciudad` (`id_ciudad`, `ciudad`, `id_pais`) VALUES
 
 --
 -- Table structure for table `donacion`
--- FIXME: Revisar la parte de ID donacion
+--
 
-DROP TABLE IF EXISTS `donacion`;
 CREATE TABLE `donacion` (
-  `id_donacion` int(255) NOT NULL,
+  `id_donacion` varchar(250) NOT NULL,
   `monto` double NOT NULL,
   `id_usuario` bigint(255) NOT NULL,
   `id_proyecto` int(11) NOT NULL,
-  `fecha_donacion` timestamp(6) NOT NULL DEFAULT current_timestamp(6)
+  `fecha_donacion` timestamp(6) NOT NULL DEFAULT current_timestamp(6),
+  `estadoDonacion` varchar(20) NOT NULL,
+  `tipoPago` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `estado`
+-- Table structure for table `estado`
 --
 
 CREATE TABLE `estado` (
@@ -95,10 +93,20 @@ CREATE TABLE `estado` (
   `estado` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `estado`
+--
+
+INSERT INTO `estado` (`id_estado`, `estado`) VALUES
+(1, 'Aprovado'),
+(2, 'NoAprovado'),
+(3, 'RevisionTecnica'),
+(4, 'RevisionDocumental');
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `organizacion`
+-- Table structure for table `organizacion`
 --
 
 CREATE TABLE `organizacion` (
@@ -117,7 +125,6 @@ CREATE TABLE `organizacion` (
 -- Table structure for table `pais`
 --
 
-DROP TABLE IF EXISTS `pais`;
 CREATE TABLE `pais` (
   `id_pais` int(11) NOT NULL,
   `pais` varchar(30) NOT NULL
@@ -162,10 +169,15 @@ INSERT INTO `pais` (`id_pais`, `pais`) VALUES
 -- Table structure for table `proyecto`
 --
 
-DROP TABLE IF EXISTS `proyecto`;
 CREATE TABLE `proyecto` (
   `id_proyecto` int(11) NOT NULL,
   `camara_comercio` varchar(255) NOT NULL,
+  `RUT` varchar(250) NOT NULL,
+  `rep_legal` varchar(250) NOT NULL,
+  `cedula` varchar(250) NOT NULL,
+  `bancario` varchar(250) NOT NULL,
+  `aprob_donacion` varchar(250) NOT NULL,
+  `form_declaraciones` varchar(250) NOT NULL,
   `keywords` varchar(100) NOT NULL,
   `tiempo_ejecucion` varchar(15) NOT NULL,
   `titulo` varchar(50) NOT NULL,
@@ -184,18 +196,18 @@ CREATE TABLE `proyecto` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `telefono`
+-- Table structure for table `telefono`
 --
 
 CREATE TABLE `telefono` (
-  `id_telefono` int(11) NOT NULL,
-  `id_usuario_telefono` int(11) NOT NULL
+  `id_telefono` varchar(12) NOT NULL,
+  `id_usuario_telefono` bigint(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tipos_organizacion`
+-- Table structure for table `tipos_organizacion`
 --
 
 CREATE TABLE `tipos_organizacion` (
@@ -203,13 +215,22 @@ CREATE TABLE `tipos_organizacion` (
   `tipos` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tipos_organizacion`
+--
+
+INSERT INTO `tipos_organizacion` (`id_tipos`, `tipos`) VALUES
+(1, 'ONG'),
+(2, 'OSC'),
+(3, 'Empresa'),
+(4, 'Academia');
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `usuarios`
 --
 
-DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id_usuario` bigint(255) NOT NULL,
   `primer_nombre` varchar(20) NOT NULL,
@@ -221,13 +242,6 @@ CREATE TABLE `usuarios` (
   `rol` int(11) NOT NULL,
   `direccion` varchar(250) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `usuarios`
---
-
-INSERT INTO `usuarios` (`id_usuario`, `primer_nombre`, `primer_apellido`, `correo`, `password`, `id_ciudad`, `id_pais`, `rol`, `direccion`) VALUES
-(1, 'Carlos Andres', 'Cuervo Galeano', 'cacuervo120@gmail.com', '$2y$12$BJaAPuxFNHQAmhgIGmjOpexMOYN/3wV/NTVUrTtfvUBvCz.BLd4eW', 'Chi-1', 9, 2, 'calle 93 sur #14 B BIS 52');
 
 --
 -- Indexes for dumped tables
@@ -259,6 +273,7 @@ ALTER TABLE `estado`
 --
 ALTER TABLE `organizacion`
   ADD PRIMARY KEY (`id_organizacion`),
+  ADD UNIQUE KEY `nombre_org` (`nombre_org`),
   ADD KEY `id_tipo` (`id_tipo`);
 
 --
@@ -302,7 +317,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- Constraints for dumped tables
@@ -315,14 +330,14 @@ ALTER TABLE `ciudad`
   ADD CONSTRAINT `ciudad_ibfk_1` FOREIGN KEY (`id_pais`) REFERENCES `pais` (`id_pais`) ON DELETE CASCADE;
 
 --
--- Filtros para la tabla `donacion`
+-- Constraints for table `donacion`
 --
 ALTER TABLE `donacion`
-  ADD CONSTRAINT `donacion_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE,
-  ADD CONSTRAINT `donacion_ibfk_2` FOREIGN KEY (`id_proyecto`) REFERENCES `proyecto` (`id_proyecto`) ON DELETE CASCADE;
+  ADD CONSTRAINT `donacion_ibfk_3` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE,
+  ADD CONSTRAINT `donacion_ibfk_4` FOREIGN KEY (`id_proyecto`) REFERENCES `proyecto` (`id_proyecto`) ON DELETE CASCADE;
 
 --
--- Filtros para la tabla `organizacion`
+-- Constraints for table `organizacion`
 --
 ALTER TABLE `organizacion`
   ADD CONSTRAINT `organizacion_ibfk_1` FOREIGN KEY (`id_tipo`) REFERENCES `tipos_organizacion` (`id_tipos`) ON DELETE CASCADE;
