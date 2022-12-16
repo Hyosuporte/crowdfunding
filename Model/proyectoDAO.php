@@ -7,13 +7,11 @@ class proyectoDAO extends Query
         }    
 
 
-  }
-
-  function insertarproyecto($camara,$keywords,$tiempo_ejecucion,$titulo,$foto,$duracion_campaña,$fecha_comienzo,$fecha_final,$abstrac,$indicador,$monto,$video,$info_adicional)
+  function insertarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones,$keywords,$tiempo_ejecucion,$titulo,$foto,$duracion_campaña,$fecha_comienzo,$fecha_final,$abstrac,$indicador,$monto,$video,$info_adicional)
   {
-    $sql = "INSERT INTO proyecto(camara_comercio,keywords,tiempo_ejecucion,titulo,foto,duracion_campaña,fecha_comienzo,fecha_final,abstrac,indicador_impacto,monto_financiacion,video,informacion_adicional) 
-    VALUES(:camara_comercio,:keywords,:tiempo_ejecucion,:titulo,:foto,:duracion_campaña,:fecha_comienzo,:fecha_final,:abstrac,:indicador_impacto,:monto_financiacion,:video,:informacion_adicional)";
-            $datos = array($camara,$keywords,$tiempo_ejecucion,$titulo,$foto,$duracion_campaña,$fecha_comienzo,$fecha_final,$abstrac,$indicador,$monto,$video,$info_adicional);
+    $sql = "INSERT INTO proyecto(camara_comercio, RUT, rep_legal, cedula, bancario, aprob_donacion, form_declaraciones, keywords,tiempo_ejecucion,titulo,foto,duracion_campaña,fecha_comienzo,fecha_final,abstrac,indicador_impacto,monto_financiacion,video,informacion_adicional) 
+    VALUES(:camara_comercio, :RUT, :rep_legal, :cedula, :bancario, :aprob_donacion, :form_declaraciones, :keywords,:tiempo_ejecucion,:titulo,:foto,:duracion_campaña,:fecha_comienzo,:fecha_final,:abstrac,:indicador_impacto,:monto_financiacion,:video,:informacion_adicional)";
+            $datos = array($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords,$tiempo_ejecucion,$titulo,$foto,$duracion_campaña,$fecha_comienzo,$fecha_final,$abstrac,$indicador,$monto,$video,$info_adicional);
             return $datos;
             $data = $this->save($sql,$datos);
             if($data == 1){
@@ -23,13 +21,13 @@ class proyectoDAO extends Query
             }
         }    
 
-  function editarproyecto($camara,$keywords,$tiempo_ejecucion,$titulo,$foto,$duracion_campaña,$fecha_comienzo,$fecha_final,$abstrac,$indicador,$monto,$video,$info_adicional,$id_proyecto)
+  function editarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords,$tiempo_ejecucion,$titulo,$foto,$duracion_campaña,$fecha_comienzo,$fecha_final,$abstrac,$indicador,$monto,$video,$info_adicional,$id_proyecto)
 {
   
-    $sql = "UPDATE proyecto SET camara_comercio = :camara_comercio, keywords = :keywords, tiempo_ejecucion = :tiempo_ejecucion, titulo = :titulo, foto = :foto, duracion_campaña = :duracion_campaña, 
+    $sql = "UPDATE proyecto SET camara_comercio = :camara_comercio, RUT = :RUP, rep_legal = rep_legal, cedula = :cedula, bancario = :bancario, aprob_donacion = :aprob_donacion, form_declaraciones = :form_declaraciones, keywords = :keywords, tiempo_ejecucion = :tiempo_ejecucion, titulo = :titulo, foto = :foto, duracion_campaña = :duracion_campaña, 
     fecha_comienzo = :fecha_comienzo, fecha_final = :fecha_final, abstrac = :abstrac, indicador_impacto = :indicador_impacto, monto_financiacion = :monto_financiacion, video = :video, 
     informacion_adicional = :informacion_adicional WHERE id_proyecto = :id_proyecto";
-    $datos = array($camara,$keywords,$tiempo_ejecucion,$titulo,$foto,$duracion_campaña,$fecha_comienzo,$fecha_final,$abstrac,$indicador,$monto,$video,$info_adicional,$id_proyecto);
+    $datos = array($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion,$titulo,$foto,$duracion_campaña,$fecha_comienzo,$fecha_final,$abstrac,$indicador,$monto,$video,$info_adicional,$id_proyecto);
     $data = $this->save($sql, $datos);
     return $data;
     if($data == 1){
@@ -60,6 +58,6 @@ class proyectoDAO extends Query
     $data = $this->selectAll($sql);
     return $data;
   }
-
+}
 
 ?>

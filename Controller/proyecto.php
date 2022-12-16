@@ -6,26 +6,7 @@ class proyecto extends Controller
     {
         parent::__construct();
     }
-    public function subirbinariocamara()
-    {
-        $camara = ($_FILES['camara']);
-        $rutaDeSubidas = __DIR__ . "/subidas";
-        if (!is_dir($rutaDeSubidas)) {
-            mkdir($rutaDeSubidas, 0777, true);
-        }
-        $ubicacionTemporal = $camara["tmp_name"];
-        $nombreArchivo = $camara["camara"];
-        $nuevaUbicacion = $rutaDeSubidas . "/" . $nombreArchivo;
-        $resultado = move_uploaded_file($ubicacionTemporal, $nuevaUbicacion);
-        if ($resultado === true) {
-            echo "Archivo subido correctamente";
-        } else {
-            echo "Error al subir archivo";
-        }
-    }
-    public function subirbinariofoto()
-    {
-
+    
     public function obtenerProyectos()
     {
         $data = $this->model->getProyectos();
@@ -70,16 +51,24 @@ class proyecto extends Controller
         $indicador = strClean($_POST['impacto']);
         $monto = strClean($_POST['monto']);
         $video = strClean($_POST['video']);
+        $foto = $this->subirArchivo($_POST['foto']);
         $info_adicional = strClean($_POST['info']);
-        $camara = $this->subirArchivo('camara');
+        $camara = $this->subirArchivo($_POST['camara']);
+        $RUT = $this->subirArchivo($_POST['RUT']);
+        $rep_legal = $this->subirArchivo($_POST['rep_legal']);
+        $cedula = $this->subirArchivo($_POST['cedula']);
+        $bancario = $this->subirArchivo($_POST['bancario']);
+        $aprob_donacion = $this->subirArchivo($_POST['aprob_donacion']);
+        $form_declaraciones = $this->subirArchivo($_POST['form_declaraciones']);
+        
         if (
-            empty($camara) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
+            empty($camara) || empty($RUT) || empty($rep_legal) || empty($cedula) || empty($bancario) || empty($aprob_donacion) || empty($form_declaraciones) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
             empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
             || empty($monto) || empty($video) || empty($info_adicional)
         ) {
             $msg = "Todos los campos son obligatorios";
         } else {
-            $data = $this->model->insertarproyecto($camara, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional);
+            $data = $this->model->insertarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional);
             if ($data === "ok") {
                 $msg = "registrado";
             } else {
@@ -93,7 +82,13 @@ class proyecto extends Controller
 
     public function editarproyecto()
     {
-        $camara = $_FILES[$_POST['camara']];
+        $camara = $this->subirArchivo($_POST['camara']);
+        $RUT = $this->subirArchivo($_POST['RUT']);
+        $rep_legal = $this->subirArchivo($_POST['rep_legal']);
+        $cedula = $this->subirArchivo($_POST['cedula']);
+        $bancario = $this->subirArchivo($_POST['bancario']);
+        $aprob_donacion = $this->subirArchivo($_POST['aprob_donacion']);
+        $form_declaraciones = $this->subirArchivo($_POST['form_declaraciones']);
         $keywords = strClean($_POST['keywords']);
         $tiempo_ejecucion = strClean($_POST['ejecucion']);
         $titulo = strClean($_POST['titulo']);
@@ -108,13 +103,13 @@ class proyecto extends Controller
         $info_adicional = strClean($_POST['info']);
 
         if (
-            empty($camara) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
+            empty($camara) || empty($RUT) || empty($rep_legal) || empty($cedula) || empty($bancario) || empty($aprob_donacion) || empty($form_declaraciones) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
             empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
             || empty($monto) || empty($video) || empty($info_adicional)
         ) {
             $msg = "Todos los campos son obligatorios";
         } else {
-            $data = $this->model->editarproyecto($camara, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional);
+            $data = $this->model->editarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional);
             if ($data === "ok") {
                 $msg = "proyecto editado";
             } else {
