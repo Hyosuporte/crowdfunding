@@ -8,6 +8,14 @@
         "Menu contenido";
 }
 
+.panelDashboard {
+    color: #031C54;
+}
+
+.textoFormuario {
+    color: #031C54;
+}
+
 .Menu {
     grid-area: Menu;
     background: #FFFFFF;
@@ -38,7 +46,9 @@
     margin-top: 1vh;
     margin-bottom: 1vh;
     color: #031C54;
+    font-size: 1.5vw;
 }
+
 .inputGrandeFormArea {
     width: 100%;
     height: auto;
@@ -69,6 +79,8 @@
     font-weight: 400;
     font-size: 3vh;
     line-height: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     /* identical to box height */
 
     display: flex;
@@ -91,6 +103,7 @@
     height: 5vh;
     color: #031C54;
     width: 100%;
+    font-size: 1.5vw;
 }
 
 .botonForm {
@@ -104,8 +117,42 @@
     font-style: normal;
     font-weight: 900;
     font-size: 3vh;
-    margin-left: 20vw;
+    margin-left: 25vw;
     margin-top: 3vh;
+    padding-left: 3.5vw;
+    padding-top: 1vh;
+}
+
+.botonFormFinal{
+    background: #DCF763;
+    border-radius: 30px;
+    border: 0px;
+    width: 15vw;
+    height: 6vh;
+    color: #031C54;
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3vh;
+    margin-left: 25vw;
+    margin-top: 3vh;
+    padding-left: 1vw;
+    padding-top: 0.5vh;
+}
+.botonFormBanner {
+    background: #DCF763;
+    border-radius: 30px;
+    border: 0px;
+    width: 15vw;
+    height: 6vh;
+    color: #031C54;
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3vh;
+    margin-left: 20vw;
+    margin-top: 3vh;    
+    padding-top: 0.5vh;
 }
 
 .textoPaso {
@@ -114,7 +161,7 @@
     font-weight: 700;
     font-size: 1vw;
     line-height: 35px;
-    margin-left: 39vw ;
+    margin-left: 39vw;
     /* identical to box height */
 
     display: flex;
@@ -128,6 +175,102 @@
     align-items: center;
 }
 
-.bloqueDashboard{
+.bloqueDashboard {
     background-color: #FFFFFF;
+}
+
+.tableDashboardTitulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.bloqueAunSinProyectosTitulo {
+    color: #540D6E;
+}
+
+.bannerDashboardProyecto {
+    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+    border-radius: 30px;
+    color: #F5F0F5;
+    text-align: center;
+    padding: 5vw;
+}
+
+.bannerDashboardProyectoTitulo {
+    font-family: 'FatFrank';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 55px;
+    text-align: center;
+
+    color: #F5F0F5;
+}
+
+.bannerDashboardProyectoTexto {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    text-align: center;
+
+    color: #F5F0F5;
+}
+
+.botonBannerDashboardSubirProyecto {
+    margin-left: 10vw;
+}
+
+.botonForm {
+    width: 30vh;
+    height: 5vh;
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2vh;
+    border-width: 0;
+    background: #DCF763;
+    border-radius: 30px;
+    color: #031C54;
+}
+
+.grupoInputsForm2{
+    display: flex;
+    font-size: 1vw;
+    margin: 1vw;
+}
+
+.inputFileForm{
+    border-radius: 30px;
+    border: 1px solid #031C54;
+    padding-right: 1vw;
+    font-size: 1.5vw;
+}
+
+.titulosInputsFileForm{
+    color: #031C54;
+    display: flex;
+    margin-left: 1vw;
+    font-size: 1.5vw;
+}
+
+.titulosInputsFileForm p{
+    margin-left: 10vw;
+    font-size: 1vw;
+}
+.titulosInputsFileForm2{
+    margin-left: 25vw !important;
+    font-size: 1vw;    
+}
+
+.tablita{
+    border-bottom: 1px  solid #031C54;
+    border-right: 1px  solid #031C54;
+}
+.bordeDerecha{    
+    border-right: 1px  solid #031C54;
+}
+.bordeIzquierda{
+    border-left: 1px  solid #031C54;
 }

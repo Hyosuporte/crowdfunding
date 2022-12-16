@@ -20,8 +20,9 @@ class proyecto extends Controller
                <select name="acciones" id="acciones">
                     <option value="">-</option>
                     <option value="aprobado">Aprobado</option>
-                    <option value="noAprobado">NoAprobado</option>
-                    <option value="enRevision">EnRevision</option>
+                    <option value="noAprobado">No Aprobado</option>
+                    <option value="tecnica">Revision Tecnica</option>
+                    <option value="documental">Revision Documental</option>
                 </select>';
             $data[$i]['observaciones'] = '<div>
                 <textarea name="observaciones" id="observaciones" cols="15" rows="3"></textarea>    </div>';

@@ -35,6 +35,39 @@ $(document).ready(function () {
     });
     console.log("cambia la puta madre")
 });
+/*$(document).ready(function () {
+    
+    $('#tblProyectos').DataTable({
+        ajax:{
+            url: base_url+"proyecto/obtenerProyectos",
+            dataSrc:"",
+        },
+        columns:[
+            {
+                data:"id_proyecto",
+            },
+            {
+                data:"titulo",
+            },
+            {
+                data:"fecha_comienzo",
+            },
+            {
+                data:"fecha_final",
+            },
+            {
+                data:"id_estado",
+            },
+            {
+                data:"acciones",
+            },
+            {
+                data:"observaciones",
+            },
+        ],
+    });
+    console.log("cambia la puta madre")
+});*/
 
 function consultarProyectos(){
   const url = base_url +"proyecto/obtenerProyectos";
