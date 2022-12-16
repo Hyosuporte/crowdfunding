@@ -61,7 +61,7 @@ class proyectoDAO extends Query
 
   public function getGaleriaP()
   {
-    $sql = 'SELECT p.foto,p.titulo,p.abstrac,p.monto_financiacion,d.id_proyecto, COUNT(d.monto),SUM(d.monto) FROM donacion d JOIN proyecto p  ON d.id_proyecto = p.id_proyecto GROUP BY d.id_proyecto;';
+    $sql='SELECT p.id_proyecto,p.keywords,p.titulo,p.foto,p.abstrac,p.monto_financiacion,COUNT(d.monto),SUM(d.monto) FROM proyecto p LEFT JOIN donacion d ON d.id_proyecto=p.id_proyecto GROUP BY p.id_proyecto;';
     $datos = $this->selectAll($sql);
     return $datos;
   }
