@@ -154,11 +154,11 @@
                         Sobre TFI
                     </li>
                     <li>
-                        Aprende más
-                    </li>
-                    <li>
-                        ¿Cómo funciona?
-                    </li>
+                            <a href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
+                        </li>
                     <li>
                         Términos y condiciones
                     </li>

@@ -274,10 +274,10 @@
                             Sobre TFI
                         </li>
                         <li>
-                            Aprende más
+                            <a href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
                         </li>
                         <li>
-                            ¿Cómo funciona?
+                            <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
                         </li>
                         <li>
                             Términos y condiciones
