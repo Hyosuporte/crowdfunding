@@ -1,17 +1,17 @@
 document
   .getElementById("bodyGaleria")
-  .addEventListener("OnLoad", listarProyectos(), false);
+  .addEventListener("OnLoad", listarGaleria(), false);
 
 if (document.getElementById("configPerfil") != null) {
   document
     .getElementById("configPerfil")
-    .addEventListener("onLoad", listarGaleria(), true);
+    .addEventListener("onLoad", listarDatos(), true);
 }
 
 if (document.getElementById("vistaProyecto") != null) {
   document
     .getElementById("vistaProyecto")
-    .addEventListener("onLoad", listarDatos(), true);
+    .addEventListener("onLoad", listarGaleria(), true);
 }
 
 function listarGaleria() {
