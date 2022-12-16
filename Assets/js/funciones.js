@@ -5,10 +5,16 @@ document
 if (document.getElementById("configPerfil") != null) {
   document
     .getElementById("configPerfil")
+    .addEventListener("onLoad", listarGaleria(), true);
+}
+
+if (document.getElementById("vistaProyecto") != null) {
+  document
+    .getElementById("vistaProyecto")
     .addEventListener("onLoad", listarDatos(), true);
 }
 
-function listarProyectos() {
+function listarGaleria() {
   const url = base_url + "proyecto/listarProyectos";
   const divGaleria = document.querySelector("#galeriaProyectos");
   const http = new XMLHttpRequest();
@@ -93,7 +99,9 @@ function creacionCardBody(element) {
     }</p>`;
   p2.setAttribute("class", "barraProgresoCard");
   ver.setAttribute("class", "botonCardGaleria");
-  ver.setAttribute("type", "button");
+  ver.setAttribute("value", element.id_proyecto);
+  ver.setAttribute("type", "submit");
+  ver.setAttribute("href", `${base_url}proyecto/listarProyecto`);
   ver.innerHTML = `Ver Proyecto <img class="imagenOjo" src="${base_url}Assets/img/Ojo.svg" width="20" alt="">`;
   divBody.appendChild(h5);
   divBody.appendChild(p1);

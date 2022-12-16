@@ -1,3 +1,5 @@
+<?php require_once("mercado_pago.php") ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +15,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="">
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
     <title><?php echo $data['title']; ?></title>
 </head>
 
@@ -36,27 +40,28 @@
             </li>
         </ul>
     </nav>
-    <div class="content">
+    <div class="content" id="vistaProyecto" >
 
         <div>
             <img class="bannerProyecto" src="<?php echo BASE_URL; ?>Assets/img/Hero Banner.svg" alt="">
         </div>
 
         <div class="bloqueVistaProyecto">
-            <p class="tituloVistaProyecto" id="nombre" name="nombre">Nombre Proyecto</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum, arcu eget blandit suscipit, ex
-                magna pharetra ante, ut convallis neque ipsum eu nisi. Phasellus at arcu vitae diam faucibus imperdiet.
-                Proin eu tortor purus. Vivamus purus nunc, feugiat et vestibulum id, cursus non felis. Nullam elementum
-                at augue non hendrerit. Nullam semper, nunc ut fermentum placerat, purus nunc vestibulum sem, ut varius
-                tortor arcu non massa. Donec fermentum turpis sagittis magna accumsan, ut aliquam augue volutpat. Nam
-                mollis ipsum risus, a facilisis nunc fringilla id.</p>
-            <img src="<?php echo BASE_URL; ?>Assets/img/caruselImagen.svg" alt="">
+            <p class="tituloVistaProyecto" id="nombre" name="nombre"><?php echo $data['titulo']; ?></p>
+            <p><?php echo $data['abstrac']; ?></p>
+            <img src="<?php echo $data['foto']; ?>" alt="">
             <div class="informacionVistaProyecto">
                 <div class="donaciones">
                     <div class="montoDonacion">
                         <div style="display: flex;">
-                            <p>Recibido $11.000.000</p>
-                            <p style="margin-left: 50%;">Meta $11.000.000</p>
+                            <p>Recibido $<?php 
+                            if($data['SUM(d.monto)']== null){
+                                echo 0;
+                            }else{
+                                echo $data['SUM(d.monto)'];
+                            }
+                             ?></p>
+                            <p style="margin-left: 50%;">Meta $<?php echo $data['monto_financiacion']; ?></p>
                         </div>
                         <div class="progress">
                             <div class="progress-bar colorBarraProgreso" style="width: 25%" role="progressbar"
@@ -65,7 +70,7 @@
                     </div>
                     <div class="montoDonadores">
                         <img src="<?php echo BASE_URL; ?>Assets/img/people.svg" alt="" width="50">
-                        <p style="margin-left: 5%; font-size: 20px;">55 Donadores</p>
+                        <p style="margin-left: 5%; font-size: 20px;"><?php echo $data['COUNT(d.monto)']; ?> Donadores</p>
                         <p style="margin-left: 15%;margin-top: 2%;">Ver todos</p>
                         <img style="margin-left: 15%;" src="<?php echo BASE_URL; ?>Assets/img/compartir.svg" alt="" width="40">
                     </div>
@@ -90,6 +95,7 @@
                     <input class="cantidadDonar" type="text" name="cantidad" id="cantidad">
                 </div>
                 <a href=""><button style="margin-left: 50%;" class="boton" type="button">Donar</button></a>
+                <div class="checkout-btn"></div>
             </div>
             <div>
                 <table class="tablaDonador">
@@ -168,9 +174,23 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const mp = new MercadoPago('TEST-af98f1a8-b5d7-464f-b9f7-d8263610c69f', {
+            locale: 'es-CO'
+        });
 
-
-    <script src="<?php echo BASE_URL; ?>Assets/js/index.js"></script>
+        mp.checkout({
+            preference: {
+                id: '<?php echo $preference->id; ?>'
+            },
+            render: {
+                container: '.checkout-btn',
+                label: 'Pagar con MercadoPago'
+            }
+        })
+    </script>
+    <?php require_once("View/Template/footer.php") ?>
+    <script src="<?php echo BASE_URL; ?>Assets/js/funciones.js"></script>
 
 </body>
 

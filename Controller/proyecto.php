@@ -125,4 +125,13 @@ class proyecto extends Controller
         die();
     }
 
+    public function listarProyecto()
+    {
+        $id = strClean($_GET['id_proyecto']);
+        $data = $this->model->getProyecto($id);
+        $data['title'] = $data['titulo'];
+        $this->views->getView("Home", "vistaProyecto",$data);
+        die();
+    }
+
 }
