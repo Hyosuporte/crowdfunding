@@ -2,19 +2,16 @@ document
   .getElementById("bodyGaleria")
   .addEventListener("OnLoad", listarGaleria(), false);
 
-<<<<<<< HEAD
-window.onload = function () {
-  var fecha = new Date();
-  var mes = fecha.getMonth() + 1;
-  var dia = fecha.getDate();
-  var ano = fecha.getFullYear();
-  if (dia < 10) dia = "0" + dia;
-  if (mes < 10) mes = "0" + mes;
-=======
 if (document.getElementById("configPerfil") != null) {
   document
     .getElementById("configPerfil")
     .addEventListener("onLoad", listarDatos(), true);
+}
+
+if (document.getElementById("galeriaProyectos") != null) {
+  document
+    .getElementById("galeriaProyectos")
+    .addEventListener("onLoad", listarGaleria(), true);
 }
 
 if (document.getElementById("vistaProyecto") != null) {
@@ -22,7 +19,6 @@ if (document.getElementById("vistaProyecto") != null) {
     .getElementById("vistaProyecto")
     .addEventListener("onLoad", listarGaleria(), true);
 }
->>>>>>> origin/daniel
 
 function listarGaleria() {
   const url = base_url + "proyecto/listarProyectos";
