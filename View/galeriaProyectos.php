@@ -83,24 +83,7 @@
                 <option value="">Organizar Fecha</option>
             </select>
         </div>
-
-        <div class="content" id="galeriaProyectos">
-
-                <div class="card cardGaleria">
-                    <div class="card-body">
-                        <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <div class="meta">
-                            <p class="metaCardDestacado">Recibido $11.000.000 </p>
-                            <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
-                        </div>
-                        <p class="barraProgresoCard"></p>
-                        <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
-                    </div>
-                </div>
-
-        </div>
-
-
+        <div class="content" id="galeriaProyectos"></div>
         <div class="bloqueSubirProyecto">
             <div class="subirFirstColumn">
                 <p class="subirProyectoTitulo">¿Cómo puedo subir mi proyecto?</p>

@@ -5,6 +5,9 @@ document
 $(document).ready(function () {
     
     $('#tblProyectos').DataTable({
+        paging: false,
+        ordering: false,
+        info: false,
         ajax:{
             url: base_url+"proyecto/obtenerProyectos",
             dataSrc:"",

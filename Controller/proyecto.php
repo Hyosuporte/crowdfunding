@@ -30,12 +30,9 @@ class proyecto extends Controller
     public function subirArchivo($name)
     {
         $fichero_subido = dir_subida . basename($_FILES[$name]['name']);
-        echo '<pre>';
         echo $_FILES[$name]['name'];
         if (move_uploaded_file($_FILES[$name]['tmp_name'], $fichero_subido)) {
-            echo "El fichero es válido y se subió con éxito.\n";
-        } else {
-            echo "¡Posible ataque de subida de ficheros!\n";
+	        $fichero_subido = 'http:\\localhost\\crowdfunding\\uploadeddocuments\\' . basename($_FILES[$name]['name']);
         }
         return $fichero_subido;
     }
@@ -136,6 +133,15 @@ class proyecto extends Controller
     {
         $data = $this->model->getGaleriaP();
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
+    public function listarProyecto()
+    {
+        $id = strClean($_GET['id_proyecto']);
+        $data = $this->model->getProyecto($id);
+        $data['title'] = $data['titulo'];
+        $this->views->getView("Home", "vistaProyecto",$data);
         die();
     }
 
