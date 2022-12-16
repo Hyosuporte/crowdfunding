@@ -13,14 +13,26 @@
 }
 
 .textoFormuario {
-    color: #031C54;
+    font-family: 'TT Norms';
+    color: #031C54;    
 }
 
 .Menu {
     grid-area: Menu;
     background: #FFFFFF;
     box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
-    border-radius: 30px;
+    border-radius: 30px;    
+}
+
+.textoMenu{
+    color: #031C54;    
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+}
+.textoMenuAbajo{
+    color: #031C54;  
+    font-size: 1.5vw;
+    margin-top: 30vw;  
 }
 
 .contenido {
@@ -79,8 +91,8 @@
     font-weight: 400;
     font-size: 3vh;
     line-height: 1vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
     /* identical to box height */
 
     display: flex;
@@ -176,11 +188,17 @@
 }
 
 .bloqueDashboard {
-    background-color: #FFFFFF;
+    background-color: #F5F0F5;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.pantallaInicialDashboard{
+    padding: 1vw;
 }
 
 .tableDashboardTitulo {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'TT Norms';
 
 }
 
@@ -194,10 +212,11 @@
     color: #F5F0F5;
     text-align: center;
     padding: 5vw;
+    margin-bottom: 1vw;
 }
 
 .bannerDashboardProyectoTitulo {
-    font-family: 'FatFrank';
+    font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
     font-size: 46px;
@@ -253,24 +272,57 @@
     display: flex;
     margin-left: 1vw;
     font-size: 1.5vw;
-}
-
-.titulosInputsFileForm p{
-    margin-left: 10vw;
-    font-size: 1vw;
+    font-weight: bold;
+    font-style: normal;
 }
 .titulosInputsFileForm2{
     margin-left: 25vw !important;
-    font-size: 1vw;    
 }
 
 .tablita{
-    border-bottom: 1px  solid #031C54;
-    border-right: 1px  solid #031C54;
+    width: 100%;
+
+}
+
+.bordeAbajo{
+    border-bottom: 0.5vh  solid #031C54;        
 }
 .bordeDerecha{    
-    border-right: 1px  solid #031C54;
+    border-right: 0.5vh  solid #031C54;
 }
 .bordeIzquierda{
-    border-left: 1px  solid #031C54;
+    border-left: 0.5vh  solid #031C54;
+}
+
+.botonFormActualizar{
+    background: #DCF763;
+    border-radius: 30px;
+    border: 0px;
+    width: 15vw;
+    height: 6vh;
+    color: #031C54;
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.5vh;
+    margin-top: 3vh;
+    padding-left: 0.5vw;
+    padding-top: 0.5vh;
+}
+
+.inputActualizarDatos{
+    border-radius: 30px;
+    border: 1px solid #031C54;
+
+}
+
+.fondoDashboard{
+    background-color: #F5F0F5;
+}
+
+.fondoBlanco{
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
+    border-radius: 1vw;
+    padding-top: 1vw;
 }

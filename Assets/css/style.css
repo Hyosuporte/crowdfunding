@@ -1007,14 +1007,13 @@ body {
 }
 
 label {
-    font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
     align-items: center;
 
-    color: #FFFFFF;
+    color: #031C54;
 }
 
 .olvidoContrasena {
