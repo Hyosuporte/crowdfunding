@@ -103,13 +103,40 @@ svg circle:nth-child(2) {
 }
 
 .tablaDonador {
-    width: 95%;
+    width: 100%;
     text-align: center;
-    border: 1px solid #031C54;
-    border-radius: 30vw;
     margin-top: 1%;
     margin-left: 1%;
     
+}
+
+.tablaDonador th,
+td {
+    border: 0.2vh solid #031C54;
+}
+
+tr td, th { 
+    border-top-right-radius: 0;               
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0; 
+}
+
+table { 
+    border-collapse: separate; 
+}
+
+th:first-child { 
+    border-top-left-radius: 1vw; 
+}
+th:last-child {   
+    border-top-right-radius: 1vw; 
+}
+tr:last-child td:first-child { 
+    border-bottom-left-radius: 1vw; 
+}
+tr:last-child td:last-child { 
+    border-bottom-right-radius: 1vw; 
 }
 
 .textoVistaProyecto {
@@ -122,11 +149,6 @@ svg circle:nth-child(2) {
     color: #031C54;
 }
 
-.tablaDonador th,
-td {
-    border: 0.3vh solid #031C54;
-    border-radius: 30vw;
-}
 
 .fuentePrincipal {
     font-family: 'TT Norms';
@@ -161,6 +183,6 @@ td {
     background: #DCF763;
     border-radius: 3vw;
     color: #031C54;
-    margin-top: 3vw;
+    margin-top: 2vw;
     margin-left: 1vw;
 }

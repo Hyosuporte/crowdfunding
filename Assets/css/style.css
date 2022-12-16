@@ -86,6 +86,10 @@ body {
     width: 80% !important;
 }
 
+.linksFooter{
+    font-size: 1.5vw;
+}
+
 .activeNavbar {
     color: #CC59D2 !important;
     text-decoration: underline !important;
@@ -867,7 +871,8 @@ color: #F5F0F5;
 
 .bloqueInfoFooter {
     font-family: 'TT Norms', sans-serif;
-    margin-top: 5%;
+    margin-top: 5vw;
+    margin-bottom: 3%;
     display: flex;
     color: #F5F0F5;
 }
