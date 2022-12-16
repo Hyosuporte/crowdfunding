@@ -152,8 +152,6 @@ function listarDatos(e) {
     }
   };
 }
-<<<<<<< HEAD
-=======
 
 function UpdateCorreo() {
   const url = base_url + "cliente/UpdateCorreo";
@@ -231,4 +229,3 @@ function UpdatePassword() {
     }
   }
 }
->>>>>>> origin/daniel
