@@ -6,12 +6,7 @@ class proyecto extends Controller
     {
         parent::__construct();
     }
-<<<<<<< HEAD
     
-=======
-
-
->>>>>>> origin/daniel
     public function obtenerProyectos()
     {
         $data = $this->model->getProyectos();
@@ -59,7 +54,6 @@ class proyecto extends Controller
         $video = strClean($_POST['video']);
         $foto = $this->subirArchivo($_POST['foto']);
         $info_adicional = strClean($_POST['info']);
-<<<<<<< HEAD
         $camara = $this->subirArchivo($_POST['camara']);
         $RUT = $this->subirArchivo($_POST['RUT']);
         $rep_legal = $this->subirArchivo($_POST['rep_legal']);
@@ -68,11 +62,6 @@ class proyecto extends Controller
         $aprob_donacion = $this->subirArchivo($_POST['aprob_donacion']);
         $form_declaraciones = $this->subirArchivo($_POST['form_declaraciones']);
         
-=======
-        $camara = $this->subirArchivo('camara');
-        print_r($_FILES);
-        $foto = $this->subirArchivo('foto');
->>>>>>> origin/daniel
         if (
             empty($camara) || empty($RUT) || empty($rep_legal) || empty($cedula) || empty($bancario) || empty($aprob_donacion) || empty($form_declaraciones) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
             empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)

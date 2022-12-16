@@ -28,7 +28,7 @@ $preference->save();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="">
     <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <title>Integración Mercado Pago</title>
+    
     
 </head>
 
@@ -50,7 +50,7 @@ $preference->save();
                 label: 'Pagar con MercadoPago'
             }
         })
-    </script>
+    </script>s
     
 </body>
 
