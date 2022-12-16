@@ -1,0 +1,129 @@
+.bloqueVistaProyecto {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 1%;
+    padding: 4vw;
+    z-index: 1;
+
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
+    border-radius: 30px;
+}
+
+.bannerProyecto {
+    width: 100%;
+    z-index: -100;
+}
+
+.videoProyecto {
+    width: 100%;
+    margin: 1VW;
+}
+
+.detallesProyecto {
+    margin-top: 3vh;
+    display: grid;
+    grid-template-columns: 1.9fr 0.6fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Meta FechaInicio Dias"
+        "Donadores FechaCierre Dias";
+}
+
+.Meta {
+    grid-area: Meta;
+}
+
+.Donadores {
+    grid-area: Donadores;
+    margin-right: 1vw;
+}
+
+.FechaInicio {
+    grid-area: FechaInicio;
+}
+
+.FechaCierre {
+    grid-area: FechaCierre;
+}
+
+.Dias {
+    grid-area: Dias;
+    margin-left: 5vw;
+}
+
+.montoDonadores {
+    display: flex;
+    margin-top: 3vh;
+}
+
+svg {
+    position: relative;
+    width: 20vw;
+    height: 25vh;
+    z-index: 100;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #CC59D2;
+    stroke-width: 8;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2){
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+}
+
+.carta:nth-child(1) svg circle:nth-child(2){
+    stroke:#D9D9D9;
+}
+
+.percent p {
+    margin-top: -7.5vw;
+    margin-left: 4.5vw;
+}
+
+.fechas{
+    margin-left: 1vw;
+    width: 150%;
+    
+}
+
+.colorBarraProgreso{
+    background-color: #CC59D2;
+}
+
+.tablaDonador {
+    width: 95%;
+    text-align: center;
+    border: 1px solid;
+    margin-top: 1%;
+    margin-left: 1%;
+    
+}
+
+.tablaDonador th,
+td {
+    border: 1px solid;
+
+}
+
+.fuentePrincipal{
+    font-family: 'TT Norms';
+    color: #031C54;
+    font-size: 1vw;
+}
+
+.fuenteSecundaria{
+    font-family: 'Be Vietnam';
+    color: #031C54;
+    font-size: 1vw;
+}

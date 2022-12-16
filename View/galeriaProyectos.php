@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <style>
+=======
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+>>>>>>> origin/daniel
         @font-face {
             font-family: 'TT Norms';
             src: url('<?php echo BASE_URL; ?>Assets/fonts/TT-Norms-Black/TTNorms-Black.otf');
@@ -18,6 +23,10 @@
             font-size: 32px;
             line-height: 38px;
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/daniel
         @font-face {
             font-family: 'Be Vietnam';
             src: url('<?php echo BASE_URL; ?>Assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
@@ -27,17 +36,20 @@
             line-height: 26px;
 
             color: #031C54;
+<<<<<<< HEAD
         }        
+=======
+        }
+>>>>>>> origin/daniel
     </style>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/galeria.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
     <title>Galeria</title>
 </head>
 
-<body>
+<body id="bodyGaleria">
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
@@ -71,71 +83,24 @@
                 <option value="">Organizar Fecha</option>
             </select>
         </div>
-        <div class="proyectosFila">
-            <div class="card cardGaleria">
-                <div>
-                    <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
-                </div>
-                <div class="card-body">
-                    <h5 class="tituloCardDestacado">Nombre <p style="text-indent: 22vw;"><img src="<?php echo BASE_URL; ?>Assets/img/personas.svg" alt=""> 55/D</p></h5>
-                    <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="meta">
-                        <p class="metaCardDestacado">Recibido $11.000.000 </p> <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
+
+        <div class="content" id="galeriaProyectos">
+
+                <div class="card cardGaleria">
+                    <div class="card-body">
+                        <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="meta">
+                            <p class="metaCardDestacado">Recibido $11.000.000 </p>
+                            <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
+                        </div>
+                        <p class="barraProgresoCard"></p>
+                        <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
                     </div>
-                    <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
-                            width="20" alt=""></button>
                 </div>
-            </div>
-            <div class="card cardGaleria">
-                <div>
-                    <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
-                </div>
-                <div class="card-body">
-                    <h5 class="tituloCardDestacado">Nombre <p style="text-indent: 22vw;"><img src="<?php echo BASE_URL; ?>Assets/img/personas.svg" alt=""> 55/D</p></h5>
-                    <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="meta">
-                        <p class="metaCardDestacado">Recibido $11.000.000 </p> <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
-                    </div>
-                    <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
-                            width="20" alt=""></button>
-                </div>
-            </div>
+
         </div>
-        <div class="proyectosFila">
-            <div class="card cardGaleria">
-                <div>
-                    <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
-                </div>
-                <div class="card-body">
-                    <h5 class="tituloCardDestacado">Nombre <p style="text-indent: 22vw;"><img src="<?php echo BASE_URL; ?>Assets/img/personas.svg" alt=""> 55/D</p></h5>
-                    <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="meta">
-                        <p class="metaCardDestacado">Recibido $11.000.000 </p> <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
-                    </div>
-                    <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
-                            width="20" alt=""></button>
-                </div>
-            </div>
-            <div class="card cardGaleria">
-                <div>
-                    <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
-                </div>
-                <div class="card-body">
-                    <h5 class="tituloCardDestacado">Nombre <p style="text-indent: 22vw;"><img src="<?php echo BASE_URL; ?>Assets/img/personas.svg" alt=""> 55/D</p></h5>
-                    <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="meta">
-                        <p class="metaCardDestacado">Recibido $11.000.000 </p> <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $11.000.000</p>
-                    </div>
-                    <p class="barraProgresoCard"></p>
-                    <button type="button" class="botonCardGaleria">Ver Proyecto <img class="imagenOjo" src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg"
-                            width="20" alt=""></button>
-                </div>
-            </div>
-        </div>
-        
+
+
         <div class="bloqueSubirProyecto">
             <div class="subirFirstColumn">
                 <p class="subirProyectoTitulo">¿Cómo puedo subir mi proyecto?</p>
@@ -243,16 +208,11 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/b2831985f5.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-    <script src="<?php echo BASE_URL; ?>Assets/js/index.js"></script>
-
+    <?php require_once("View/Template/footer.php") ?>
+    <script src="<?php echo BASE_URL; ?>Assets/js/funciones.js"></script>
 </body>
 
 </html>
