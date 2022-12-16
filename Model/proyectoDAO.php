@@ -58,6 +58,12 @@ class proyectoDAO extends Query
     $data = $this->selectAll($sql);
     return $data;
   }
+  public function getProyectosDonados()
+  {
+    $sql = "SELECT * FROM proyecto";
+    $data = $this->selectAll($sql);
+    return $data;
+  }
 
   public function getGaleriaP()
   {
