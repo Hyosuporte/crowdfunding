@@ -8,12 +8,6 @@ if (document.getElementById("configPerfil") != null) {
     .addEventListener("onLoad", listarDatos(), true);
 }
 
-if (document.getElementById("galeriaProyectos") != null) {
-  document
-    .getElementById("galeriaProyectos")
-    .addEventListener("onLoad", listarGaleria(), true);
-}
-
 if (document.getElementById("vistaProyecto") != null) {
   document
     .getElementById("vistaProyecto")
