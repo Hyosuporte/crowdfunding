@@ -1,76 +1,95 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="/Assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
     <title>Registro</title>
 </head>
-<body class="main">
-    <nav class=" navbar navbar-expand-lg fixed-top ">
-        <a class="navbar-brand ">Registro Usuario</a>
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
+<body>
+    <nav class="navbar fixed-top">
+        <ul class="navbarList">
+            <li>
+                <a href="/"><img class="navbarLogo" src="/Assets/img/LOGO_21.svg" alt=""></a>
+            </li>
+            <li>
+                <a href="/Home/galeriaProyectos" class="navbarText ">Descubre</a>
+            </li>
+            <li>
+                <a href="/Home/aplicar" class="navbarText">Aplica</a>
+            </li>
+            <li>
+                <a href="/Home/SubirProyecto" class="navbarText">Aprende</a>
+            </li>
+            <li>
+                <div><a href="/Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
+            </li>
+        </ul>
+    </nav>
+<div class="bloqueLogin">
+    <div class="bannerRegistro">
+        <img class="" src="/Assets/img/registro.svg" alt="" height="720">
+        <p class="beneficioTitulo1">¡Bienvenid@!</p>
+        <p class="textoLoginIzquierda">Es momento de crear y aportar. Inicia sesión y comienza a conectar con nuevas oportunidades.</p>
+    </div>
+    <div class="formLogin">
+        <p class="formLoginTitulo">Registrate</p>
+        <div class="linkRegistrarse">
+            <p>Bienvenida</p>
         </div>
-       </nav>  
-    <form action="" method="post">
-        <div class="formulario">
-            <div class="container mt-2">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="input-group mb-3">                    
-                            <span class="input-group-text">Primer Nombre</span>
-                            <input type="text" class="form-control" placeholder="Primer Nombre" id="nombre" required>                            
-                        </div>       
-                        <div class="input-group mb-3">                    
-                            <span class="input-group-text">Primer Apellido</span>
-                            <input type="text" class="form-control" placeholder="Primer Apellido" id="apellido" required>                            
-                        </div>        
-                        <div class="input-group mb-3">                    
-                            <span class="input-group-text">Correo</span>
-                            <input type="email" class="form-control" placeholder="Correo Electronico" id="correo" required>                            
-                        </div>  
-                        <div class="input-group mb-3">                    
-                            <span class="input-group-text">Contraseña</span>
-                            <input type="password" class="form-control" placeholder="Contraseña" id="password" required>                            
-                        </div>     
-                        <div class="input-group mb-3">                    
-                            <span class="input-group-text">Dirección</span>
-                            <input type="text" class="form-control" placeholder="Direccion" id="direccion" required>                            
-                        </div>       
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Pais</span>
-                            <select name="pais" id="pais" style="margin-right: 13rem; border-radius: 10px;">
-                
-                              </select>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Ciudad</span>
-                            <select name="ciudad" id="ciudad" style="margin-right: 13rem;">
-                              </select>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">ROL</span>
-                            <select name="rol" id="rol" style="margin-right: 13rem; border-radius: 10px;">
-                                <option value="admin">Admin</option>
-                                <option value="cliente">Cliente</option>
-                            </select>
-                        </div>
+        <form action="" method="post" id="frmRegistro">
+            <div class="inputsRegistro">
+                <div class="grupoInputsRegistro">
+                    <input type="text" class="form-control inputFormularioRegistro" placeholder="Primer Nombre" id="nombre" name="primer_nombre" required max="20">
+                    <input type="text" class="form-control inputFormularioRegistro" placeholder="Primer Apellido" id="apellido" name="primer_apellido" required max="20">
+                </div>
+                <div class="grupoInputsRegistro">
+                    <input type="email" class="form-control inputFormularioRegistro" placeholder="Email" id="correo" name="correo" required max="40">
+                    <input type="text" class="form-control inputFormularioRegistro" placeholder="Direccion" id="direccion" name="direccion" required>
+                </div>                
+            </div>
+                <div class="grupoInputsRegistro">
+                    <div class="grupoInputsRegistroSimbolo">
+                        <span class="input-group-text">Pais</span>
+                        <select name="pais" id="pais" class="form-control"  onclick="listarCiudad();" >
+                        </select>
+                    </div>
+                    <div class="grupoInputsRegistroSimbolo" style="margin-left: 0.5vh;">
+                        <span class="input-group-text">Ciudad</span>
+                        <select name="ciudad" id="ciudad" class="form-control">
+                        </select>
                     </div>
                 </div>
+                <div class="grupoInputsRegistro">
+                    <input type="password" class="form-control inputFormularioRegistro" placeholder="Contraseña" id="password" name="password" required max="15">
+                    <input type="password" class="form-control inputFormularioRegistro" placeholder="Confirmar Contraseña" id="passwordConf" name="passwordConf" required max="15">
+                </div>
+                <input type="checkbox" name="recordarme" id="terminos" name="terminos" class="formInputCheck">
+                <label class="recordarme" for="terminos">Acepto terminos y condiciones de TFI</label>
+            <button type="button" class="botonFormRegistro mt-5 " onclick="frmRegistro()">Enviar</button>
+            <div class="linkRegistrarse">
+                <p>¿Ya tienes una cuenta? <a href="/Home/login/">INICIA SESIÓN</a></p>
             </div>
-        </div>
-        <div class=" finalButton">
-            <button class="btn btn-primary mb-3 mt-2" type="submit" style="width: 250px; ;height: 50px;" id="btnContinuar">Enviar</button>
-        </div>
-    </form>
-    <script src="../Assets/js/registroUsuario.js"></script>
-    <script src="jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/b2831985f5.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        </form>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/b2831985f5.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const base_url = "/"
+</script>
+<script src="/Assets/js/login.js"></script>
 </body>
+
 </html>

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
-    <title>bannerLanding</title>
+    <title><?php echo $data['title']; ?></title>
 </head>
 
 <body>
@@ -23,11 +23,11 @@
             <li>
                 <a href=""><img class="navbarLogo" src="/Assets/img/LOGO_21.svg" alt=""></a>
             </li>
-            <li>
-                <a href="" class="navbarText ">Descubre</a>
+            <li class="descubre">
+                <a href="/Home/galeriaProyecyod" class="navbarText ">Descubre</a>
             </li>
             <li>
-                <a href="" class="navbarText">Aplica</a>
+                <a href="/Home/aplicar" class="navbarText">Aplica</a>
             </li>
             <li>
                 <a href="/Home/SubirProyecto" class="navbarText">Aprende</a>
@@ -67,8 +67,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Aprende / General / Item</h5>
-                        <h2>Titulo del Item </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor magna nunc, sit amet dignissim arcu dignissim cursus. Donec tempus nunc justo. Donec suscipit tristique leo, sit amet lacinia turpis convallis et. Fusce tincidunt felis elit, posuere eleifend mi volutpat ut. Nam sem ex, faucibus ac nunc eu, scelerisque sollicitudin erat. Phasellus non metus accumsan, suscipit tortor eu, venenatis magna. In pretium velit at tellus pretium molestie. Phasellus posuere, lorem eu tempus euismod, felis elit convallis enim, a tincidunt velit lectus sed felis. Fusce vel nunc tincidunt, auctor mauris id, dapibus nisi. Sed consequat dui sed augue fermentum, in aliquet ipsum sagittis. Nullam vitae tortor non massa fringilla rhoncus in vel metus. Maecenas sed gravida turpis, in ultrices ante. Phasellus sed malesuada dui, vestibulum dignissim massa.
+                        <h2 class="tituloItem">Titulo del Item </h2>
+                        <p class="textoItem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor magna nunc, sit amet dignissim arcu dignissim cursus. Donec tempus nunc justo. Donec suscipit tristique leo, sit amet lacinia turpis convallis et. Fusce tincidunt felis elit, posuere eleifend mi volutpat ut. Nam sem ex, faucibus ac nunc eu, scelerisque sollicitudin erat. Phasellus non metus accumsan, suscipit tortor eu, venenatis magna. In pretium velit at tellus pretium molestie. Phasellus posuere, lorem eu tempus euismod, felis elit convallis enim, a tincidunt velit lectus sed felis. Fusce vel nunc tincidunt, auctor mauris id, dapibus nisi. Sed consequat dui sed augue fermentum, in aliquet ipsum sagittis. Nullam vitae tortor non massa fringilla rhoncus in vel metus. Maecenas sed gravida turpis, in ultrices ante. Phasellus sed malesuada dui, vestibulum dignissim massa.
 
                             Nam ac elit augue. Nulla consectetur ut lorem eu faucibus. Donec cursus purus porta eros pharetra hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod quis nibh ac sagittis. Proin vitae leo quis quam consectetur maximus eleifend sed massa. Nunc gravida diam orci, et malesuada tortor consectetur malesuada. Aenean in sem id urna pulvinar pulvinar et sed massa. Fusce pellentesque fermentum risus eget suscipit. Aliquam justo purus, iaculis vehicula auctor nec, mollis eu elit.
                             
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
-                    <p>Sigue en contacto con nosotros, escribe tu correo aquí.</p>
+                    <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
                     <input type="text" name="" id="">
                     <a href="/Home/login/"><button class="botonFormFooter" type="button">Quiero estar
                             conectado</button></a>
@@ -112,17 +112,17 @@
                             Sobre TFI
                         </li>
                         <li>
-                            Aprende más
+                            <a href="/Home/SubirProyecto">Aprende más</a>
                         </li>
                         <li>
-                            ¿Cómo funciona?
+                            <a href="/Home/aplicar">¿Cómo funciona?</a>
                         </li>
                         <li>
                             Términos y condiciones
                         </li>
                     </ul>
                 </div>
-                <div style="margin-left: 50%;">
+                <div style="margin-left: 30%;">
                     <h3>Contáctanos</h3> <br>
                     <ul>
                         <li>Telefono</li>

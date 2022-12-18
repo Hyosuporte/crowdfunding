@@ -7,6 +7,7 @@ class proyecto extends Controller
         parent::__construct();
     }
 
+
     public function obtenerProyectos()
     {
         $data = $this->model->getProyectos();
@@ -15,8 +16,9 @@ class proyecto extends Controller
                <select name="acciones" id="acciones">
                     <option value="">-</option>
                     <option value="aprobado">Aprobado</option>
-                    <option value="noAprobado">NoAprobado</option>
-                    <option value="enRevision">EnRevision</option>
+                    <option value="noAprobado">No Aprobado</option>
+                    <option value="tecnica">Revision Tecnica</option>
+                    <option value="documental">Revision Documental</option>
                 </select>';
             $data[$i]['observaciones'] = '<div>
                 <textarea name="observaciones" id="observaciones" cols="15" rows="3"></textarea>    </div>';
@@ -29,12 +31,9 @@ class proyecto extends Controller
     public function subirArchivo($name)
     {
         $fichero_subido = dir_subida . basename($_FILES[$name]['name']);
-        echo '<pre>';
         echo $_FILES[$name]['name'];
         if (move_uploaded_file($_FILES[$name]['tmp_name'], $fichero_subido)) {
-            echo "El fichero es válido y se subió con éxito.\n";
-        } else {
-            echo "¡Posible ataque de subida de ficheros!\n";
+	        $fichero_subido = 'http:\\localhost\\crowdfunding\\uploadeddocuments\\' . basename($_FILES[$name]['name']);
         }
         return $fichero_subido;
     }
@@ -53,6 +52,8 @@ class proyecto extends Controller
         $video = strClean($_POST['video']);
         $info_adicional = strClean($_POST['info']);
         $camara = $this->subirArchivo('camara');
+        print_r($_FILES);
+        $foto = $this->subirArchivo('foto');
         if (
             empty($camara) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
             empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
@@ -64,7 +65,7 @@ class proyecto extends Controller
             if ($data === "ok") {
                 $msg = "registrado";
             } else {
-                $msg = "Error";
+                $msg = $data;
             }
         }
 
@@ -116,4 +117,21 @@ class proyecto extends Controller
             $msg = "Error";
         }
     }
+
+    public function listarProyectos()
+    {
+        $data = $this->model->getGaleriaP();
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
+    public function listarProyecto()
+    {
+        $id = strClean($_GET['id_proyecto']);
+        $data = $this->model->getProyecto($id);
+        $data['title'] = $data['titulo'];
+        $this->views->getView("Home", "vistaProyecto",$data);
+        die();
+    }
+
 }

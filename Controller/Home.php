@@ -43,9 +43,33 @@ class Home extends Controller
         $this->views->getView("Home", "formulario",$data);
     }
 
-    public function dashboardAdmin()
+    public function aplicar()
     {
-        $data['title'] = "Dashboard";
-        $this->views->getView("Home","Dashboard",$data);
+        $data['title'] = "aplicar";
+        $this->views->getView("Home","aplicar",$data);
     }
-}
+
+    public function aprende()
+    {
+        $data['title'] = "aprende";
+        $this->views->getView("Home","aprende",$data);
+    }
+
+    public function aprenderItem()
+    {
+        $data['title'] = "aprenderItem";
+        $this->views->getView("Home","aprenderItem",$data);
+    }
+
+    public function galeriaProyectos()
+    {
+        $data['title'] = "galeriaProyectos";
+        $this->views->getView("Home","galeriaProyectos",$data);
+    }
+
+    public function vistaProyecto()
+    {
+        $data['title'] = "vistaProyecto";
+        $this->views->getView("Home","vistaProyecto",$data);
+    }
+}   

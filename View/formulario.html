@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Assets/css/style.css">
+    <link rel="stylesheet" href="/Assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+    <title>bannerLanding</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top">
+        <ul class="navbarList">
+            <li>
+                <a href=""><img class="navbarLogo" src="/Assets/img/LOGO_21.svg" alt=""></a>
+            </li>
+            <li>
+                <a href="" class="navbarText ">Descubre</a>
+            </li>
+            <li>
+                <a href="" class="navbarText">Aplica</a>
+            </li>
+            <li>
+                <a href="/Home/SubirProyecto" class="navbarText">Aprende</a>
+            </li>
+            <li>
+                <div><a class="boton" href="/Home/login/">Nombre...</a></div>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="dashboard">
+            <div class="Menu">
+                <ul>
+                    <li>Proyectos Subidos</li>
+                    <li>Proyectos Donados</li>
+                    <li>Actualizar Datos</li>
+                </ul>
+            </div>
+            <div class="contenido">
+                <form action="">
+                    <div class="headerForm">
+                        <p class="tituloFormSubirProyecto">Subir Proyecto </p>
+                        <p class="textoPaso">Paso 1 de 2</p>
+                    </div>
+                    <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
+                    <input class="inputGrandeForm" type="text" name="nombre" id="nombre" placeholder="Nombre de la organización*">
+                    <div class="grupoInputsForm">
+                        <select class="grupoInput1" name="organizacion" id="organizacion" style="margin-right: 3rem;">
+                            <option value="">Organizacion</option>
+                            <option value="1">ONG</option>
+                            <option value="2">OSC</option>
+                            <option value="3">Empresa</option>
+                            <option value="4">Persona Natural</option>
+                            <option value="5">Academia</option>
+                            <option value="6">Grupos No Constituidos</option>
+                        </select>
+                        <input type="number" class="grupoInput1"
+                        placeholder="Telefono Responsable*" required id="telefono"
+                        name="telefono" onkeydown="filtro()">
+                        <script>
+                            function filtro() {
+                                var tecla = event.key;
+                                if (['.', 'e'].includes(tecla))
+                                event.preventDefault()
+                            }
+                            </script>
+                    </div>
+                    <input class="inputGrandeForm" type="text" name="web" id="web" placeholder="Sitio WEB">
+                    <input class="inputGrandeForm" type="text" name="redes" id="redes" placeholder="Redes Sociales*">
+                    <div class="grupoInputsForm">
+                        <input class="grupoInput1" type="text" name="banco" id="banco" placeholder="Banco*">
+                        <input class="grupoInput1" type="text" name="cuenta" id="cuenta" placeholder="Cuenta*">
+                    </div>
+                    <button class="botonForm" type="button" onclick="validar()">Siguiente Paso</button>
+                </form>
+            </div>
+            <!--<form action="/organizacion/insertarorg" method="post">
+                <div class="formulario">
+                    <div class="container mt-2">
+                        <div class="card">
+                            <div class="card-header">
+                                Datos de la Organizacion
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">id de la Organizacion</span>
+                                    <input type="number" class="form-control" placeholder="id de la organizacion"
+                                        name="id_org" required>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">Nombre de la Organizacion</span>
+                                    <input type="text" class="form-control" placeholder="Nombre de la organizacion"
+                                        name="nombre" name="nombre" id="nombre" required>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">Tipo Organizacion</span>
+                                    <select name="organizacion" id="organizacion" style="margin-right: 3rem;">
+                                        <option value="1">ONG</option>
+                                        <option value="2">OSC</option>
+                                        <option value="3">Empresa</option>
+                                        <option value="4">Persona Natural</option>
+                                        <option value="5">Academia</option>
+                                        <option value="6">Grupos No Constituidos</option>
+                                    </select>
+                                    <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                                    <input type="number" class="form-control "
+                                        placeholder="Telefono de contacto de la persona encargada" required
+                                        id="telefono" name="telefono" onkeydown="filtro()">
+                                    <script>
+                                        function filtro() {
+                                            var tecla = event.key;
+                                            if (['.', 'e'].includes(tecla))
+                                                event.preventDefault()
+                                        }
+                                    </script>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">@</span>
+                                    <input type="text" class="form-control" placeholder="Redes Sociales" required
+                                        id="redes" name="redes">
+                                    <span class="input-group-text">Pagina WEB</span>
+                                    <input type="text" class="form-control" placeholder="Pagina WEB" id="pagina"
+                                        name="pagina" name="pagina" required>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text">Numero de cuenta</span>
+                                    <input type="text" class="form-control" placeholder="Numero de cuenta" id="cuenta"
+                                        name="cuenta" maxlength="20" required>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary mb-3 mt-2" type="submit"
+                                style="width: 250px; ;height: 50px; margin:auto;" id="btnContinuar">Guardar</button>
+                        </div>
+            </form>
+            <form action="proyecto/insertarproyecto" method="post">
+                <div class="formulario">
+                    <div class="card">
+                        <div class="card-header">
+                            Datos del Proyecto
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Titulo del Proyecto</span>
+                                <input type="text" class="form-control" placeholder="Titulo del Proyecto" id="titulo"
+                                    name="titulo" size="90rem" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                                <input type="text" class="form-control" placeholder="KeyWords" required id="keywords"
+                                    name="keywords">
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Abstract" id="Abstract" name="Abstract"
+                                    style="height: 150px"></textarea>
+                                <label for="floatingTextarea">Abstract</label>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Indicador Impacto</span>
+                                <input type="number" class="form-control" placeholder="Indicador Impacto" id="impacto"
+                                    name="impacto" style="margin-right: rem;" required>
+                                <span class="input-group-text">Monto financiero</span>
+                                <input type="number" class="form-control" placeholder="Monto financiero" id="monto"
+                                    name="monto" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="input-group">
+                                            <label for="final">Fecha Final Campaña</label>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text"><i
+                                                        class="fa-solid fa-calendar-check"></i></span>
+                                                <input type="date" class="form-control" id="final" name="final"
+                                                    name="final">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="input-group">
+                                            <label for="ejecucion">Tiempo de ejecucion</label>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text"><i
+                                                        class="fa-solid fa-calendar"></i></span>
+                                                <input type="date" class="form-control" id="ejecucion" name="ejecucion"
+                                                    name="ejecucion">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Foto</span>
+                                <input class="form-control" type="file" id="foto" required itemid="foto">
+                                <span class="input-group-text"><i class="fa-brands fa-youtube"></i></span>
+                                <input type="text" class="form-control" placeholder="Video" required id="video"
+                                    name="video">
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Informacion Adicional" id="info" name="info"
+                                    name="info" style="height: 150px"></textarea>
+                                <label for="floatingTextarea">Informacion Adicional</label>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class=" mb-3">
+                                            <label for="camara" class="form-label">Camara de comercio</label>
+                                            <input class="form-control" type="file" id="camara" name="camara" required
+                                                itemid="camara">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mb-3 mt-2" type="submit"
+                            style="width: 250px; ;height: 50px; margin:auto;" id="btnContinuar">Enviar</button>
+                    </div>
+                </div>
+        </div>
+        <div class=" finalButton">
+            <button class="btn btn-primary mb-3 mt-2" type="submit" style="width: 250px; ;height: 50px;"
+                id="btnContinuar" onclick="validar()">Enviar</button>
+            </form>-->
+        </div>
+    </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="../Assets/js/funciones.js"></script>
+    <script src="https://kit.fontawesome.com/b2831985f5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+<script src="../Assets/js/funciones.js"></script>
+<script src="https://kit.fontawesome.com/b2831985f5.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

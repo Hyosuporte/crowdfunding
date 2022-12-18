@@ -21,7 +21,18 @@
 }
 
 .cartas {
+    width: auto;
     grid-area: cartas;
+}
+
+.imagenTema {
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.card {
+    width: 90%;
 }
 
 .card li {
@@ -68,6 +79,35 @@
     color: #031C54;
 }
 
-.botonCardTema img{
+.botonCardTema img {
     margin-left: 1vh;
+}
+
+.textoCard {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 26px;
+    margin: 1vw;
+
+    color: #031C54;
+}
+
+.tituloItem {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3vw;
+
+    color: #031C54;
+}
+
+.textoItem {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+
+    color: #031C54;
 }

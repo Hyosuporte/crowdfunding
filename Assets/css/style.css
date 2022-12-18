@@ -1,3 +1,68 @@
+/*Inicio del reset css*/
+html,
+body,
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+pre,
+code,
+address,
+variance,
+form,
+fieldset,
+blockquote {
+    padding: 0px;
+    margin: 0px;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th,
+caption {
+    font-weight: normal;
+    text-align: left;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+ol {
+    padding-left: 1.4em;
+    list-style: decimal;
+}
+
+ul {
+    padding-left: 1.4em;
+    list-style: square;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+/*Fin del reset css*/
+* {
+    font: "arial";
+    font-size: 2vw;
+}
+
 a {
     text-decoration: none;
     color: #FFFFFF;
@@ -5,6 +70,24 @@ a {
 
 body {
     background-color: #F5F0F5;
+}
+
+.descubre {
+    margin-left: 50vw;
+}
+
+.inputFormularioRegistrar {
+    margin: 1vh;
+    width: 95%;
+}
+
+.inputFormularioRegistrarGrupo {
+    margin: 1vh;
+    width: 80% !important;
+}
+
+.linksFooter{
+    font-size: 1.5vw;
 }
 
 .activeNavbar {
@@ -15,7 +98,7 @@ body {
 .boton {
     width: 50vh;
     height: 5vh;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 4vh;
@@ -24,14 +107,28 @@ body {
     background: #DCF763;
     border-radius: 30px;
     color: #031C54;
-    right: 0;
+}
+.botonNavbar {
+    width: 50vh;
+    height: 5vh;
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vh;
+    line-height: 29px;
+    border-width: 0;
+    background: #DCF763;
+    border-radius: 30px;
+    color: #031C54;
+}
+
+.listaBannerLanding2{
+    font-size: 1vw;
 }
 
 .navbar {
-    padding-left: 10%;
     position: fixed;
     top: 0;
-    width: 100%;
     height: 20vh;
     background-color: #f5f0f5 !important;
     display: flex;
@@ -47,14 +144,11 @@ body {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
-    font-size: 64px;
-    line-height: 77px;
     text-align: center;
 }
 
 .navbarContent {
-    position: relative;
-    left: 50%;
+
     transform: translatex(-50%);
 }
 
@@ -75,6 +169,26 @@ body {
 
 .imagenCarusel {
     width: 100vh;
+}
+
+.botonFormRegistro{
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1vw;
+    line-height: 29px;
+    width: 30vh;
+    height: 50px;
+    border-width: 0px;
+    background: #DCF763;
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #031C54;
+    margin: auto;
+    margin-bottom: 1vw;
+    padding-left: 6vw;
 }
 
 .formulario__validacion-estado-incorrecto {
@@ -116,7 +230,7 @@ body {
 .botonLogin {
     width: 50vh;
     height: 60px;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -151,7 +265,7 @@ body {
 .navbar-item {
     position: relative;
     margin: auto;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -181,11 +295,9 @@ body {
 }
 
 .bannerLanding {
-    padding-left: 5rem;
-    padding-top: 1rem;
-    padding-right: 1rem;
+
     width: 100%;
-    height: 670px;
+    height: 90vh;
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 30px;
     z-index: -1;
@@ -195,16 +307,7 @@ body {
     grid-auto-rows: minmax(200px, auto);
 }
 
-.bannerLanding-2 {
-    padding-left: 5rem;
-    padding-top: 1rem;
-    padding-right: 1rem;
-    width: 100%;
-    height: 350px;
-    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
-    border-radius: 30px;
-    z-index: -1;
-}
+
 
 .bannerLanding div {
     padding-bottom: 2rem;
@@ -212,7 +315,7 @@ body {
 }
 
 .navbarList li a {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -227,12 +330,13 @@ body {
 .titulo {
     margin-right: 25rem;
     flex-wrap: wrap;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 10vh;
     line-height: 100%;
-
+    margin: 5vh;
+    width: 70%;
     color: #F5F0F5;
 }
 
@@ -240,7 +344,7 @@ body {
 
 .titulo-2 {
     margin-top: 2%;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 8vh;
@@ -251,7 +355,7 @@ body {
 }
 
 .textoBannerLanding {
-
+    margin-left: 2vw;
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
@@ -262,17 +366,18 @@ body {
 }
 
 .botonBannerLanding {
-    width: 292px;
-    height: 60px;
+    width: 50vh;
+    height: 7vh;
     color: #031C54;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 3vh;
     line-height: 29px;
     border-width: 0;
     background: #DCF763;
     border-radius: 30px;
+    margin-left: 2vw;
 }
 
 .navbarContent {
@@ -282,6 +387,7 @@ body {
 .oneColumnBanner {
     grid-column: 1/3;
     grid-row: 1;
+
 }
 
 .twoColumnBanner {
@@ -296,7 +402,7 @@ body {
 .threeColumnBanner {
     grid-column: 3 / 3;
     grid-row: 1;
-    margin-top: 10rem;
+    margin-top: 40vh;
 }
 
 .threeColumnBanner img {
@@ -307,7 +413,7 @@ body {
     width: 90% !important;
     height: 100%;
     margin-left: 5%;
-    margin-top: 20%;
+    margin-top: 10vh;
     padding-top: 1%;
     border-radius: 5%;
 }
@@ -346,14 +452,27 @@ body {
     border-radius: 30px;
 }
 
+.subitutiloFomrRegistrar{
+    font-family: 'Be Vietnam';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 35px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #F5F0F5;
+}
+
 .beneficioTitulo1 {
     position: absolute;
-    margin-top: 4%;
-    margin-left: 2%;
+    margin-top: 6vh;
+    margin-left: 2vw;
     width: 40%;
     height: 10%;
 
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 46px;
@@ -380,9 +499,9 @@ body {
 
 .twoColumnBeneficio {
     position: absolute;
-    width: 48%;
+    width: 48vw;
     height: 50%;
-    margin-top: 2%;
+    margin-top: 2vh;
     margin-left: 50%;
     background: #CC59D2;
     border-radius: 30px;
@@ -394,7 +513,7 @@ body {
     height: 55px;
     left: 693px;
 
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 46px;
@@ -420,7 +539,7 @@ body {
     height: 55px;
     left: 693px;
 
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 46px;
@@ -429,8 +548,19 @@ body {
     color: #031C54;
 }
 
+.textoCard {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 26px;
+    margin: 1vw;
+
+    color: #031C54;
+}
+
 .beneficioTitulo2 {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 46px;
@@ -452,7 +582,7 @@ body {
 }
 
 .beneficioTitulo3 {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 46px;
@@ -475,16 +605,14 @@ body {
 
 .tituloSecundario {
     position: relative;
-    width: 678px;
-    height: 55px;
-    left: 382px;
 
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 46px;
     line-height: 55px;
 
+    margin-left: 30vw;
     color: #031C54;
 }
 
@@ -507,14 +635,18 @@ body {
 
 .imageDestacado {
     width: 100%;
+    height: 95%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .tituloCardDestacado {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
     line-height: 38px;
+    display: flex;
 
     color: #031C54;
 }
@@ -536,13 +668,15 @@ body {
     height: 10px;
     background: #CC59D2;
     border-radius: 20px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .botonCardDestacado {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 1vw;
     line-height: 29px;
     width: 30vh;
     height: 50px;
@@ -550,8 +684,32 @@ body {
     background: #DCF763;
     border-radius: 30px;
     display: flex;
+    text-align: center;
     align-items: center;
     color: #031C54;
+    padding-left: 3vw;
+    margin: auto;
+}
+
+.imagenBannerLanding1 {
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+.imagenBannerLanding2 {
+    margin-top: 30vh;
+}
+
+.tituloBannerLanding2 {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 62px;
+    line-height: 73px;
+    margin: 1vw;
+
+    color: #F5F0F5;
+
 }
 
 .bannerLanding2 {
@@ -573,26 +731,26 @@ body {
 .oneColumnBanner2 {
     grid-column: 1/3;
     grid-row: 1;
-    z-index: 1;
 }
 
 .twoColumnBanner2 {
     grid-column: 2/ 3;
     grid-row: 1;
-    margin-top: 60%;
+
 }
 
 .threeColumnBanner2 {
     grid-column: 3/ 3;
     grid-row: 1;
     display: block;
+    margin-right: 8vw;
 }
 
 .bloqueSubirProyecto {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 2rem;
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(200px, 100%);
     margin-top: 2%;
     margin-left: 2%;
 }
@@ -601,6 +759,7 @@ body {
     margin-top: 10vh;
     grid-column: 1/2;
     grid-row: 1;
+    width: 100%;
 }
 
 .subirSecondColumn {
@@ -609,30 +768,8 @@ body {
     margin-left: 30%;
 }
 
-.subirProyectoTitulo {
-    font-family: 'Signika Negative', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 56px;
-    line-height: 67px;
-
-    color: #031C54;
-}
-
-.subirProyectoTexto {
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vh;
-    line-height: 26px;
-    /* identical to box height */
-
-
-    color: #031C54;
-}
-
 .bloqueSubirProyecto li {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
@@ -660,7 +797,7 @@ body {
 
 .bloqueImagnes {
     margin-top: 2%;
-    margin-left: 2%;
+    margin-left: 15vw;
     display: flex;
 }
 
@@ -671,28 +808,28 @@ body {
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 30px;
     margin-left: 1%;
+    margin-top: 1vw;
     z-index: -1;
 }
 
 .formFooter {
     margin-left: 5%;
+    padding-left: 1vw;
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
-    gap: 5rem;
     grid-auto-rows: minmax(200px, auto);
     width: 180vh;
-    height: 30vh;
+    height: 50vh;
     background: #F5F0F5;
     border-radius: 30px;
 }
 
 .tituloFormFooter {
 
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 46px;
-    line-height: 54px;
+    font-size: 5vh;
 
     color: #031C54;
 }
@@ -711,16 +848,16 @@ body {
     background: #FFFFFF;
     border: 1px solid #031C54;
     border-radius: 30px;
-    width: 180%;
-    height: 25%;
+    height: 5vh;
     margin-top: 5%;
+    width: 40vw;
 }
 
 .botonFormFooter {
-    width: 292px;
-    height: 60px;
+    width: 20vw;
+    height: 7vh;
     color: #031C54;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -729,12 +866,13 @@ body {
     background: #DCF763;
     border-radius: 30px;
     margin-left: 40%;
-    margin-top: 5%;
+    margin-top: 10vh;
 }
 
 .bloqueInfoFooter {
-    font-family: 'Signika Negative', sans-serif;
-    margin-top: 5%;
+    font-family: 'TT Norms', sans-serif;
+    margin-top: 5vw;
+    margin-bottom: 3%;
     display: flex;
     color: #F5F0F5;
 }
@@ -744,23 +882,50 @@ body {
 }
 
 .caruselTitulo {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 10vh;
+    font-size: 5vh;
     line-height: 55px;
 
     color: #031C54;
 }
 
+.subirProyectoTextoCarusel {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 26px;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    color: #031C54;
+}
+
+.subirProyectoTexto {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    line-height: 4vh;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+
+    color: #031C54;
+}
+
 .caruselMeta {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
     line-height: 38px;
 
     color: #031C54;
+}
+
+.barraMeta {
+    background-color: #CC59D2;
 }
 
 .progress {
@@ -773,43 +938,90 @@ body {
 }
 
 .formLogin {
-    width: 100vh;
+    width: 50vw;
+    height: 76vh;
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 30px;
     display: block;
+    padding: 1vw;
+    padding-right: 3vw;
+}
+
+.aunRegistrarse{
+    font-family: 'TT Norms', sans-serif;
+    font-size: 1.5vw;
+}
+
+.grupoInputsRegistro{
+    display: flex;
+    width: 40vw;
+    margin: 1vw;
+    margin-left: 3vw;
+}
+
+.grupoInputsRegistro input{
+    margin: 0.2vw;
+}
+
+.grupoInputsRegistroSimbolo{
+    display: flex;
+    width: 20vw;
+}
+
+.inputFormularioRegistro{
+    width: 20vw;
+}
+
+
+.bannerLogin{
+    display: flex; 
+    margin-right: 1vw;   
+}
+.bannerRegistro{
+    display: flex;
+    margin-right: 1vw;
+}
+.imagenBannerRegistro{
+    height: 100vh;
 }
 
 .bloqueLogin {
     margin-top: 10%;
     margin-bottom: 8%;
     display: flex;
-    padding: 5%;
+    padding: 1vw;
 }
 
 .textoLoginIzquierda {
     position: absolute;
     margin: auto;
-    width: 20vh;
-    margin-top: 25%;
+    width: 50vw;
+    margin-top: 68vh;
     margin-left: 2%;
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1vw;
     line-height: 26px;
-
+    
+    color: #F5F0F5;
+}
+.recordarme{
+    font-family: 'Be Vietnam';
+    font-size: 1vw;
     color: #F5F0F5;
 }
 
 .formLoginTitulo {
     margin: auto;
-    width: 50vh;
-    font-family: 'Signika Negative', sans-serif;
+    width: 80vh;
+    font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 2vw;
     line-height: 38px;
     text-align: center;
+    
 
     color: #F5F0F5;
 }
@@ -818,11 +1030,12 @@ body {
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.5vw;
     line-height: 26px;
     align-items: center;
     text-align: center;
     margin: auto;
+    margin-top: 1vh;
     color: #FFFFFF;
 }
 
@@ -843,133 +1056,79 @@ body {
 }
 
 label {
-    font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
     align-items: center;
 
-    color: #FFFFFF;
+    color: #031C54;
 }
 
 .olvidoContrasena {
     color: #FFFFFF;
     float: right;
     margin-right: 5%;
+    margin-top: 1vw;
+    font-size: 1.5vw;
 }
 
-.bannerProyecto {
-    width: 100%;
-}
 
-.bloqueVistaProyecto {
-    width: 90%;
-    height: auto;
-    margin-left: 5%;
-    padding: 1%;
 
-    background: #FFFFFF;
-    box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
-    border-radius: 30px;
-}
 
-.informacionVistaProyecto {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        "donaciones fechas diasRestantes";
-}
 
-.donaciones {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        "montoDonacion"
-        "montoDonadores";
-    grid-area: donaciones;
-}
 
-.montoDonacion {
-    grid-area: montoDonacion;
-}
 
-.montoDonadores {
-    display: flex;
-    grid-area: montoDonadores;
-}
 
-.fechas {
-    margin-left: 10%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        "fechaInicio"
-        "fechaCierre";
-    grid-area: fechas;
-}
-
-.fechaInicio {
-    grid-area: fechaInicio;
-}
-
-.fechaCierre {
-    grid-area: fechaCierre;
-}
-
-.diasRestantes {
-    grid-area: diasRestantes;
-}
-
-.cantidadDonar {
-    width: 50vh;
-    border-radius: 30px;
-}
 
 .inputsDonar {
     display: flex;
 }
 
-.tablaDonador {
-    width: 95%;
-    text-align: center;
-    border: 1px solid;
-    margin-top: 1%;
-    margin-left: 1%;
-}
 
-.tablaDonador th,
-td {
-    border: 1px solid;
-
-}
 
 .tituloVistaProyecto {
     font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
-    font-size: 46px;
+    font-size: 3vw;
     line-height: 54px;
 
     color: #031C54;
 }
 
-.proyectosFila{
-    display: flex;
-    margin-left: 15%;
+
+.buscar {
+    border-radius: 30px;
+    width: 20vw;
+    height: 2vw;
 }
 
-.card{
-    width: auto;
-    height: auto;
+.subirProyectoTitulo {
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vw;
+    line-height: 8vh;
+
+
+    color: #031C54;
 }
 
-.buscar{
+.textoSigue {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 26px;
+    text-align: center;
+    margin-left: 6vw;
+
+    color: #031C54;
+}
+
+.tablaDashboard{
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
     border-radius: 30px;
 }
