@@ -6,7 +6,7 @@ class Home extends Controller
         session_start();
         if (!empty($_SESSION['rol'])) {
             if ($_SESSION['rol'] == "1") {
-                header("location: " . BASE_URL . "administrador");
+                header("location: " . BASE_URL . "admin");
             } else {
                 header("location: " . BASE_URL . "cliente");
             }

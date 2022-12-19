@@ -27,9 +27,9 @@ if (file_exists($dirControllers)) {
     if (method_exists($controller, $metodo)) {
         $controller->$metodo($parametro);
     } else {
-        header('Location: ' . BASE_URL . 'errors');
+        //header('Location: ' . BASE_URL . 'errors');
     }
 } else {
-    header('Location: ' . BASE_URL . 'errors');
+    //header('Location: ' . BASE_URL . 'errors');
 }
 ?>
