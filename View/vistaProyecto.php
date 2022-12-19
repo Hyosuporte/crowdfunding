@@ -11,7 +11,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <style>
+        @font-face {
+            font-family: 'TT Norms';
+            src: url('<?php echo BASE_URL; ?>Assets/fonts/TT-Norms-Black/TTNorms-Black.otf');
+            font-style: normal;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 38px;
+        }
+        @font-face {
+            font-family: 'Be Vietnam';
+            src: url('<?php echo BASE_URL; ?>Assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+
+            color: #031C54;
+        }        
+    </style>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/vistaProyecto.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
@@ -24,7 +45,7 @@
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href=""><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
+                <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText activeNavbar">Descubre</a>
@@ -49,53 +70,72 @@
         <div class="bloqueVistaProyecto">
             <p class="tituloVistaProyecto" id="nombre" name="nombre"><?php echo $data['titulo']; ?></p>
             <p><?php echo $data['abstrac']; ?></p>
-            <img src="<?php echo $data['foto']; ?>" alt="">
+            <img src="<?php echo $data['foto']; ?>" alt="" width="1000">
             <div class="informacionVistaProyecto">
-                <div class="donaciones">
-                    <div class="montoDonacion">
-                        <div style="display: flex;">
-                            <p>Recibido $<?php 
-                            if($data['SUM(d.monto)']== null){
-                                echo 0;
-                            }else{
-                                echo $data['SUM(d.monto)'];
-                            }
-                             ?></p>
-                            <p style="margin-left: 50%;">Meta $<?php echo $data['monto_financiacion']; ?></p>
+                <div class="detallesProyecto">
+                    <div class="Meta">
+                        <div class="montoDonacion">
+                            <div style="display: flex;">
+                                <div style="display: flex;">
+                                    <p class="fuentePrincipal">Recibido</p>
+                                    <p class="fuenteSecundaria">$<?php echo $data['SUM(d.monto)']; ?></p>
+                                </div>
+                                <div style="display: flex; margin-left: 15vw;">
+                                    <p class="fuentePrincipal">Meta</p>
+                                    <p class="fuenteSecundaria">$<?php echo $data['monto_financiacion']; ?></p>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar colorBarraProgreso" style="width: 25%" role="progressbar"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="200"></div>
+                            </div>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar colorBarraProgreso" style="width: 25%" role="progressbar"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <div class="Donadores">
+                        <div class="montoDonadores">
+                            <img src="<?php echo BASE_URL; ?>Assets/img/people.svg" alt="" width="50">
+                            <p class="fuentePrincipal" style="margin-top: 1vw; margin-left: 1vw;"><?php echo $data['COUNT(d.monto)']; ?>  Donadores</p>
+                            <p class="fuenteSecundaria" style="margin-left: 1vw;margin-top: 1vw;">Ver todos</p>
+                            <img style="margin-left: 15%;" src="<?php echo BASE_URL; ?>Assets/img/compartir.svg" alt="" width="40">
                         </div>
                     </div>
-                    <div class="montoDonadores">
-                        <img src="<?php echo BASE_URL; ?>Assets/img/people.svg" alt="" width="50">
-                        <p style="margin-left: 5%; font-size: 20px;"><?php echo $data['COUNT(d.monto)']; ?> Donadores</p>
-                        <p style="margin-left: 15%;margin-top: 2%;">Ver todos</p>
-                        <img style="margin-left: 15%;" src="<?php echo BASE_URL; ?>Assets/img/compartir.svg" alt="" width="40">
+                    <div class="fechas">
+                        <div class="FechaInicio">
+                            <div class="fechaInicio">
+                                <p class="fuentePrincipal">Fecha de Inicio</p>
+                                <p class="fuenteSecundaria">10 - 05 - 2022</p>
+                            </div>
+                        </div>
+                        <div class="FechaCierre">
+                            <div class="fechaCierre">
+                                <p class="fuentePrincipal">Fecha de Cierre</p>
+                                <p class="fuenteSecundaria"> 10 - 09 - 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Dias">
+                        <div class="carta">
+                            <div class="box">
+                                <div class="percent">
+                                    <svg>
+                                        <circle cx="200" cy="100" r="100"></circle>
+                                        <circle cx="200" cy="100" r="100"></circle>
+                                    </svg>
+                                    <p>15</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="fechas">
-                    <div class="fechaInicio">
-                        <p>Fecha de Inicio</p>
-                        <p>10 - 05 - 2022</p>
-                    </div>
-                    <div class="fechaCierre">
-                        <p>Fecha de Cierre</p>
-                        <p> 10 - 09 - 2022</p>
-                    </div>
-                </div>
-                <div class="diasRestantes">
-                    15
-                </div>
+
             </div>
             <div class="inputsDonar">
                 <div>
                     <p>Cantidad. $ COP</p>
                     <input class="cantidadDonar" type="text" name="cantidad" id="cantidad">
                 </div>
-                <a href=""><button style="margin-left: 50%;" class="boton" type="button">Donar</button></a>
-                <div class="checkout-btn"></div>
+                <div class="checkout-btn cantidadDonar" style="margin-top: 1.5vw; margin-left: 1vw;"></div>
             </div>
             <div>
                 <table class="tablaDonador">
