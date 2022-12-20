@@ -1,10 +1,13 @@
 <?php
-class Query extends Conexion{
+class Query extends Conexion
+{
     private $pdo, $con, $sql, $datos;
-    public function __construct() {
+    public function __construct()
+    {
         $this->pdo = new Conexion();
         $this->con = $this->pdo->conect();
     }
+
     public function select(string $sql)
     {
         $this->sql = $sql;
@@ -13,6 +16,7 @@ class Query extends Conexion{
         $data = $resul->fetch(PDO::FETCH_ASSOC);
         return $data;
     }
+
     public function selectAll(string $sql)
     {
         $this->sql = $sql;
@@ -21,6 +25,7 @@ class Query extends Conexion{
         $data = $resul->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+
     public function save(string $sql, array $datos)
     {
         $this->sql = $sql;
@@ -29,45 +34,6 @@ class Query extends Conexion{
         $data = $insert->execute($this->datos);
         if ($data) {
             $res = 1;
-        }else{
-            $res = 0;
-        }
-        return $res;
-    }
-    public function insertar(string $sql, array $datos)
-    {
-        $this->sql = $sql;
-        $this->datos = $datos;
-        $insert = $this->con->prepare($this->sql);
-        $data = $insert->execute($this->datos);
-        if ($data) {
-            $res = $this->con->lastInsertId();
-        } else {
-            $res = 0;
-        }
-        return $res;
-    }
-    public function editar(string $sql, array $datos)
-    {
-        $this->sql = $sql;
-        $this->datos = $datos;
-        $update = $this->con->prepare($this->sql);
-        $data = $update->execute($this->datos);
-        if ($data) {
-            $data = $update->fetch(PDO::FETCH_ASSOC);
-        } else {
-            $res = 0;
-        }
-        return $res;
-    }
-    public function eliminar(string $sql, array $datos)
-    {
-        $this->sql = $sql;
-        $this->datos = $datos;
-        $delete = $this->con->prepare($this->sql);
-        $data = $delete->execute($this->datos);
-        if ($data) {
-            $res = $this->con->lastInsertId();
         } else {
             $res = 0;
         }
