@@ -170,12 +170,7 @@
               <th class="bordeAbajo">Ver Proyectos</th>
             </tr>
           </thead>
-          <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tbody id="Donaciones">
           </tbody>
         </table>
       </div>

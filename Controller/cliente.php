@@ -100,6 +100,13 @@ class cliente extends Controller
         die();
     }
 
+    public function getDonaciones()
+    {
+        $data = $this->model->getDonaciones($_SESSION['id']);
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
     public function valid_email($str)
     {
         return (false !== filter_var($str, FILTER_VALIDATE_EMAIL));

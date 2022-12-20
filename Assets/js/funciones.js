@@ -16,6 +16,12 @@ if (document.getElementById("cardsDestacados") != null) {
     .addEventListener("onLoad", listarGaleriaDes(), true);
 }
 
+if (document.getElementById("Donaciones") != null) {
+  document
+    .getElementById("Donaciones")
+    .addEventListener("onLoad", listarDonaciones(), true);
+}
+
 function listarGaleria() {
   const url = base_url + "proyecto/listarProyectos";
   const divGaleria = document.querySelector("#galeriaProyectos");
@@ -60,6 +66,93 @@ function listarGaleriaDes() {
       res.forEach((element) => {
         divCardGal = crearCadGaleria(element);
         divMain.appendChild(divCardGal);
+      });
+    }
+  };
+}
+
+function listarPais() {
+  const url = base_url + "pais/obtenerPaises";
+  const selectorPais = $("#paisUser");
+  const http = new XMLHttpRequest();
+  http.open("GET", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      res.forEach((element) => {
+        selectorPais.append(
+          $("<option />", {
+            text: element.pais,
+            value: element.id_pais,
+          })
+        );
+      });
+    }
+  };
+}
+
+function listarCiudad() {
+  const id_pais = document.getElementById("paisUser").value;
+  const selectorCiudad = $("#ciudadUser");
+  for (let i = selectorCiudad.children.length; i >= 0; i--) {
+    document.getElementById("ciudadUser").remove(i);
+  }
+  const url = base_url + "ciudad/obtenerCiudades?id_pais=" + id_pais;
+  const http = new XMLHttpRequest();
+  http.open("GET", url, true);
+  http.send(null);
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      res.forEach((element) => {
+        selectorCiudad.append(
+          $("<option />", {
+            text: element.ciudad,
+            value: element.id_ciudad,
+          })
+        );
+      });
+    }
+  };
+}
+
+function listarDatos(e) {
+  listarPais();
+  const url = base_url + "cliente/userData";
+  const http = new XMLHttpRequest();
+  http.open("GET", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      document.getElementById("newCorreo").value = res.correo;
+      document.getElementById("ActCorreo").value = res.correo;
+      document.getElementById("nombreCompleto").value =
+        res.primer_nombre + " " + res.primer_apellido;
+      document.getElementById("correo").value = res.correo;
+      document.getElementById("direccion").value = res.direccion;
+      document.getElementById("telefonoUser").value = res.id_telefono;
+      document
+        .getElementById("paisUser")
+        .options.item(res.id_pais - 1).selected = "selected";
+      listarCiudad();
+    }
+  };
+}
+
+function listarDonaciones() {
+  const url = base_url + "cliente/getDonaciones";
+  const http = new XMLHttpRequest();
+  http.open("POST", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      res.forEach((element) => {
+        document
+          .getElementById("Donaciones")
+          .appendChild(crearFilaDonacion(element));
       });
     }
   };
@@ -131,75 +224,34 @@ function creacionCardBody(element) {
   return divBody;
 }
 
-function listarPais() {
-  const url = base_url + "pais/obtenerPaises";
-  const selectorPais = $("#paisUser");
-  const http = new XMLHttpRequest();
-  http.open("GET", url, true);
-  http.send();
-  http.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      const res = JSON.parse(this.responseText);
-      res.forEach((element) => {
-        selectorPais.append(
-          $("<option />", {
-            text: element.pais,
-            value: element.id_pais,
-          })
-        );
-      });
-    }
-  };
-  return true;
-}
-
-function listarCiudad() {
-  const id_pais = document.getElementById("paisUser").value;
-  const selectorCiudad = $("#ciudadUser");
-  for (let i = selectorCiudad.children.length; i >= 0; i--) {
-    document.getElementById("ciudadUser").remove(i);
-  }
-  const url = base_url + "ciudad/obtenerCiudades?id_pais=" + id_pais;
-  const http = new XMLHttpRequest();
-  http.open("GET", url, true);
-  http.send(null);
-  http.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      const res = JSON.parse(this.responseText);
-      res.forEach((element) => {
-        selectorCiudad.append(
-          $("<option />", {
-            text: element.ciudad,
-            value: element.id_ciudad,
-          })
-        );
-      });
-    }
-  };
-}
-
-function listarDatos(e) {
-  listarPais();
-  const url = base_url + "cliente/userData";
-  const http = new XMLHttpRequest();
-  http.open("GET", url, true);
-  http.send();
-  http.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      const res = JSON.parse(this.responseText);
-      document.getElementById("newCorreo").value = res.correo;
-      document.getElementById("ActCorreo").value = res.correo;
-      document.getElementById("nombreCompleto").value =
-        res.primer_nombre + " " + res.primer_apellido;
-      document.getElementById("correo").value = res.correo;
-      document.getElementById("direccion").value = res.direccion;
-      document.getElementById("telefonoUser").value = res.id_telefono;
-      document
-        .getElementById("paisUser")
-        .options.item(res.id_pais - 1).selected = "selected";
-      listarCiudad();
-    }
-  };
+function crearFilaDonacion(element) {
+  let tr = document.createElement("tr");
+  let tdNamePro = document.createElement("td");
+  let tdCant = document.createElement("td");
+  let tdFecha = document.createElement("td");
+  let tdVerPro = document.createElement("td");
+  let ver = document.createElement("a");
+  tdNamePro.innerHTML = element.titulo;
+  tdNamePro.setAttribute("class", "bordeDerecha bordeAbajo");
+  tdCant.innerHTML = element.monto;
+  tdCant.setAttribute("class", "bordeDerecha bordeAbajo");
+  tdFecha.innerHTML = element.fecha_donacion;
+  tdFecha.setAttribute("class", "bordeDerecha bordeAbajo");
+  tdVerPro.setAttribute("class", "bordeAbajo");
+  ver.setAttribute("class", "botonCardGaleria");
+  ver.setAttribute("value", element.id_proyecto);
+  ver.setAttribute("type", "submit");
+  ver.setAttribute(
+    "href",
+    `${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`
+  );
+  ver.innerHTML = `Ver Proyecto <img class="imagenOjo" src="${base_url}Assets/img/Ojo.svg" width="20" alt="">`;
+  tdVerPro.appendChild(ver);
+  tr.appendChild(tdNamePro);
+  tr.appendChild(tdCant);
+  tr.appendChild(tdFecha);
+  tr.appendChild(tdVerPro);
+  return tr;
 }
 
 function UpdateCorreo() {

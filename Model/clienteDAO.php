@@ -21,6 +21,13 @@ class clienteDAO extends Query
         return $data;
     }
 
+    public function getDonaciones($id)
+    {
+        $sql = "SELECT d.id_proyecto,d.fecha_donacion,d.monto,p.titulo FROM donacion AS d LEFT JOIN proyecto AS p ON d.id_proyecto = p.id_proyecto WHERE d.id_usuario='$id' ";
+        $data = $this->selectAll($sql);
+        return $data;
+    }
+
     public function UpdateCorreo($newCorreo, $id)
     {
         $existCorreo = $this->getEmail($newCorreo);
