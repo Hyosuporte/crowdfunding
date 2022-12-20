@@ -117,9 +117,6 @@
                         <li>
                             <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
                         </li>
-                        <li>
-                            Términos y condiciones
-                        </li>
                     </ul>
                 </div>
                 <div style="margin-left: 30%;">
