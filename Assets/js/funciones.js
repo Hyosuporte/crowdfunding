@@ -1,6 +1,8 @@
-document
-  .getElementById("bodyGaleria")
-  .addEventListener("OnLoad", listarGaleria(), false);
+if (document.getElementById("bodyGaleria") != null) {
+  document
+    .getElementById("bodyGaleria")
+    .addEventListener("OnLoad", listarGaleria(), false);
+}
 
 if (document.getElementById("configPerfil") != null) {
   document
@@ -8,6 +10,11 @@ if (document.getElementById("configPerfil") != null) {
     .addEventListener("onLoad", listarDatos(), true);
 }
 
+if (document.getElementById("cardsDestacados") != null) {
+  document
+    .getElementById("cardsDestacados")
+    .addEventListener("onLoad", listarGaleriaDes(), true);
+}
 
 function listarGaleria() {
   const url = base_url + "proyecto/listarProyectos";
@@ -18,11 +25,9 @@ function listarGaleria() {
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
-      console.log({res});
       let numFil = 1;
       res.forEach((element) => {
         if (document.getElementById(`numFil${numFil}`) == null) {
-          console.log({ element });
           divFila = crearFila(numFil);
           divCardGal = crearCadGaleria(element);
           divFila.appendChild(divCardGal);
@@ -38,6 +43,23 @@ function listarGaleria() {
             numFil++;
           }
         }
+      });
+    }
+  };
+}
+
+function listarGaleriaDes() {
+  const url = base_url + "proyecto/listarProyectosDes";
+  const divMain = document.querySelector("#cardsDestacados");
+  const http = new XMLHttpRequest();
+  http.open("POST", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      res.forEach((element) => {
+        divCardGal = crearCadGaleria(element);
+        divMain.appendChild(divCardGal);
       });
     }
   };
@@ -87,7 +109,7 @@ function creacionCardBody(element) {
   p1.innerHTML = element.abstrac;
   divMeta.setAttribute("class", "meta");
   divMeta.innerHTML = `<p class="metaCardDestacado">Recibido $ ${
-    element["SUM(d.monto)"] == null ? 0 : element["COUNT(d.monto)"]
+    element["SUM(d.monto)"] == null ? 0 : element["SUM(d.monto)"]
   }</p>
     <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $ ${
       element.monto_financiacion
@@ -96,7 +118,10 @@ function creacionCardBody(element) {
   ver.setAttribute("class", "botonCardGaleria");
   ver.setAttribute("value", element.id_proyecto);
   ver.setAttribute("type", "submit");
-  ver.setAttribute("href", `${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`);
+  ver.setAttribute(
+    "href",
+    `${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`
+  );
   ver.innerHTML = `Ver Proyecto <img class="imagenOjo" src="${base_url}Assets/img/Ojo.svg" width="20" alt="">`;
   divBody.appendChild(h5);
   divBody.appendChild(p1);
@@ -106,9 +131,9 @@ function creacionCardBody(element) {
   return divBody;
 }
 
-function listarPais(e) {
+function listarPais() {
   const url = base_url + "pais/obtenerPaises";
-  const selectorPais = $("#pais");
+  const selectorPais = $("#paisUser");
   const http = new XMLHttpRequest();
   http.open("GET", url, true);
   http.send();
@@ -125,10 +150,37 @@ function listarPais(e) {
       });
     }
   };
+  return true;
+}
+
+function listarCiudad() {
+  const id_pais = document.getElementById("paisUser").value;
+  const selectorCiudad = $("#ciudadUser");
+  for (let i = selectorCiudad.children.length; i >= 0; i--) {
+    document.getElementById("ciudadUser").remove(i);
+  }
+  const url = base_url + "ciudad/obtenerCiudades?id_pais=" + id_pais;
+  const http = new XMLHttpRequest();
+  http.open("GET", url, true);
+  http.send(null);
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      res.forEach((element) => {
+        selectorCiudad.append(
+          $("<option />", {
+            text: element.ciudad,
+            value: element.id_ciudad,
+          })
+        );
+      });
+    }
+  };
 }
 
 function listarDatos(e) {
-  const url = base_url + "usuario/obtenerUsuario?id_usuario=" + id_usuario;
+  listarPais();
+  const url = base_url + "cliente/userData";
   const http = new XMLHttpRequest();
   http.open("GET", url, true);
   http.send();
@@ -140,10 +192,12 @@ function listarDatos(e) {
       document.getElementById("nombreCompleto").value =
         res.primer_nombre + " " + res.primer_apellido;
       document.getElementById("correo").value = res.correo;
-      document.getElementById("pais").value = res.pais;
-      document.getElementById("ciudad").value = res.ciudad;
       document.getElementById("direccion").value = res.direccion;
-      document.getElementById("telefono").value = res.id_usuario;
+      document.getElementById("telefonoUser").value = res.id_telefono;
+      document
+        .getElementById("paisUser")
+        .options.item(res.id_pais - 1).selected = "selected";
+      listarCiudad();
     }
   };
 }
@@ -182,8 +236,8 @@ function UpdateCorreo() {
 }
 
 function UpdatePassword() {
-  const passwordNow = document.getElementById("$passwordNow");
-  const newPassword = document.getElementById("$newPassword");
+  const passwordNow = document.getElementById("passwordNow");
+  const newPassword = document.getElementById("newPassword");
   const newPasswordTry = document.getElementById("newPasswordTry");
   if (
     passwordNow.value != "" ||
@@ -210,6 +264,31 @@ function UpdatePassword() {
             setTimeout(function () {
               window.location.reload();
             }, 4000);
+          } else if (res === "La contraseña actual es incorrecta") {
+            Swal.fire({
+              position: "top-end",
+              icon: "warning",
+              title: res,
+              showConfirmButton: false,
+              timer: 2500,
+            });
+          } else if (res === "fallo") {
+            Swal.fire({
+              position: "top-end",
+              icon: "warning",
+              title:
+                "No se pudo actualizar la contraseña intente de nuevo mas tarde.",
+              showConfirmButton: false,
+              timer: 2500,
+            });
+          } else {
+            Swal.fire({
+              position: "top-end",
+              icon: "warning",
+              title: res,
+              showConfirmButton: false,
+              timer: 2500,
+            });
           }
         }
       };
@@ -222,5 +301,67 @@ function UpdatePassword() {
         timer: 2500,
       });
     }
+  }
+}
+
+function UpdateDates() {
+  const nombreCompleto = document.getElementById("nombreCompleto").value;
+  const pais = document.getElementById("paisUser").value;
+  const ciudad = document.getElementById("ciudadUser").value;
+  const direccion = document.getElementById("direccion").value;
+  const telefono = document.getElementById("telefonoUser").value;
+  if (
+    nombreCompleto != "" ||
+    pais != "" ||
+    ciudad != "" ||
+    direccion != "" ||
+    telefono != ""
+  ) {
+    const url = base_url + "cliente/UpdateData";
+    const frm = document.getElementById("frmUpdateData");
+    const http = new XMLHttpRequest();
+    http.open("POST", url, true);
+    http.send(new FormData(frm));
+    http.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        const res = JSON.parse(this.responseText);
+        if (res === "exito") {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Datos Actualizados",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+          setTimeout(function () {
+            window.location.reload();
+          }, 3500);
+        } else if (res === "fallo") {
+          Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: "Error al actualizar los datos intentelo mas tarde",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        } else {
+          Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: res,
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        }
+      }
+    };
+  } else {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Todos los campos son obligatorios",
+      showConfirmButton: false,
+      timer: 2500,
+    });
   }
 }
