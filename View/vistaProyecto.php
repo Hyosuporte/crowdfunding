@@ -1,7 +1,7 @@
-<?php require_once("mercado_pago.php") ?>
+<?php require_once("mercado_pago.php")?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -86,8 +86,7 @@
                                 </div>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar colorBarraProgreso" style="width: 25%" role="progressbar"
-                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="200"></div>
+                                <div class="progress-bar colorBarraProgreso" style="width: <?php echo (($data['SUM(d.monto)']*100)/$data['monto_financiacion']); ?>%" role="progressbar"></div>
                             </div>
                         </div>
                     </div>
@@ -130,7 +129,8 @@
                 </div>
 
             </div>
-            <div class="inputsDonar">
+            <?php if($data['SUM(d.monto)']<$data['monto_financiacion']){ ?>
+	    <div class="inputsDonar">
                 <div>
                     <p>Cantidad. $ COP</p>
                     <input class="cantidadDonar" type="text" name="cantidad" id="cantidad">
@@ -138,17 +138,26 @@
                 <div class="checkout-btn cantidadDonar" style="margin-top: 1.5vw; margin-left: 1vw;"></div>
             </div>
             <div>
+            <?php }else{ ?>
+		<h4 class="fuentePrincipal" >Lo sentimos las donaciones para este proyecto se han cerrado</h4><br>
+            <?php } ?>
                 <table class="tablaDonador">
                     <thead>
                         <th>Donador</th>
                         <th>Cantidad</th>
                         <th>Fecha</th>
                     </thead>
-                    <tr>
-                        <td>1.000.00</td>
-                        <td>1.000.00</td>
-                        <td>1.000.00</td>
-                    </tr>
+		    <tbody>
+			<?php for($i=0,$j=1;$i<sizeof($data['topDonadores']);$i++,$j++){
+			$fecha = explode(" ", $data['topDonadores'][$i]['fecha_donacion']);
+			echo "<tr>";
+			echo "<td>" . $j . "</td>";
+			echo "<td>". $data['topDonadores'][$i]['monto'] ."</td>";
+			echo "<td>". $fecha[0] ."</td>";
+			echo "</tr>";
+			}
+			?>
+		    </tbody>
                 </table>
             </div>
         </div>
@@ -206,14 +215,6 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/b2831985f5.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const mp = new MercadoPago('TEST-af98f1a8-b5d7-464f-b9f7-d8263610c69f', {
             locale: 'es-CO'

@@ -189,7 +189,7 @@ function creacionCardBody(element) {
   let divMeta = document.createElement("div");
   let h5 = document.createElement("h5");
   let p1 = document.createElement("p");
-  let p2 = document.createElement("p");
+  let divProgress = document.createElement("div");
   let ver = document.createElement("a");
   divBody.setAttribute("class", "card-body");
   h5.setAttribute("class", "tituloCardDestacado");
@@ -207,7 +207,10 @@ function creacionCardBody(element) {
     <p style="text-indent: 15vw;" class="metaCardDestacado">Meta $ ${
       element.monto_financiacion
     }</p>`;
-  p2.setAttribute("class", "barraProgresoCard");
+  divProgress.setAttribute("class", "progress");
+  divProgress.innerHTML = `<div class="progress-bar" style="width:${
+    (element["SUM(d.monto)"] * 100) / element.monto_financiacion
+  }%; background-color: #CC59D2;" role="progressbar"></div>`;
   ver.setAttribute("class", "botonCardGaleria");
   ver.setAttribute("value", element.id_proyecto);
   ver.setAttribute("type", "submit");
@@ -219,7 +222,7 @@ function creacionCardBody(element) {
   divBody.appendChild(h5);
   divBody.appendChild(p1);
   divBody.appendChild(divMeta);
-  divBody.appendChild(p2);
+  divBody.appendChild(divProgress);
   divBody.appendChild(ver);
   return divBody;
 }

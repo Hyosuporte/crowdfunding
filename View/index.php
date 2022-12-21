@@ -254,7 +254,12 @@
                         <p>En caso de ser aprobado se subirá inmediatamente tu proyecto. En caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer cambios a tu proyecto. Este tendrá un tiempo determinado para su revisión.</p>
                     </li>
                     <div>
-                        <a href="<?php echo BASE_URL; ?>Home/login/">
+                        <a href="<?php if(!isset($_SESSION['id'])){
+					echo BASE_URL . "Home/login";
+				}else{
+					echo BASE_URL . "cliente";
+				}
+				 ?>">
                             <button class="botonBannerLanding" type="button">Subir Proyecto </button>
                         </a>
                     </div>
