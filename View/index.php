@@ -161,12 +161,12 @@
         <div class="beneficios">
             <div class="oneColumnBeneficio">
                 <img class="imagenBeneficio" src="<?php echo BASE_URL; ?>Assets/img/Beneficio.svg" alt="">
-                <p class="beneficioTitulo1">Proyectos reales y de gran impacto</p>
-                <p class="beneficioTexto">Verificamos la veracidad de cada proyecto previamente y te asesoramos gratis
+                <p class="beneficioTitulo1">Proyectos reales <br> y de gran impacto</p>
+                <p class="beneficioTexto">Verificamos la veracidad de cada <br> proyecto previamente y te asesoramos gratis
                     para ayudarte y garantizar el éxito de tu financiación.</p>
             </div>
             <div class="twoColumnBeneficio">
-                <p class="beneficioTitulo2">Conectamos la creatividad</p>
+                <p class="beneficioTitulo2">Conectamos la <br> creatividad</p>
                 <p class="beneficioTexto2">Construimos puentes de oportunidades y de monetización para el sector
                     cultural, artístico y turístico.</p>
             </div>
@@ -261,7 +261,7 @@
                 </ul>
             </div>
             <div class="subirSecondColumn">
-                <img class="" src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
+                <img src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
             </div>
         </div>
 

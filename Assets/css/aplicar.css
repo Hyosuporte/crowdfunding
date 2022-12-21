@@ -34,18 +34,17 @@
 }
 
 .proyectosFila {
-    margin-left: 20vh;
+    margin-left: 1vh;
     display: flex;
-    height: auto;
     margin-bottom: 5vh;
     margin-top: 2vh;
+    overflow: auto;
+    height: 40vw;
 }
 
 .seccionPreguntas {
-    height: 70vh;
     border: 1px solid #ddd;
     background: #f1f1f1;
-    overflow-y: scroll;
 }
 .texto {
     padding:4px;
@@ -107,7 +106,7 @@
 .threeColumnBanner {
     grid-column: 3 / 3;
     grid-row: 1;
-    margin-top: 10rem;
+    margin-top: 4vw;
 }
 
 .threeColumnBanner img {
@@ -119,7 +118,7 @@
 }
 
 .subirProyectoTitulo {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
     font-size: 5vh;
@@ -157,7 +156,7 @@
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 1vw;
+    font-size: 1.3vw;
     margin: 1vw;
 
     color: #F5F0F5;
@@ -171,7 +170,7 @@
 
 .paso1 {
     display: flex;
-    width: 100%;
+    width: 80%;
     margin: 10vh;
 }
 
@@ -179,6 +178,7 @@
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 30px;
     margin: 10vh;
+    margin-top: 8vw;
 }
 
 .cabeceraCardDudas {
@@ -189,6 +189,11 @@
     box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
     border-radius: 30px 30px 0px 0px;
     height: 17vh;
+    width: 45vw;
+}
+.cuerpoRespuestas{
+    padding: 1vw;
+    height: 30vw;
 }
 
 .cabeceraCardDudas p {
@@ -197,8 +202,8 @@
 
 
 .imagenBannerPasos1 {
-    width: 50vh;
-    height: 50vh;
+    width: 40vw;
+    margin-left: 10vw;
 }
 
 .textoImagenBannerProyecto {
@@ -237,6 +242,13 @@
     width: 30vw;
     background-size: 30vw;
 }
+.backGroundImage3 {
+    margin-left: 15vw;
+    background-repeat: no-repeat;
+    height: 45vh;
+    width: 30vw;
+    background-size: cover;
+}
 
 .bannerLandingAplicar {
     padding-left: 1rem;
@@ -259,13 +271,19 @@
     font-weight: 400;
     font-size: 3vh;
     line-height: 26px;
-    margin-top: 20vh;
+    margin-top: 18vh;
     margin-left: 1vw;
     color: #F5F0F5;
 }
 
 .card img {
     border-radius: 30px;
+}
+
+.card2{
+    margin-left: 2vw;
+    width: 60vw;
+    height: 60vh;
 }
 
 .subirProyectoTexto {
@@ -286,5 +304,34 @@
 
 .textoPaso {
     margin-top: 1vw;
+}
 
+.threeColumnBannerPaso2 {
+    grid-column: 3/ 3;
+    grid-row: 1;
+    display: block;
+    margin-left: -15vw;
+}
+
+.tituloPaso2{
+    margin-right: 25rem;
+    flex-wrap: wrap;
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10vh;
+    line-height: 100%;
+    margin: 5vh;
+    width: 70%;
+    color: #F5F0F5;
+}
+
+.imagen1Paso2{
+    width: 18vw;
+    margin-top: -5vw;
+    margin-left: -6vw;
+}
+.imagen2Paso2{
+    width: 25vw;
+    margin-left: -6vw;
 }

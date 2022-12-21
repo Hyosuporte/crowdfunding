@@ -87,7 +87,7 @@
                             </div>
                             <div class="progress">
                                 <div class="progress-bar colorBarraProgreso" style="width: 25%" role="progressbar"
-                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="200"></div>
+                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="200"></div>
                             </div>
                         </div>
                     </div>

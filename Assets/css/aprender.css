@@ -7,7 +7,16 @@
     width: 100%;
 }
 
+.textoMenu{
+    font-family: 'Be Vietnam';
+    text-decoration: none;
+    color: #031C54;
+    font-size: 1vw;
+}
+
 .principalAprende {
+    margin-top: -4vw;
+    margin-left: 3vw;
     display: grid;
     grid-template-columns: 0.5fr 1.5fr;
     grid-template-rows: 1fr;

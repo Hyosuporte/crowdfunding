@@ -1,15 +1,15 @@
 <?php require_once("View/Template/header.php") ?>
 <div class="content">
-  <div class="d-flex flex-row text-white ">
-    <div class="col-2 fondoBlanco menu">
-      <div class="list-group">
+  <div class="d-flex flex-row text-white ml-2 margenIzquierda">
+    <div class="col-2 fondoBlanco ">
+      <div class="list-group menu">
         <a href="#cuenta" class=" list-group-item-action active nav-link textoMenu" data-bs-toggle="tab" aria-selected="true" role="tab" onclick="aparecerVista('cuenta')"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosSubidosDashboard.svg" alt="">Proyectos subidos</a>
         <a href="#perfil" class=" list-group-item-action textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosDonadosDashboard.svg" alt="">Proyectos
           Donados</a>
         <a href="#misProtectos" class=" list-group-item-action textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
           Datos</a>
-        <a href="/Home/usuario/salir" class=" list-group-item-action textoMenuAbajo" data-bs-toggle="tab" aria-selected="false" role="tab"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a>
-      </div>
+        </div>
+        <a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a>
     </div>
     <div class="col-10  tab-content bloqueDashboard panelDashboard" id="configPerfil">
       <div class="tab-pane fade active show fondoDashboard fondoBlanco" role="tabpanel1" id="cuenta">

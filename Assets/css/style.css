@@ -23,6 +23,7 @@ blockquote {
     margin: 0px;
     font-size: 100%;
     font-weight: normal;
+    text-align: justify;
 }
 
 table {
@@ -135,7 +136,7 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    height: 20vh;
+    height: 12vh;
     background-color: #f5f0f5 !important;
     display: flex;
     width: 100%;
@@ -347,7 +348,11 @@ body {
     color: #F5F0F5;
 }
 
-
+.subtitulo{
+    font-family: 'Be Vietnam';
+    margin-left: 20vw;
+    font-size: 1.5vw;
+}
 
 .titulo-2 {
     margin-top: 2%;
@@ -384,6 +389,7 @@ body {
     border-width: 0;
     background: #DCF763;
     border-radius: 30px;
+    margin-top: 1vw;
     margin-left: 2vw;
 }
 
@@ -475,15 +481,15 @@ color: #F5F0F5;
 
 .beneficioTitulo1 {
     position: absolute;
-    margin-top: 6vh;
-    margin-left: 2vw;
+    margin-top: 8vh;
+    margin-left: 2.5vw;
     width: 40%;
     height: 10%;
 
     font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 46px;
+    font-size: 3.5vw;
     line-height: 55px;
 
     color: #DCF763;
@@ -493,14 +499,14 @@ color: #F5F0F5;
     position: absolute;
     width: 40%;
     height: 10%;
-    margin-top: 50vw;
+    margin-top: 40vw;
     margin-left: 2%;
 
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
 
     color: #F5F0F5;
 }
@@ -568,13 +574,13 @@ color: #F5F0F5;
 }
 
 .beneficioTitulo2 {
-    font-family: 'TT Norms', sans-serif;
+    font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
-    font-size: 46px;
-    line-height: 55px;
+    font-size: 4vw;
+    line-height: 4.5vw;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 4.5vw;
 
     color: #031C54;
 }
@@ -583,22 +589,21 @@ color: #F5F0F5;
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
     margin-left: 5%;
-    margin-top: 15vw;
+    margin-top: 2vw;
     color: #031C54;
 }
 
 .beneficioTitulo3 {
-    font-family: 'TT Norms', sans-serif;
+    font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
-    font-size: 46px;
-    line-height: 55px;
+    font-size: 4vw;
+    line-height: 4.5vw;
     margin-left: 5%;
-    margin-top: 5%;
-
+    margin-top: 4.5vw;
     color: #F5F0F5;
 }
 
@@ -606,10 +611,10 @@ color: #F5F0F5;
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
     margin-left: 5%;
-    margin-top: 14vw;
+    margin-top: 2vw;
     color: #D0DAFA;
 }
 
@@ -789,9 +794,10 @@ color: #F5F0F5;
 
 .subirFirstColumn {
     margin-top: 10vh;
+    margin-left: 3vw;
     grid-column: 1/2;
     grid-row: 1;
-    width: 100%;
+    width: 30vw;
 }
 
 .imagenComoSubir{
@@ -815,10 +821,15 @@ color: #F5F0F5;
     margin-top: 3vw;
 }
 
+.imagenComoSubirProyecto{
+    width: 50vw;
+    margin-left: 10vw;
+}
+
 .subirSecondColumn {
     grid-column: 2/ 2;
     grid-row: 1;
-    margin-top: 13vh;
+    margin-top: 5vh;
 }
 
 .bloqueSubirProyecto li {
@@ -857,7 +868,7 @@ color: #F5F0F5;
 .bannerFooter {
     padding-top: 3%;
     width: 98%;
-    height: auto;
+    height: 55vw;
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 30px;
     margin-left: 1%;
@@ -882,7 +893,7 @@ color: #F5F0F5;
     font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 5vh;
+    font-size: 4.5vh;
 
     color: #031C54;
 }
@@ -893,8 +904,19 @@ color: #F5F0F5;
     margin-left: 5%;
 }
 
+.txtFooter{
+    margin-left: 5vw;
+}
+
 .iconosFooter i {
     margin-left: 5%;
+    background-color: #CC59D2;
+    color: #FFFFFF;
+    width: 3.5vw;
+    height: 3.5vw;
+    padding-top: 0.7vw;
+    padding-left: 0.7vw;
+    border-radius: 2vw;
 }
 
 .formFooter input {
@@ -913,12 +935,12 @@ color: #F5F0F5;
     font-family: 'TT Norms', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 1.3vw;
     line-height: 29px;
     border-width: 0;
     background: #DCF763;
     border-radius: 30px;
-    margin-left: 40%;
+    margin-left: 15vw;
     margin-top: 10vh;
 }
 
@@ -1002,8 +1024,9 @@ color: #F5F0F5;
 }
 
 .aunRegistrarse{
-    font-family: 'TT Norms', sans-serif;
+    font-family: 'TT Norms';
     font-size: 1.5vw;
+    margin-left: 5vw;
 }
 
 .grupoInputsRegistro{
@@ -1159,7 +1182,7 @@ label {
 }
 
 .subirProyectoTitulo {
-    font-family: 'TT Norms', sans-serif;
+    font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
     font-size: 4vw;

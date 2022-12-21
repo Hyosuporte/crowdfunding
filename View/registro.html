@@ -9,6 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <style>
+            @font-face {
+                font-family: 'TT Norms';
+                src: url('/Assets/fonts/TT-Norms-Black/TTNorms-Black.otf');
+            }
+    
+            @font-face {
+                font-family: 'Be Vietnam';
+                src: url('/Assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
+            }
+        </style>
     <link rel="stylesheet" href="/Assets/css/style.css">
     <link rel="stylesheet" href="/Assets/css/formularioLyR.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -47,7 +58,7 @@
         <div class="formLogin">
             <p class="formLoginTitulo">Registrate</p>
             <div class="linkRegistrarse">
-                <p>Bienvenida</p>
+                <p class="subtitulo">Bienvenida</p>
             </div>
             <form action="" method="post" id="frmRegistro">
                 <div class="inputsRegistro">
@@ -292,7 +303,7 @@
 
                 <button type="button" class="botonFormRegistro mt-5 " onclick="frmRegistro()">Enviar</button>
                 <div class="linkRegistrarse">
-                    <p>¿Ya tienes una cuenta? <a href="/Home/login/">INICIA SESIÓN</a></p>
+                    <p class="aunRegistrarse">¿Ya tienes una cuenta? <a class="aunRegistrarse" href="/Home/login/">INICIA SESIÓN</a></p>
                 </div>
             </form>
         </div>
