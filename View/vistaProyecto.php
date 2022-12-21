@@ -225,13 +225,11 @@
             },
             render: {
                 container: '.checkout-btn',
-                label: 'Pagar con MercadoPago'
+                label: 'Donar'
             }
         })
     </script>
     <?php require_once("View/Template/footer.php") ?>
-    <script src="<?php echo BASE_URL; ?>Assets/js/funciones.js"></script>
-
 </body>
 
 </html>
