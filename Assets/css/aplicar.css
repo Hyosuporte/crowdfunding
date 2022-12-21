@@ -1,5 +1,5 @@
 .bannerLandingAplicar {
-
+    
     padding-top: 1rem;
     width: 100%;
     height: 60vh;
@@ -10,6 +10,46 @@
     grid-template-columns: 0.5fr 1fr 1fr;
     gap: 5rem;
     grid-auto-rows: minmax(200px, auto);
+}
+
+.fondoBlanco {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    padding-top: 1vw;
+}
+
+.fuentePreguntas{
+    font-family: 'Be Vietnam';
+    color: #FFFFFF;
+    font-size: 1vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+.fuenteRespuestas{
+    font-family: 'Be Vietnam';
+    color: #031C54;
+    font-size: 1vw;
+}
+
+.proyectosFila {
+    margin-left: 20vh;
+    display: flex;
+    height: auto;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+}
+
+.seccionPreguntas {
+    height: 70vh;
+    border: 1px solid #ddd;
+    background: #f1f1f1;
+    overflow-y: scroll;
+}
+.texto {
+    padding:4px;
+    background:#fff;
 }
 
 .bannerLandingAplicar2 {
@@ -148,16 +188,13 @@
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%), #FFFFFF;
     box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
     border-radius: 30px 30px 0px 0px;
+    height: 17vh;
 }
 
 .cabeceraCardDudas p {
     font-size: 3vh;
 }
 
-.proyectosFila {
-    margin-left: 20vh;
-    display: flex;
-}
 
 .imagenBannerPasos1 {
     width: 50vh;
@@ -242,11 +279,12 @@
 
     color: #031C54;
 }
-.pasosLista{
+
+.pasosLista {
     margin: 1vw;
 }
 
-.textoPaso{
+.textoPaso {
     margin-top: 1vw;
-    
+
 }

@@ -43,7 +43,7 @@
                 <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
-                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText ">Descubre</a>
+                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText itemsNavbar">Descubre</a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
@@ -67,14 +67,14 @@
             </div>
             <div class="twoColumnBanner">
                 <div>
-                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner.svg" alt="">
-                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner.svg" alt="">
+                    <img class="imagenBannerLanding" src="<?php echo BASE_URL; ?>Assets/img/imagenBanner.svg" alt="">
+                    <img class="imagenBannerLanding" src="<?php echo BASE_URL; ?>Assets/img/imagenBanner1.svg" alt="">
                 </div>
             </div>
             <div class="threeColumnBanner">
                 <div>
-                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner.svg" alt="">
-                    <img src="<?php echo BASE_URL; ?>Assets/img/imagenBanner.svg" alt="">
+                    <img class="imagenBannerLanding" src="<?php echo BASE_URL; ?>Assets/img/imagenBannerSubirProyecto3.svg" alt="">
+                    <img class="imagenBannerLanding" src="<?php echo BASE_URL; ?>Assets/img/imagenBanner4.svg" alt="">
                 </div>
             </div>
         </div>
@@ -253,15 +253,15 @@
                         </div>
                         <p>En caso de ser aprobado se subirá inmediatamente tu proyecto. En caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer cambios a tu proyecto. Este tendrá un tiempo determinado para su revisión.</p>
                     </li>
-                    <div>
+                    <div >
                         <a href="<?php echo BASE_URL; ?>Home/login/">
-                            <button class="botonBannerLanding" type="button">Subir Proyecto </button>
+                            <button class="botonSubirProyecto" type="button">Subir Proyecto </button>
                         </a>
                     </div>
                 </ul>
             </div>
             <div class="subirSecondColumn">
-                <img src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
+                <img class="" src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
             </div>
         </div>
 
@@ -300,18 +300,15 @@
                             Sobre TFI
                         </li>
                         <li>
-                            Aprende más
+                            <a href="<?php echo BASE_URL; ?>Home/aprende">Aprende más</a>
                         </li>
                         <li>
-                            ¿Cómo funciona?
-                        </li>
-                        <li>
-                            Términos y condiciones
+                            <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
                         </li>
                     </ul>
                 </div>
                 <div style="margin-left: 30%;">
-                    <h3>Contáctanos</h3> <br>
+                    <p>Contáctanos</p>
                     <ul>
                         <li>Telefono</li>
                         <li>Whatsapp</li>

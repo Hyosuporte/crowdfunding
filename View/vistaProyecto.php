@@ -48,13 +48,13 @@
                 <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
-                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText activeNavbar">Descubre</a>
+                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText activeNavbar itemsNavbar">Descubre</a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
             </li>
             <li>
-                <a href="<?php echo BASE_URL; ?>Home/SubirProyecto" class="navbarText">Aprende</a>
+                <a href="<?php echo BASE_URL; ?>Home/aprende" class="navbarText">Aprende</a>
             </li>
             <li>
                 <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
@@ -70,7 +70,7 @@
         <div class="bloqueVistaProyecto">
             <p class="tituloVistaProyecto" id="nombre" name="nombre"><?php echo $data['titulo']; ?></p>
             <p><?php echo $data['abstrac']; ?></p>
-            <img src="<?php echo $data['foto']; ?>" alt="" width="1000">
+            <img src="<?php echo $data['foto']; ?>" alt="" width="640" height="360" style="margin-left: 23vw;">
             <div class="informacionVistaProyecto">
                 <div class="detallesProyecto">
                     <div class="Meta">
@@ -184,13 +184,10 @@
                             Sobre TFI
                         </li>
                         <li>
-                            <a href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
+                            <a href="<?php echo BASE_URL; ?>Home/aprende">Aprende más</a>
                         </li>
                         <li>
                             <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
-                        </li>
-                        <li>
-                            Términos y condiciones
                         </li>
                     </ul>
                 </div>
