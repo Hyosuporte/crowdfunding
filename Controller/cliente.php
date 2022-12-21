@@ -10,7 +10,7 @@ class cliente extends Controller
     public function index()
     {
             $data['title'] = "Cliente";
-            $this->views->getView("cliente", "perfil", $data);
+            $this->views->getView($this, "perfil", $data);
     }
 
     public function UpdateCorreo()
