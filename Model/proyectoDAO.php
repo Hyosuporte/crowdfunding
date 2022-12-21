@@ -34,4 +34,12 @@ class proyectoDAO extends Query
     $data = $this->selectAll($sql);
     return $data;
   }
+
+  public function getDonadores($id)
+  {
+    $sql = "SELECT d.monto,d.fecha_donacion FROM donacion AS d WHERE d.id_proyecto='$id' ORDER BY d.monto DESC limit 10";
+    $datos = $this->selectAll($sql);
+    return $datos;
+  }
+
 }

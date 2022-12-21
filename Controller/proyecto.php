@@ -146,6 +146,7 @@ class proyecto extends Controller
     {
         $id = strClean($_GET['id_proyecto']);
         $data = $this->model->getProyecto($id);
+	$data['topDonadores'] = $this->model->getDonadores($id);
         $data['title'] = $data['titulo'];
         $this->views->getView("Home", "vistaProyecto",$data);
         die();

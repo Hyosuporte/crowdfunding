@@ -16,11 +16,10 @@ function frmLogin(e) {
         const res = JSON.parse(this.responseText);
         console.log(res);
         if (res == "1") {
-          window.location = base_url + "administrador";
+          window.location = base_url + "admin";
         } else if (res == "2") {
           window.location = base_url + "cliente";
         } else {
-          //TODO: Agregar css para indicar al usuario porque fallo la validacion
           Swal.fire({
             position: 'center',
             icon: 'warning',
