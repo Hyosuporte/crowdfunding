@@ -52,7 +52,7 @@
         <div class="bannerLandingAplicar">
             <div class="oneColumnBanner mt-5">
                 <div class="tituloBannerAplicar">¿Por qué <br> subir un <br> proyecto? </div>
-                <div><a href=""><button class="botonBannerLanding" type="button">Subir Proyecto</button></a>
+                <div><a href="<?php echo BASE_URL; ?>Home/login"><button class="botonBannerLanding" type="button">Subir Proyecto</button></a>
                 </div>
             </div>
             <div class="twoColumnBanner">
@@ -690,7 +690,7 @@
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
                     <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
-                    <input class="txtFooter" type="text" name="correo" id="correo" placeholder="Correo Electronico">
+                    <input class="txtFooter" type="text" name="" id="">
                     <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar
                             conectado</button></a>
                 </div>
@@ -703,23 +703,23 @@
                     <h2>Nosotros</h2>
                     <ul>
                         <li>
-                            Sobre TFI
+                            <a class="textoInformacionesFooter" href="">Sobre TFI</a>
                         </li>
                         <li>
-                            <a href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
+                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
                         </li>
                         <li>
-                            <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
+                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
                         </li>
                     </ul>
                 </div>
                 <div style="margin-left: 30%;">
-                    <h3>Contáctanos</h3> <br>
+                    <h3>Contáctanos</h3>
                     <ul>
-                        <li>Telefono</li>
-                        <li>Whatsapp</li>
-                        <li>info@fundtur.com</li>
-                        <li>Cr 13 # 90 - 17, Bogotá D.C.</li>
+                        <li class="textoInformacionesFooter">Telefono +57 317 4336722</li>
+                        <li class="textoInformacionesFooter">Whatsapp +57 315 8475169</li>
+                        <li class="textoInformacionesFooter">info@fundtur.com</li>
+                        <li class="textoInformacionesFooter">Cr 13 # 90 - 17, Bogotá D.C.</li>
                     </ul>
                 </div>
             </div>

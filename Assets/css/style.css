@@ -898,7 +898,7 @@ body {
 .bannerFooter {
     padding-top: 3%;
     width: 98%;
-    height: 55vw;
+    height: 45vw;
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 30px;
     margin-left: 1%;
@@ -1183,13 +1183,10 @@ label {
     font-size: 1.5vw;
 }
 
-
-
-
-
-
-
-
+.textoInformacionesFooter{
+    font-family: 'Be Vietnam';
+    font-size: 1.5vw;
+}
 
 .inputsDonar {
     display: flex;

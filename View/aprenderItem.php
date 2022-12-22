@@ -64,25 +64,7 @@
         </div>
         <div class="principalAprende">
             <div class="menu">
-                <div class="card">
-                    <div class="card-body">
-                        <input class="buscar" placeholder="Buscar" type="text" name="" id="">
-                        <ul>
-                            <li>General</li>
-                            <li>Tema 1
-                                <ul>
-                                    <li>Item1</li>
-                                    <li>Item2</li>
-                                    <li>Item3</li>
-                                </ul>
-                            </li>
-                            <li>Tema2</li>
-                            <li>Tema3</li>
-                            <li>Tema4</li>
-                            <li>Tema5</li>
-                        </ul>
-                    </div>
-                </div>
+                <img src="<?php echo BASE_URL; ?>Assets/img/imagen2Banner2.svg" alt="">
             </div>
             <div class="cartas">
                 <div class="card">
@@ -108,16 +90,15 @@
                     <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa
                     </p>
                     <div class="iconosFooter">
+                        <i class="fa-brands fa-linkedin"></i>
                         <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
                     </div>
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
                     <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
-                    <input type="text" name="" id="">
+                    <input class="txtFooter" type="text" name="" id="">
                     <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar
                             conectado</button></a>
                 </div>
@@ -130,23 +111,23 @@
                     <h2>Nosotros</h2>
                     <ul>
                         <li>
-                            Sobre TFI
+                            <a class="textoInformacionesFooter" href="">Sobre TFI</a>
                         </li>
                         <li>
-                            <a href="<?php echo BASE_URL; ?>Home/aprende">Aprende más</a>
+                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
                         </li>
                         <li>
-                            <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
+                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
                         </li>
                     </ul>
                 </div>
                 <div style="margin-left: 30%;">
-                    <h3>Contáctanos</h3> <br>
+                    <h3>Contáctanos</h3>
                     <ul>
-                        <li>Telefono</li>
-                        <li>Whatsapp</li>
-                        <li>info@fundtur.com</li>
-                        <li>Cr 13 # 90 - 17, Bogotá D.C.</li>
+                        <li class="textoInformacionesFooter">Telefono +57 317 4336722</li>
+                        <li class="textoInformacionesFooter">Whatsapp +57 315 8475169</li>
+                        <li class="textoInformacionesFooter">info@fundtur.com</li>
+                        <li class="textoInformacionesFooter">Cr 13 # 90 - 17, Bogotá D.C.</li>
                     </ul>
                 </div>
             </div>

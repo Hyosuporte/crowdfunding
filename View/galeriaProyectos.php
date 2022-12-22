@@ -115,7 +115,8 @@
     <div class="bannerFooter">
         <div class="formFooter">
             <div class="subirFirstColumn">
-                <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa</p>
+                <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa
+                </p>
                 <div class="iconosFooter">
                     <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-facebook"></i>
@@ -125,35 +126,36 @@
             </div>
             <div class="subirSecondColumn" style="margin-top: 10%;">
                 <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
-                <input class="txtFooter" type="text" name="correo" id="correo" placeholder="Correo Electronico">
-                <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar conectado</button></a>
+                <input class="txtFooter" type="text" name="" id="">
+                <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar
+                        conectado</button></a>
             </div>
         </div>
         <div class="bloqueInfoFooter">
             <div>
-                <img src="<?php echo BASE_URL; ?>Assets/img/logoFooter.svg" alt="">
+                <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
             </div>
             <div style="margin-left: 10%;">
                 <h2>Nosotros</h2>
                 <ul>
                     <li>
-                        Sobre TFI
+                        <a class="textoInformacionesFooter" href="">Sobre TFI</a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>Home/aprende">Aprende más</a>
+                        <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
+                        <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
                     </li>
                 </ul>
             </div>
-            <div style="margin-left: 30vw;">
-                <h3>Contáctanos</h3> <br>
+            <div style="margin-left: 30%;">
+                <h3>Contáctanos</h3>
                 <ul>
-                    <li>Telefono</li>
-                    <li>Whatsapp</li>
-                    <li>info@fundtur.com</li>
-                    <li>Cr 13 # 90 - 17, Bogotá D.C.</li>
+                    <li class="textoInformacionesFooter">Telefono +57 317 4336722</li>
+                    <li class="textoInformacionesFooter">Whatsapp +57 315 8475169</li>
+                    <li class="textoInformacionesFooter">info@fundtur.com</li>
+                    <li class="textoInformacionesFooter">Cr 13 # 90 - 17, Bogotá D.C.</li>
                 </ul>
             </div>
         </div>

@@ -368,17 +368,17 @@ function UpdatePassword() {
 }
 
 function UpdateDates() {
-  const nombreCompleto = document.getElementById("nombreCompleto").value;
-  const pais = document.getElementById("paisUser").value;
-  const ciudad = document.getElementById("ciudadUser").value;
-  const direccion = document.getElementById("direccion").value;
-  const telefono = document.getElementById("telefonoUser").value;
+  const nombreCompleto = document.getElementById("nombreCompleto");
+  const pais = document.getElementById("paisUser");
+  const ciudad = document.getElementById("ciudadUser");
+  const direccion = document.getElementById("direccion");
+  const telefono = document.getElementById("telefonoUser");
   if (
-    nombreCompleto != "" ||
-    pais != "" ||
-    ciudad != "" ||
-    direccion != "" ||
-    telefono != ""
+    nombreCompleto.value != "" ||
+    pais.value != "" ||
+    ciudad.value != "" ||
+    direccion.value != "" ||
+    telefono.value != ""
   ) {
     const url = base_url + "cliente/UpdateData";
     const frm = document.getElementById("frmUpdateData");

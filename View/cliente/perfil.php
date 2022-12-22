@@ -3,7 +3,7 @@
   <div class="d-flex flex-row text-white ml-2 margenIzquierda">
     <div class="fondoBlanco sizeMenu">
       <div class="list-group menu">
-        <a href="#cuenta" class="  active textoMenu" data-bs-toggle="tab" aria-selected="true" role="tab" onclick="aparecerVista('cuenta')"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosSubidosDashboard.svg" alt="">Proyectos subidos</a>
+        <a href="#cuenta" class="  active textoMenu" data-bs-toggle="tab" aria-selected="true" role="tab" onclick="aparecerVista('cuenta'),desaparecerVistas(['v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosSubidosDashboard.svg" alt="">Proyectos subidos</a>
         <a href="#perfil" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosDonadosDashboard.svg" alt="">Proyectos
           Donados</a>
         <a href="#misProtectos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
@@ -61,7 +61,7 @@
             <input class="inputGrandeForm" type="text" name="nombre" id="nombre" placeholder="Nombre de la organización*">
             <div class="grupoInputsForm">
               <select class="grupoInput1" name="organizacion" id="organizacion" style="margin-right: 3rem;">
-                <option value="">Organizacion</option>
+                <option value="0">Organizacion</option>
                 <option value="1">ONG</option>
                 <option value="2">OSC</option>
                 <option value="3">Empresa</option>
@@ -106,10 +106,10 @@
               <input class="grupoInput1" type="text" name="video" id="video" placeholder="URL Video*">
             </div>
             <div class="grupoInputsForm">
-              <input class="grupoInput1" type="text" name="banco" placeholder="Monto a Recaudar">
+              <input class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
               <input type="date" class="grupoInput1" id="final" name="final" name="final">
             </div>
-            <div class="list-group"><a href="#v-pills-subir-proyecto-3" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVista('v-pills-subir-proyecto-2'),aparecerVista('v-pills-subir-proyecto-3')">Subir
+            <div class="list-group"><a href="#v-pills-subir-proyecto-3" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos2('v-pills-subir-proyecto-2','v-pills-subir-proyecto-3')">Subir
                 Proyecto</a></div>
           </form>
         </div>
