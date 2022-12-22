@@ -6,3 +6,4 @@
 <script>
     const base_url = "<?php echo BASE_URL; ?>"
 </script>
+<script src="<?php echo BASE_URL; ?>Assets/js/funciones.js"></script>

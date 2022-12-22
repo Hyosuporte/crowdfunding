@@ -7,7 +7,16 @@
     width: 100%;
 }
 
+.textoMenu{
+    font-family: 'Be Vietnam';
+    text-decoration: none;
+    color: #031C54;
+    font-size: 1vw;
+}
+
 .principalAprende {
+    margin-top: -4vw;
+    margin-left: 3vw;
     display: grid;
     grid-template-columns: 0.5fr 1.5fr;
     grid-template-rows: 1fr;
@@ -52,7 +61,7 @@
 }
 
 .tituloTema {
-    font-family: 'FatFrank';
+    font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
@@ -64,10 +73,10 @@
 .botonCardTema {
     margin-left: 10vh;
     padding-left: 10vh;
-    font-family: 'Signika Negative', sans-serif;
+    font-family:  'TT Norms';
     font-style: normal;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 1vw;
     line-height: 29px;
     width: 30vh;
     height: 50px;

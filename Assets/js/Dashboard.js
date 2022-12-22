@@ -1,117 +1,140 @@
-document
-  .getElementById("configPerfil")
-  .addEventListener("onLoad", listarDatos(), true);
-
 $(document).ready(function () {
-    
-    $('#tblProyectos').DataTable({
-        paging: false,
-        ordering: false,
-        info: false,
-        ajax:{
-            url: base_url+"proyecto/obtenerProyectos",
-            dataSrc:"",
-        },
-        columns:[
-            {
-                data:"id_proyecto",
-            },
-            {
-                data:"titulo",
-            },
-            {
-                data:"fecha_comienzo",
-            },
-            {
-                data:"fecha_final",
-            },
-            {
-                data:"id_estado",
-            },
-            {
-                data:"acciones",
-            },
-            {
-                data:"observaciones",
-            },
-        ],
-    });
-    console.log("cambia la puta madre")
+  $("#tblProyectos").DataTable({
+    paging: false,
+    ordering: false,
+    info: false,
+    ajax: {
+      url: base_url + "proyecto/obtenerProyectos",
+      dataSrc: "",
+    },
+    columns: [
+      {
+        data: "id_proyecto",
+      },
+      {
+        data: "titulo",
+      },
+      {
+        data: "fecha_comienzo",
+      },
+      {
+        data: "fecha_final",
+      },
+      {
+        data: "id_estado",
+      },
+      {
+        data: "acciones",
+      },
+      {
+        data: "observaciones",
+      },
+    ],
+  });
 });
-/*$(document).ready(function () {
-    
-    $('#tblProyectos').DataTable({
-        ajax:{
-            url: base_url+"proyecto/obtenerProyectos",
-            dataSrc:"",
-        },
-        columns:[
-            {
-                data:"id_proyecto",
-            },
-            {
-                data:"titulo",
-            },
-            {
-                data:"fecha_comienzo",
-            },
-            {
-                data:"fecha_final",
-            },
-            {
-                data:"id_estado",
-            },
-            {
-                data:"acciones",
-            },
-            {
-                data:"observaciones",
-            },
-        ],
-    });
-    console.log("cambia la puta madre")
-});*/
 
-function consultarProyectos(){
-  const url = base_url +"proyecto/obtenerProyectos";
+function consultarProyectos() {
+  const url = base_url + "proyecto/obtenerProyectos";
   const http = new XMLHttpRequest();
   http.open("GET", url, true);
   http.send();
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
-      console.log(res)     
-    }else{
-
+      console.log(res);
+    } else {
     }
   };
 }
 
-function aparecerVista(panel){
-    element = document.getElementById(panel);
-    element.style.display='block';
+function aparecerVista(panel) {
+  element = document.getElementById(panel);
+  element.style.display = "block";
 }
-function aparecerVistas(panel){
-    panel.forEach(i => {
-        element = document.getElementById(i);
-        element.style.display='block';        
-    });    
+function aparecerVistas(panel) {
+  panel.forEach((i) => {
+    element = document.getElementById(i);
+    element.style.display = "block";
+  });
 }
-function desaparecerVista(panel){
-    element = document.getElementById(panel);
-    element.style.display='none';
+function desaparecerVista(panel) {
+  element = document.getElementById(panel);
+  element.style.display = "none";
 }
-function desaparecerVistas(panel){
-    panel.forEach(i => {
-        element = document.getElementById(i);
-        element.style.display='none';        
-    });    
+function desaparecerVistas(panel) {
+  panel.forEach((i) => {
+    element = document.getElementById(i);
+    element.style.display = "none";
+  });
 }
 
-/* function registrar(){
-    const table = document.getElementById("proyectos");
-    const url = base_url + "proyecto/obtenerProyectos";
-    const http = new XMLHttpRequest();
-    http.open("post", url, true);
-    http.send(null);
-}*/
+function verificarCampos(parametro1,parametro2){
+  const nombre = document.getElementById("nombre");
+  const telefono = document.getElementById("telefono");
+  const web = document.getElementById("web");
+  const redes = document.getElementById("redes");
+  const banco = document.getElementById("banco");
+  const cuenta = document.getElementById("cuenta");
+  const organizacion = document.getElementById("organizacion");
+  if (
+    nombre.value != "" &&
+    telefono.value != "" &&
+    web.value != "" &&
+    redes.value != "" &&
+    banco.value != "" &&
+    cuenta.value != "" &&
+    organizacion.value != "0"
+  ) 
+  {
+    //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
+    
+    desaparecerVista(parametro1);
+    aparecerVista(parametro2);
+  } 
+  else{
+    console.log("Rellena los campos we");
+    Swal.fire({
+      position: 'center',
+      icon: 'warning',
+      title: 'Todos los campos son obligatorios',
+      showConfirmButton: false,
+      timer: 1500
+    }) 
+  }
+}
+function verificarCampos2(parametro1,parametro2){
+  const titulo = document.getElementById("titulo");
+  const palabras = document.getElementById("palabras");
+  const impacto = document.getElementById("impacto");
+  const resumen = document.getElementById("resumen");
+  const foto = document.getElementById("foto");
+  const video = document.getElementById("video");
+  const banco = document.getElementById("banco");
+  const final = document.getElementById("final");
+  if (
+    titulo.value != "" &&
+    palabras.value != "" &&
+    impacto.value != "" &&
+    resumen.value != "" &&
+    foto.value != "" &&
+    video.value != "" &&
+    banco.value != "" &&
+    final.value != "" 
+  ) 
+  {
+    //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
+    
+    desaparecerVista(parametro1);
+    aparecerVista(parametro2);
+  } 
+  else{
+    console.log("Rellena los campos we");
+    Swal.fire({
+      position: 'center',
+      icon: 'warning',
+      title: 'Todos los campos son obligatorios',
+      showConfirmButton: false,
+      timer: 1500
+    }) 
+  }
+}
