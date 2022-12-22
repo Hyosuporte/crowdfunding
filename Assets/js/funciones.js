@@ -241,7 +241,7 @@ function crearFilaDonacion(element) {
   tdFecha.innerHTML = element.fecha_donacion;
   tdFecha.setAttribute("class", "bordeDerecha bordeAbajo");
   tdVerPro.setAttribute("class", "bordeAbajo");
-  ver.setAttribute("class", "botonCardGaleria");
+  ver.setAttribute("class", "botonDonador");
   ver.setAttribute("value", element.id_proyecto);
   ver.setAttribute("type", "submit");
   ver.setAttribute(
@@ -356,6 +356,14 @@ function UpdatePassword() {
         timer: 2500,
       });
     }
+  } else{
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Los campos de contraseña deben ser llenados",
+      showConfirmButton: false,
+      timer: 2500,
+    });
   }
 }
 

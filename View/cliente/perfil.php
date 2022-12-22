@@ -1,18 +1,18 @@
 <?php require_once("View/Template/header.php") ?>
 <div class="content">
   <div class="d-flex flex-row text-white ml-2 margenIzquierda">
-    <div class="col-2 fondoBlanco ">
+    <div class="fondoBlanco sizeMenu">
       <div class="list-group menu">
-        <a href="#cuenta" class=" list-group-item-action active nav-link textoMenu" data-bs-toggle="tab" aria-selected="true" role="tab" onclick="aparecerVista('cuenta')"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosSubidosDashboard.svg" alt="">Proyectos subidos</a>
-        <a href="#perfil" class=" list-group-item-action textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosDonadosDashboard.svg" alt="">Proyectos
+        <a href="#cuenta" class="  active textoMenu" data-bs-toggle="tab" aria-selected="true" role="tab" onclick="aparecerVista('cuenta')"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosSubidosDashboard.svg" alt="">Proyectos subidos</a>
+        <a href="#perfil" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosDonadosDashboard.svg" alt="">Proyectos
           Donados</a>
-        <a href="#misProtectos" class=" list-group-item-action textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
+        <a href="#misProtectos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
           Datos</a>
         </div>
-        <a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a>
+        <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
     </div>
     <div class="col-10  tab-content bloqueDashboard panelDashboard" id="configPerfil">
-      <div class="tab-pane fade active show fondoDashboard fondoBlanco" role="tabpanel1" id="cuenta">
+      <div class="tab-pane fade active show fondoDashboard fondoBlanco contenido" role="tabpanel1" id="cuenta">
         <?php if (!isset($_SESSION["datos"]["numProyects"])) { ?>
           <div class="pantallaInicialDashboard">
             <p class="tableDashboardTitulo">Aun no tines ningun proyecto subido</p>
@@ -82,7 +82,7 @@
               <input class="grupoInput1" type="text" name="banco" id="banco" placeholder="Banco*">
               <input class="grupoInput1" type="text" name="cuenta" id="cuenta" placeholder="Cuenta*">
             </div>
-            <div class="list-group"><a href="#v-pills-subir-proyecto-2" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVista('v-pills-subir-proyecto-1'),aparecerVista('v-pills-subir-proyecto-2')">Subir
+            <div class="list-group"><a href="#v-pills-subir-proyecto-2"  class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos('v-pills-subir-proyecto-1','v-pills-subir-proyecto-2')">Subir
                 Proyecto</a></div>
           </form>
         </div>
@@ -156,7 +156,7 @@
           </form>
         </div>
       </div>
-      <div class="tab-pane fade fondoDashboard fondoBlanco pantallaInicialDashboard" role="tabpanel1" id="perfil">
+      <div class="tab-pane fade fondoDashboard fondoBlanco pantallaInicialDashboard contenido" role="tabpanel1" id="perfil">
         <div>
           <p class="tituloFormSubirProyecto">Proyectos Donados</p>
           <p class="subtituloFormSubirProyecto">Los proyectos que estas ayudando a que se hagan realidad </p>
@@ -174,7 +174,7 @@
           </tbody>
         </table>
       </div>
-      <div class="tab-pane  fade fondoDashboard fondoBlanco" role="tabpanel1" id="misProtectos">
+      <div class="tab-pane  fade fondoDashboard fondoBlanco contenido" role="tabpanel1" id="misProtectos">
         <div class="container">
           <div>
             <div class="col-md-6">

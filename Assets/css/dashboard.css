@@ -1,6 +1,13 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
+
 .dashboard {
     display: grid;
-    margin-left: 1vw;  
+    margin-left: 1vw;
     grid-template-columns: 0.5fr 1.5fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
@@ -8,7 +15,10 @@
     grid-template-areas:
         "Menu contenido";
 }
-.margenIzquierda{
+
+
+
+.margenIzquierda {
     margin-left: 1vw;
 }
 
@@ -18,28 +28,31 @@
 
 .textoFormuario {
     font-family: 'TT Norms';
-    color: #031C54;    
+    color: #031C54;
 }
 
 .Menu {
     grid-area: Menu;
     background: #FFFFFF;
     box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
-    border-radius: 30px;  
-    padding-left: 1vw;
+    border-radius: 30px;
 }
 
-.textoMenu{
-    color: #031C54;    
-    font-size: 1.5vw;
+.textoMenu {
+    color: #031C54;
+    font-size: 1.3vw;
     margin-bottom: 1vw;
     margin-left: 1vw;
 }
-.textoMenuAbajo{
-    color: #031C54;  
-    font-size: 1.5vw;
-    margin-top:22vw; 
-    margin-left: 1vw; 
+
+.textoMenuAbajo {
+    color: #031C54;
+    font-size: 1.3vw;
+    margin-left: 1vw;
+}
+
+.ultimaOpcion {
+    margin-top: 20vw;
 }
 
 .contenido {
@@ -47,7 +60,8 @@
     background: #FFFFFF;
     box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
     border-radius: 30px;
-    width: 80%;
+    width: 80vw;
+    height: 80vh;
     padding: 3vh;
     margin-left: 1vw;
 }
@@ -70,13 +84,14 @@
 
 .inputGrandeFormArea {
     width: 100%;
-    height: auto;
+    height: 5vh;
     border-radius: 30px;
     border: 1px solid #031C54;
     padding-left: 2vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
     color: #031C54;
+    font-size: 1.5vw;
 }
 
 
@@ -142,7 +157,7 @@
     padding-top: 1vh;
 }
 
-.botonFormFinal{
+.botonFormFinal {
     background: #DCF763;
     border-radius: 30px;
     border: 0px;
@@ -158,6 +173,7 @@
     padding-left: 1vw;
     padding-top: 0.5vh;
 }
+
 .botonFormBanner {
     background: #DCF763;
     border-radius: 30px;
@@ -170,7 +186,7 @@
     font-weight: 900;
     font-size: 3vh;
     margin-left: 20vw;
-    margin-top: 3vh;    
+    margin-top: 3vh;
     padding-top: 0.5vh;
 }
 
@@ -196,11 +212,9 @@
 
 .bloqueDashboard {
     background-color: #F5F0F5;
-    padding-left: 1vw;
-    padding-right: 1vw;
 }
 
-.pantallaInicialDashboard{
+.pantallaInicialDashboard {
     padding: 1vw;
 }
 
@@ -245,7 +259,7 @@
 }
 
 .botonBannerDashboardSubirProyecto {
-    margin-left: 10vw;
+    margin-left: 6vw;
 }
 
 .botonForm {
@@ -259,22 +273,23 @@
     background: #DCF763;
     border-radius: 30px;
     color: #031C54;
+    margin-left: 35vw;
 }
 
-.grupoInputsForm2{
+.grupoInputsForm2 {
     display: flex;
     font-size: 1vw;
     margin: 1vw;
 }
 
-.inputFileForm{
+.inputFileForm {
     border-radius: 30px;
     border: 1px solid #031C54;
     padding-right: 1vw;
     font-size: 1.5vw;
 }
 
-.titulosInputsFileForm{
+.titulosInputsFileForm {
     color: #031C54;
     display: flex;
     margin-left: 1vw;
@@ -282,26 +297,29 @@
     font-weight: bold;
     font-style: normal;
 }
-.titulosInputsFileForm2{
+
+.titulosInputsFileForm2 {
     margin-left: 25vw !important;
 }
 
-.tablita{
+.tablita {
     width: 100%;
 
 }
 
-.bordeAbajo{
-    border-bottom: 0.5vh  solid #031C54;        
-}
-.bordeDerecha{    
-    border-right: 0.5vh  solid #031C54;
-}
-.bordeIzquierda{
-    border-left: 0.5vh  solid #031C54;
+.bordeAbajo {
+    border-bottom: 0.3vh solid #031C54;
 }
 
-.botonFormActualizar{
+.bordeDerecha {
+    border-right: 0.3vh solid #031C54;
+}
+
+.bordeIzquierda {
+    border-left: 0.3vh solid #031C54;
+}
+
+.botonFormActualizar {
     background: #DCF763;
     border-radius: 30px;
     border: 0px;
@@ -317,19 +335,23 @@
     padding-top: 0.5vh;
 }
 
-.inputActualizarDatos{
+.inputActualizarDatos {
     border-radius: 30px;
     border: 1px solid #031C54;
 
 }
 
-.fondoDashboard{
+.fondoDashboard {
     background-color: #F5F0F5;
 }
 
-.fondoBlanco{
+.fondoBlanco {
     background: #FFFFFF;
     box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
     border-radius: 1vw;
     padding-top: 1vw;
+}
+
+.sizeMenu{
+    width: 100vw;
 }

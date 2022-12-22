@@ -87,7 +87,7 @@ body {
     width: 80% !important;
 }
 
-.linksFooter{
+.linksFooter {
     font-size: 1.5vw;
 }
 
@@ -109,6 +109,7 @@ body {
     border-radius: 30px;
     color: #031C54;
 }
+
 .botonNavbar {
     width: 50vh;
     height: 5vh;
@@ -125,11 +126,11 @@ body {
 
 
 
-.listaBannerLanding2{
+.listaBannerLanding2 {
     font-size: 1vw;
 }
 
-.itemsNavbar{
+.itemsNavbar {
     margin-left: 15vw;
 }
 
@@ -176,11 +177,11 @@ body {
 }
 
 .imagenCarusel {
-    width: 100vh;
+    width: 50vh;
 }
 
-.botonFormRegistro{
-    font-family: 'TT Norms', sans-serif;
+.botonFormRegistro {
+    font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
     font-size: 1vw;
@@ -197,6 +198,33 @@ body {
     margin: auto;
     margin-bottom: 1vw;
     padding-left: 6vw;
+}
+
+.imagen1Paso2{
+    width: 30vw;
+    margin-top: -6vw;
+    margin-left: -5vw;
+}
+
+.imagen2Paso2{
+    width: 35vw;
+    margin-top: -2vw;
+    margin-left: -25vw;
+}
+
+.botonDonador {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    line-height: 26px;
+    text-align: center;
+    padding-top: 0.5vw;
+    color: #031C54;
+    background: #DCF763;
+    width: 15vw;
+    height: 2.5vw;
+    border-radius: 3vw;
 }
 
 .formulario__validacion-estado-incorrecto {
@@ -348,7 +376,7 @@ body {
     color: #F5F0F5;
 }
 
-.subtitulo{
+.subtitulo {
     font-family: 'Be Vietnam';
     margin-left: 20vw;
     font-size: 1.5vw;
@@ -466,17 +494,17 @@ body {
     border-radius: 30px;
 }
 
-.subitutiloFomrRegistrar{
+.subitutiloFomrRegistrar {
     font-family: 'Be Vietnam';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 35px;
-display: flex;
-align-items: center;
-text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 
-color: #F5F0F5;
+    color: #F5F0F5;
 }
 
 .beneficioTitulo1 {
@@ -705,6 +733,7 @@ color: #F5F0F5;
     padding-left: 3vw;
     margin: auto;
 }
+
 .botonLogin {
     font-family: 'TT Norms', sans-serif;
     font-style: normal;
@@ -723,7 +752,8 @@ color: #F5F0F5;
     padding-left: 6vw;
     margin: auto;
 }
-.imagenBannerLanding{
+
+.imagenBannerLanding {
     width: 20vw;
     height: 20vw;
 }
@@ -800,12 +830,12 @@ color: #F5F0F5;
     width: 30vw;
 }
 
-.imagenComoSubir{
+.imagenComoSubir {
     width: 100vw;
     height: 50vh;
 }
 
-.botonSubirProyecto{
+.botonSubirProyecto {
     width: 50vh;
     height: 7vh;
     color: #031C54;
@@ -821,7 +851,7 @@ color: #F5F0F5;
     margin-top: 3vw;
 }
 
-.imagenComoSubirProyecto{
+.imagenComoSubirProyecto {
     width: 50vw;
     margin-left: 10vw;
 }
@@ -904,7 +934,7 @@ color: #F5F0F5;
     margin-left: 5%;
 }
 
-.txtFooter{
+.txtFooter {
     margin-left: 5vw;
 }
 
@@ -1023,42 +1053,44 @@ color: #F5F0F5;
     padding-top: 6vw;
 }
 
-.aunRegistrarse{
+.aunRegistrarse {
     font-family: 'TT Norms';
     font-size: 1.5vw;
     margin-left: 5vw;
 }
 
-.grupoInputsRegistro{
+.grupoInputsRegistro {
     display: flex;
     width: 40vw;
     margin: 1vw;
     margin-left: 3vw;
 }
 
-.grupoInputsRegistro input{
+.grupoInputsRegistro input {
     margin: 0.2vw;
 }
 
-.grupoInputsRegistroSimbolo{
+.grupoInputsRegistroSimbolo {
     display: flex;
     width: 20vw;
 }
 
-.inputFormularioRegistro{
+.inputFormularioRegistro {
     width: 20vw;
 }
 
 
-.bannerLogin{
-    display: flex; 
-    margin-right: 1vw;   
-}
-.bannerRegistro{
+.bannerLogin {
     display: flex;
     margin-right: 1vw;
 }
-.imagenBannerRegistro{
+
+.bannerRegistro {
+    display: flex;
+    margin-right: 1vw;
+}
+
+.imagenBannerRegistro {
     height: 100vh;
 }
 
@@ -1080,10 +1112,11 @@ color: #F5F0F5;
     font-weight: 400;
     font-size: 1vw;
     line-height: 26px;
-    
+
     color: #F5F0F5;
 }
-.recordarme{
+
+.recordarme {
     font-family: 'Be Vietnam';
     font-size: 1vw;
     color: #F5F0F5;
@@ -1098,7 +1131,7 @@ color: #F5F0F5;
     font-size: 2vw;
     line-height: 38px;
     text-align: center;
-    
+
 
     color: #F5F0F5;
 }
@@ -1204,7 +1237,7 @@ label {
     color: #031C54;
 }
 
-.tablaDashboard{
+.tablaDashboard {
     background: #FFFFFF;
     box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
     border-radius: 30px;

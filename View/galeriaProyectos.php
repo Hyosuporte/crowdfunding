@@ -12,21 +12,11 @@
         @font-face {
             font-family: 'TT Norms';
             src: url('<?php echo BASE_URL; ?>Assets/fonts/TT-Norms-Black/TTNorms-Black.otf');
-            font-style: normal;
-            font-weight: 900;
-            font-size: 32px;
-            line-height: 38px;
         }
 
         @font-face {
             font-family: 'Be Vietnam';
             src: url('<?php echo BASE_URL; ?>Assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 26px;
-
-            color: #031C54;
         }
     </style>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
@@ -116,7 +106,7 @@
                 </ul>
             </div>
             <div class="subirSecondColumn">
-                <img src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
+                <img class="imagenComoSubirProyecto" src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
             </div>
         </div>
         <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonSubirProyecto" type="button">Subir Proyecto</button></a></div>
@@ -135,7 +125,7 @@
             </div>
             <div class="subirSecondColumn" style="margin-top: 10%;">
                 <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
-                <input type="text" name="correo" id="correo" placeholder="Correo Electronico">
+                <input class="txtFooter" type="text" name="correo" id="correo" placeholder="Correo Electronico">
                 <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar conectado</button></a>
             </div>
         </div>

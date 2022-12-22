@@ -67,3 +67,38 @@ function desaparecerVistas(panel) {
     element.style.display = "none";
   });
 }
+
+function verificarCampos(parametro1,parametro2){
+  const nombre = document.getElementById("nombre");
+  const telefono = document.getElementById("telefono");
+  const web = document.getElementById("web");
+  const redes = document.getElementById("redes");
+  const banco = document.getElementById("banco");
+  const cuenta = document.getElementById("cuenta");
+  const organizacion = document.getElementById("organizacion");
+  if (
+    nombre.value != "" &&
+    telefono.value != "" &&
+    web.value != "" &&
+    redes.value != "" &&
+    banco.value != "" &&
+    cuenta.value != "" &&
+    organizacion.value != "1"
+  ) 
+  {
+    //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
+    
+    desaparecerVista(parametro1);
+    aparecerVista(parametro2);
+  } 
+  else{
+    console.log("Rellena los campos we");
+    Swal.fire({
+      position: 'center',
+      icon: 'warning',
+      title: 'Todos los campos son obligatorios',
+      showConfirmButton: false,
+      timer: 1500
+    }) 
+  }
+}
