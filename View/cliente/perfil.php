@@ -52,22 +52,22 @@
       </div>
       <div class="tab-pane fade  fondoDashboard" id="v-pills-subir-proyecto-1" role="tabpanel" aria-labelledby="v-pills-subir-proyecto-1" tabindex="0">
         <div class="contenido">
-          <form action="">
+          <form name= "frmorg" action="frmOrg()" method="post">
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 1 de 3</p>
             </div>
             <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
-            <input class="inputGrandeForm" type="text" name="nombre" id="nombre" placeholder="Nombre de la organización*">
+            <input class="inputGrandeForm" type="text" name="nombre_org" id="nombreor" placeholder="Nombre de la organización*">
             <div class="grupoInputsForm">
-              <select class="grupoInput1" name="organizacion" id="organizacion" style="margin-right: 3rem;">
+              <select class="grupoInput1" name="id_tipo" id="organizacion_tipo" style="margin-right: 3rem;">
                 <option value="0">Organizacion</option>
                 <option value="1">ONG</option>
                 <option value="2">OSC</option>
                 <option value="3">Empresa</option>
                 <option value="4">Academia</option>
               </select>
-              <input type="number" class="grupoInput1" placeholder="Telefono Responsable*" required id="telefono" name="telefono" onkeydown="filtro()">
+              <input type="number" class="grupoInput1" placeholder="Telefono Responsable*" required id="telefono" name="telefono_contacto" onkeydown="filtro()">
               <script>
                 function filtro() {
                   var tecla = event.key;
@@ -76,20 +76,21 @@
                 }
               </script>
             </div>
-            <input class="inputGrandeForm" type="text" name="web" id="web" placeholder="Sitio WEB">
-            <input class="inputGrandeForm" type="text" name="redes" id="redes" placeholder="Redes Sociales*">
+            <input class="inputGrandeForm" type="text" name="pagina_web" id="web" placeholder="Sitio WEB">
+            <input class="inputGrandeForm" type="text" name="redes_sociales" id="redes" placeholder="Redes Sociales*">
             <div class="grupoInputsForm">
               <input class="grupoInput1" type="text" name="banco" id="banco" placeholder="Banco*">
-              <input class="grupoInput1" type="text" name="cuenta" id="cuenta" placeholder="Cuenta*">
+              <input class="grupoInput1" type="text" name="nro_cuenta" id="cuenta" placeholder="Cuenta*">
             </div>
-            <div class="list-group"><a href="#v-pills-subir-proyecto-2"  class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos('v-pills-subir-proyecto-1','v-pills-subir-proyecto-2')">Subir
+            <div class="list-group"><a href="#v-pills-subir-proyecto-2"  type="submit" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos('v-pills-subir-proyecto-1','v-pills-subir-proyecto-2')" onclick="frmOrg()">Subir
                 Proyecto</a></div>
           </form>
         </div>
       </div>
       <div class="tab-pane fade fondoDashboard" role="tabpanel1" id="v-pills-subir-proyecto-2">
         <div class="contenido">
-          <form action="">
+          
+        <form action="">
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 2 de 3</p>

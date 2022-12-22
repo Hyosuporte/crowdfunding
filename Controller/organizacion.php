@@ -15,17 +15,18 @@ class organizacion extends Controller
         $redes_sociales = strClean($_POST['redes']);
         $telefono_contacto = strClean($_POST['telefono']);
         $id_tipo = intval(strClean($_POST['organizacion'])); //pendiente actualizar
+        $banco = strClean($_POST['banco']);
         $nro_cuenta = strClean($_POST['cuenta']); //pendiente actualizar
 
         echo var_dump($id_tipo);
 
         if (
             empty($id_org) || empty($nombre_org) || empty($pagina_web) || empty($redes_sociales) || empty($telefono_contacto) ||
-            empty($id_tipo) || empty($nro_cuenta)
+            empty($id_tipo) || empty($banco) || empty($nro_cuenta)
         ) {
             $msg = "Todos los campos son obligatorios";
         } else {
-            $data = $this->model->insertarorg($id_org, $nombre_org, $pagina_web, $redes_sociales, $telefono_contacto, $id_tipo, $nro_cuenta);
+            $data = $this->model->insertarorg($id_org, $nombre_org, $pagina_web, $redes_sociales, $telefono_contacto, $id_tipo, $banco,$nro_cuenta);
             if ($data === "ok") {
                 $msg = "org registrada";
             } else {
@@ -45,15 +46,16 @@ class organizacion extends Controller
         $redes_sociales = strClean($_POST['redes']);
         $telefono_contacto = strClean($_POST['telefono']);
         $id_tipo = strClean($_POST['organizacion']); //pendiente actualizar
+        $banco = strClean($_POST['banco']);
         $nro_cuenta = strClean($_POST['cuenta']); //pendiente actualizar
 
         if (
             empty($id_org) || empty($nombre_org) || empty($pagina_web) || empty($redes_sociales) || empty($telefono_contacto) ||
-            empty($id_tipo) || empty($nro_cuenta)
+            empty($id_tipo) || empty($banco) || empty($nro_cuenta)
         ) {
             $msg = "Todos los campos son obligatorios";
         } else {
-            $data = $this->model->editarorg($id_org, $nombre_org, $pagina_web, $redes_sociales, $telefono_contacto, $id_tipo, $nro_cuenta);
+            $data = $this->model->editarorg($id_org, $nombre_org, $pagina_web, $redes_sociales, $telefono_contacto, $id_tipo, $banco,$nro_cuenta);
             if ($data === "ok") {
                 $msg = "organizacion editada";
             } else {

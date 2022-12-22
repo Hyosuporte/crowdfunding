@@ -138,3 +138,47 @@ function verificarCampos2(parametro1,parametro2){
     }) 
   }
 }
+
+function frmOrg(e) {
+  const id_organizacion = document.getElementById("nombreor");
+  const nombre_org = document.getElementById("nombreor");
+  const id_tipo = document.getElementById("organizacion_tipo");
+  const pagina_web = document.getElementById("web");
+  const redes_sociales = document.getElementById("redes");
+  const telefono_contacto = document.getElementById("telefono");
+  const banco = document.getElementById("banco");
+  const nro_cuenta = document.getElementById("cuenta");
+  
+    const url = base_url + "organizacion/insertarorg";
+    const frm = document.getElementById("frmorg");
+    const http = new XMLHttpRequest();
+    http.open("POST", url, true);
+    http.send(new FormData(frm));
+    http.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        const res = JSON.parse(this.responseText);
+        console.log(res);
+        if (res === "registrado") {
+          //TODO: Agregar notificacion de registro exitoso
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Organización registrada con éxito',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          
+        }else{
+          //TODO: Agregar notificacion de que hubo un error al registrar
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Hubo un error al registrar la organización',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+      }
+    };
+  }
+

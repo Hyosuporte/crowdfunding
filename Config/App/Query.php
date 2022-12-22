@@ -41,16 +41,19 @@ class Query extends Conexion
     }
     public function insertar(string $sql, array $datos)
     {
+        try {
         $this->sql = $sql;
         $this->datos = $datos;
         $insert = $this->con->prepare($this->sql);
         $data = $insert->execute($this->datos);
         if ($data) {
             $res = $this->con->lastInsertId();
-        } else {
-            $res = 0;
         }
-        return $res;
+        } catch(PDOException $e) {
+            
+                return $e->getMessage();
+                       
+        }
     }
     public function editar(string $sql, array $datos)
     {
