@@ -52,7 +52,7 @@
       </div>
       <div class="tab-pane fade  fondoDashboard" id="v-pills-subir-proyecto-1" role="tabpanel" aria-labelledby="v-pills-subir-proyecto-1" tabindex="0">
         <div class="contenido">
-          <form name= "frmorg" action="" method="post">
+          <form id= "frmorg" action="" method="post">
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 1 de 3</p>
@@ -62,11 +62,11 @@
             <input class="inputGrandeForm" type="text" name="nombre" id="nombreorg" placeholder="Nombre de la organización*">
             <div class="grupoInputsForm">
               <select class="grupoInput1" name="id_tipo" id="organizacion_tipo" style="margin-right: 3rem;">
-                <option value="0">Organizacion</option>
-                <option value="1">ONG</option>
-                <option value="2">OSC</option>
-                <option value="3">Empresa</option>
-                <option value="4">Academia</option>
+                <option value=0>Organizacion</option>
+                <option value=1>ONG</option>
+                <option value=2>OSC</option>
+                <option value=3>Empresa</option>
+                <option value=4>Academia</option>
               </select>
               <input type="number" class="grupoInput1" placeholder="Telefono Responsable*" required id="telefono" name="telefono_contacto" onkeydown="filtro()">
               <script>
@@ -91,7 +91,7 @@
       <div class="tab-pane fade fondoDashboard" role="tabpanel1" id="v-pills-subir-proyecto-2">
         <div class="contenido">
           
-        <form action="">
+        <form id= "frmproy" action="" method="post">
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 2 de 3</p>

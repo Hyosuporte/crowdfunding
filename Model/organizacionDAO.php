@@ -31,7 +31,7 @@ class organizacionDAO extends Query
 
   public function insertarorg($id_org, $nombre_org, $pagina_web, $redes_sociales, $telefono_contacto, $id_tipo, $banco,$nro_cuenta)
   {
-    $sql = "INSERT INTO organizacion(id_organizacion, nombre_org, pagina_web, redes_sociales, telefono_contacto, id_tipo, banco, nro_cuenta) VALUES (?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO organizacion(id_organizacion, nombre_org, pagina_web, redes_sociales, telefono_contacto, id_tipo, banco, nro_cuenta) VALUES (?,?,?,?,?,?,?,?)";
     $datos = array($id_org, $nombre_org, $pagina_web, $redes_sociales, $telefono_contacto, $id_tipo, $banco,$nro_cuenta);
     $data = $this->save($sql, $datos);
     if ($data == 1) {

@@ -70,13 +70,13 @@ function desaparecerVistas(panel) {
 
 function verificarCampos(parametro1,parametro2){
   const nit = document.getElementById("nit");
-  const nombre = document.getElementById("nombre");
+  const nombre = document.getElementById("nombreorg");
   const telefono = document.getElementById("telefono");
   const web = document.getElementById("web");
   const redes = document.getElementById("redes");
   const banco = document.getElementById("banco");
   const cuenta = document.getElementById("cuenta");
-  const organizacion = document.getElementById("organizacion");
+  const organizacion = document.getElementById("organizacion_tipo");
   if (
     nit.value != "" &&
     nombre.value != "" &&
@@ -184,3 +184,46 @@ function frmOrg(e) {
     };
   }
 
+  function frmProy(e) {
+    const id_organizacion = document.getElementById("nit");
+    const nombre_org = document.getElementById("nombreorg");
+    const id_tipo = document.getElementById("organizacion_tipo");
+    const pagina_web = document.getElementById("web");
+    const redes_sociales = document.getElementById("redes");
+    const telefono_contacto = document.getElementById("telefono");
+    const banco = document.getElementById("banco");
+    const nro_cuenta = document.getElementById("cuenta");
+    
+      const url = base_url + "proyecto/insertarproyecto";
+      const frm = document.getElementById("frmorg");
+      const http = new XMLHttpRequest();
+      http.open("POST", url, true);
+      http.send(new FormData(frm));
+      http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          const res = JSON.parse(this.responseText);
+          console.log(res);
+          if (res === "registrado") {
+            //TODO: Agregar notificacion de registro exitoso
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Organización registrada con éxito',
+              showConfirmButton: false,
+              timer: 1500
+            })
+            
+          }else{
+            //TODO: Agregar notificacion de que hubo un error al registrar
+            Swal.fire({
+              position: 'top-end',
+              icon: 'error',
+              title: 'Hubo un error al registrar la organización',
+              showConfirmButton: false,
+              timer: 1500
+            })
+          }
+        }
+      };
+    }
+  

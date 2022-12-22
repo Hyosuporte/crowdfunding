@@ -9,14 +9,14 @@ class organizacion extends Controller
 
     public function insertarorg()
     {
-        $id_org = strClean($_POST['id_org']); //pendiente por agregar al formulario
+        $id_org = strClean($_POST['nit']); //pendiente por agregar al formulario
         $nombre_org = strClean($_POST['nombre']);
-        $pagina_web = strClean($_POST['pagina']);
-        $redes_sociales = strClean($_POST['redes']);
-        $telefono_contacto = strClean($_POST['telefono']);
-        $id_tipo = intval(strClean($_POST['organizacion'])); //pendiente actualizar
+        $pagina_web = strClean($_POST['pagina_web']);
+        $redes_sociales = strClean($_POST['redes_sociales']);
+        $telefono_contacto = strClean($_POST['telefono_contacto']);
+        $id_tipo = intval(strClean($_POST['id_tipo'])); //pendiente actualizar
         $banco = strClean($_POST['banco']);
-        $nro_cuenta = strClean($_POST['cuenta']); //pendiente actualizar
+        $nro_cuenta = strClean($_POST['nro_cuenta']); //pendiente actualizar
 
         echo var_dump($id_tipo);
 
@@ -40,14 +40,14 @@ class organizacion extends Controller
 
     public function editarorg()
     {
-        $id_org = strClean($_POST['id_org']); //pendiente por agregar al formulario
+        $id_org = strClean($_POST['nit']); //pendiente por agregar al formulario
         $nombre_org = strClean($_POST['nombre']);
-        $pagina_web = strClean($_POST['pagina']);
-        $redes_sociales = strClean($_POST['redes']);
-        $telefono_contacto = strClean($_POST['telefono']);
-        $id_tipo = strClean($_POST['organizacion']); //pendiente actualizar
+        $pagina_web = strClean($_POST['pagina_web']);
+        $redes_sociales = strClean($_POST['redes_sociales']);
+        $telefono_contacto = strClean($_POST['telefono_contacto']);
+        $id_tipo = strClean($_POST['id_tipo']); //pendiente actualizar
         $banco = strClean($_POST['banco']);
-        $nro_cuenta = strClean($_POST['cuenta']); //pendiente actualizar
+        $nro_cuenta = strClean($_POST['nro_cuenta']); //pendiente actualizar
 
         if (
             empty($id_org) || empty($nombre_org) || empty($pagina_web) || empty($redes_sociales) || empty($telefono_contacto) ||

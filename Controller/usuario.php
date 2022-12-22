@@ -71,6 +71,33 @@ class usuario extends Controller
         die();
     }
 
+    public function reginteresado()
+    {
+        $correo = strClean($_POST['correo']);
+
+        if (empty($correo) ) {
+            $msg = "Todos los campos son obligatorios";
+        }
+        else{
+            $data = $this->model->reginteresado($correo);
+            if ($data === "ok") {
+                echo '<link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet"';
+                echo '<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>';
+                echo "<script> Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Correo Registrado',
+                    showConfirmButton: false,
+                    timer: 1500
+                  }) </script>";
+            } else if ($data === "existe") {
+                $msg = "correo repetido";
+            } else {
+                $msg = "Error";
+            }          
+        }
+    }
+
     public function valid_email($str)
     {
         return (false !== filter_var($str, FILTER_VALIDATE_EMAIL));
