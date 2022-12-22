@@ -241,7 +241,7 @@ function crearFilaDonacion(element) {
   tdFecha.innerHTML = element.fecha_donacion;
   tdFecha.setAttribute("class", "bordeDerecha bordeAbajo");
   tdVerPro.setAttribute("class", "bordeAbajo");
-  ver.setAttribute("class", "botonCardGaleria");
+  ver.setAttribute("class", "botonDonador");
   ver.setAttribute("value", element.id_proyecto);
   ver.setAttribute("type", "submit");
   ver.setAttribute(
@@ -375,15 +375,23 @@ function UpdatePassword() {
         timer: 2500,
       });
     }
+  } else{
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Los campos de contraseña deben ser llenados",
+      showConfirmButton: false,
+      timer: 2500,
+    });
   }
 }
 
 function UpdateDates() {
-  const nombreCompleto = document.getElementById("nombreCompleto").value;
-  const pais = document.getElementById("paisUser").value;
-  const ciudad = document.getElementById("ciudadUser").value;
-  const direccion = document.getElementById("direccion").value;
-  const telefono = document.getElementById("telefonoUser").value;
+  const nombreCompleto = document.getElementById("nombreCompleto");
+  const pais = document.getElementById("paisUser");
+  const ciudad = document.getElementById("ciudadUser");
+  const direccion = document.getElementById("direccion");
+  const telefono = document.getElementById("telefonoUser");
   if (
     nombreCompleto == "" ||
     pais == "" ||

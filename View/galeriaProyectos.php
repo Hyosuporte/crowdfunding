@@ -7,27 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
         @font-face {
             font-family: 'TT Norms';
             src: url('<?php echo BASE_URL; ?>Assets/fonts/TT-Norms-Black/TTNorms-Black.otf');
-            font-style: normal;
-            font-weight: 900;
-            font-size: 32px;
-            line-height: 38px;
         }
+
         @font-face {
             font-family: 'Be Vietnam';
             src: url('<?php echo BASE_URL; ?>Assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 26px;
-
-            color: #031C54;
-        }        
+        }
     </style>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/galeria.css">
@@ -43,7 +33,7 @@
                 <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
-                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText activeNavbar">Descubre</a>
+                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText activeNavbar itemsNavbar">Descubre</a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
@@ -65,10 +55,6 @@
                 <span><i class="fa-solid fa-magnifying-glass"></i></span>
                 <input class="botonBuscar" placeholder="Buscar" type="text" name="buscar" id="buscar">
             </div>
-            <select class="organizar" name="organizar" id="organizar">
-                <option value="">Organizar A-Z</option>
-                <option value="">Organizar Fecha</option>
-            </select>
         </div>
         <div class="content" id="galeriaProyectos"></div>
         <div class="bloqueSubirProyecto">
@@ -120,7 +106,7 @@
                 </ul>
             </div>
             <div class="subirSecondColumn">
-                <img src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
+                <img class="imagenComoSubirProyecto" src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
             </div>
         </div>
         <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonSubirProyecto" type="button">Subir Proyecto</button></a></div>
@@ -129,7 +115,8 @@
     <div class="bannerFooter">
         <div class="formFooter">
             <div class="subirFirstColumn">
-                <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa</p>
+                <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa
+                </p>
                 <div class="iconosFooter">
                     <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-facebook"></i>
@@ -139,38 +126,36 @@
             </div>
             <div class="subirSecondColumn" style="margin-top: 10%;">
                 <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
-                <input type="text" name="correo" id="correo" placeholder="Correo Electronico">
-                <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar conectado</button></a>
+                <input class="txtFooter" type="text" name="" id="">
+                <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar
+                        conectado</button></a>
             </div>
         </div>
         <div class="bloqueInfoFooter">
             <div>
-                <img src="<?php echo BASE_URL; ?>Assets/img/logoFooter.svg" alt="">
+                <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
             </div>
             <div style="margin-left: 10%;">
                 <h2>Nosotros</h2>
                 <ul>
                     <li>
-                        Sobre TFI
+                        <a class="textoInformacionesFooter" href="">Sobre TFI</a>
                     </li>
                     <li>
-                            <a href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
-                        </li>
+                        <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
+                    </li>
                     <li>
-                        Términos y condiciones
+                        <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
                     </li>
                 </ul>
             </div>
-            <div style="margin-left: 30vw;">
-                <h3>Contáctanos</h3> <br>
+            <div style="margin-left: 30%;">
+                <h3>Contáctanos</h3>
                 <ul>
-                    <li>Telefono</li>
-                    <li>Whatsapp</li>
-                    <li>info@fundtur.com</li>
-                    <li>Cr 13 # 90 - 17, Bogotá D.C.</li>
+                    <li class="textoInformacionesFooter">Telefono +57 317 4336722</li>
+                    <li class="textoInformacionesFooter">Whatsapp +57 315 8475169</li>
+                    <li class="textoInformacionesFooter">info@fundtur.com</li>
+                    <li class="textoInformacionesFooter">Cr 13 # 90 - 17, Bogotá D.C.</li>
                 </ul>
             </div>
         </div>

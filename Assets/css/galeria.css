@@ -93,13 +93,6 @@
     display: flex;
 }
 
-.barraProgresoCardGaleria{
-    width: 10vh;
-    height: 1vh;
-    background: #CC59D2;
-    border-radius: 20px;
-}
-
 .organizar{
     border-radius: 30vh;
     width: 20vh;

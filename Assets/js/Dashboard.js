@@ -67,3 +67,74 @@ function desaparecerVistas(panel) {
     element.style.display = "none";
   });
 }
+
+function verificarCampos(parametro1,parametro2){
+  const nombre = document.getElementById("nombre");
+  const telefono = document.getElementById("telefono");
+  const web = document.getElementById("web");
+  const redes = document.getElementById("redes");
+  const banco = document.getElementById("banco");
+  const cuenta = document.getElementById("cuenta");
+  const organizacion = document.getElementById("organizacion");
+  if (
+    nombre.value != "" &&
+    telefono.value != "" &&
+    web.value != "" &&
+    redes.value != "" &&
+    banco.value != "" &&
+    cuenta.value != "" &&
+    organizacion.value != "0"
+  ) 
+  {
+    //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
+    
+    desaparecerVista(parametro1);
+    aparecerVista(parametro2);
+  } 
+  else{
+    console.log("Rellena los campos we");
+    Swal.fire({
+      position: 'center',
+      icon: 'warning',
+      title: 'Todos los campos son obligatorios',
+      showConfirmButton: false,
+      timer: 1500
+    }) 
+  }
+}
+function verificarCampos2(parametro1,parametro2){
+  const titulo = document.getElementById("titulo");
+  const palabras = document.getElementById("palabras");
+  const impacto = document.getElementById("impacto");
+  const resumen = document.getElementById("resumen");
+  const foto = document.getElementById("foto");
+  const video = document.getElementById("video");
+  const banco = document.getElementById("banco");
+  const final = document.getElementById("final");
+  if (
+    titulo.value != "" &&
+    palabras.value != "" &&
+    impacto.value != "" &&
+    resumen.value != "" &&
+    foto.value != "" &&
+    video.value != "" &&
+    banco.value != "" &&
+    final.value != "" 
+  ) 
+  {
+    //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
+    
+    desaparecerVista(parametro1);
+    aparecerVista(parametro2);
+  } 
+  else{
+    console.log("Rellena los campos we");
+    Swal.fire({
+      position: 'center',
+      icon: 'warning',
+      title: 'Todos los campos son obligatorios',
+      showConfirmButton: false,
+      timer: 1500
+    }) 
+  }
+}
