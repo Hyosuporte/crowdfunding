@@ -258,36 +258,47 @@ function crearFilaDonacion(element) {
 }
 
 function UpdateCorreo() {
-  const url = base_url + "cliente/UpdateCorreo";
-  const frm = document.getElementById("frmUpdateCorreo");
-  const http = new XMLHttpRequest();
-  http.open("POST", url, true);
-  http.send(new FormData(frm));
-  http.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      const res = JSON.parse(this.responseText);
-      if (res === "Correo actualizado con exito") {
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: res,
-          showConfirmButton: false,
-          timer: 2500,
-        });
-        setTimeout(function () {
-          window.location.reload();
-        }, 4000);
-      } else if (res === "El correo no se encuentra disponible") {
-        Swal.fire({
-          position: "top-end",
-          icon: "error",
-          title: res,
-          showConfirmButton: false,
-          timer: 2500,
-        });
+  const correo = document.getElementById("newCorreo").value;
+  if (correo == "") {
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "El correo no puede estar vacio",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+  } else {
+    const url = base_url + "cliente/UpdateCorreo";
+    const frm = document.getElementById("frmUpdateCorreo");
+    const http = new XMLHttpRequest();
+    http.open("POST", url, true);
+    http.send(new FormData(frm));
+    http.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        const res = JSON.parse(this.responseText);
+        if (res === "Correo actualizado con exito") {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: res,
+            showConfirmButton: false,
+            timer: 2500,
+          });
+          setTimeout(function () {
+            window.location.reload();
+          }, 4000);
+        } else if (res === "El correo no se encuentra disponible") {
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: res,
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        }
       }
-    }
-  };
+    };
+  }
 }
 
 function UpdatePassword() {
@@ -295,10 +306,18 @@ function UpdatePassword() {
   const newPassword = document.getElementById("newPassword");
   const newPasswordTry = document.getElementById("newPasswordTry");
   if (
-    passwordNow.value != "" ||
-    newPassword.value != "" ||
-    newPasswordTry.value != ""
+    passwordNow.value == "" ||
+    newPassword.value == "" ||
+    newPasswordTry.value == ""
   ) {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Las contraseñas no pueden estar vacias",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+  } else {
     if (newPassword.value === newPasswordTry.value) {
       const url = base_url + "cliente/UpdatePassword";
       const frm = document.getElementById("frmUpdatePassword");
@@ -366,12 +385,20 @@ function UpdateDates() {
   const direccion = document.getElementById("direccion").value;
   const telefono = document.getElementById("telefonoUser").value;
   if (
-    nombreCompleto != "" ||
-    pais != "" ||
-    ciudad != "" ||
-    direccion != "" ||
-    telefono != ""
+    nombreCompleto == "" ||
+    pais == "" ||
+    ciudad == "" ||
+    direccion == "" ||
+    telefono == ""
   ) {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Todos los campos son obligatorios",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+  } else {
     const url = base_url + "cliente/UpdateData";
     const frm = document.getElementById("frmUpdateData");
     const http = new XMLHttpRequest();
@@ -410,13 +437,5 @@ function UpdateDates() {
         }
       }
     };
-  } else {
-    Swal.fire({
-      position: "top-end",
-      icon: "warning",
-      title: "Todos los campos son obligatorios",
-      showConfirmButton: false,
-      timer: 2500,
-    });
   }
 }

@@ -9,8 +9,17 @@ class cliente extends Controller
 
     public function index()
     {
-            $data['title'] = "Cliente";
-            $this->views->getView("cliente", "perfil", $data);
+        if (!empty($_SESSION['rol'])) {
+            if ($_SESSION['rol'] == 2) {
+                $data['title'] = "Perfil";
+                $this->views->getView("cliente", "perfil", $data);
+            } else {
+                header("location: " . BASE_URL);
+            }
+        } else {
+            $data['title'] = "Principal";
+            header("location: " . BASE_URL);
+        }
     }
 
     public function UpdateCorreo()
@@ -40,7 +49,7 @@ class cliente extends Controller
         $passwordNow = strClean($_POST['passwordNow']);
         $newPassword = strClean($_POST['newPassword']);
         $newPasswordTry = strClean($_POST['newPasswordTry']);
-        if (!empty($passwordNow) || !empty($newPassword) || !empty($newPasswordTry)) {
+        if (empty($passwordNow) || empty($newPassword) || !empty($newPasswordTry)) {
             if ($newPassword === $newPasswordTry) {
                 $data = $this->model->user_very($_SESSION['id']);
                 if ($data) {
@@ -76,12 +85,12 @@ class cliente extends Controller
         $ciudad = strClean($_POST['ciudad']);
         $direccion = strClean($_POST['direccion']);
         $telefono = strClean($_POST['telefonoUser']);
-        if (!empty($nombreCompleto) || !empty($pais) || !empty($ciudad) || !empty($direccion) || !empty($telefono)) {
-            list($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido) = explode(" ",$nombreCompleto) ;
+        if (empty($nombreCompleto) || empty($pais) || empty($ciudad) || !empty($direccion) || empty($telefono)) {
+            list($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido) = explode(" ", $nombreCompleto);
             $nombre = $primer_nombre . " " . $segundo_nombre;
             $apellido = $primer_apellido . " " . $segundo_apellido;
             $data = $this->model->UpdateData($nombre, $apellido, $ciudad, $pais, $direccion, $telefono, $_SESSION['id']);
-            $data==1?$msg="exito":$msg="fallo";
+            $data == 1 ? $msg = "exito" : $msg = "fallo";
         } else {
             $msg = "Todos los campos son obligatorios";
         }
