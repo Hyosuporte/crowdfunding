@@ -34,7 +34,6 @@ $preference->save();
 
 <body>
 
-    <h3>Esto es mercado pago</h3>
     <div class="checkout-btn"></div>
     <script>
         const mp = new MercadoPago('TEST-af98f1a8-b5d7-464f-b9f7-d8263610c69f', {
