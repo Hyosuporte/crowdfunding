@@ -142,8 +142,8 @@ function verificarCampos2(parametro1,parametro2){
 }
 
 function frmOrg(e) {
-  const id_organizacion = document.getElementById("nombreor");
-  const nombre_org = document.getElementById("nombreor");
+  const id_organizacion = document.getElementById("nit");
+  const nombre_org = document.getElementById("nombreorg");
   const id_tipo = document.getElementById("organizacion_tipo");
   const pagina_web = document.getElementById("web");
   const redes_sociales = document.getElementById("redes");

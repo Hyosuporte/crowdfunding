@@ -52,14 +52,14 @@
       </div>
       <div class="tab-pane fade  fondoDashboard" id="v-pills-subir-proyecto-1" role="tabpanel" aria-labelledby="v-pills-subir-proyecto-1" tabindex="0">
         <div class="contenido">
-          <form name= "frmorg" action="frmOrg()" method="post">
+          <form name= "frmorg" action="" method="post">
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 1 de 3</p>
             </div>
             <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
             <input class="inputGrandeForm" type="number" name="nit" id="nit" placeholder="NIT">
-            <input class="inputGrandeForm" type="text" name="nombre" id="nombre" placeholder="Nombre de la organización*">
+            <input class="inputGrandeForm" type="text" name="nombre" id="nombreorg" placeholder="Nombre de la organización*">
             <div class="grupoInputsForm">
               <select class="grupoInput1" name="id_tipo" id="organizacion_tipo" style="margin-right: 3rem;">
                 <option value="0">Organizacion</option>
