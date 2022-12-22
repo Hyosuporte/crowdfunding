@@ -375,14 +375,6 @@ function UpdatePassword() {
         timer: 2500,
       });
     }
-  } else{
-    Swal.fire({
-      position: "top-end",
-      icon: "warning",
-      title: "Los campos de contraseña deben ser llenados",
-      showConfirmButton: false,
-      timer: 2500,
-    });
   }
 }
 
