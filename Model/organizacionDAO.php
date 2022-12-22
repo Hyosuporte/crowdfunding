@@ -10,7 +10,7 @@ class organizacionDAO extends Query
   {
     $sql = "DELETE FROM organizacion WHERE id_organizacion= :id_organizacion";
     $datos = array($id_org);
-    $data = $this->eliminar($sql, $datos);
+    $data = $this->eliminar($sql, $datos); //hacer eliminar query
     return $data;
   }
 
@@ -20,7 +20,7 @@ class organizacionDAO extends Query
     redes_sociales = :redes_sociales, telefono_contacto = :telefono_contacto, id_tipo = :id_tipo, nro_cuenta = :nro_cuenta
      WHERE id_organizacion = :id_organizacion";
     $datos = array($id_org, $nombre_org, $pagina_web, $redes_sociales, $telefono_contacto, $id_tipo, $nro_cuenta);
-    $data = $this->editar($sql, $datos);
+    $data = $this->editar($sql, $datos); //hacer eliminar
     return $data;
     if ($data == 1) {
       $res = "ok";
