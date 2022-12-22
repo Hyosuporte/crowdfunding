@@ -38,7 +38,7 @@
                 <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
             </li>
             <li>
-                <a href="<?php echo BASE_URL; ?>Home/SubirProyecto" class="navbarText">Aprende</a>
+                <a href="<?php echo BASE_URL; ?>Home/aprende" class="navbarText">Aprende</a>
             </li>
             <li>
                 <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
@@ -336,7 +336,7 @@
                             <a class="textoInformacionesFooter" href="">Sobre TFI</a>
                         </li>
                         <li>
-                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
+                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aprende">Aprende más</a>
                         </li>
                         <li>
                             <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>

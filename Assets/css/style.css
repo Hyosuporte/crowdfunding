@@ -399,7 +399,6 @@ body {
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 3vh;
     line-height: 26px;
 
     color: #F5F0F5;
@@ -771,9 +770,9 @@ body {
     font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
-    font-size: 62px;
-    line-height: 73px;
-    margin: 1vw;
+    font-size: 4vw;
+    line-height: 4vw;
+    margin-top: 1vw;
 
     color: #F5F0F5;
 

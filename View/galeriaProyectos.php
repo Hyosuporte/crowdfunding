@@ -160,7 +160,7 @@
                         <a class="textoInformacionesFooter" href="">Sobre TFI</a>
                     </li>
                     <li>
-                        <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/SubirProyecto">Aprende más</a>
+                        <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aprende">Aprende más</a>
                     </li>
                     <li>
                         <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
