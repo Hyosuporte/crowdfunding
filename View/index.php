@@ -51,7 +51,7 @@
             <div class="oneColumnBanner mt-5">
                 <div class="titulo">Crowfunding <br> para mujeres de <br> la industria <br> creativa</div>
                 <div class="textoBannerLanding">Es momento de financiar tu proyecto de forma colectiva.</div>
-                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonBannerLanding" type="button">Quiero aportar</button></a>
+                <div><a href="<?php echo BASE_URL; ?>Home/galeriaProyectos/"><button class="botonBannerLanding" type="button">Quiero aportar</button></a>
                 </div>
             </div>
             <div class="twoColumnBanner">
@@ -244,7 +244,7 @@
                         <li>Puedes financiar tu proyecto turístico (Promoción, infraestructura, sostenibilidad, educación, etc)</li>
                     </ul>
                 </div>
-                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonBannerLanding" type="button">Conoce más</button></a>
+                <div><a href="<?php echo BASE_URL; ?>Home/aplicar/"><button class="botonBannerLanding" type="button">Conoce más</button></a>
                 </div>
             </div>
         </div>

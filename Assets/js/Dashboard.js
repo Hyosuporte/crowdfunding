@@ -69,6 +69,7 @@ function desaparecerVistas(panel) {
 }
 
 function verificarCampos(parametro1,parametro2){
+  const nit = document.getElementById("nit");
   const nombre = document.getElementById("nombre");
   const telefono = document.getElementById("telefono");
   const web = document.getElementById("web");
@@ -77,6 +78,7 @@ function verificarCampos(parametro1,parametro2){
   const cuenta = document.getElementById("cuenta");
   const organizacion = document.getElementById("organizacion");
   if (
+    nit.value != "" &&
     nombre.value != "" &&
     telefono.value != "" &&
     web.value != "" &&

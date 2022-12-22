@@ -8,8 +8,8 @@
           Donados</a>
         <a href="#misProtectos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
           Datos</a>
-        </div>
-        <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
+      </div>
+      <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
     </div>
     <div class="col-10  tab-content bloqueDashboard panelDashboard" id="configPerfil">
       <div class="tab-pane fade active show fondoDashboard fondoBlanco contenido" role="tabpanel1" id="cuenta">
@@ -58,6 +58,7 @@
               <p class="textoPaso">Paso 1 de 3</p>
             </div>
             <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
+            <input class="inputGrandeForm" type="number" name="nit" id="nit" placeholder="NIT">
             <input class="inputGrandeForm" type="text" name="nombre" id="nombre" placeholder="Nombre de la organización*">
             <div class="grupoInputsForm">
               <select class="grupoInput1" name="organizacion" id="organizacion" style="margin-right: 3rem;">
@@ -82,8 +83,8 @@
               <input class="grupoInput1" type="text" name="banco" id="banco" placeholder="Banco*">
               <input class="grupoInput1" type="text" name="cuenta" id="cuenta" placeholder="Cuenta*">
             </div>
-            <div class="list-group"><a href="#v-pills-subir-proyecto-2"  class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos('v-pills-subir-proyecto-1','v-pills-subir-proyecto-2')">Subir
-                Proyecto</a></div>
+            <div class="list-group"><a href="#v-pills-subir-proyecto-2" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos('v-pills-subir-proyecto-1','v-pills-subir-proyecto-2')">
+                Siguiente Paso >></a></div>
           </form>
         </div>
       </div>
