@@ -27,6 +27,20 @@ class clienteDAO extends Query
         $data = $this->selectAll($sql);
         return $data;
     }
+    
+    public function getProyectos($id)
+    {
+        $sql = "SELECT p.id_proyecto,p.titulo,e.estado,p.observaciones,p.fecha_comienzo,p.fecha_final FROM proyecto AS p JOIN estado AS e ON p.id_estado = e.id_estado WHERE p.id_usuario='$id'";
+        $data = $this->selectAll($sql);
+        return $data;
+    }
+
+    public function getCantPro($id)
+    {
+        $sql = "SELECT COUNT(p.id_proyecto) FROM proyecto AS p JOIN usuarios AS u ON p.id_usuario=u.id_usuario WHERE u.id_usuario='$id'";
+        $data = $this->select($sql);
+        return $data;
+    }
 
     public function UpdateCorreo($newCorreo, $id)
     {

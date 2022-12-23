@@ -8,12 +8,12 @@
           Donados</a>
         <a href="#misProtectos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
           Datos</a>
-        </div>
-        <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
+      </div>
+      <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
     </div>
     <div class="col-10  tab-content bloqueDashboard panelDashboard" id="configPerfil">
       <div class="tab-pane fade active show fondoDashboard fondoBlanco contenido" role="tabpanel1" id="cuenta">
-        <?php if (!isset($_SESSION["datos"]["numProyects"])) { ?>
+        <?php if (!isset($data["numProyects"])) { ?>
           <div class="pantallaInicialDashboard">
             <p class="tableDashboardTitulo">Aun no tines ningun proyecto subido</p>
             <div class="bloqueAunSinProyectos">
@@ -35,13 +35,10 @@
             <table id="tblProyectos" class="display tablita" style="width:100%">
               <thead>
                 <tr>
-                  <th class="bordeDerecha bordeAbajo">Id</th>
-                  <th class="bordeDerecha bordeAbajo">Título</th>
-                  <th class="bordeDerecha bordeAbajo">Comienzo</th>
-                  <th class="bordeDerecha bordeAbajo">Final</th>
-                  <th class="bordeDerecha bordeAbajo">Estado</th>
-                  <th class="bordeDerecha bordeAbajo">Acciones</th>
-                  <th class="bordeAbajo">Observaciones</th>
+                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Proyecto</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Estado</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Comentarios</strong></th>
+                  <th data-class-name="bordeAbajo"></th>
                 </tr>
               </thead>
               <tbody>
@@ -82,7 +79,7 @@
               <input class="grupoInput1" type="text" name="banco" id="banco" placeholder="Banco*">
               <input class="grupoInput1" type="text" name="cuenta" id="cuenta" placeholder="Cuenta*">
             </div>
-            <div class="list-group"><a href="#v-pills-subir-proyecto-2"  class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos('v-pills-subir-proyecto-1','v-pills-subir-proyecto-2')">Subir
+            <div class="list-group"><a href="#v-pills-subir-proyecto-2" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos('v-pills-subir-proyecto-1','v-pills-subir-proyecto-2')">Subir
                 Proyecto</a></div>
           </form>
         </div>
@@ -161,16 +158,16 @@
           <p class="tituloFormSubirProyecto">Proyectos Donados</p>
           <p class="subtituloFormSubirProyecto">Los proyectos que estas ayudando a que se hagan realidad </p>
         </div>
-        <table class="tablita" style="width:100%">
+        <table class="tablita" style="width:100%;" id="Donaciones">
           <thead>
             <tr>
-              <th class="bordeDerecha bordeAbajo">Proyecto</th>
-              <th class="bordeDerecha bordeAbajo">Cantidad</th>
-              <th class="bordeDerecha bordeAbajo">Fecha</th>
-              <th class="bordeAbajo">Ver Proyectos</th>
+              <th data-class-name="bordeDerecha bordeAbajo"><strong>Proyecto</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo"><strong>Cantidad</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo"><strong>Fecha</strong></th>
+              <th data-class-name="bordeAbajo"></th>
             </tr>
           </thead>
-          <tbody id="Donaciones">
+          <tbody>
           </tbody>
         </table>
       </div>

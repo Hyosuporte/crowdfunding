@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#tblProyectos").DataTable({
+  $("#tblProyectosAdm").DataTable({
     paging: false,
     ordering: false,
     info: false,
@@ -8,9 +8,6 @@ $(document).ready(function () {
       dataSrc: "",
     },
     columns: [
-      {
-        data: "id_proyecto",
-      },
       {
         data: "titulo",
       },
@@ -28,6 +25,60 @@ $(document).ready(function () {
       },
       {
         data: "observaciones",
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  $("#tblProyectos").DataTable({
+    paging: false,
+    ordering: false,
+    info: false,
+    searching: false,
+    ajax: {
+      url: base_url + "cliente/getProyectos",
+      dataSrc: "",
+    },
+    columns: [
+      {
+        data: "titulo",
+      },
+      {
+        data: "estado",
+      },
+      {
+        data: "miComen",
+      },
+      {
+        data: "ver",
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  $("#Donaciones").DataTable({
+    paging: false,
+    ordering: false,
+    info: false,
+    searching: false,
+    ajax: {
+      url: base_url + "cliente/getDonaciones",
+      dataSrc: "",
+    },
+    columns: [
+      {
+        data: "titulo",
+      },
+      {
+        data: "monto",
+      },
+      {
+        data: "fecha_donacion",
+      },
+      {
+        data: "ver",
       },
     ],
   });
