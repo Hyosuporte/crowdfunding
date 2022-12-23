@@ -11,16 +11,23 @@ class proyecto extends Controller
     {
         $data = $this->model->getProyectos();
         for ($i = 0; $i < count($data); $i++) {
-            $data[$i]['acciones'] = '
-               <select name="acciones" id="acciones">
-                    <option value="">-</option>
-                    <option value="aprobado">Aprobado</option>
-                    <option value="noAprobado">No Aprobado</option>
-                    <option value="tecnica">Revision Tecnica</option>
-                    <option value="documental">Revision Documental</option>
+            if ($data[$i]['id_estado'] == 1) {
+                $data[$i]['acciones'] = '
+               <select name="acciones" disabled>
+                    <option value="1" selected >Aprobado</option>
                 </select>';
+            } else {
+                $data[$i]['acciones'] = '
+               <select id="acciones' . $i . '" onchange="updateEstado(' . $data[$i]['id_proyecto'] . ',' . $i . ')">
+                    <option value=""></option>
+                    <option value="1">Aprobado</option>
+                    <option value="2">No Aprobado</option>
+                    <option value="3">Revision Tecnica</option>
+                    <option value="4">Revision Documental</option>
+                </select>';
+            }
             $data[$i]['observaciones'] = '<div>
-                <textarea name="observaciones" id="observaciones" cols="15" rows="3"></textarea>    </div>';
+                <textarea id="observaciones'. $i . '" cols="18" rows="2" onchange="UpdateObser(' . $data[$i]['id_proyecto'] . ',' . $i . ')">' . $data[$i]['observaciones'] . '</textarea></div>';
         }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
@@ -158,4 +165,34 @@ class proyecto extends Controller
         $this->views->getView("Home", "vistaProyecto", $data);
         die();
     }
+
+    public function UpdateEstado()
+    {
+        $id = $_GET['id_proyecto'];
+        $estado = $_GET['estado'];
+        $data = $this->model->UpdateEstado($id,$estado);
+        if ($data === 1) {
+            $msg = "exito";
+        } else {
+            $msg = "fallo";
+        }
+        echo json_encode($msg, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
+    public function UpdateObser()
+    {
+        $id = $_GET['id_proyecto'];
+        $obser = $_GET['obser'];
+        $data = $this->model->UpdateObser($id, $obser);
+        if ($data === 1) {
+            $msg = "exito";
+        } else {
+            $msg = "fallo";
+        }
+        echo json_encode($msg, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
+
 }
