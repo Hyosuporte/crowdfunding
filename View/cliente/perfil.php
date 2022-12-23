@@ -89,8 +89,8 @@
       </div>
       <div class="tab-pane fade fondoDashboard" role="tabpanel1" id="v-pills-subir-proyecto-2">
         <div class="contenido">
-
-          <form id="frmproy" action="" method="post">
+<form id="frmProyecto" action="" method="post">
+          <form id="" action="" method="post">
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 2 de 3</p>
@@ -160,8 +160,13 @@
             <div class="grupoInputsForm2">
               <input class="inputFileForm" type="file" name="camara" id="camara">
             </div>
-            <button class="botonFormFinal" type="submit">Siguiente Paso</button>
+            <button class="botonFormFinal" type="submit" onclick=frmProyecto()>Siguiente Paso</button>
           </form>
+              </form>
+
+
+
+
         </div>
       </div>
       <div class="tab-pane fade fondoDashboard fondoBlanco pantallaInicialDashboard contenido" role="tabpanel1" id="perfil">
