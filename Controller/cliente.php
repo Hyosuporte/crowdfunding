@@ -123,17 +123,17 @@ class cliente extends Controller
         $data = $this->model->getProyectos($_SESSION['id']);
         for ($i = 0; $i < count($data); $i++) {
             if ($data[$i]['estado'] == "Aprovado") {
-                $data[$i]['miComen'] = substr($data[$i]['observaciones'], 0, 16) . "...";
+                $data[$i]['observaciones'];
                 $data[$i]['fecha_final'] <= date('Y-m-d') ? $data[$i]['estado'] = "Finalizado" : $data[$i]['estado'] = "En campaña";
                 $data[$i]['ver'] = '<a class="botonDonador" style="padding:5px; margin-left:20%" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '" >Ver Proyecto</a>';
             } else {
                 if ($data[$i]['estado'] == "NoAprovado") {
-                    $data[$i]['miComen'] = substr($data[$i]['observaciones'], 0, 16) . "..." ;
+                    $data[$i]['observaciones'];
                     $data[$i]['estado'] = "No Aprovado";
                     $data[$i]['ver'] = '';
                 } else {
                     $data[$i]['estado'] = "En Revision";
-                    $data[$i]['miComen'] = substr($data[$i]['observaciones'], 0, 16) . "...";
+                    $data[$i]['observaciones'];
                     $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2">Actualizar</button>';
                 }
             }

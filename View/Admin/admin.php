@@ -12,15 +12,14 @@
     <div class="col-10  tab-content bloqueDashboard panelDashboard">
       <div class="tab-pane fade active show fondoDashboard fondoBlanco" role="tabpanel1" id="cuenta">
         <div class="fondoBlanco pantallaInicialDashboard">
-          <table id="tblProyectos" class="display tablita" style="width:100%">
+          <table id="tblProyectosAdm" class="display tablita" style="width:100%">
             <thead>
               <tr>
-                <th class="bordeDerecha bordeAbajo">Id</th>
-                <th class="bordeDerecha bordeAbajo">Título</th>
-                <th class="bordeDerecha bordeAbajo">Comienzo</th>
-                <th class="bordeDerecha bordeAbajo">Final</th>
-                <th class="bordeDerecha bordeAbajo">Estado</th>
-                <th class="bordeDerecha bordeAbajo">Acciones</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Título</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Comienzo</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Final</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Estado</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Acciones</th>
                 <th class="bordeAbajo">Observaciones</th>
               </tr>
             </thead>
@@ -36,10 +35,10 @@
         <table class="tablita" style="width:100%">
           <thead>
             <tr>
-              <th class="bordeDerecha bordeAbajo">Proyecto</th>
-              <th class="bordeDerecha bordeAbajo">Cantidad</th>
-              <th class="bordeDerecha bordeAbajo">Fecha</th>
-              <th class="bordeAbajo">Ver Proyectos</th>
+              <th data-class-name="bordeDerecha bordeAbajo">Proyecto</th>
+              <th data-class-name="bordeDerecha bordeAbajo">Cantidad</th>
+              <th data-class-name="bordeDerecha bordeAbajo">Fecha</th>
+              <th data-class-name="bordeDerecha bordeAbajo"></th>
             </tr>
           </thead>
           <tbody>

@@ -242,6 +242,13 @@ body {
     border-color: #ffffff;
 }
 
+.comentar{
+    width: 220px;
+    max-width: 26ch;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
 .formulario__validacion-estado-incorrecto {
     position: relative;
     right: 10px;

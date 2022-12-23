@@ -37,7 +37,7 @@
                 <tr>
                   <th data-class-name="bordeDerecha bordeAbajo"><strong>Proyecto</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo"><strong>Estado</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Comentarios</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Comentarios</strong></th>
                   <th data-class-name="bordeAbajo"></th>
                 </tr>
               </thead>
