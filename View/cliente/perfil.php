@@ -11,13 +11,13 @@
         <a href="#v-pills-subir-proyecto-1" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="aparecerVista('v-pills-subir-proyecto-1'),desaparecerVistas(['cuenta','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])">
           <img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/file-arrow-up-solid.svg" alt="">Subir Proyecto</a>
       </div>
-      <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
+      <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
     </div>
     <div class="col-10  tab-content bloqueDashboard panelDashboard" id="configPerfil">
       <div class="tab-pane fade active show fondoDashboard fondoBlanco contenido" role="tabpanel1" id="cuenta">
         <?php if (!isset($data["numProyects"])) { ?>
           <div class="pantallaInicialDashboard">
-            <p class="tableDashboardTitulo">Aun no tines ningun proyecto subido</p>
+            <p class="tableDashboardTitulo">Aun no tienes ningun proyecto subido</p>
             <div class="bloqueAunSinProyectos">
               <p class="bloqueAunSinProyectosTitulo">Creativa, es hora de financiar tu idea</p>
               <div class="bannerDashboardProyecto">
