@@ -196,3 +196,71 @@ function verificarCampos2(parametro1, parametro2) {
     });
   }
 }
+
+function updateEstado(id, name) {
+  const estado = document.getElementById(`acciones${name}`).value;
+  const url =
+    base_url + `proyecto/UpdateEstado?id_proyecto=${id}&estado=${estado}`;
+  const http = new XMLHttpRequest();
+  http.open("GET", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      if (res === "exito") {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Se cambio correctamente el estado",
+          showConfirmButton: false,
+          timer: 2500,
+        });
+        setTimeout(function () {
+          window.location.reload();
+        }, 2700);
+      } else {
+        Swal.fire({
+          position: "top-end",
+          icon: "warning",
+          title: "Error al actualizar el estado intente mas tarde",
+          showConfirmButton: false,
+          timer: 3500,
+        });
+      }
+    }
+  };
+}
+
+function UpdateObser(id, name) {
+  const obser = document.getElementById(`observaciones${name}`).value;
+  const url =
+    base_url + `proyecto/UpdateObser?id_proyecto=${id}&obser=${obser}`;
+  const http = new XMLHttpRequest();
+  http.open("GET", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      if (res === "exito") {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Se enviaron correctamente las observaciones",
+          showConfirmButton: false,
+          timer: 2500,
+        });
+        setTimeout(function () {
+          window.location.reload();
+        }, 2700);
+      } else {
+        Swal.fire({
+          position: "top-end",
+          icon: "warning",
+          title: "Error al subir las observaciones intente mas tarde",
+          showConfirmButton: false,
+          timer: 3500,
+        });
+      }
+    }
+  };
+}
