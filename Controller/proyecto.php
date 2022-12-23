@@ -48,8 +48,8 @@ class proyecto extends Controller
         $keywords = strClean($_POST['keywords']);
         $tiempo_ejecucion = strClean($_POST['ejecucion']);
         $titulo = strClean($_POST['titulo']);
-        $duracion_campaña = strClean($_POST['ejecucion']); //pendiente actualizar
-        $fecha_comienzo = strClean($_POST['ejecucion']); //pendiente actualizar
+        $duracion_campana = strClean($_POST['campana']); //pendiente actualizar
+        $fecha_comienzo = strClean($_POST['comienzo']); //pendiente actualizar
         $fecha_final = strClean($_POST['final']);
         $abstrac = strClean($_POST['Abstract']);
         $indicador = strClean($_POST['impacto']);
@@ -67,12 +67,12 @@ class proyecto extends Controller
 
         if (
             empty($camara) || empty($RUT) || empty($rep_legal) || empty($cedula) || empty($bancario) || empty($aprob_donacion) || empty($form_declaraciones) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
-            empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
+            empty($duracion_campana) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
             || empty($monto) || empty($video) || empty($info_adicional)
         ) {
             $msg = "Todos los campos son obligatorios";
         } else {
-            $data = $this->model->insertarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional);
+            $data = $this->model->insertarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campana, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional);
             if ($data === "ok") {
                 $msg = "registrado";
             } else {
