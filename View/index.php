@@ -92,7 +92,7 @@
                             <div class="progress">
                                 <div class="progress-bar barraMeta" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <button type="button" class="botonCardDestacado mt-5">Ver Proyecto</button>
+                            <button type="button" class="botonCarusel mt-5">Ver Proyecto</button>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                             <div class="progress">
                                 <div class="progress-bar barraMeta" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <button type="button" class="botonCardDestacado mt-5">Ver Proyecto</button>
+                            <button type="button" class="botonCarusel mt-5">Ver Proyecto</button>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                             <div class="progress">
                                 <div class="progress-bar barraMeta" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <button type="button" class="botonCardDestacado mt-5">Ver Proyecto</button>
+                            <button type="button" class="botonCarusel mt-5">Ver Proyecto</button>
                         </div>
                     </div>
                 </div>

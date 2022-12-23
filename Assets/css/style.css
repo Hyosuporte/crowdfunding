@@ -489,8 +489,7 @@ body {
     margin-left: 1%;
     margin-top: 2%;
 
-    background: linear-gradient(180deg, rgba(245, 240, 245, 0.2) 0%, #031C54 100%), url(.jpg);
-    border-radius: 30px;
+   
 }
 
 .subitutiloFomrRegistrar {
@@ -654,6 +653,7 @@ body {
     font-size: 46px;
     line-height: 55px;
 
+    margin-bottom: 2vw;
     margin-left: 30vw;
     color: #031C54;
 }
@@ -732,6 +732,24 @@ body {
     padding-left: 3vw;
     margin: auto;
 }
+.botonCarusel {
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.2vw;
+    line-height: 29px;
+    width: 30vh;
+    height: 50px;
+    border-width: 0px;
+    background: #DCF763;
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #031C54;
+    padding-left: 3.5vw;
+    margin: auto;
+}
 
 .botonLogin {
     font-family: 'TT Norms', sans-serif;
@@ -770,9 +788,9 @@ body {
     font-family: 'TT Norms';
     font-style: normal;
     font-weight: 900;
-    font-size: 4vw;
+    font-size: 3vw;
     line-height: 4vw;
-    margin-top: 1vw;
+    margin-top: 2vw;
 
     color: #F5F0F5;
 
@@ -1206,7 +1224,9 @@ label {
 
 .buscar {
     border-radius: 30px;
-    width: 20vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    width: 15vw;
     height: 2vw;
 }
 

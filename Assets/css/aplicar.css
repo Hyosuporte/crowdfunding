@@ -39,7 +39,7 @@
     margin-bottom: 5vh;
     margin-top: 2vh;
     overflow: auto;
-    height: 40vw;
+    height: 18.5vw;
 }
 
 .seccionPreguntas {
@@ -164,7 +164,6 @@
 
 .textoPasos {
     font-size: 2vh;
-    font-size: 2vw;
     margin: 1vw;
 }
 
@@ -188,12 +187,12 @@
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%), #FFFFFF;
     box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
     border-radius: 30px 30px 0px 0px;
-    height: 17vh;
+    height: 14vh;
     width: 45vw;
 }
 .cuerpoRespuestas{
     padding: 1vw;
-    height: 30vw;
+    height: 10vw;
 }
 
 .cabeceraCardDudas p {
@@ -283,7 +282,6 @@
 .card2{
     margin-left: 2vw;
     width: 60vw;
-    height: 60vh;
 }
 
 .subirProyectoTexto {
@@ -303,6 +301,7 @@
 }
 
 .textoPaso {
+    font-size: 1vw;
     margin-top: 1vw;
 }
 

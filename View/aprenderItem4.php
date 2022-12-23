@@ -12,18 +12,28 @@
         @font-face {
             font-family: 'TT Norms';
             src: url('<?php echo BASE_URL; ?>Assets/fonts/TT-Norms-Black/TTNorms-Black.otf');
+            font-style: normal;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 38px;
         }
 
         @font-face {
             font-family: 'Be Vietnam';
             src: url('<?php echo BASE_URL; ?>Assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+
+            color: #031C54;
         }
     </style>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/aprender.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
-    <title>Aprende</title>
+    <title><?php echo $data['title']; ?></title>
 </head>
 
 <body>
@@ -32,14 +42,14 @@
             <li>
                 <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
-            <li>
+            <li class="descubre">
                 <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText itemsNavbar">Descubre</a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
             </li>
             <li>
-                <a href="<?php echo BASE_URL; ?>Home/aprende" class="navbarText activeNavbar">Aprende</a>
+                <a href="<?php echo BASE_URL; ?>Home/aprende" class="navbarText">Aprende</a>
             </li>
             <li>
                 <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
@@ -52,85 +62,33 @@
         </div>
         <div class="principalAprende">
             <div class="menu">
-                <div class="card">
-                    <div>
-                        <input class="buscar" placeholder="Buscar" type="text" name="" id="">
-                        <ul>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprender">General</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem">Tema 1</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem2">Tema 2</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem3">Tema 3</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem4">Tema 4</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem5">Tema 5</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <img src="<?php echo BASE_URL; ?>Assets/img/imagen2Banner2.svg" alt="">
             </div>
             <div class="cartas">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Aprende / General</h5>
-                        <div class="filaTemas">
-                            <div class="card2 fondoBlanco">
-                                <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="tituloTema">¿Entonces, ¿Qué es el crowdfunding?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
-                                    </p>
-                                    <a href="<?php echo BASE_URL; ?>Home/aprenderItem" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="card2 fondoBlanco">
-                                <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="tituloTema">¿Cómo elegir la plataforma adecuada para tu campaña?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
-                                    </p>
-                                    <a href="<?php echo BASE_URL; ?>Home/aprenderItem2" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filaTemas">
-                            <div class="card2 fondoBlanco">
-                                <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="tituloTema">¿Qué tipo de crowdfunding existe?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
-                                    </p>
-                                    <a href="<?php echo BASE_URL; ?>Home/aprenderItem3" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="card2 fondoBlanco">
-                                <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="tituloTema">¿De qué depende el éxito de mi campaña?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
-                                    </p>
-                                    <a href="<?php echo BASE_URL; ?>Home/aprenderItem4" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filaTemas">
-                            <div class="card2 fondoBlanco">
-                                <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="tituloTema">¿Por qué hacer una campaña para financiar un proyecto de la industria creativa?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
-                                    </p>
-                                    <a href="<?php echo BASE_URL; ?>Home/aprenderItem5" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
+                        <h5 class="card-title">Aprende / General / ¿De qué depende el éxito de mi campaña?</h5>
+                        <h2 class="tituloItem">¿De qué depende el éxito de mi campaña?</h2>
+                        <p class="textoItem">Las campañas de crowdfunding exitosas suelen ser aquellas que cuentan
+                            una buena historia, se conectan con una comunidad y tienen un buen plan
+                            de comunicación. Estos tres factores unidos auguran éxito a tu campañaEl primer factor de éxito es contar una buena historia. La técnica del
+                            storytelling es muy utilizada y conocida para conectar con las emociones e
+                            informar brevemente de qué trata el proyecto y qué se desea conseguir.
+                            Una historia es la razón por la cual la gente respalda su campaña. Si no
+                            tiene una historia interesante y atractiva, es poco probable que obtenga
+                            patrocinadores para apoyar su campaña.
+                            El segundo factor de éxito es conectar con una comunidad. El crowdfunding
+                            trata de construir relaciones con personas que comparten sus intereses y
+                            valores. Una campaña exitosa tiene que ofrecer algo de valor al donador
+                            para que se involucre en el proyecto y se sienta parte de él. Esto que le
+                            puedes ofrecer puede ser una recompensa por su donación o un
+                            seguimiento al progreso de tu iniciativa.
+                            El tercer factor de éxito es tener un buen plan de comunicación: esto
+                            incluye tener una idea de a quién quiere llegar, qué tipo de contenido les
+                            gustaría ver de usted, qué tipo de lenguaje les gustaría escuchar de ti y con
+                            qué frecuencia les gustaría. Así mismo, establecer hitos de comunicación
+                            que mantengan activa la campaña será primordialmente para conseguir el
+                            objetivo.
                     </div>
                 </div>
             </div>

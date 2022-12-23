@@ -2,7 +2,7 @@
 
 <div class="bloqueLogin">
     <div class="bannerLogin">
-        <img src="<?php echo BASE_URL; ?>Assets/img/imagenLogin.svg" alt="" width="850">
+        <img class="imagenLogin" src="<?php echo BASE_URL; ?>Assets/img/imagenLogin.svg" alt="">
         <p class="beneficioTitulo1">¡Bienvenid@!</p>        
         <p class="textoLoginIzquierda">Es momento de crear y aportar. Inicia sesión y comienza a conectar <br> con nuevas oportunidades.</p>
     </div>

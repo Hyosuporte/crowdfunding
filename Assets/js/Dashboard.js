@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  desaparecerVista("v-pills-subir-proyecto-1");
+  desaparecerVista("v-pills-subir-proyecto-2");
+  desaparecerVista("v-pills-subir-proyecto-3");
   $("#tblProyectos").DataTable({
     paging: false,
     ordering: false,
@@ -111,8 +114,11 @@ function verificarCampos2(parametro1,parametro2){
   const resumen = document.getElementById("resumen");
   const foto = document.getElementById("foto");
   const video = document.getElementById("video");
-  const banco = document.getElementById("banco");
-  const final = document.getElementById("final");
+  const monto = document.getElementById("monto");
+  const duracion = document.getElementById("duracion");
+  const comienzo = document.getElementById("comienzo");
+  const ejecucion = document.getElementById("ejecucion");
+  const adicional = document.getElementById("adicional");
   if (
     titulo.value != "" &&
     palabras.value != "" &&
@@ -120,8 +126,11 @@ function verificarCampos2(parametro1,parametro2){
     resumen.value != "" &&
     foto.value != "" &&
     video.value != "" &&
-    banco.value != "" &&
-    final.value != "" 
+    monto.value != "" &&
+    duracion.value != "" &&
+    comienzo.value != "" &&
+    ejecucion.value != "" &&
+    adicional.value != ""
   ) 
   {
     //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
@@ -130,7 +139,6 @@ function verificarCampos2(parametro1,parametro2){
     aparecerVista(parametro2);
   } 
   else{
-    console.log("Rellena los campos we");
     Swal.fire({
       position: 'center',
       icon: 'warning',
