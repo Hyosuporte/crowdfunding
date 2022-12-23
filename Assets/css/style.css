@@ -128,6 +128,7 @@ body {
 
 .listaBannerLanding2 {
     font-size: 1vw;
+    line-height: 1.5vw;
 }
 
 .itemsNavbar {
@@ -200,13 +201,13 @@ body {
     padding-left: 6vw;
 }
 
-.imagen1Paso2{
+.imagen1Paso2 {
     width: 30vw;
     margin-top: -6vw;
     margin-left: -5vw;
 }
 
-.imagen2Paso2{
+.imagen2Paso2 {
     width: 35vw;
     margin-top: -2vw;
     margin-left: -25vw;
@@ -395,11 +396,12 @@ body {
 }
 
 .textoBannerLanding {
-    margin-left: 2vw;
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    line-height: 26px;
+    font-size: 1vw;
+    line-height: 1vw;
+    margin-left: 2vw;
 
     color: #F5F0F5;
 }
@@ -489,7 +491,7 @@ body {
     margin-left: 1%;
     margin-top: 2%;
 
-   
+
 }
 
 .subitutiloFomrRegistrar {
@@ -659,8 +661,8 @@ body {
 }
 
 .bloqueDestacados {
-    margin-top: 4%;
-    margin-bottom: 2%;
+    margin-top: 8vh;
+    margin-bottom: 6vh;
 }
 
 .cardsDestacados {
@@ -697,8 +699,10 @@ body {
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 35px;
+    font-size: 1vw;
+    line-height: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     /* identical to box height */
 
 
@@ -732,6 +736,7 @@ body {
     padding-left: 3vw;
     margin: auto;
 }
+
 .botonCarusel {
     font-family: 'TT Norms', sans-serif;
     font-style: normal;
@@ -784,16 +789,37 @@ body {
     margin-top: 30vh;
 }
 
-.tituloBannerLanding2 {
-    font-family: 'TT Norms';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 3vw;
-    line-height: 4vw;
-    margin-top: 2vw;
+/* For Desktop View */
+@media screen and (min-width: 500px) {
+    .tituloBannerLanding2 {
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 4vw;
+        margin-top: 2vw;
+    
+        color: #F5F0F5;
+    
+    }
+}
+@media screen and (max-width: 500px) {
+    .tituloBannerLanding2 {
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1vw;
+        line-height: 1vw;
+        margin-top: 2vw;
+    
+        color: #F5F0F5;
+    
+    }
+    
+}
 
-    color: #F5F0F5;
-
+.contactanos{
+    margin-left: 10vw;
 }
 
 .bannerLanding2 {
@@ -908,8 +934,12 @@ body {
 
 .bloqueImagnes {
     margin-top: 2%;
-    margin-left: 15vw;
+    margin-left: 10vw;
     display: flex;
+}
+
+.imagenBloqueImagenes{
+    width: 40vw;
 }
 
 .bannerFooter {
@@ -1067,7 +1097,6 @@ body {
     display: block;
     padding: 1vw;
     padding-right: 1vw;
-    padding-top: 6vw;
 }
 
 .aunRegistrarse {
@@ -1200,7 +1229,7 @@ label {
     font-size: 1.5vw;
 }
 
-.textoInformacionesFooter{
+.textoInformacionesFooter {
     font-family: 'Be Vietnam';
     font-size: 1.5vw;
 }

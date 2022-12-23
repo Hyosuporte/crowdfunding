@@ -62,7 +62,7 @@
         </div>
         <div class="principalAprende">
             <div class="menu">
-                <img src="<?php echo BASE_URL; ?>Assets/img/imagen2Banner2.svg" alt="">
+                <img class="imagenMenu" src="<?php echo BASE_URL; ?>Assets/img/imagen2Banner2.svg" alt="">
             </div>
             <div class="cartas">
                 <div class="card">
@@ -102,7 +102,7 @@
                 <div>
                     <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
                 </div>
-                <div style="margin-left: 10%;">
+                <div class="contactanos">
                     <h2>Nosotros</h2>
                     <ul>
                         <li>
@@ -116,7 +116,7 @@
                         </li>
                     </ul>
                 </div>
-                <div style="margin-left: 30%;">
+                <div class="contactanos">
                     <h3>Contáctanos</h3>
                     <ul>
                         <li class="textoInformacionesFooter">Telefono +57 317 4336722</li>

@@ -237,7 +237,7 @@
 .backGroundImage2 {
     margin-left: 15vw;
     background-repeat: no-repeat;
-    height: 45vh;
+    height: 46vh;
     width: 30vw;
     background-size: 30vw;
 }
@@ -270,7 +270,17 @@
     font-weight: 400;
     font-size: 3vh;
     line-height: 26px;
-    margin-top: 18vh;
+    margin-top: 23vh;
+    margin-left: 1vw;
+    color: #F5F0F5;
+}
+.textoImagenBannerAplicar2 {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vh;
+    line-height: 26px;
+    margin-top: 15vh;
     margin-left: 1vw;
     color: #F5F0F5;
 }
@@ -288,8 +298,8 @@
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 1vw;
-    line-height: 26px;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
     margin-top: 1vw;
     margin-bottom: 1vw;
 

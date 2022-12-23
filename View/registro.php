@@ -252,7 +252,7 @@
                     </div>
                 </div>
 
-                <button type="button" class="botonFormRegistro mt-5 " onclick="frmRegistro()">Enviar</button>
+                <button type="button" class="botonFormRegistro" onclick="frmRegistro()">Enviar</button>
                 <div class="linkRegistrarse">
                     <p class="aunRegistrarse">¿Ya tienes una cuenta? <a class="aunRegistrarse" href="<?php echo BASE_URL; ?>Home/login/">INICIA SESIÓN</a></p>
                 </div>

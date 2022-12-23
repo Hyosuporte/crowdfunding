@@ -28,6 +28,7 @@ input[type=number] { -moz-appearance:textfield; }
 
 .textoFormuario {
     font-family: 'TT Norms';
+    font-size: 1.5vw;
     color: #031C54;
 }
 
@@ -324,7 +325,7 @@ input[type=number] { -moz-appearance:textfield; }
     border-radius: 30px;
     border: 0px;
     width: 15vw;
-    height: 6vh;
+    height: 4vh;
     color: #031C54;
     font-family: 'TT Norms';
     font-style: normal;
