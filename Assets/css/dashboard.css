@@ -115,7 +115,7 @@ input[type=number] { -moz-appearance:textfield; }
     font-style: normal;
     font-weight: 900;
     font-size: 2vw;
-    line-height: 2vh;
+    line-height: 1.5vh;
     /* identical to box height */
 
 

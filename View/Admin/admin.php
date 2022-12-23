@@ -17,15 +17,15 @@
           <p class="tituloFormSubirProyecto">Proyectos Subidos</p><br>
         </div>
         <div class=" pantallaInicialDashboard">
-          <table id="tblProyectos" class="display tablita" style="width:100%">
+          <table id="tblProyectosAdm" class="display tablita" style="width:100%">
             <thead>
               <tr>
-                <th class="bordeDerecha bordeAbajo">Título</th>
-                <th class="bordeDerecha bordeAbajo">Comienzo</th>
-                <th class="bordeDerecha bordeAbajo">Final</th>
-                <th class="bordeDerecha bordeAbajo">Estado</th>
-                <th class="bordeDerecha bordeAbajo">Acciones</th>
-                <th class="bordeAbajo">Observaciones</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Título</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Comienzo</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Final</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Estado</th>
+                <th data-class-name="bordeDerecha bordeAbajo">Acciones</th>
+                <th data-class-name="bordeAbajo">Observaciones</th>
               </tr>
             </thead>
             <tbody>
@@ -68,11 +68,9 @@
   </div>
 </div>
 <?php require_once("View/Template/footer.php") ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
   const id_usuario = "<?php echo $_SESSION['id'] ?>"
 </script>
-<script src="<?php echo BASE_URL; ?>Assets/js/DataTable.js"></script>
 <script src="<?php echo BASE_URL; ?>Assets/js/Dashboard.js"></script>
 </body>
 
