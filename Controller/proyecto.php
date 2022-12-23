@@ -6,21 +6,28 @@ class proyecto extends Controller
     {
         parent::__construct();
     }
-    
+
     public function obtenerProyectos()
     {
         $data = $this->model->getProyectos();
         for ($i = 0; $i < count($data); $i++) {
-            $data[$i]['acciones'] = '
-               <select name="acciones" id="acciones">
-                    <option value="">-</option>
-                    <option value="aprobado">Aprobado</option>
-                    <option value="noAprobado">No Aprobado</option>
-                    <option value="tecnica">Revision Tecnica</option>
-                    <option value="documental">Revision Documental</option>
+            if ($data[$i]['id_estado'] == 1) {
+                $data[$i]['acciones'] = '
+               <select name="acciones" disabled>
+                    <option value="1" selected >Aprobado</option>
                 </select>';
+            } else {
+                $data[$i]['acciones'] = '
+               <select id="acciones' . $i . '" onchange="updateEstado(' . $data[$i]['id_proyecto'] . ',' . $i . ')">
+                    <option value=""></option>
+                    <option value="1">Aprobado</option>
+                    <option value="2">No Aprobado</option>
+                    <option value="3">Revision Tecnica</option>
+                    <option value="4">Revision Documental</option>
+                </select>';
+            }
             $data[$i]['observaciones'] = '<div>
-                <textarea name="observaciones" id="observaciones" cols="15" rows="3"></textarea>    </div>';
+                <textarea id="observaciones'. $i . '" cols="18" rows="2" onchange="UpdateObser(' . $data[$i]['id_proyecto'] . ',' . $i . ')">' . $data[$i]['observaciones'] . '</textarea></div>';
         }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
@@ -31,7 +38,7 @@ class proyecto extends Controller
         $fichero_subido = dir_subida . basename($_FILES[$name]['name']);
         echo $_FILES[$name]['name'];
         if (move_uploaded_file($_FILES[$name]['tmp_name'], $fichero_subido)) {
-	        $fichero_subido = 'http:\\localhost\\crowdfunding\\uploadeddocuments\\' . basename($_FILES[$name]['name']);
+            $fichero_subido = 'http:\\localhost\\crowdfunding\\uploadeddocuments\\' . basename($_FILES[$name]['name']);
         }
         return $fichero_subido;
     }
@@ -57,7 +64,7 @@ class proyecto extends Controller
         $bancario = $this->subirArchivo($_POST['bancario']);
         $aprob_donacion = $this->subirArchivo($_POST['aprob_donacion']);
         $form_declaraciones = $this->subirArchivo($_POST['form_declaraciones']);
-        
+
         if (
             empty($camara) || empty($RUT) || empty($rep_legal) || empty($cedula) || empty($bancario) || empty($aprob_donacion) || empty($form_declaraciones) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
             empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
@@ -142,14 +149,50 @@ class proyecto extends Controller
         die();
     }
 
+    public function listarProyectosCar()
+    {
+        $data = $this->model->getGaleriaCar();
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
     public function listarProyecto()
     {
         $id = strClean($_GET['id_proyecto']);
         $data = $this->model->getProyecto($id);
-	$data['topDonadores'] = $this->model->getDonadores($id);
+        $data['topDonadores'] = $this->model->getDonadores($id);
         $data['title'] = $data['titulo'];
-        $this->views->getView("Home", "vistaProyecto",$data);
+        $this->views->getView("Home", "vistaProyecto", $data);
         die();
     }
+
+    public function UpdateEstado()
+    {
+        $id = $_GET['id_proyecto'];
+        $estado = $_GET['estado'];
+        $data = $this->model->UpdateEstado($id,$estado);
+        if ($data === 1) {
+            $msg = "exito";
+        } else {
+            $msg = "fallo";
+        }
+        echo json_encode($msg, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
+    public function UpdateObser()
+    {
+        $id = $_GET['id_proyecto'];
+        $obser = $_GET['obser'];
+        $data = $this->model->UpdateObser($id, $obser);
+        if ($data === 1) {
+            $msg = "exito";
+        } else {
+            $msg = "fallo";
+        }
+        echo json_encode($msg, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
 
 }

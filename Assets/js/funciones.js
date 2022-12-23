@@ -7,19 +7,34 @@ if (document.getElementById("bodyGaleria") != null) {
 if (document.getElementById("configPerfil") != null) {
   document
     .getElementById("configPerfil")
-    .addEventListener("onLoad", listarDatos(), true);
+    .addEventListener("onLoad", listarPais().then(listarDatos()), false);
 }
 
 if (document.getElementById("cardsDestacados") != null) {
   document
     .getElementById("cardsDestacados")
-    .addEventListener("onLoad", listarGaleriaDes(), true);
+    .addEventListener("onLoad", listarGaleriaDes(), false);
 }
 
-if (document.getElementById("Donaciones") != null) {
+if (document.getElementById("carouselExampleIndicators") != null) {
   document
-    .getElementById("Donaciones")
-    .addEventListener("onLoad", listarDonaciones(), true);
+    .getElementById("carouselExampleIndicators")
+    .addEventListener("onLoad", listarCarousel(), false);
+}
+
+function listarCarousel() {
+  const url = base_url + "proyecto/listarProyectosCar";
+  const http = new XMLHttpRequest();
+  http.open("POST", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      res.forEach((element, i) => {
+        crearCardCaro(element, i);
+      });
+    }
+  };
 }
 
 function listarGaleria() {
@@ -56,22 +71,20 @@ function listarGaleria() {
 
 function listarGaleriaDes() {
   const url = base_url + "proyecto/listarProyectosDes";
-  const divMain = document.querySelector("#cardsDestacados");
   const http = new XMLHttpRequest();
   http.open("POST", url, true);
   http.send();
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
-      res.forEach((element) => {
-        divCardGal = crearCadGaleria(element);
-        divMain.appendChild(divCardGal);
+      res.forEach((element,i) => {
+        crearCardDes(element,i);
       });
     }
   };
 }
 
-function listarPais() {
+async function listarPais() {
   const url = base_url + "pais/obtenerPaises";
   const selectorPais = $("#paisUser");
   const http = new XMLHttpRequest();
@@ -118,7 +131,6 @@ function listarCiudad() {
 }
 
 function listarDatos(e) {
-  listarPais();
   const url = base_url + "cliente/userData";
   const http = new XMLHttpRequest();
   http.open("GET", url, true);
@@ -141,23 +153,6 @@ function listarDatos(e) {
   };
 }
 
-function listarDonaciones() {
-  const url = base_url + "cliente/getDonaciones";
-  const http = new XMLHttpRequest();
-  http.open("POST", url, true);
-  http.send();
-  http.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      const res = JSON.parse(this.responseText);
-      res.forEach((element) => {
-        document
-          .getElementById("Donaciones")
-          .appendChild(crearFilaDonacion(element));
-      });
-    }
-  };
-}
-
 function crearFila(numFil) {
   let divFila = document.createElement("div");
   divFila.classList.add("proyectosFila");
@@ -166,13 +161,9 @@ function crearFila(numFil) {
 }
 
 function crearCadGaleria(element) {
-  //TODO:Creacion del cardGaleria
   let divCardGal = document.createElement("div");
-  divCardGal.classList.add("card");
-  divCardGal.classList.add("cardGaleria");
+  divCardGal.setAttribute("class", "card cardGaleria");
   divCardGal.setAttribute("id", element.id_proyecto);
-  //TODO:Creacion del Contenido del cardGaleria
-  //TODO:Creacion del div con la imagen del proyecto
   let divImg = document.createElement("div");
   let img = document.createElement("img");
   img.setAttribute("class", "imageDestacado");
@@ -182,6 +173,38 @@ function crearCadGaleria(element) {
   let divBody = creacionCardBody(element);
   divCardGal.appendChild(divBody);
   return divCardGal;
+}
+
+function crearCardDes(element, i) {
+  document.getElementById(`imagenDes${i}`).setAttribute("src", element.foto);
+  document.getElementById(`tituloDes${i}`).innerText=element.titulo;
+  document.getElementById(`absText${i}`).innerText=element.abstrac;
+  document.getElementById(`metaDes${i}`).innerText=`Meta ${element.monto_financiacion} cop`;
+  document.getElementById(`barraDes${i}`)
+    .setAttribute(
+      "style",
+      `width:${(element["SUM(d.monto)"] * 100) / element.monto_financiacion}%;`
+    );
+  document.getElementById(`btnCardDes${i}`)
+    .setAttribute(
+    "href",`
+    ${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`);
+}
+
+function crearCardCaro(element, i) {
+  document.getElementById(`imgCarusel${i}`).setAttribute("src", element.foto);
+  document.getElementById(`caruselTitulo${i}`).innerText=element.titulo;
+  document.getElementById(`caruselAbs${i}`).innerText=element.abstrac;
+  document.getElementById(`caruselMeta${i}`).innerText=`Meta ${element.monto_financiacion} cop`;
+  document.getElementById(`barraMeta${i}`)
+    .setAttribute(
+      "style",
+      `width:${(element["SUM(d.monto)"] * 100) / element.monto_financiacion}%;`
+    );
+  document.getElementById(`btnCarusel${i}`)
+    .setAttribute(
+    "href",`
+    ${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`);
 }
 
 function creacionCardBody(element) {
@@ -210,10 +233,8 @@ function creacionCardBody(element) {
   divProgress.setAttribute("class", "progress");
   divProgress.innerHTML = `<div class="progress-bar" style="width:${
     (element["SUM(d.monto)"] * 100) / element.monto_financiacion
-  }%; background-color: #CC59D2;" role="progressbar"></div>`;
+  }%; background-color: #CC59D2;"></div>`;
   ver.setAttribute("class", "botonCardGaleria");
-  ver.setAttribute("value", element.id_proyecto);
-  ver.setAttribute("type", "submit");
   ver.setAttribute(
     "href",
     `${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`
@@ -227,78 +248,75 @@ function creacionCardBody(element) {
   return divBody;
 }
 
-function crearFilaDonacion(element) {
-  let tr = document.createElement("tr");
-  let tdNamePro = document.createElement("td");
-  let tdCant = document.createElement("td");
-  let tdFecha = document.createElement("td");
-  let tdVerPro = document.createElement("td");
-  let ver = document.createElement("a");
-  tdNamePro.innerHTML = element.titulo;
-  tdNamePro.setAttribute("class", "bordeDerecha bordeAbajo");
-  tdCant.innerHTML = element.monto;
-  tdCant.setAttribute("class", "bordeDerecha bordeAbajo");
-  tdFecha.innerHTML = element.fecha_donacion;
-  tdFecha.setAttribute("class", "bordeDerecha bordeAbajo");
-  tdVerPro.setAttribute("class", "bordeAbajo");
-  ver.setAttribute("class", "botonDonador");
-  ver.setAttribute("value", element.id_proyecto);
-  ver.setAttribute("type", "submit");
-  ver.setAttribute(
-    "href",
-    `${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`
-  );
-  ver.innerHTML = `Ver Proyecto <img class="imagenOjo" src="${base_url}Assets/img/Ojo.svg" width="20" alt="">`;
-  tdVerPro.appendChild(ver);
-  tr.appendChild(tdNamePro);
-  tr.appendChild(tdCant);
-  tr.appendChild(tdFecha);
-  tr.appendChild(tdVerPro);
-  return tr;
-}
-
 function UpdateCorreo() {
-  const url = base_url + "cliente/UpdateCorreo";
-  const frm = document.getElementById("frmUpdateCorreo");
-  const http = new XMLHttpRequest();
-  http.open("POST", url, true);
-  http.send(new FormData(frm));
-  http.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      const res = JSON.parse(this.responseText);
-      if (res === "Correo actualizado con exito") {
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: res,
-          showConfirmButton: false,
-          timer: 2500,
-        });
-        setTimeout(function () {
-          window.location.reload();
-        }, 4000);
-      } else if (res === "El correo no se encuentra disponible") {
-        Swal.fire({
-          position: "top-end",
-          icon: "error",
-          title: res,
-          showConfirmButton: false,
-          timer: 2500,
-        });
+  const correo = $("#newCorreo").val().trim();
+  if (correo == "") {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "El correo no puede estar vacio",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+  } else {
+    const url = base_url + "cliente/UpdateCorreo";
+    const frm = document.getElementById("frmUpdateCorreo");
+    const http = new XMLHttpRequest();
+    http.open("POST", url, true);
+    http.send(new FormData(frm));
+    http.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        const res = JSON.parse(this.responseText);
+        if (res === "Correo actualizado con exito") {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: res,
+            showConfirmButton: false,
+            timer: 2500,
+          });
+          setTimeout(function () {
+            window.location.reload();
+          }, 4000);
+        } else if (res === "El correo no se encuentra disponible") {
+          Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: res,
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        } else {
+          Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: "El correo nuevo no puede ser igual al actual",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+        }
       }
-    }
-  };
+    };
+  }
 }
 
 function UpdatePassword() {
-  const passwordNow = document.getElementById("passwordNow");
-  const newPassword = document.getElementById("newPassword");
-  const newPasswordTry = document.getElementById("newPasswordTry");
+  const passwordNow = $("#passwordNow").val().trim();
+  const newPassword = $("#newPassword").val().trim();
+  const newPasswordTry = $("#newPasswordTry").val().trim();
   if (
-    passwordNow.value != "" ||
-    newPassword.value != "" ||
-    newPasswordTry.value != ""
+    passwordNow.value == "" ||
+    newPassword.value == "" ||
+    newPasswordTry.value == ""
   ) {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Las contraseñas no pueden estar vacias",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+  } else {
     if (newPassword.value === newPasswordTry.value) {
       const url = base_url + "cliente/UpdatePassword";
       const frm = document.getElementById("frmUpdatePassword");
@@ -356,30 +374,30 @@ function UpdatePassword() {
         timer: 2500,
       });
     }
-  } else{
-    Swal.fire({
-      position: "top-end",
-      icon: "warning",
-      title: "Los campos de contraseña deben ser llenados",
-      showConfirmButton: false,
-      timer: 2500,
-    });
   }
 }
 
 function UpdateDates() {
-  const nombreCompleto = document.getElementById("nombreCompleto");
-  const pais = document.getElementById("paisUser");
-  const ciudad = document.getElementById("ciudadUser");
-  const direccion = document.getElementById("direccion");
-  const telefono = document.getElementById("telefonoUser");
+  const nombreCompleto = $("#nombreCompleto").val().trim();
+  const pais = $("#paisUser").val().trim();
+  const ciudad = $("#ciudadUser").val().trim();
+  const direccion = $("#direccion").val().trim();
+  const telefono = $("#telefonoUser").val().trim();
   if (
-    nombreCompleto.value != "" ||
-    pais.value != "" ||
-    ciudad.value != "" ||
-    direccion.value != "" ||
-    telefono.value != ""
+    nombreCompleto == "" ||
+    pais == "" ||
+    ciudad == "" ||
+    direccion == "" ||
+    telefono == ""
   ) {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "Todos los campos son obligatorios",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+  } else {
     const url = base_url + "cliente/UpdateData";
     const frm = document.getElementById("frmUpdateData");
     const http = new XMLHttpRequest();
@@ -418,13 +436,5 @@ function UpdateDates() {
         }
       }
     };
-  } else {
-    Swal.fire({
-      position: "top-end",
-      icon: "warning",
-      title: "Todos los campos son obligatorios",
-      showConfirmButton: false,
-      timer: 2500,
-    });
   }
 }

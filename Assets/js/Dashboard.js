@@ -2,7 +2,7 @@ $(document).ready(function () {
   desaparecerVista("v-pills-subir-proyecto-1");
   desaparecerVista("v-pills-subir-proyecto-2");
   desaparecerVista("v-pills-subir-proyecto-3");
-  $("#tblProyectos").DataTable({
+  $("#tblProyectosAdm").DataTable({
     paging: false,
     ordering: false,
     info: false,
@@ -11,9 +11,6 @@ $(document).ready(function () {
       dataSrc: "",
     },
     columns: [
-      {
-        data: "id_proyecto",
-      },
       {
         data: "titulo",
       },
@@ -31,6 +28,60 @@ $(document).ready(function () {
       },
       {
         data: "observaciones",
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  $("#tblProyectos").DataTable({
+    paging: false,
+    ordering: false,
+    info: false,
+    searching: false,
+    ajax: {
+      url: base_url + "cliente/getProyectos",
+      dataSrc: "",
+    },
+    columns: [
+      {
+        data: "titulo",
+      },
+      {
+        data: "estado",
+      },
+      {
+        data: "observaciones",
+      },
+      {
+        data: "ver",
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  $("#Donaciones").DataTable({
+    paging: false,
+    ordering: false,
+    info: false,
+    searching: false,
+    ajax: {
+      url: base_url + "cliente/getDonaciones",
+      dataSrc: "",
+    },
+    columns: [
+      {
+        data: "titulo",
+      },
+      {
+        data: "monto",
+      },
+      {
+        data: "fecha_donacion",
+      },
+      {
+        data: "ver",
       },
     ],
   });
@@ -72,7 +123,6 @@ function desaparecerVistas(panel) {
 }
 
 function verificarCampos(parametro1,parametro2){
-  const nit = document.getElementById("nit");
   const nombre = document.getElementById("nombre");
   const telefono = document.getElementById("telefono");
   const web = document.getElementById("web");
@@ -89,25 +139,23 @@ function verificarCampos(parametro1,parametro2){
     banco.value != "" &&
     cuenta.value != "" &&
     organizacion.value != "0"
-  ) 
-  {
+  ) {
     //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
-    
+
     desaparecerVista(parametro1);
     aparecerVista(parametro2);
-  } 
-  else{
+  } else {
     console.log("Rellena los campos we");
     Swal.fire({
-      position: 'center',
-      icon: 'warning',
-      title: 'Todos los campos son obligatorios',
+      position: "center",
+      icon: "warning",
+      title: "Todos los campos son obligatorios",
       showConfirmButton: false,
-      timer: 1500
-    }) 
+      timer: 1500,
+    });
   }
 }
-function verificarCampos2(parametro1,parametro2){
+function verificarCampos2(parametro1, parametro2) {
   const titulo = document.getElementById("titulo");
   const palabras = document.getElementById("palabras");
   const impacto = document.getElementById("impacto");
@@ -126,25 +174,23 @@ function verificarCampos2(parametro1,parametro2){
     resumen.value != "" &&
     foto.value != "" &&
     video.value != "" &&
-    monto.value != "" &&
-    duracion.value != "" &&
-    comienzo.value != "" &&
-    ejecucion.value != "" &&
-    adicional.value != ""
+    banco.value != "" &&
+    final.value != "" 
   ) 
   {
     //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
-    
+
     desaparecerVista(parametro1);
     aparecerVista(parametro2);
   } 
   else{
+    console.log("Rellena los campos we");
     Swal.fire({
-      position: 'center',
-      icon: 'warning',
-      title: 'Todos los campos son obligatorios',
+      position: "center",
+      icon: "warning",
+      title: "Todos los campos son obligatorios",
       showConfirmButton: false,
-      timer: 1500
-    }) 
+      timer: 1500,
+    });
   }
 }

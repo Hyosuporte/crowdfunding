@@ -10,7 +10,7 @@ class Home extends Controller
     public function index()
     {
         $data['title'] = "Principal";
-        $this->views->getView($this, "index", $data);
+        $this->views->getView("Home", "index", $data);
     }
 
     public function login()
@@ -23,7 +23,7 @@ class Home extends Controller
             }
         } else {
             $data['title'] = "Login";
-            $this->views->getView($this, "login", $data);
+            $this->views->getView("Home", "login", $data);
         }
     }
 
@@ -37,7 +37,7 @@ class Home extends Controller
             }
         } else {
             $data['title'] = "Registro";
-            $this->views->getView($this, "registro", $data);
+            $this->views->getView("Home", "registro", $data);
         }
     }
 
@@ -50,57 +50,61 @@ class Home extends Controller
                 header("location: " . BASE_URL . "cliente");
             }
         } else {
-            $this->views->getView($this, "recuperar");
+            $this->views->getView("Home", "recuperar");
         }
     }
 
     public function aplicar()
     {
         $data['title'] = "aplicar";
-        $this->views->getView($this, "aplicar", $data);
+        $this->views->getView("Home", "aplicar", $data);
     }
 
     public function aprende()
     {
         $data['title'] = "aprende";
-        $this->views->getView($this, "aprende", $data);
+        $this->views->getView("Home", "aprende", $data);
     }
 
     public function aprenderItem()
     {
-        $data['title'] = "Aprender Item";
-        $this->views->getView($this, "aprenderItem", $data);
+        $data['title'] = "aprenderItem";
+        $this->views->getView("Home", "aprenderItem", $data);
     }
+    
     public function aprenderItem2()
     {
         $data['title'] = "Aprender Item";
-        $this->views->getView($this, "aprenderItem2", $data);
+        $this->views->getView("Home", "aprenderItem2", $data);
     }
+
     public function aprenderItem3()
     {
         $data['title'] = "Aprender Item";
-        $this->views->getView($this, "aprenderItem3", $data);
+        $this->views->getView("Home", "aprenderItem3", $data);
     }
+
     public function aprenderItem4()
     {
         $data['title'] = "Aprender Item";
-        $this->views->getView($this, "aprenderItem4", $data);
+        $this->views->getView("Home", "aprenderItem4", $data);
     }
+
     public function aprenderItem5()
     {
         $data['title'] = "Aprender Item";
-        $this->views->getView($this, "aprenderItem5", $data);
+        $this->views->getView("Home", "aprenderItem5", $data);
     }
 
     public function galeriaProyectos()
     {
         $data['title'] = "galeriaProyectos";
-        $this->views->getView($this, "galeriaProyectos", $data);
+        $this->views->getView("Home", "galeriaProyectos", $data);
     }
 
     public function vistaProyecto()
     {
         $data['title'] = "vistaProyecto";
-        $this->views->getView($this, "vistaProyecto", $data);
+        $this->views->getView("Home", "vistaProyecto", $data);
     }
 }

@@ -9,8 +9,18 @@ class cliente extends Controller
 
     public function index()
     {
-            $data['title'] = "Cliente";
-            $this->views->getView($this, "perfil", $data);
+        if (!empty($_SESSION['rol'])) {
+            if ($_SESSION['rol'] == 2) {
+                $data['title'] = "Perfil";
+                $data['numProyects'] = $this->model->getCantPro($_SESSION['id']);
+                $this->views->getView("cliente", "perfil", $data);
+            } else {
+                header("location: " . BASE_URL);
+            }
+        } else {
+            $data['title'] = "Principal";
+            header("location: " . BASE_URL);
+        }
     }
 
     public function UpdateCorreo()
@@ -40,7 +50,7 @@ class cliente extends Controller
         $passwordNow = strClean($_POST['passwordNow']);
         $newPassword = strClean($_POST['newPassword']);
         $newPasswordTry = strClean($_POST['newPasswordTry']);
-        if (!empty($passwordNow) || !empty($newPassword) || !empty($newPasswordTry)) {
+        if (empty($passwordNow) || empty($newPassword) || !empty($newPasswordTry)) {
             if ($newPassword === $newPasswordTry) {
                 $data = $this->model->user_very($_SESSION['id']);
                 if ($data) {
@@ -76,12 +86,12 @@ class cliente extends Controller
         $ciudad = strClean($_POST['ciudad']);
         $direccion = strClean($_POST['direccion']);
         $telefono = strClean($_POST['telefonoUser']);
-        if (!empty($nombreCompleto) || !empty($pais) || !empty($ciudad) || !empty($direccion) || !empty($telefono)) {
-            list($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido) = explode(" ",$nombreCompleto) ;
+        if (empty($nombreCompleto) || empty($pais) || empty($ciudad) || !empty($direccion) || empty($telefono)) {
+            list($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido) = explode(" ", $nombreCompleto);
             $nombre = $primer_nombre . " " . $segundo_nombre;
             $apellido = $primer_apellido . " " . $segundo_apellido;
             $data = $this->model->UpdateData($nombre, $apellido, $ciudad, $pais, $direccion, $telefono, $_SESSION['id']);
-            $data==1?$msg="exito":$msg="fallo";
+            $data == 1 ? $msg = "exito" : $msg = "fallo";
         } else {
             $msg = "Todos los campos son obligatorios";
         }
@@ -99,6 +109,35 @@ class cliente extends Controller
     public function getDonaciones()
     {
         $data = $this->model->getDonaciones($_SESSION['id']);
+        for ($i = 0; $i < count($data); $i++) {
+            $data[$i]['monto'] = "$" . $data[$i]['monto'];
+            $data[$i]['fecha_donacion'] = explode(" ", $data[$i]['fecha_donacion'])[0];
+            $data[$i]['ver'] = '<a class="botonDonador" style="padding:5px;" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '" >Ver Proyecto</a>';
+        }
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
+    public function getProyectos()
+    {
+        $data = $this->model->getProyectos($_SESSION['id']);
+        for ($i = 0; $i < count($data); $i++) {
+            if ($data[$i]['estado'] == "Aprovado") {
+                $data[$i]['observaciones'];
+                $data[$i]['fecha_final'] <= date('Y-m-d') ? $data[$i]['estado'] = "Finalizado" : $data[$i]['estado'] = "En campaña";
+                $data[$i]['ver'] = '<a class="botonDonador" style="padding:5px; margin-left:20%" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '" >Ver Proyecto</a>';
+            } else {
+                if ($data[$i]['estado'] == "NoAprovado") {
+                    $data[$i]['observaciones'];
+                    $data[$i]['estado'] = "No Aprovado";
+                    $data[$i]['ver'] = '';
+                } else {
+                    $data[$i]['estado'] = "En Revision";
+                    $data[$i]['observaciones'];
+                    $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2">Actualizar</button>';
+                }
+            }
+        }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
     }

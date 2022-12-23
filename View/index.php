@@ -79,60 +79,48 @@
                 <div class="carousel-item active">
                     <div class="bloqueCaruselItem">
                         <div>
-                            <img class="imagenCarusel" src="<?php echo BASE_URL; ?>Assets/img/caruselImagen.svg" alt="">
+                            <img class="imagenCarusel" id="imgCarusel0">
                         </div>
                         <div class="caruselTexto">
-                            <p class="caruselTitulo">Nombre del Proyecto</p>
-                            <p class="subirProyectoTextoCarusel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                interdum, arcu eget blandit suscipit, ex magna
-                                pharetra ante, ut convallis neque ipsum eu nisi.Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Duis interdum, arcu eget blandit
-                                suscipit, ex magna pharetra ante, ut convallis neque ipsum eu nisi.</p>
-                            <p class="caruselMeta">Meta 10.000.000 cop</p>
+                            <p class="caruselTitulo" id="caruselTitulo0"></p>
+                            <p class="subirProyectoTextoCarusel" id="caruselAbs0"></p>
+                            <p class="caruselMeta" id="caruselMeta0"></p>
                             <div class="progress">
-                                <div class="progress-bar barraMeta" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar barraMeta" id="barraMeta0"></div>
                             </div>
-                            <button type="button" class="botonCarusel mt-5">Ver Proyecto</button>
+                            <a class="botonCardDestacado mt-5" id="btnCarusel0" >Ver Proyecto</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item ">
                     <div class="bloqueCaruselItem">
                         <div>
-                            <img class="imagenCarusel" src="<?php echo BASE_URL; ?>Assets/img/imagenBanner1.svg" alt="">
+                            <img class="imagenCarusel" id="imgCarusel1">
                         </div>
                         <div class="caruselTexto">
-                            <p class="caruselTitulo">Nombre del Proyecto</p>
-                            <p class="subirProyectoTextoCarusel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                interdum, arcu eget blandit suscipit, ex magna
-                                pharetra ante, ut convallis neque ipsum eu nisi.Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Duis interdum, arcu eget blandit
-                                suscipit, ex magna pharetra ante, ut convallis neque ipsum eu nisi.</p>
-                            <p class="caruselMeta">Meta 10.000.000 cop</p>
+                            <p class="caruselTitulo" id="caruselTitulo1"></p>
+                            <p class="subirProyectoTextoCarusel" id="caruselAbs1"></p>
+                            <p class="caruselMeta" id="caruselMeta1"></p>
                             <div class="progress">
-                                <div class="progress-bar barraMeta" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar barraMeta" id="barraMeta1"></div>
                             </div>
-                            <button type="button" class="botonCarusel mt-5">Ver Proyecto</button>
+                            <a class="botonCardDestacado mt-5" id="btnCarusel1" >Ver Proyecto</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item ">
                     <div class="bloqueCaruselItem">
                         <div>
-                            <img class="imagenCarusel" src="<?php echo BASE_URL; ?>Assets/img/imagenBannerSubirProyecto3.svg" alt="">
+                            <img class="imagenCarusel" id="imgCarusel2">
                         </div>
                         <div class="caruselTexto">
-                            <p class="caruselTitulo">Nombre del Proyecto</p>
-                            <p class="subirProyectoTextoCarusel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                interdum, arcu eget blandit suscipit, ex magna
-                                pharetra ante, ut convallis neque ipsum eu nisi.Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Duis interdum, arcu eget blandit
-                                suscipit, ex magna pharetra ante, ut convallis neque ipsum eu nisi.</p>
-                            <p class="caruselMeta">Meta 10.000.000 cop</p>
+                            <p class="caruselTitulo" id="caruselTitulo2"></p>
+                            <p class="subirProyectoTextoCarusel" id="caruselAbs2"></p>
+                            <p class="caruselMeta" id="caruselMeta2"></p>
                             <div class="progress">
-                                <div class="progress-bar barraMeta" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar barraMeta" id="barraMeta2"></div>
                             </div>
-                            <button type="button" class="botonCarusel mt-5">Ver Proyecto</button>
+                            <a class="botonCardDestacado mt-5" id="btnCarusel2" >Ver Proyecto</a>
                         </div>
                     </div>
                 </div>
@@ -168,55 +156,63 @@
         </div>
 
 
-        <div class="bloqueDestacados">
+        <div class="bloqueDestacados" id="cardsDestacados" >
             <p class="tituloSecundario">Nuestros proyectos destacados</p>
             <div class="cardsDestacados">
                 <div class="card">
                     <div>
-                        <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
+                        <img class="imageDestacado" id="imagenDes0" >
                     </div>
                     <div class="card-body">
-                        <h5 class="tituloCardDestacado">Nombre</h5>
-                        <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="metaCardDestacado">Meta $11.000.000</p>
-                        <p class="barraProgresoCard"></p>
-                        <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
+                        <h5 class="tituloCardDestacado" id="tituloDes0" ></h5>
+                        <p class="textoCard" id="absText0" ></p>
+                        <p class="metaCardDestacado" id="metaDes0" ></p>
+                        <div class="progress">
+                            <div class="progress-bar barraMeta" id="barraDes0"></div>
+                        </div>
+                        <a class="botonCardDestacado" id="btnCardDes0" >Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
+                        <img class="imageDestacado" id="imagenDes1" >
                     </div>
                     <div class="card-body">
-                        <h5 class="tituloCardDestacado">Nombre</h5>
-                        <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="metaCardDestacado">Meta $11.000.000</p>
-                        <p class="barraProgresoCard"></p>
-                        <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
+                        <h5 class="tituloCardDestacado" id="tituloDes1" ></h5>
+                        <p class="textoCard" id="absText1" ></p>
+                        <p class="metaCardDestacado" id="metaDes1" ></p>
+                        <div class="progress">
+                                <div class="progress-bar barraMeta" id="barraDes1"></div>
+                            </div>
+                        <a class="botonCardDestacado" id="btnCardDes1" >Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
+                        <img class="imageDestacado" id="imagenDes2" >
                     </div>
                     <div class="card-body">
-                        <h5 class="tituloCardDestacado">Nombre</h5>
-                        <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="metaCardDestacado">Meta $11.000.000</p>
-                        <p class="barraProgresoCard"></p>
-                        <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
+                        <h5 class="tituloCardDestacado" id="tituloDes2" ></h5>
+                        <p class="textoCard" id="absText2" ></p>
+                        <p class="metaCardDestacado" id="metaDes2" ></p>
+                        <div class="progress">
+                                <div class="progress-bar barraMeta" id="barraDes2"></div>
+                            </div>
+                        <a class="botonCardDestacado" id="btnCardDes2" >Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img class="imageDestacado" src="<?php echo BASE_URL; ?>Assets/img/Destacados.svg" alt="">
+                        <img class="imageDestacado" id="imagenDes3" >
                     </div>
                     <div class="card-body">
-                        <h5 class="tituloCardDestacado">Nombre</h5>
-                        <p class="textoCard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="metaCardDestacado">Meta $11.000.000</p>
-                        <p class="barraProgresoCard"></p>
-                        <button type="button" class="botonCardDestacado">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></button>
+                        <h5 class="tituloCardDestacado" id="tituloDes3" ></h5>
+                        <p class="textoCard" id="absText3" ></p>
+                        <p class="metaCardDestacado" id="metaDes3" ></p>
+                        <div class="progress">
+                                <div class="progress-bar barraMeta" id="barraDes3"></div>
+                            </div>
+                        <a class="botonCardDestacado" id="btnCardDes3" >Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
                     </div>
                 </div>
             </div>

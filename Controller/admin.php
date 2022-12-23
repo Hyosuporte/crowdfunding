@@ -12,7 +12,7 @@ class admin extends Controller
         if (!empty($_SESSION['rol'])) {
             if ($_SESSION['rol'] == 1) {
                 $data['title'] = "Administrador";
-                $this->views->getView($this, "admin", $data);
+                $this->views->getView("admin", "admin", $data);
             } else {
                 header("location: " . BASE_URL);
             }
