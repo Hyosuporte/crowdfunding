@@ -227,6 +227,21 @@ body {
     border-radius: 3vw;
 }
 
+.btnActual {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    line-height: 26px;
+    text-align: center;
+    padding-top: 0.5vw;
+    margin-left: 25%;
+    color: #ffffff;
+    background: #CC59D2;
+    border-radius: 3vw;
+    border-color: #ffffff;
+}
+
 .formulario__validacion-estado-incorrecto {
     position: relative;
     right: 10px;

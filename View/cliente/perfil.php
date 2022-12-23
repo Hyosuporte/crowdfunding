@@ -13,7 +13,7 @@
     </div>
     <div class="col-10  tab-content bloqueDashboard panelDashboard" id="configPerfil">
       <div class="tab-pane fade active show fondoDashboard fondoBlanco contenido" role="tabpanel1" id="cuenta">
-        <?php if (!isset($_SESSION["datos"]["numProyects"])) { ?>
+        <?php if (!isset($data["numProyects"])) { ?>
           <div class="pantallaInicialDashboard">
             <p class="tableDashboardTitulo">Aun no tines ningun proyecto subido</p>
             <div class="bloqueAunSinProyectos">
@@ -35,13 +35,10 @@
             <table id="tblProyectos" class="display tablita" style="width:100%">
               <thead>
                 <tr>
-                  <th class="bordeDerecha bordeAbajo">Id</th>
-                  <th class="bordeDerecha bordeAbajo">Título</th>
-                  <th class="bordeDerecha bordeAbajo">Comienzo</th>
-                  <th class="bordeDerecha bordeAbajo">Final</th>
-                  <th class="bordeDerecha bordeAbajo">Estado</th>
-                  <th class="bordeDerecha bordeAbajo">Acciones</th>
-                  <th class="bordeAbajo">Observaciones</th>
+                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Proyecto</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Estado</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Comentarios</strong></th>
+                  <th data-class-name="bordeAbajo"></th>
                 </tr>
               </thead>
               <tbody>
@@ -163,16 +160,16 @@
           <p class="tituloFormSubirProyecto">Proyectos Donados</p>
           <p class="subtituloFormSubirProyecto">Los proyectos que estas ayudando a que se hagan realidad </p>
         </div>
-        <table class="tablita" style="width:100%">
+        <table class="tablita" style="width:100%;" id="Donaciones">
           <thead>
             <tr>
-              <th class="bordeDerecha bordeAbajo">Proyecto</th>
-              <th class="bordeDerecha bordeAbajo">Cantidad</th>
-              <th class="bordeDerecha bordeAbajo">Fecha</th>
-              <th class="bordeAbajo">Ver Proyectos</th>
+              <th data-class-name="bordeDerecha bordeAbajo"><strong>Proyecto</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo"><strong>Cantidad</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo"><strong>Fecha</strong></th>
+              <th data-class-name="bordeAbajo"></th>
             </tr>
           </thead>
-          <tbody id="Donaciones">
+          <tbody>
           </tbody>
         </table>
       </div>

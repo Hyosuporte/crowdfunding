@@ -142,6 +142,13 @@ class proyecto extends Controller
         die();
     }
 
+    public function listarProyectosCar()
+    {
+        $data = $this->model->getGaleriaCar();
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
     public function listarProyecto()
     {
         $id = strClean($_GET['id_proyecto']);

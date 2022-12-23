@@ -12,6 +12,7 @@ class cliente extends Controller
         if (!empty($_SESSION['rol'])) {
             if ($_SESSION['rol'] == 2) {
                 $data['title'] = "Perfil";
+                $data['numProyects'] = $this->model->getCantPro($_SESSION['id']);
                 $this->views->getView("cliente", "perfil", $data);
             } else {
                 header("location: " . BASE_URL);
@@ -108,6 +109,35 @@ class cliente extends Controller
     public function getDonaciones()
     {
         $data = $this->model->getDonaciones($_SESSION['id']);
+        for ($i = 0; $i < count($data); $i++) {
+            $data[$i]['monto'] = "$" . $data[$i]['monto'];
+            $data[$i]['fecha_donacion'] = explode(" ", $data[$i]['fecha_donacion'])[0];
+            $data[$i]['ver'] = '<a class="botonDonador" style="padding:5px;" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '" >Ver Proyecto</a>';
+        }
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
+    public function getProyectos()
+    {
+        $data = $this->model->getProyectos($_SESSION['id']);
+        for ($i = 0; $i < count($data); $i++) {
+            if ($data[$i]['estado'] == "Aprovado") {
+                $data[$i]['miComen'] = substr($data[$i]['observaciones'], 0, 16) . "...";
+                $data[$i]['fecha_final'] <= date('Y-m-d') ? $data[$i]['estado'] = "Finalizado" : $data[$i]['estado'] = "En campaña";
+                $data[$i]['ver'] = '<a class="botonDonador" style="padding:5px; margin-left:20%" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '" >Ver Proyecto</a>';
+            } else {
+                if ($data[$i]['estado'] == "NoAprovado") {
+                    $data[$i]['miComen'] = substr($data[$i]['observaciones'], 0, 16) . "..." ;
+                    $data[$i]['estado'] = "No Aprovado";
+                    $data[$i]['ver'] = '';
+                } else {
+                    $data[$i]['estado'] = "En Revision";
+                    $data[$i]['miComen'] = substr($data[$i]['observaciones'], 0, 16) . "...";
+                    $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2">Actualizar</button>';
+                }
+            }
+        }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
     }
