@@ -1,8 +1,13 @@
 $(document).ready(function () {
   $("#tblProyectosAdm").DataTable({
+    scrollY: "500px",
+    scrollCollapse: true,
     paging: false,
     ordering: false,
     info: false,
+    searching: false,
+    dom: "Bfrtip",
+    buttons: ["csv", "excel", "pdf"],
     ajax: {
       url: base_url + "proyecto/obtenerProyectos",
       dataSrc: "",
@@ -29,63 +34,70 @@ $(document).ready(function () {
     ],
   });
 });
-
-$(document).ready(function () {
-  desaparecerVista("v-pills-subir-proyecto-1");
-  desaparecerVista("v-pills-subir-proyecto-2");
-  desaparecerVista("v-pills-subir-proyecto-3");
-  $("#tblProyectos").DataTable({
-    paging: false,
-    ordering: false,
-    info: false,
-    searching: false,
-    ajax: {
-      url: base_url + "cliente/getProyectos",
-      dataSrc: "",
-    },
-    columns: [
-      {
-        data: "titulo",
+if (document.getElementById("tblProyectos") != null) {
+  $(document).ready(function () {
+    desaparecerVista("v-pills-subir-proyecto-1");
+    desaparecerVista("v-pills-subir-proyecto-2");
+    desaparecerVista("v-pills-subir-proyecto-3");
+    $("#tblProyectos").DataTable({
+      scrollY: "500px",
+      scrollCollapse: true,
+      paging: false,
+      ordering: false,
+      info: false,
+      searching: false,
+      dom: "Bfrtip",
+      buttons: ["csv", "excel", "pdf"],
+      ajax: {
+        url: base_url + "cliente/getProyectos",
+        dataSrc: "",
       },
-      {
-        data: "estado",
-      },
-      {
-        data: "observaciones",
-      },
-      {
-        data: "ver",
-      },
-    ],
+      columns: [
+        {
+          data: "titulo",
+        },
+        {
+          data: "estado",
+        },
+        {
+          data: "observaciones",
+        },
+        {
+          data: "ver",
+        },
+      ],
+    });
   });
-});
+}
 
-$(document).ready(function () {
-  $("#Donaciones").DataTable({
-    paging: false,
-    ordering: false,
-    info: false,
-    searching: false,
-    ajax: {
-      url: base_url + "cliente/getDonaciones",
-      dataSrc: "",
-    },
-    columns: [
-      {
-        data: "titulo",
+if (document.getElementById("Donaciones")) {
+  $(document).ready(function () {
+    $("#Donaciones").DataTable({
+      paging: false,
+      ordering: false,
+      info: false,
+      searching: false,
+      ajax: {
+        url: base_url + "cliente/getDonaciones",
+        dataSrc: "",
       },
-      {
-        data: "monto",
-      },
-      {
-        data: "fecha_donacion",
-      },
-      {
-        data: "ver",
-      },
-    ],
+      columns: [
+        {
+          data: "titulo",
+        },
+        {
+          data: "monto",
+        },
+        {
+          data: "fecha_donacion",
+        },
+        {
+          data: "ver",
+        },
+      ],
+    });
   });
-});
+}
 
 function consultarProyectos() {
   const url = base_url + "proyecto/obtenerProyectos";
