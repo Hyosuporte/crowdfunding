@@ -356,3 +356,8 @@ input[type=number] { -moz-appearance:textfield; }
 .sizeMenu{
     width: 100vw;
 }
+
+.iconoMenu{
+    margin-right: 0.5vw;
+    width: 1vw;
+}
