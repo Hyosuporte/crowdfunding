@@ -88,7 +88,7 @@
                             <div class="progress">
                                 <div class="progress-bar barraMeta" id="barraMeta0"></div>
                             </div>
-                            <a class="botonCardDestacado mt-5" id="btnCarusel0" >Ver Proyecto</a>
+                            <button type="button" class="botonCarusel mt-5">Ver Proyecto</button>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                             <div class="progress">
                                 <div class="progress-bar barraMeta" id="barraMeta1"></div>
                             </div>
-                            <a class="botonCardDestacado mt-5" id="btnCarusel1" >Ver Proyecto</a>
+                            <button type="button" class="botonCarusel mt-5">Ver Proyecto</button>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                             <div class="progress">
                                 <div class="progress-bar barraMeta" id="barraMeta2"></div>
                             </div>
-                            <a class="botonCardDestacado mt-5" id="btnCarusel2" >Ver Proyecto</a>
+                            <button type="button" class="botonCarusel mt-5">Ver Proyecto</button>
                         </div>
                     </div>
                 </div>
@@ -298,8 +298,8 @@
         </div>
 
         <div class="bloqueImagnes">
-            <img src="<?php echo BASE_URL; ?>Assets/img/ministerioCultura.svg" alt="">
-            <img src="<?php echo BASE_URL; ?>Assets/img/pne.svg" alt="">
+            <img class="imagenBloqueImagenes" src="<?php echo BASE_URL; ?>Assets/img/ministerioCultura.svg" alt="">
+            <img class="imagenBloqueImagenes" src="<?php echo BASE_URL; ?>Assets/img/pne.svg" alt="">
         </div>
 
         <div class="bannerFooter">
@@ -326,7 +326,7 @@
                 <div>
                     <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
                 </div>
-                <div style="margin-left: 10%;">
+                <div class="contactanos">
                     <h2>Nosotros</h2>
                     <ul>
                         <li>
@@ -340,7 +340,7 @@
                         </li>
                     </ul>
                 </div>
-                <div style="margin-left: 30%;">
+                <div class="contactanos">
                     <h3>Contáctanos</h3>
                     <ul>
                         <li class="textoInformacionesFooter">Telefono +57 317 4336722</li>

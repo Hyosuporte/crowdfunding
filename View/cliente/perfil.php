@@ -8,6 +8,8 @@
           Donados</a>
         <a href="#misProtectos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
           Datos</a>
+        <a href="#v-pills-subir-proyecto-1" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="aparecerVista('v-pills-subir-proyecto-1'),desaparecerVistas(['cuenta','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])">
+        <i class="fa-solid fa-file-arrow-up"></i>Subir Proyecto</a>
       </div>
       <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
     </div>
@@ -93,23 +95,30 @@
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 2 de 3</p>
             </div>
-            <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
+            <p class="subtituloFormSubirProyecto">Datos del proyecto</p>
             <input class="inputGrandeForm" type="text" name="titulo" id="titulo" placeholder="Titulo del proyecto*">
             <div class="grupoInputsForm">
-              <input type="text" class="grupoInput1" placeholder="Palabras Clave**" required id="palabras" name="palabras">
+              <input type="text" class="grupoInput1" placeholder="Palabras Clave**" required id="palabras" id="palabras" name="palabras">
               <input type="number" class="grupoInput1" placeholder="Indicador Impacto*" required id="impacto" name="impacto">
             </div>
-            <textarea class="inputGrandeFormArea" name="resumen" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
+            <textarea class="inputTextArea" name="resumen" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
             <div class="grupoInputsForm">
               <input class="inputFileForm" type="file" name="foto" id="foto" style="width: 100%;">
               <input class="grupoInput1" type="text" name="video" id="video" placeholder="URL Video*">
             </div>
             <div class="grupoInputsForm">
               <input class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
-              <input type="date" class="grupoInput1" id="final" name="final" name="final">
+              <input type="number" class="grupoInput1" id="duracion" name="duracion" name="duracion" placeholder="Duración de la campaña">
+            </div>
+            <div class="grupoInputsForm">
+              <input type="date" class="grupoInput1" id="comienzo" name="comienzo" name="comienzo">
+              <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
+            </div>
+            <div class="grupoInputsForm">
+              <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10"></textarea>
             </div>
             <div class="list-group"><a href="#v-pills-subir-proyecto-3" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos2('v-pills-subir-proyecto-2','v-pills-subir-proyecto-3')">Subir
-                Proyecto</a></div>
+                Proyecto >></a></div>
           </form>
         </div>
       </div>

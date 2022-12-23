@@ -67,26 +67,22 @@
             <div class="cartas">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Aprende / General / ¿Entonces, ¿Qué es el crowdfunding?</h5>
-                        <h2 class="tituloItem">¿Entonces, ¿Qué es el crowdfunding?</h2>
-                        <p class="textoItem">El crowdfunding es la práctica de financiar un proyecto o empresa
-                            recaudando dinero de un gran número de personas. El crowdfunding se
-                            puede usar para causas personales como emergencias médicas, pero se usa
-                            más a menudo para financiar proyectos creativos y nuevas empresas. Se
-                            puede utilizar para cualquier cosa, desde financiar un álbum, una película o
-                            el diseño de un nuevo producto, hasta recaudar fondos para obras de
-                            caridad.
-                            La primera plataforma de financiación colectiva fue ArtistShare en 1997. La
-                            empresa permitía a músicos y cineastas ofrecer su trabajo a cambio de
-                            donaciones de fans y simpatizantes.
-                            El proceso de crowdfunding generalmente comienza con la persona que
-                            tiene una idea para un proyecto o empresa que establece su propia
-                            campaña de crowdfunding en una de las muchas plataformas de
-                            crowdfunding. Luego crearán incentivos para atraer a las personas a donar
-                            dinero para su proyecto. Una vez que hayan establecido su objetivo,
-                            comenzarán a promocionar la campaña para que la mayor cantidad de
-                            personas posible pueda verla y donar si están interesados en su éxito.
-
+                        <h5 class="card-title">Aprende / General / ¿Por qué hacer una campaña para financiar un proyecto de la industria creativa?</h5>
+                        <h2 class="tituloItem">¿Por qué hacer una campaña para financiar un proyecto de la industria creativa?</h2>
+                        <p class="textoItem">En los últimos años, el crowdfunding se ha convertido en una forma cada
+                            vez más popular para que artistas y creativos financien sus proyectos. Se
+                            puede usar como una oportunidad para crear una comunidad de personas
+                            que se preocupan por tu proyecto y quieren verlo realidad. También es una
+                            oportunidad para mostrar su producto o servicio, algo que puede usar como
+                            herramienta de marketing en el futuro. Y finalmente, es un impulso para
+                            convertir su producto o servicio en algo que sea viable para el mercado.
+                            En conclusión, hay una serie de factores para tener en cuenta al iniciar una
+                            campaña de crowdfunding. El más importante de ellos es tener una meta u
+                            objetivo claro para la campaña que esté respaldado por una historia bien
+                            narrada que conecte con tu audiencia. Si eres mujer y quieres buscar
+                            recursos para tu proyecto creativo, puedes presentar tu idea en TFInancia
+                            (ww.tfilatam.com/tfinancia) y empezar a crear tu campaña exitosa.
+                            Nosotras te ayudaremos.
                     </div>
                 </div>
             </div>

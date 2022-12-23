@@ -1,7 +1,7 @@
 <?php require_once("View/Template/header.php") ?>
 <div class="bloqueLogin">
         <div class="bannerRegistro">
-            <img class="" src="<?php echo BASE_URL; ?>Assets/img/registro.svg" alt="" height="720">
+            <img class="imagenLogin" src="<?php echo BASE_URL; ?>Assets/img/registro.svg" alt="">
             <p class="beneficioTitulo1">¡Bienvenid@!</p>
             <p class="textoLoginIzquierda">Es momento de crear y aportar. Inicia sesión y comienza a conectar <br> con nuevas
                 oportunidades.</p>
@@ -252,7 +252,7 @@
                     </div>
                 </div>
 
-                <button type="button" class="botonFormRegistro mt-5 " onclick="frmRegistro()">Enviar</button>
+                <button type="button" class="botonFormRegistro" onclick="frmRegistro()">Enviar</button>
                 <div class="linkRegistrarse">
                     <p class="aunRegistrarse">¿Ya tienes una cuenta? <a class="aunRegistrarse" href="<?php echo BASE_URL; ?>Home/login/">INICIA SESIÓN</a></p>
                 </div>

@@ -67,26 +67,14 @@
             <div class="cartas">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Aprende / General / ¿Entonces, ¿Qué es el crowdfunding?</h5>
-                        <h2 class="tituloItem">¿Entonces, ¿Qué es el crowdfunding?</h2>
-                        <p class="textoItem">El crowdfunding es la práctica de financiar un proyecto o empresa
-                            recaudando dinero de un gran número de personas. El crowdfunding se
-                            puede usar para causas personales como emergencias médicas, pero se usa
-                            más a menudo para financiar proyectos creativos y nuevas empresas. Se
-                            puede utilizar para cualquier cosa, desde financiar un álbum, una película o
-                            el diseño de un nuevo producto, hasta recaudar fondos para obras de
-                            caridad.
-                            La primera plataforma de financiación colectiva fue ArtistShare en 1997. La
-                            empresa permitía a músicos y cineastas ofrecer su trabajo a cambio de
-                            donaciones de fans y simpatizantes.
-                            El proceso de crowdfunding generalmente comienza con la persona que
-                            tiene una idea para un proyecto o empresa que establece su propia
-                            campaña de crowdfunding en una de las muchas plataformas de
-                            crowdfunding. Luego crearán incentivos para atraer a las personas a donar
-                            dinero para su proyecto. Una vez que hayan establecido su objetivo,
-                            comenzarán a promocionar la campaña para que la mayor cantidad de
-                            personas posible pueda verla y donar si están interesados en su éxito.
-
+                        <h5 class="card-title">Aprende / General / ¿Cómo elegir la plataforma adecuada para tu campaña?</h5>
+                        <h2 class="tituloItem">¿Cómo elegir la plataforma adecuada para tu campaña?</h2>
+                        <p class="textoItem">Elegir la plataforma de crowdfunding adecuada es crucial para tu éxito. Es
+                            importante elegir un sitio con la audiencia adecuada, un sitio que pueda
+                            atraer los fondos necesarios y un sitio que pueda manejar las necesidades
+                            de tu campaña. La mejor plataforma de financiación colectiva que puedes
+                            utilizar también dependerá de los objetivos de su campaña, la cantidad de
+                            dinero que intenta recaudar y el tipo de recompensas que ofrece
                     </div>
                 </div>
             </div>

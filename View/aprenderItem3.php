@@ -67,26 +67,24 @@
             <div class="cartas">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Aprende / General / ¿Entonces, ¿Qué es el crowdfunding?</h5>
-                        <h2 class="tituloItem">¿Entonces, ¿Qué es el crowdfunding?</h2>
-                        <p class="textoItem">El crowdfunding es la práctica de financiar un proyecto o empresa
-                            recaudando dinero de un gran número de personas. El crowdfunding se
-                            puede usar para causas personales como emergencias médicas, pero se usa
-                            más a menudo para financiar proyectos creativos y nuevas empresas. Se
-                            puede utilizar para cualquier cosa, desde financiar un álbum, una película o
-                            el diseño de un nuevo producto, hasta recaudar fondos para obras de
-                            caridad.
-                            La primera plataforma de financiación colectiva fue ArtistShare en 1997. La
-                            empresa permitía a músicos y cineastas ofrecer su trabajo a cambio de
-                            donaciones de fans y simpatizantes.
-                            El proceso de crowdfunding generalmente comienza con la persona que
-                            tiene una idea para un proyecto o empresa que establece su propia
-                            campaña de crowdfunding en una de las muchas plataformas de
-                            crowdfunding. Luego crearán incentivos para atraer a las personas a donar
-                            dinero para su proyecto. Una vez que hayan establecido su objetivo,
-                            comenzarán a promocionar la campaña para que la mayor cantidad de
-                            personas posible pueda verla y donar si están interesados en su éxito.
-
+                        <h5 class="card-title">Aprende / General / ¿Qué tipo de crowdfunding existe?</h5>
+                        <h2 class="tituloItem">¿Qué tipo de crowdfunding existe? </h2>
+                        <p class="textoItem">Existen cuatro tipos de crowdfunding:
+                            1. El crowdfunding de recompensa es una forma de crowdfunding que
+                            consiste en dar a los donadores una recompensa por donar a la campaña.
+                            Las recompensas suelen tener la forma de un producto o servicio, pero
+                            también pueden ser recompensas no financieras como el reconocimiento.
+                            2. El crowdfunding de donación es un tipo de crowdfunding en el que los
+                            donantes donan dinero para ayudar a financiar un proyecto. No obtienen
+                            nada a cambio, aparte de la satisfacción de saber que ayudaron a que algo
+                            sucediera.
+                            3. El crowdfunding de acciones es una forma de recaudación de fondos en la
+                            que las personas invierten a cambio de acciones o propiedad de la empresa.
+                            Este tipo de inversión se ha popularizado en sitios como Kickstarter e
+                            Indiegogo, así como en sitios como AngelList, que se centran en empresas
+                            emergentes y en etapa inicial.
+                            4. La financiación colectiva de préstamos es cuando un proveedor de
+                            préstamos ofrece préstamos a los prestatarios a cambio de intereses.
                     </div>
                 </div>
             </div>

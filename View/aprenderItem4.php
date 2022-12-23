@@ -67,26 +67,28 @@
             <div class="cartas">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Aprende / General / ¿Entonces, ¿Qué es el crowdfunding?</h5>
-                        <h2 class="tituloItem">¿Entonces, ¿Qué es el crowdfunding?</h2>
-                        <p class="textoItem">El crowdfunding es la práctica de financiar un proyecto o empresa
-                            recaudando dinero de un gran número de personas. El crowdfunding se
-                            puede usar para causas personales como emergencias médicas, pero se usa
-                            más a menudo para financiar proyectos creativos y nuevas empresas. Se
-                            puede utilizar para cualquier cosa, desde financiar un álbum, una película o
-                            el diseño de un nuevo producto, hasta recaudar fondos para obras de
-                            caridad.
-                            La primera plataforma de financiación colectiva fue ArtistShare en 1997. La
-                            empresa permitía a músicos y cineastas ofrecer su trabajo a cambio de
-                            donaciones de fans y simpatizantes.
-                            El proceso de crowdfunding generalmente comienza con la persona que
-                            tiene una idea para un proyecto o empresa que establece su propia
-                            campaña de crowdfunding en una de las muchas plataformas de
-                            crowdfunding. Luego crearán incentivos para atraer a las personas a donar
-                            dinero para su proyecto. Una vez que hayan establecido su objetivo,
-                            comenzarán a promocionar la campaña para que la mayor cantidad de
-                            personas posible pueda verla y donar si están interesados en su éxito.
-
+                        <h5 class="card-title">Aprende / General / ¿De qué depende el éxito de mi campaña?</h5>
+                        <h2 class="tituloItem">¿De qué depende el éxito de mi campaña?</h2>
+                        <p class="textoItem">Las campañas de crowdfunding exitosas suelen ser aquellas que cuentan
+                            una buena historia, se conectan con una comunidad y tienen un buen plan
+                            de comunicación. Estos tres factores unidos auguran éxito a tu campañaEl primer factor de éxito es contar una buena historia. La técnica del
+                            storytelling es muy utilizada y conocida para conectar con las emociones e
+                            informar brevemente de qué trata el proyecto y qué se desea conseguir.
+                            Una historia es la razón por la cual la gente respalda su campaña. Si no
+                            tiene una historia interesante y atractiva, es poco probable que obtenga
+                            patrocinadores para apoyar su campaña.
+                            El segundo factor de éxito es conectar con una comunidad. El crowdfunding
+                            trata de construir relaciones con personas que comparten sus intereses y
+                            valores. Una campaña exitosa tiene que ofrecer algo de valor al donador
+                            para que se involucre en el proyecto y se sienta parte de él. Esto que le
+                            puedes ofrecer puede ser una recompensa por su donación o un
+                            seguimiento al progreso de tu iniciativa.
+                            El tercer factor de éxito es tener un buen plan de comunicación: esto
+                            incluye tener una idea de a quién quiere llegar, qué tipo de contenido les
+                            gustaría ver de usted, qué tipo de lenguaje les gustaría escuchar de ti y con
+                            qué frecuencia les gustaría. Así mismo, establecer hitos de comunicación
+                            que mantengan activa la campaña será primordialmente para conseguir el
+                            objetivo.
                     </div>
                 </div>
             </div>

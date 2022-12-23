@@ -68,8 +68,28 @@ class Home extends Controller
 
     public function aprenderItem()
     {
-        $data['title'] = "aprenderItem";
-        $this->views->getView("Home", "aprenderItem", $data);
+        $data['title'] = "Aprender Item";
+        $this->views->getView($this, "aprenderItem", $data);
+    }
+    public function aprenderItem2()
+    {
+        $data['title'] = "Aprender Item";
+        $this->views->getView($this, "aprenderItem2", $data);
+    }
+    public function aprenderItem3()
+    {
+        $data['title'] = "Aprender Item";
+        $this->views->getView($this, "aprenderItem3", $data);
+    }
+    public function aprenderItem4()
+    {
+        $data['title'] = "Aprender Item";
+        $this->views->getView($this, "aprenderItem4", $data);
+    }
+    public function aprenderItem5()
+    {
+        $data['title'] = "Aprender Item";
+        $this->views->getView($this, "aprenderItem5", $data);
     }
 
     public function galeriaProyectos()
