@@ -36,8 +36,7 @@
           <thead>
             <tr>
               <th data-class-name="bordeDerecha bordeAbajo">Proyecto</th>
-              <th data-class-name="bordeDerecha bordeAbajo">Cantidad</th>
-              <th data-class-name="bordeDerecha bordeAbajo">Fecha</th>
+              <th data-class-name="bordeDerecha bordeAbajo">Total Donaciones</th>
               <th data-class-name="bordeDerecha bordeAbajo"></th>
             </tr>
           </thead>
