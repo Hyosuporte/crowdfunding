@@ -1,7 +1,4 @@
 $(document).ready(function () {
-  desaparecerVista("v-pills-subir-proyecto-1");
-  desaparecerVista("v-pills-subir-proyecto-2");
-  desaparecerVista("v-pills-subir-proyecto-3");
   $("#tblProyectosAdm").DataTable({
     paging: false,
     ordering: false,
@@ -34,6 +31,9 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  desaparecerVista("v-pills-subir-proyecto-1");
+  desaparecerVista("v-pills-subir-proyecto-2");
+  desaparecerVista("v-pills-subir-proyecto-3");
   $("#tblProyectos").DataTable({
     paging: false,
     ordering: false,
@@ -105,16 +105,19 @@ function aparecerVista(panel) {
   element = document.getElementById(panel);
   element.style.display = "block";
 }
+
 function aparecerVistas(panel) {
   panel.forEach((i) => {
     element = document.getElementById(i);
     element.style.display = "block";
   });
 }
+
 function desaparecerVista(panel) {
   element = document.getElementById(panel);
   element.style.display = "none";
 }
+
 function desaparecerVistas(panel) {
   panel.forEach((i) => {
     element = document.getElementById(i);
@@ -122,7 +125,7 @@ function desaparecerVistas(panel) {
   });
 }
 
-function verificarCampos(parametro1,parametro2){
+function verificarCampos(parametro1, parametro2) {
   const nombre = document.getElementById("nombre");
   const telefono = document.getElementById("telefono");
   const web = document.getElementById("web");
@@ -155,6 +158,7 @@ function verificarCampos(parametro1,parametro2){
     });
   }
 }
+
 function verificarCampos2(parametro1, parametro2) {
   const titulo = document.getElementById("titulo");
   const palabras = document.getElementById("palabras");
@@ -175,15 +179,13 @@ function verificarCampos2(parametro1, parametro2) {
     foto.value != "" &&
     video.value != "" &&
     banco.value != "" &&
-    final.value != "" 
-  ) 
-  {
+    final.value != ""
+  ) {
     //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
 
     desaparecerVista(parametro1);
     aparecerVista(parametro2);
-  } 
-  else{
+  } else {
     console.log("Rellena los campos we");
     Swal.fire({
       position: "center",

@@ -76,12 +76,18 @@
                         <div class="montoDonacion">
                             <div style="display: flex;">
                                 <div style="display: flex;">
-                                    <p class="fuentePrincipal">Recibido</p>
-                                    <p class="fuenteSecundaria">$<?php echo $data['SUM(d.monto)']; ?></p>
+                                    <p class="fuentePrincipal">Recibido: </p>
+                                    <p class="fuenteSecundaria"> $<?php
+                                                                    if ($data['SUM(d.monto)'] != null) {
+                                                                        echo $data['SUM(d.monto)'];
+                                                                    } else {
+                                                                        echo 0;
+                                                                    }
+                                                                    ?></p>
                                 </div>
                                 <div style="display: flex; margin-left: 15vw;">
-                                    <p class="fuentePrincipal">Meta</p>
-                                    <p class="fuenteSecundaria">$<?php echo $data['monto_financiacion']; ?></p>
+                                    <p class="fuentePrincipal">Meta: </p>
+                                    <p class="fuenteSecundaria"> $<?php echo $data['monto_financiacion']; ?></p>
                                 </div>
                             </div>
                             <div class="progress">
@@ -102,13 +108,13 @@
                         <div class="FechaInicio">
                             <div class="fechaInicio">
                                 <p class="fuentePrincipal">Fecha de Inicio</p>
-                                <p class="fuenteSecundaria">10 - 05 - 2022</p>
+                                <p class="fuenteSecundaria"><?php echo $data['fecha_comienzo']; ?></p>
                             </div>
                         </div>
                         <div class="FechaCierre">
                             <div class="fechaCierre">
                                 <p class="fuentePrincipal">Fecha de Cierre</p>
-                                <p class="fuenteSecundaria"> 10 - 09 - 2022</p>
+                                <p class="fuenteSecundaria"><?php echo $data['fecha_final']; ?></p>
                             </div>
                         </div>
                     </div>
