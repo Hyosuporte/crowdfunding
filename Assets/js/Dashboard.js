@@ -35,10 +35,14 @@ $(document).ready(function () {
   desaparecerVista("v-pills-subir-proyecto-2");
   desaparecerVista("v-pills-subir-proyecto-3");
   $("#tblProyectos").DataTable({
+    scrollY: "500px",
+    scrollCollapse: true,
     paging: false,
     ordering: false,
     info: false,
     searching: false,
+    dom: "Bfrtip",
+    buttons: ["csv", "excel", "pdf"],
     ajax: {
       url: base_url + "cliente/getProyectos",
       dataSrc: "",

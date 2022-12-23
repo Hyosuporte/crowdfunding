@@ -3,11 +3,13 @@
   <div class="d-flex flex-row text-white ml-2 margenIzquierda">
     <div class="fondoBlanco sizeMenu">
       <div class="list-group menu">
-        <a href="#cuenta" class="  active textoMenu" data-bs-toggle="tab" aria-selected="true" role="tab" onclick="aparecerVista('cuenta'),desaparecerVistas(['v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosSubidosDashboard.svg" alt="">Proyectos subidos</a>
-        <a href="#perfil" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/proyectosDonadosDashboard.svg" alt="">Proyectos
+        <a href="#cuenta" class="  active textoMenu" data-bs-toggle="tab" aria-selected="true" role="tab" onclick="aparecerVista('cuenta'),desaparecerVistas(['v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/proyectosSubidosDashboard.svg" alt="">Proyectos subidos</a>
+        <a href="#perfil" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/proyectosDonadosDashboard.svg" alt="">Proyectos
           Donados</a>
-        <a href="#misProtectos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
+        <a href="#misProtectos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
           Datos</a>
+        <a href="#v-pills-subir-proyecto-1" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="aparecerVista('v-pills-subir-proyecto-1'),desaparecerVistas(['cuenta','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])">
+          <img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/file-arrow-up-solid.svg" alt="">Subir Proyecto</a>
       </div>
       <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img style="margin-right: 1vw;" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
     </div>
@@ -31,12 +33,16 @@
             </div>
           </div>
         <?php } else { ?>
-          <div class="fondoBlanco pantallaInicialDashboard">
+          <div class=" pantallaInicialDashboard">
+            <div>
+              <p class="tituloFormSubirProyecto">Proyectos Subidos</p>
+              <p class="subtituloFormSubirProyecto">Los proyectos que has creado y su estado</p>
+            </div>
             <table id="tblProyectos" class="display tablita" style="width:100%">
               <thead>
                 <tr>
-                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Proyecto</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Estado</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo columnaProyecto"><strong>Proyecto</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo columnaEstado"><strong>Estado</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Comentarios</strong></th>
                   <th data-class-name="bordeAbajo"></th>
                 </tr>
@@ -166,12 +172,12 @@
           <p class="tituloFormSubirProyecto">Proyectos Donados</p>
           <p class="subtituloFormSubirProyecto">Los proyectos que estas ayudando a que se hagan realidad </p>
         </div>
-        <table class="tablita" style="width:100%;" id="Donaciones">
+        <table class="display tablita scrollTablita" style="width:100% !important;" id="Donaciones">
           <thead>
             <tr>
-              <th data-class-name="bordeDerecha bordeAbajo"><strong>Proyecto</strong></th>
-              <th data-class-name="bordeDerecha bordeAbajo"><strong>Cantidad</strong></th>
-              <th data-class-name="bordeDerecha bordeAbajo"><strong>Fecha</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo "><strong>Proyecto</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo "><strong>Cantidad</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo "><strong>Fecha</strong></th>
               <th data-class-name="bordeAbajo"></th>
             </tr>
           </thead>
@@ -277,7 +283,7 @@
 <script>
   const id_usuario = "<?php echo $_SESSION['id'] ?>"
 </script>
-<script src="<?php echo BASE_URL; ?>Assets/js/DataTable.js"></script>
+
 <script src="<?php echo BASE_URL; ?>Assets/js/Dashboard.js"></script>
 </body>
 
