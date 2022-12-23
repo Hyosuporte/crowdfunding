@@ -66,4 +66,12 @@ class usuarioDAO extends Query
     return $res;
 }
 
+
+
+public function listarinteresados()
+  {
+    $sql = "SELECT correo FROM proyecto";
+    $data = $this->select($sql);
+    return $data;
+  }
 }

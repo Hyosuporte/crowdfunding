@@ -90,12 +90,20 @@ class usuario extends Controller
                     showConfirmButton: false,
                     timer: 1500
                   }) </script>";
+                  header("location:" .BASE_URL);
             } else if ($data === "existe") {
                 $msg = "correo repetido";
             } else {
                 $msg = "Error";
             }          
         }
+    }
+    
+    public function listarinteresados()
+    {
+        $data = $this->model->listarinteresados();
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
     }
 
     public function valid_email($str)
