@@ -118,7 +118,7 @@
               <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
             </div>
             <div class="grupoInputsForm">
-              <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10"></textarea>
+              <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10" placeholder="Informacion Adicional"></textarea>
             </div>
             <div class="list-group"><a href="#v-pills-subir-proyecto-3" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos2('v-pills-subir-proyecto-2','v-pills-subir-proyecto-3')">Subir
                 Proyecto >></a></div>
