@@ -87,6 +87,24 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $("#Correos").DataTable({
+    paging: false,
+    ordering: false,
+    info: false,
+    searching: false,
+    ajax: {
+      url: base_url + "usuario/listarinteresados",
+      dataSrc: "",
+    },
+    columns: [
+      {
+        data: "Correos",
+      }
+    ],
+  });
+});
+
 function consultarProyectos() {
   const url = base_url + "proyecto/obtenerProyectos";
   const http = new XMLHttpRequest();
