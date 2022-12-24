@@ -48,21 +48,4 @@ class proyectoDAO extends Query
     $datos = $this->selectAll($sql);
     return $datos;
   }
-
-  public function UpdateEstado($id,$estado)
-  {
-    $sql = "UPDATE proyecto SET id_estado = ? WHERE id_proyecto = ?";
-    $datos = array($estado, $id);
-    $data = $this->save($sql, $datos);
-    return $data;
-  }
-
-  public function UpdateObser($id, $obser)
-  {
-    $sql = "UPDATE proyecto SET observaciones = ? WHERE id_proyecto = ?";
-    $datos = array($obser, $id);
-    $data = $this->save($sql, $datos);
-    return $data;
-  }
-
 }

@@ -1,39 +1,42 @@
-$(document).ready(function () {
-  $("#tblProyectosAdm").DataTable({
-    scrollY: "500px",
-    scrollCollapse: true,
-    paging: false,
-    ordering: false,
-    info: false,
-    searching: false,
-    dom: "Bfrtip",
-    buttons: ["csv", "excel", "pdf"],
-    ajax: {
-      url: base_url + "proyecto/obtenerProyectos",
-      dataSrc: "",
-    },
-    columns: [
-      {
-        data: "titulo",
+if (document.getElementById("tblProyectosAdm") != null) {
+  $(document).ready(function () {
+    $("#tblProyectosAdm").DataTable({
+      scrollY: "500px",
+      scrollCollapse: true,
+      paging: false,
+      ordering: false,
+      info: false,
+      searching: false,
+      dom: "Bfrtip",
+      buttons: ["csv", "excel", "pdf"],
+      ajax: {
+        url: base_url + "proyecto/obtenerProyectos",
+        dataSrc: "",
       },
-      {
-        data: "fecha_comienzo",
-      },
-      {
-        data: "fecha_final",
-      },
-      {
-        data: "id_estado",
-      },
-      {
-        data: "acciones",
-      },
-      {
-        data: "observaciones",
-      },
-    ],
+      columns: [
+        {
+          data: "titulo",
+        },
+        {
+          data: "fecha_comienzo",
+        },
+        {
+          data: "fecha_final",
+        },
+        {
+          data: "id_estado",
+        },
+        {
+          data: "acciones",
+        },
+        {
+          data: "observaciones",
+        },
+      ],
+    });
   });
-});
+}
+
 if (document.getElementById("tblProyectos") != null) {
   $(document).ready(function () {
     desaparecerVista("v-pills-subir-proyecto-1");
@@ -70,7 +73,36 @@ if (document.getElementById("tblProyectos") != null) {
   });
 }
 
-if (document.getElementById("Donaciones")) {
+if (document.getElementById("tblDonadores") != null) {
+  $(document).ready(function () {
+    $("#tblDonadores").DataTable({
+      paging: false,
+      ordering: false,
+      info: false,
+      searching: false,
+      ajax: {
+        url: base_url + "admin/getDonaciones",
+        dataSrc: "",
+      },
+      columns: [
+        {
+          data: "titulo",
+        },
+        {
+          data: ["SUM(d.monto)"],
+        },
+        {
+          data: ["COUNT(d.monto)"],
+        },
+        {
+          data: "ver",
+        },
+      ],
+    });
+  });
+}
+
+if (document.getElementById("Donaciones") != null) {
   $(document).ready(function () {
     $("#Donaciones").DataTable({
       paging: false,
@@ -93,6 +125,26 @@ if (document.getElementById("Donaciones")) {
         },
         {
           data: "ver",
+        },
+      ],
+    });
+  });
+}
+
+if (document.getElementById("tblInteresados") != null) {
+  $(document).ready(function () {
+    $("#tblInteresados").DataTable({
+      paging: false,
+      ordering: false,
+      info: false,
+      searching: false,
+      ajax: {
+        url: base_url + "admin/getInteresados",
+        dataSrc: "",
+      },
+      columns: [
+        {
+          data: "correo",
         },
       ],
     });
@@ -212,7 +264,7 @@ function verificarCampos2(parametro1, parametro2) {
 function updateEstado(id, name) {
   const estado = document.getElementById(`acciones${name}`).value;
   const url =
-    base_url + `proyecto/UpdateEstado?id_proyecto=${id}&estado=${estado}`;
+    base_url + `admin/UpdateEstado?id_proyecto=${id}&estado=${estado}`;
   const http = new XMLHttpRequest();
   http.open("GET", url, true);
   http.send();
@@ -246,7 +298,7 @@ function updateEstado(id, name) {
 function UpdateObser(id, name) {
   const obser = document.getElementById(`observaciones${name}`).value;
   const url =
-    base_url + `proyecto/UpdateObser?id_proyecto=${id}&obser=${obser}`;
+    base_url + `admin/UpdateObser?id_proyecto=${id}&obser=${obser}`;
   const http = new XMLHttpRequest();
   http.open("GET", url, true);
   http.send();

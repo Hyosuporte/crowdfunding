@@ -3,10 +3,10 @@
   <div class="d-flex flex-row text-white ">
     <div class="col-2 fondoBlanco menu">
       <div class="list-group">
-        <a href="#cuenta" class="  active textoMenu" data-bs-toggle="tab" aria-selected="true" role="tab" onclick="aparecerVista('cuenta'),desaparecerVistas(['v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/proyectosSubidosDashboard.svg" alt="">Proyectos subidos</a>
-        <a href="#perfil" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/proyectosDonadosDashboard.svg" alt="">Proyectos
+        <a href="#cuenta" class="  active textoMenu" data-bs-toggle="tab" aria-selected="true" role="tab"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/proyectosSubidosDashboard.svg" alt="">Proyectos subidos</a>
+        <a href="#perfil" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/proyectosDonadosDashboard.svg" alt="">Proyectos
           Donados</a>
-        <a href="#correos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])">
+        <a href="#correos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab">
           <img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/people.svg" alt="">Lista Interesados</a>
         <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
       </div>
@@ -37,15 +37,16 @@
         <div>
           <p class="tituloFormSubirProyecto">Proyectos Donados</p><br>
         </div>
-        <table class="tablita" style="width:100%">
+        <table class="tablita" style="width:100%" id="tblDonadores">
           <thead>
             <tr>
               <th data-class-name="bordeDerecha bordeAbajo">Proyecto</th>
               <th data-class-name="bordeDerecha bordeAbajo">Total Donaciones</th>
-              <th data-class-name="bordeDerecha bordeAbajo"></th>
+              <th data-class-name="bordeDerecha bordeAbajo">Donadores</th>
+              <th data-class-name="bordeAbajo"></th>
             </tr>
           </thead>
-          <tbody id="Donaciones">
+          <tbody>
           </tbody>
         </table>
       </div>
@@ -53,7 +54,7 @@
         <div>
           <p class="tituloFormSubirProyecto">Lista de Interesados</p><br>
         </div>
-        <table class="tablita" style="width:100%">
+        <table id="tblInteresados" data-class-name="tablita" style="width:100%">
           <thead>
             <tr>
               <th class=" bordeAbajo">Correos</th>
@@ -67,9 +68,6 @@
   </div>
 </div>
 <?php require_once("View/Template/footer.php") ?>
-<script>
-  const id_usuario = "<?php echo $_SESSION['id'] ?>"
-</script>
 <script src="<?php echo BASE_URL; ?>Assets/js/Dashboard.js"></script>
 </body>
 

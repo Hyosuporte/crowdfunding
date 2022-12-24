@@ -7,21 +7,21 @@ class adminDAO extends Query
     parent::__construct();
   }
 
-  public function getProyectos()
-  {
-    $sql = "SELECT * FROM proyecto";
-    $data = $this->selectAll($sql);
-    return $data;
-  }
-
-  public function getDonados()
+  public function getDonaciones()
   {
     $sql = "SELECT p.id_proyecto,p.titulo,COUNT(d.monto),SUM(d.monto) FROM proyecto p LEFT JOIN donacion d ON d.id_proyecto=p.id_proyecto WHERE p.id_estado=1 GROUP BY p.id_proyecto";
     $datos = $this->selectAll($sql);
     return $datos;
   }
 
-  public function UpdateEstado($id,$estado)
+  public function getInteresados()
+  {
+    $sql = "SELECT i.correo FROM interesados i";
+    $datos = $this->selectAll($sql);
+    return $datos;
+  }
+
+  public function UpdateEstado($id, $estado)
   {
     $sql = "UPDATE proyecto SET id_estado = ? WHERE id_proyecto = ?";
     $datos = array($estado, $id);
@@ -36,5 +36,4 @@ class adminDAO extends Query
     $data = $this->save($sql, $datos);
     return $data;
   }
-
 }
