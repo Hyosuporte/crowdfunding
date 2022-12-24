@@ -81,15 +81,6 @@ class usuario extends Controller
         else{
             $data = $this->model->reginteresado($correo);
             if ($data === "ok") {
-                echo '<link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet"';
-                echo '<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>';
-                echo "<script> Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Correo Registrado',
-                    showConfirmButton: false,
-                    timer: 1500
-                  }) </script>";
                   header("location:" .BASE_URL);
             } else if ($data === "existe") {
                 $msg = "correo repetido";

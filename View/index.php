@@ -315,7 +315,7 @@
                     </div>
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
-                <form action="<?php echo BASE_URL;?>usuario/reginteresado" method="post"> 
+                <form id="frminteresado"action="<?php echo BASE_URL;?>usuario/reginteresado" method="post"> 
                     <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
                     <input class="txtFooter" type="text" name="correo" id="correo">
                     <button class="botonFormFooter" type="submit">Quiero estar conectado</button>
