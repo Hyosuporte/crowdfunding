@@ -69,7 +69,7 @@
         <div class="bloqueVistaProyecto">
             <p class="tituloVistaProyecto" id="nombre" name="nombre"><?php echo $data['titulo']; ?></p>
             <p><?php echo $data['abstrac']; ?></p>
-            <img src="<?php echo $data['foto']; ?>" alt="" width="640" height="360" style="margin-left: 23vw;">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/<?php explode("=", $data['video'])[1]; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="informacionVistaProyecto">
                 <div class="detallesProyecto">
                     <div class="Meta">
