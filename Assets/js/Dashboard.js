@@ -151,23 +151,6 @@ if (document.getElementById("tblInteresados") != null) {
   });
 }
 
-$(document).ready(function () {
-  $("#Correos").DataTable({
-    paging: false,
-    ordering: false,
-    info: false,
-    searching: false,
-    ajax: {
-      url: base_url + "usuario/listarinteresados",
-      dataSrc: "",
-    },
-    columns: [
-      {
-        data: "Correos",
-      }
-    ],
-  });
-});
 
 function consultarProyectos() {
   const url = base_url + "proyecto/obtenerProyectos";
@@ -276,7 +259,8 @@ function UpdateObser(id, name) {
 }
 
 function verificarCampos(parametro1, parametro2) {
-  const nombre = document.getElementById("nombre");
+  const id_organizacion = document.getElementById("nit");
+  const nombre = document.getElementById("nombreorg");
   const telefono = document.getElementById("telefono");
   const web = document.getElementById("web");
   const redes = document.getElementById("redes");
@@ -284,7 +268,7 @@ function verificarCampos(parametro1, parametro2) {
   const cuenta = document.getElementById("cuenta");
   const organizacion = document.getElementById("organizacion_tipo");
   if (
-    nit.value != "" &&
+    id_organizacion.value != "" &&
     nombre.value != "" &&
     telefono.value != "" &&
     web.value != "" &&
@@ -360,7 +344,7 @@ function frmOrg(e) {
   const banco = document.getElementById("banco");
   const nro_cuenta = document.getElementById("cuenta");
   
-    const url = base_url + "proyecto/insertarproyecto";
+    const url = base_url + "organizacion/insertarorg";
     const frm = document.getElementById("frmorg");
     const http = new XMLHttpRequest();
     http.open("POST", url, true);
@@ -393,7 +377,7 @@ function frmOrg(e) {
     };
   }
 
-  function frmProyecto(e) {
+  function insertarProyecto(e) {
     const titulo = document.getElementById("titulo");
     const keywords = document.getElementById("palabras");
     const indicador_impacto = document.getElementById("impacto");
@@ -401,17 +385,18 @@ function frmOrg(e) {
     const foto = document.getElementById("foto");
     const video = document.getElementById("video");
     const monto_financiacion = document.getElementById("monto");
+    const duracion_campana = document.getElementById("duracion");
     const fecha_comienzo = document.getElementById("comienzo");
     const tiempo_ejecucion = document.getElementById("ejecucion");
     const fecha_final = document.getElementById("final");
-    const RUT = document.getElementById("tributario");
     const informacion_adicional = document.getElementById("adicional");
+    const RUT = document.getElementById("tributario");
     const rep_legal = document.getElementById("existenciaYrepresentacion");
     const cedula = document.getElementById("cedula");
     const bancario = document.getElementById("bancario");
     const aprob_donacion = document.getElementById("acta");
     const form_declaraciones = document.getElementById("formulario");
-    const camara = document.getElementById("camara");
+    const camara_comercio = document.getElementById("camara");
 
     
       const url = base_url + "proyecto/insertarproyecto";

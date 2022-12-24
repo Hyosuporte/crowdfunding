@@ -93,8 +93,8 @@
       </div>
       <div class="tab-pane fade fondoDashboard" role="tabpanel1" id="v-pills-subir-proyecto-2">
         <div class="contenido">
-<form id="frmProyecto" action="" method="post">
-          <form id="" action="" method="post">
+        <form id="frmProyecto" action="" method="post" enctype="multipart/form-data">
+          <form>
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 2 de 3</p>
@@ -102,17 +102,17 @@
             <p class="subtituloFormSubirProyecto">Datos del proyecto</p>
             <input class="inputGrandeForm" type="text" name="titulo" id="titulo" placeholder="Titulo del proyecto*">
             <div class="grupoInputsForm">
-              <input type="text" class="grupoInput1" placeholder="Palabras Clave**" required id="palabras" id="palabras" name="palabras">
+              <input type="text" class="grupoInput1" placeholder="Palabras Clave**" required id="palabras" id="palabras" name="keywords">
               <input type="number" class="grupoInput1" placeholder="Indicador Impacto*" required id="impacto" name="impacto">
             </div>
-            <textarea class="inputTextArea" name="resumen" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
+            <textarea class="inputTextArea" name="Abstract" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
             <div class="grupoInputsForm">
               <input class="inputFileForm" type="file" name="foto" id="foto" style="width: 100%;">
               <input class="grupoInput1" type="text" name="video" id="video" placeholder="URL Video*">
             </div>
             <div class="grupoInputsForm">
               <input class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
-              <input type="number" class="grupoInput1" id="duracion" name="duracion" name="duracion" placeholder="Duración de la campaña">
+              <input type="number" class="grupoInput1" id="duracion" name="campana"  placeholder="Duración de la campaña">
             </div>
             <div class="grupoInputsForm">              
               <input type="date" class="grupoInput1" id="comienzo" name="comienzo" name="comienzo">
@@ -120,7 +120,7 @@
               <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
             </div>
             <div class="grupoInputsForm">
-              <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10" placeholder="Informacion Adicional"></textarea>
+              <textarea class="inputTextArea" name="info" id="adicional" cols="30" rows="10" placeholder="Informacion Adicional"></textarea>
             </div>
             <div class="grupoInputsForm">
             </div>
@@ -131,7 +131,7 @@
       </div>
       <div class="tab-pane fade fondoDashboard" role="tabpanel1" id="v-pills-subir-proyecto-3">
         <div class="contenido">
-          <form action="">
+          <form>
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 3 de 3</p>
@@ -142,8 +142,8 @@
               <p class="titulosInputsFileForm2">Certificado de Existencia</p>
             </div>
             <div class="grupoInputsForm2 inputArchivo">
-              <input class="inputFileForm" type="file" name="tributario" id="tributario" class="inputArchivo">
-              <input class="inputFileForm" type="file" name="existenciaYrepresentacion" id="existenciaYrepresentacion">
+              <input class="inputFileForm" type="file" name="RUT" id="tributario" class="inputArchivo">
+              <input class="inputFileForm" type="file" name="rep_legal" id="existenciaYrepresentacion">
             </div>
             <div class="titulosInputsFileForm">
               <p>Cédula de Ciudadanía</p>
@@ -158,8 +158,8 @@
               <p class="titulosInputsFileForm2">Formulario de declaraciones</p>
             </div>
             <div class="grupoInputsForm2">
-              <input class="inputFileForm" type="file" name="acta" id="acta" class="inputArchivo">
-              <input class="inputFileForm" type="file" name="formulario" id="formulario">
+              <input class="inputFileForm" type="file" name="aprob_donacion" id="acta" class="inputArchivo">
+              <input class="inputFileForm" type="file" name="form_declaraciones" id="formulario">
             </div>
             <div class="titulosInputsFileForm">
               <p>Camara</p>
@@ -167,7 +167,7 @@
             <div class="grupoInputsForm2">
               <input class="inputFileForm" type="file" name="camara" id="camara">
             </div>
-            <button class="botonFormFinal" type="submit" onclick=frmProyecto()>Siguiente Paso</button>
+            <button class="botonFormFinal" type="button" onclick="insertarProyecto()">Siguiente Paso</button>
           </form>
               </form>
 

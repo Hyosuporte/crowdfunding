@@ -48,13 +48,14 @@ class proyecto extends Controller
         $keywords = strClean($_POST['keywords']);
         $tiempo_ejecucion = strClean($_POST['ejecucion']);
         $titulo = strClean($_POST['titulo']);
-        $duracion_campana = strClean($_POST['campana']); //pendiente actualizar
-        $fecha_comienzo = strClean($_POST['comienzo']); //pendiente actualizar
+        $duracion_campana = strClean($_POST['campana']); 
+        $fecha_comienzo = strClean($_POST['comienzo']); 
         $fecha_final = strClean($_POST['final']);
         $abstrac = strClean($_POST['Abstract']);
         $indicador = strClean($_POST['impacto']);
         $monto = strClean($_POST['monto']);
         $video = strClean($_POST['video']);
+        print_r($_POST['campana']);
         $foto = $this->subirArchivo($_POST['foto']);
         $info_adicional = strClean($_POST['info']);
         $camara = $this->subirArchivo($_POST['camara']);

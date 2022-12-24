@@ -67,7 +67,7 @@ class proyectoDAO extends Query
 
   public function insertarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campana, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional)
   {
-    $sql = "INSERT INTO organizacion(camara_comercio, RUT, rep_legal, cedula, bancario, aprob_donacion, form_declaraciones, keywords, tiempo_ejecucion, titulo, foto, duracion_campana, fecha_comienzo, fecha_final, abstrac, indicador_impacto, monto_financiacion, video, info_adicional) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO proyecto(camara_comercio, RUT, rep_legal, cedula, bancario, aprob_donacion, form_declaraciones, keywords, tiempo_ejecucion, titulo, foto, duracion_campana, fecha_comienzo, fecha_final, abstrac, indicador_impacto, monto_financiacion, video, informacion_adicional) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     $datos = array($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campana, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional);
     $data = $this->save($sql, $datos);
     if ($data == 1) {
