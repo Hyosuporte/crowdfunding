@@ -106,6 +106,9 @@
             </div>
             <textarea class="inputTextArea" name="resumen" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
             <div class="grupoInputsForm">
+              <label class="labelInputs labelFoto" for="comienzo">Foto</label>
+            </div>
+            <div class="grupoInputsForm">
               <input class="inputFileForm" type="file" name="foto" id="foto" style="width: 100%;">
               <input class="grupoInput1" type="text" name="video" id="video" placeholder="URL Video*">
             </div>
@@ -113,15 +116,17 @@
               <input class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
               <input type="number" class="grupoInput1" id="duracion" name="duracion" name="duracion" placeholder="Duración de la campaña">
             </div>
-            <div class="grupoInputsForm">              
+            <div class="grupoInputsForm">
+              <label class="labelInputs" for="comienzo">Fecha Comienzo</label>
+              <label class="labelInputs2" for="final">Fecha Final</label>
+            </div>
+            <div class="grupoInputsForm">
               <input type="date" class="grupoInput1" id="comienzo" name="comienzo" name="comienzo">
               <input class="grupoInput1" type="date" name="final" id="final">
               <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
             </div>
             <div class="grupoInputsForm">
               <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10" placeholder="Informacion Adicional"></textarea>
-            </div>
-            <div class="grupoInputsForm">
             </div>
             <div class="list-group"><a href="#v-pills-subir-proyecto-3" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos2('v-pills-subir-proyecto-2','v-pills-subir-proyecto-3')">Subir
                 Proyecto >></a></div>
@@ -166,16 +171,16 @@
             <div class="grupoInputsForm2">
               <input class="inputFileForm" type="file" name="camara" id="camara">
             </div>
-            <button class="botonFormFinal" type="submit">Siguiente Paso</button>
+            <button class="botonFormFinal" type="submit" onclick=" fingirArchivos()">Subir Proyecto>></button>
           </form>
         </div>
       </div>
-      <div class="tab-pane fade fondoDashboard fondoBlanco pantallaInicialDashboard contenido" role="tabpanel1" id="perfil">
+      <div class="tab-pane fade fondoDashboard fondoBlanco pantallaInicialDashboard contenido scrollTablita" role="tabpanel1" id="perfil">
         <div>
           <p class="tituloFormSubirProyecto">Proyectos Donados</p>
           <p class="subtituloFormSubirProyecto">Los proyectos que estas ayudando a que se hagan realidad </p>
         </div>
-        <table class="display tablita scrollTablita" style="width:100% !important;" id="Donaciones">
+        <table class="display tablita " style="width:100% !important;" id="Donaciones">
           <thead>
             <tr>
               <th data-class-name="bordeDerecha bordeAbajo "><strong>Proyecto</strong></th>
@@ -197,7 +202,7 @@
                   <h4 class="textoFormuario">Correo</h4>
                   <input id="newCorreo" class="form-control inputActualizarDatos" type="email" name="newCorreo" placeholder="Correo Actual" />
                   <input id="ActCorreo" class="form-control" type="hidden" name="ActCorreo" />
-                  <button type="button" class=" botonFormActualizar mt-3 mb-3" onclick="UpdateCorreo()">
+                  <button type="button" class=" botonFormActualizar  mb-3" onclick="UpdateCorreo()">
                     Cambiar Correo
                   </button>
                 </div>
@@ -212,7 +217,7 @@
                   <input id="passwordNow" class="form-control inputActualizarDatos" type="password" name="passwordNow" placeholder="Contraseña actual" />
                 </div>
                 <div>
-                  <button type="button" class=" botonFormActualizar mt-3 mb-4" onclick="UpdatePassword();">
+                  <button type="button" class=" botonFormActualizar mb-4" onclick="UpdatePassword();">
                     Cambiar Contraseña
                   </button>
                 </div>
@@ -248,13 +253,13 @@
             <div class="row justify-content-center mt-4">
               <div class="col-md-5">
                 <div class="form-group">
-                  <select name="pais" id="paisUser" class="form-control" onclick="listarCiudad();">
+                  <select name="pais" id="paisUser" class="form-control selectCiudad" onclick="listarCiudad();">
                   </select>
                 </div>
               </div>
               <div class="col-md-5">
                 <div class="form-group">
-                  <select name="ciudad" id="ciudadUser" class="form-control">
+                  <select name="ciudad" id="ciudadUser" class="form-control selectCiudad">
                   </select>
                 </div>
               </div>
@@ -265,7 +270,7 @@
                   <input id="direccion" class="form-control inputActualizarDatos" type="text" name="direccion" placeholder="Direccion">
                 </div>
                 <div>
-                  <button type="button" class=" botonFormActualizar mt-3 mb-4" onclick="UpdateDates()">
+                  <button type="button" class=" botonFormActualizar  mb-4" onclick="UpdateDates()">
                     Guardar Cambios
                   </button>
                 </div>

@@ -93,6 +93,10 @@
     display: flex;
 }
 
+.titulos{
+    max-width: 35ch;
+}
+
 .organizar{
     border-radius: 30vh;
     width: 20vh;
