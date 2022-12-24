@@ -16,7 +16,9 @@ input[type=number] { -moz-appearance:textfield; }
         "Menu contenido";
 }
 
-
+.titulosTabla{
+    width: 100vw;
+}
 
 .margenIzquierda {
     margin-left: 1vw;
@@ -113,7 +115,7 @@ input[type=number] { -moz-appearance:textfield; }
     font-style: normal;
     font-weight: 900;
     font-size: 2vw;
-    line-height: 2vh;
+    line-height: 1.5vh;
     /* identical to box height */
 
 
@@ -203,9 +205,30 @@ input[type=number] { -moz-appearance:textfield; }
     color: #540D6E;
 }
 
+.dt-button {
+    font-family: 'Be Vietnam';
+    width: 6.5vw;
+    height: 2vw;
+    font-size: 0.1vh !important;
+    padding-top: 0.7vw !important;
+    background: #DCF763 !important;
+    border-radius: 1vw !important;
+    border-color: #FFFFFF !important;
+}
+
 .headerForm {
     display: flex;
     align-items: center;
+}
+.columnaProyecto{
+    width: 25%;
+}
+.columnaEstado{
+    width: 18%;
+}
+
+.scrollTablita{
+    overflow-y: scroll;
 }
 
 .bloqueDashboard {
@@ -305,13 +328,16 @@ input[type=number] { -moz-appearance:textfield; }
 
 .tablita {
     width: 100%;
-
+    padding-top: 1vw;
 }
 
 .bordeAbajo {
     border-bottom: 0.3vh solid #031C54;
 }
-
+.iconoMenu{
+    margin-right: 0.5vw;
+    width: 1vw;
+}
 .bordeDerecha {
     border-right: 0.3vh solid #031C54;
 }

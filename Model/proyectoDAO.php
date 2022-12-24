@@ -30,7 +30,7 @@ class proyectoDAO extends Query
 
   public function getProyecto($id)
   {
-    $sql = "SELECT p.id_proyecto,p.titulo,p.foto,p.abstrac,p.monto_financiacion,COUNT(d.monto),SUM(d.monto) FROM proyecto p LEFT JOIN donacion d ON d.id_proyecto=p.id_proyecto WHERE p.id_proyecto ='$id' GROUP BY p.id_proyecto";
+    $sql = "SELECT p.id_proyecto,p.titulo,p.video,p.abstrac,p.monto_financiacion,COUNT(d.monto),SUM(d.monto),p.fecha_comienzo,p.fecha_final FROM proyecto p JOIN donacion d ON d.id_proyecto=p.id_proyecto WHERE p.id_proyecto='$id'";
     $data = $this->select($sql);
     return $data;
   }

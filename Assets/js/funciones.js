@@ -77,8 +77,8 @@ function listarGaleriaDes() {
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
-      res.forEach((element,i) => {
-        crearCardDes(element,i);
+      res.forEach((element, i) => {
+        crearCardDes(element, i);
       });
     }
   };
@@ -166,7 +166,7 @@ function crearCadGaleria(element) {
   divCardGal.setAttribute("id", element.id_proyecto);
   let divImg = document.createElement("div");
   let img = document.createElement("img");
-  img.setAttribute("class", "imageDestacado");
+  img.setAttribute("class", "imageGaleria");
   img.setAttribute("src", element.foto);
   divImg.appendChild(img);
   divCardGal.appendChild(divImg);
@@ -177,34 +177,42 @@ function crearCadGaleria(element) {
 
 function crearCardDes(element, i) {
   document.getElementById(`imagenDes${i}`).setAttribute("src", element.foto);
-  document.getElementById(`tituloDes${i}`).innerText=element.titulo;
-  document.getElementById(`absText${i}`).innerText=element.abstrac;
-  document.getElementById(`metaDes${i}`).innerText=`Meta ${element.monto_financiacion} cop`;
-  document.getElementById(`barraDes${i}`)
+  document.getElementById(`tituloDes${i}`).innerText = element.titulo;
+  document.getElementById(`absText${i}`).innerText = element.abstrac;
+  document.getElementById(
+    `metaDes${i}`
+  ).innerText = `Meta ${element.monto_financiacion} cop`;
+  document
+    .getElementById(`barraDes${i}`)
     .setAttribute(
       "style",
       `width:${(element["SUM(d.monto)"] * 100) / element.monto_financiacion}%;`
     );
-  document.getElementById(`btnCardDes${i}`)
-    .setAttribute(
-    "href",`
-    ${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`);
+  document.getElementById(`btnCardDes${i}`).setAttribute(
+    "href",
+    `
+    ${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`
+  );
 }
 
 function crearCardCaro(element, i) {
   document.getElementById(`imgCarusel${i}`).setAttribute("src", element.foto);
-  document.getElementById(`caruselTitulo${i}`).innerText=element.titulo;
-  document.getElementById(`caruselAbs${i}`).innerText=element.abstrac;
-  document.getElementById(`caruselMeta${i}`).innerText=`Meta ${element.monto_financiacion} cop`;
-  document.getElementById(`barraMeta${i}`)
+  document.getElementById(`caruselTitulo${i}`).innerText = element.titulo;
+  document.getElementById(`caruselAbs${i}`).innerText = element.abstrac;
+  document.getElementById(
+    `caruselMeta${i}`
+  ).innerText = `Meta ${element.monto_financiacion} cop`;
+  document
+    .getElementById(`barraMeta${i}`)
     .setAttribute(
       "style",
       `width:${(element["SUM(d.monto)"] * 100) / element.monto_financiacion}%;`
     );
-  document.getElementById(`btnCarusel${i}`)
-    .setAttribute(
-    "href",`
-    ${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`);
+  document.getElementById(`btnCarusel${i}`).setAttribute(
+    "href",
+    `
+    ${base_url}proyecto/listarProyecto?id_proyecto=${element.id_proyecto}`
+  );
 }
 
 function creacionCardBody(element) {

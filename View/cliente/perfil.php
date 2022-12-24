@@ -33,12 +33,16 @@
             </div>
           </div>
         <?php } else { ?>
-          <div class="fondoBlanco pantallaInicialDashboard">
+          <div class=" pantallaInicialDashboard">
+            <div>
+              <p class="tituloFormSubirProyecto">Proyectos Subidos</p>
+              <p class="subtituloFormSubirProyecto">Los proyectos que has creado y su estado</p>
+            </div>
             <table id="tblProyectos" class="display tablita" style="width:100%">
               <thead>
                 <tr>
-                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Proyecto</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo"><strong>Estado</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo columnaProyecto"><strong>Proyecto</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo columnaEstado"><strong>Estado</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Comentarios</strong></th>
                   <th data-class-name="bordeAbajo"></th>
                 </tr>
@@ -110,12 +114,15 @@
               <input class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
               <input type="number" class="grupoInput1" id="duracion" name="duracion" name="duracion" placeholder="Duración de la campaña">
             </div>
-            <div class="grupoInputsForm">
+            <div class="grupoInputsForm">              
               <input type="date" class="grupoInput1" id="comienzo" name="comienzo" name="comienzo">
+              <input class="grupoInput1" type="date" name="final" id="final">
               <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
             </div>
             <div class="grupoInputsForm">
-              <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10"></textarea>
+              <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10" placeholder="Informacion Adicional"></textarea>
+            </div>
+            <div class="grupoInputsForm">
             </div>
             <div class="list-group"><a href="#v-pills-subir-proyecto-3" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos2('v-pills-subir-proyecto-2','v-pills-subir-proyecto-3')">Subir
                 Proyecto >></a></div>
@@ -174,12 +181,12 @@
           <p class="tituloFormSubirProyecto">Proyectos Donados</p>
           <p class="subtituloFormSubirProyecto">Los proyectos que estas ayudando a que se hagan realidad </p>
         </div>
-        <table class="tablita" style="width:100%;" id="Donaciones">
+        <table class="display tablita scrollTablita" style="width:100% !important;" id="Donaciones">
           <thead>
             <tr>
-              <th data-class-name="bordeDerecha bordeAbajo"><strong>Proyecto</strong></th>
-              <th data-class-name="bordeDerecha bordeAbajo"><strong>Cantidad</strong></th>
-              <th data-class-name="bordeDerecha bordeAbajo"><strong>Fecha</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo "><strong>Proyecto</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo "><strong>Cantidad</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo "><strong>Fecha</strong></th>
               <th data-class-name="bordeAbajo"></th>
             </tr>
           </thead>
@@ -285,7 +292,7 @@
 <script>
   const id_usuario = "<?php echo $_SESSION['id'] ?>"
 </script>
-<script src="<?php echo BASE_URL; ?>Assets/js/DataTable.js"></script>
+
 <script src="<?php echo BASE_URL; ?>Assets/js/Dashboard.js"></script>
 </body>
 

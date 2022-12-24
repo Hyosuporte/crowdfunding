@@ -166,33 +166,4 @@ class proyecto extends Controller
         die();
     }
 
-    public function UpdateEstado()
-    {
-        $id = $_GET['id_proyecto'];
-        $estado = $_GET['estado'];
-        $data = $this->model->UpdateEstado($id,$estado);
-        if ($data === 1) {
-            $msg = "exito";
-        } else {
-            $msg = "fallo";
-        }
-        echo json_encode($msg, JSON_UNESCAPED_UNICODE);
-        die();
-    }
-
-    public function UpdateObser()
-    {
-        $id = $_GET['id_proyecto'];
-        $obser = $_GET['obser'];
-        $data = $this->model->UpdateObser($id, $obser);
-        if ($data === 1) {
-            $msg = "exito";
-        } else {
-            $msg = "fallo";
-        }
-        echo json_encode($msg, JSON_UNESCAPED_UNICODE);
-        die();
-    }
-
-
 }
