@@ -113,12 +113,15 @@
               <input class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
               <input type="number" class="grupoInput1" id="duracion" name="duracion" name="duracion" placeholder="Duración de la campaña">
             </div>
-            <div class="grupoInputsForm">
+            <div class="grupoInputsForm">              
               <input type="date" class="grupoInput1" id="comienzo" name="comienzo" name="comienzo">
+              <input class="grupoInput1" type="date" name="final" id="final">
               <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
             </div>
             <div class="grupoInputsForm">
               <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10" placeholder="Informacion Adicional"></textarea>
+            </div>
+            <div class="grupoInputsForm">
             </div>
             <div class="list-group"><a href="#v-pills-subir-proyecto-3" class="botonForm" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="verificarCampos2('v-pills-subir-proyecto-2','v-pills-subir-proyecto-3')">Subir
                 Proyecto >></a></div>

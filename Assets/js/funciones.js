@@ -166,7 +166,7 @@ function crearCadGaleria(element) {
   divCardGal.setAttribute("id", element.id_proyecto);
   let divImg = document.createElement("div");
   let img = document.createElement("img");
-  img.setAttribute("class", "imageDestacado");
+  img.setAttribute("class", "imageGaleria");
   img.setAttribute("src", element.foto);
   divImg.appendChild(img);
   divCardGal.appendChild(divImg);
