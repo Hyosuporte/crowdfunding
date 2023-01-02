@@ -62,13 +62,13 @@
         </div>
         <div class="principalAprende">
             <div class="menu">
-                <img class="imagenMenu" src="<?php echo BASE_URL; ?>Assets/img/imagen2Banner2.svg" alt="">
+                <img class="imagenMenu" src="<?php echo BASE_URL; ?>uploadeddocuments/18.jpeg" alt="">
             </div>
             <div class="cartas">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Aprende / General / ¿Entonces, ¿Qué es el crowdfunding?</h5>
-                        <h2 class="tituloItem">¿Entonces, ¿Qué es el crowdfunding?</h2>
+                        <h5 class="card-title">Aprende / General / ¿Qué es el crowdfunding?</h5>
+                        <h2 class="tituloItem">¿Qué es el crowdfunding?</h2>
                         <p class="textoItem">El crowdfunding es la práctica de financiar un proyecto o empresa
                             recaudando dinero de un gran número de personas. El crowdfunding se
                             puede usar para causas personales como emergencias médicas, pero se usa

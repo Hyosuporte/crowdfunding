@@ -1,7 +1,7 @@
 if (document.getElementById("tblProyectosAdm") != null) {
   $(document).ready(function () {
     $("#tblProyectosAdm").DataTable({
-      scrollY: "500px",
+      scrollY: "50vh",
       scrollCollapse: true,
       paging: false,
       ordering: false,
@@ -37,13 +37,24 @@ if (document.getElementById("tblProyectosAdm") != null) {
   });
 }
 
+function fingirArchivos(){
+  Swal.fire({
+    position: "center",
+    icon: "succes",
+    title: "Proyecto Subido",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+}
+
+
 if (document.getElementById("tblProyectos") != null) {
   $(document).ready(function () {
     desaparecerVista("v-pills-subir-proyecto-1");
     desaparecerVista("v-pills-subir-proyecto-2");
     desaparecerVista("v-pills-subir-proyecto-3");
     $("#tblProyectos").DataTable({
-      scrollY: "500px",
+      scrollY: "50vh",
       scrollCollapse: true,
       paging: false,
       ordering: false,

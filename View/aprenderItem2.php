@@ -62,7 +62,7 @@
         </div>
         <div class="principalAprende">
             <div class="menu">
-                <img class="imagenMenu" src="<?php echo BASE_URL; ?>Assets/img/imagen2Banner2.svg" alt="">
+                <img class="imagenMenu" src="<?php echo BASE_URL; ?>uploadeddocuments/21.jpeg" alt="">
             </div>
             <div class="cartas">
                 <div class="card">

@@ -92,9 +92,19 @@ input[type=number] { -moz-appearance:textfield; }
     border: 1px solid #031C54;
     padding-left: 2vw;
     margin-top: 1vh;
-    margin-bottom: 1vh;
     color: #031C54;
     font-size: 1.5vw;
+}
+
+.labelInputs{
+    margin-left: 2vw;
+}
+.labelInputs2{
+    margin-left: 20vw;
+}
+
+.labelFoto{
+    margin-top: -1vw;
 }
 
 .inputGrandeFormArea {
@@ -115,7 +125,7 @@ input[type=number] { -moz-appearance:textfield; }
     font-style: normal;
     font-weight: 900;
     font-size: 2vw;
-    line-height: 1.5vh;
+    line-height: 1vh;
     /* identical to box height */
 
 
@@ -225,6 +235,10 @@ input[type=number] { -moz-appearance:textfield; }
 }
 .columnaEstado{
     width: 18%;
+}
+
+.headerTabla{
+    width: 100%;
 }
 
 .scrollTablita{
@@ -346,26 +360,52 @@ input[type=number] { -moz-appearance:textfield; }
     border-left: 0.3vh solid #031C54;
 }
 
-.botonFormActualizar {
-    background: #DCF763;
-    border-radius: 30px;
-    border: 0px;
-    width: 15vw;
-    height: 4vh;
-    color: #031C54;
-    font-family: 'TT Norms';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 2.5vh;
-    margin-top: 3vh;
-    padding-left: 0.5vw;
-    padding-top: 0.5vh;
+@media  (min-width: 1810px){
+    .botonFormActualizar {
+        background: #DCF763;
+        border-radius: 30px;
+        border: 0px;
+        width: 15vw;
+        height: 6vh;
+        color: #031C54;
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2.5vh;
+        padding-left: 0.5vw;
+        padding-top: 0.5vh;
+        margin-top: 1vw;
+    }
 }
+@media  (max-width: 1809px){
+    .botonFormActualizar {
+        background: #DCF763;
+        border-radius: 30px;
+        border: 0px;
+        width: 15vw;
+        height: 5vh;
+        color: #031C54;
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2.5vh;
+        padding-left: 0.5vw;
+        padding-top: 0.5vh;
+    }
+
+}
+
 
 .inputActualizarDatos {
     border-radius: 30px;
     border: 1px solid #031C54;
+    height: 3vw;
+    font-size: 1.5vw;
+}
 
+.selectCiudad{
+    font-size: 1.5vw;
+    height: 3vw;
 }
 
 .fondoDashboard {

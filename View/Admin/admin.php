@@ -33,12 +33,12 @@
           </table>
         </div>
       </div>
-      <div class="tab-pane fade fondoDashboard fondoBlanco pantallaInicialDashboard contenido" role="tabpanel1" id="perfil">
+      <div class="tab-pane fade fondoDashboard fondoBlanco pantallaInicialDashboard contenido scrollTablita" role="tabpanel1" id="perfil">
         <div>
           <p class="tituloFormSubirProyecto">Proyectos Donados</p><br>
         </div>
-        <table class="tablita" style="width:100%" id="tblDonadores">
-          <thead>
+        <table class="tablita " style="width:100%" id="tblDonadores">
+          <thead class="headerTabla">
             <tr>
               <th data-class-name="bordeDerecha bordeAbajo">Proyecto</th>
               <th data-class-name="bordeDerecha bordeAbajo">Total Donaciones</th>
@@ -57,7 +57,7 @@
         <table id="tblInteresados" data-class-name="tablita" style="width:100%">
           <thead>
             <tr>
-              <th class=" bordeAbajo">Correos</th>
+              <th data-class-name=" bordeAbajo">Correos</th>
             </tr>
           </thead>
           <tbody id="Correos">

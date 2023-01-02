@@ -179,26 +179,49 @@ body {
 
 .imagenCarusel {
     width: 50vh;
+    height: 40vh;
 }
-
-.botonFormRegistro {
-    font-family: 'TT Norms';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1vw;
-    line-height: 29px;
-    width: 30vh;
-    height: 50px;
-    border-width: 0px;
-    background: #DCF763;
-    border-radius: 30px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    color: #031C54;
-    margin: auto;
-    margin-bottom: 1vw;
-    padding-left: 6vw;
+@media  (min-width: 1810px){    
+    .botonFormRegistro {
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 29px;
+        width: 30vh;
+        height: 50px;
+        border-width: 0px;
+        background: #DCF763;
+        border-radius: 30px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        color: #031C54;
+        margin: auto;
+        margin-bottom: 1vw;
+        padding-left: 4.5vw;
+    }
+}
+@media  (max-width: 1809px){    
+    .botonFormRegistro {
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 29px;
+        width: 30vh;
+        height: 50px;
+        border-width: 0px;
+        background: #DCF763;
+        border-radius: 30px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        color: #031C54;
+        margin: auto;
+        margin-bottom: 1vw;
+        padding-left: 4vw;
+    }
 }
 
 .imagen1Paso2 {
@@ -284,21 +307,6 @@ body {
     border-right-width: 3px;
     border-bottom-width: 3px;
     border-left-width: 3px;
-}
-
-.botonLogin {
-    width: 50vh;
-    height: 60px;
-    font-family: 'TT Norms', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    margin-left: 3rem;
-    border-width: 0;
-    background: #DCF763;
-    border-radius: 30px;
-    color: #031C54;
 }
 
 .Bloque {
@@ -763,6 +771,7 @@ body {
     color: #031C54;
     padding-left: 3vw;
     margin: auto;
+    margin-top: 0.8vw;
 }
 
 .botonCarusel {
@@ -783,24 +792,47 @@ body {
     padding-left: 3.5vw;
     margin: auto;
 }
+@media  (min-width: 1810px){
 
-.botonLogin {
-    font-family: 'TT Norms', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1vw;
-    line-height: 29px;
-    width: 30vh;
-    height: 50px;
-    border-width: 0px;
-    background: #DCF763;
-    border-radius: 30px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    color: #031C54;
-    padding-left: 6vw;
-    margin: auto;
+    
+    .botonLogin {
+        font-family: 'TT Norms', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2.5vw;
+        line-height: 29px;
+        width: 30vh;
+        height: 50px;
+        border-width: 0px;
+        background: #DCF763;
+        border-radius: 30px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        color: #031C54;
+        padding-left: 4vw;
+        margin: auto;
+    }    
+} 
+@media  (max-width: 1809px){
+    .botonLogin {
+        font-family: 'TT Norms', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.5vw;
+        line-height: 29px;
+        width: 30vh;
+        height: 50px;
+        border-width: 0px;
+        background: #DCF763;
+        border-radius: 30px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        color: #031C54;
+        padding-left: 5vw;
+        margin: auto;
+    }
 }
 
 .imagenBannerLanding {
@@ -818,30 +850,28 @@ body {
 }
 
 /* For Desktop View */
-@media screen and (min-width: 500px) {
+@media  (min-width: 1810px) {
     .tituloBannerLanding2 {
         font-family: 'TT Norms';
         font-style: normal;
         font-weight: 900;
-        font-size: 2vw;
+        font-size: 5vw;
         line-height: 4vw;
         margin-top: 2vw;
     
         color: #F5F0F5;
-    
     }
 }
-@media screen and (max-width: 500px) {
+@media  (max-width: 1809px) {
     .tituloBannerLanding2 {
         font-family: 'TT Norms';
         font-style: normal;
         font-weight: 900;
-        font-size: 1vw;
-        line-height: 1vw;
+        font-size: 3vw;
+        line-height: 2.5vw;
         margin-top: 2vw;
     
         color: #F5F0F5;
-    
     }
     
 }
@@ -1059,6 +1089,7 @@ body {
 
 .bloqueCaruselItem {
     display: flex;
+    height: 30vw;
 }
 
 .caruselTitulo {
@@ -1117,14 +1148,28 @@ body {
     margin-left: 10%;
 }
 
-.formLogin {
-    width: 50vw;
-    height: 76vh;
-    background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
-    border-radius: 30px;
-    display: block;
-    padding: 1vw;
-    padding-right: 1vw;
+@media  (min-width: 1810px) {
+    .formLogin {
+        width: 50vw;
+        height: 76vh;
+        background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+        border-radius: 30px;
+        display: block;
+        padding: 1vw;
+        padding-right: 1vw;
+    }    
+}
+
+@media  (max-width: 1809px){
+    .formLogin {
+        width: 50vw;
+        height: 80vh;
+        background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+        border-radius: 30px;
+        display: block;
+        padding: 1vw;
+        padding-right: 1vw;
+    }    
 }
 
 .aunRegistrarse {
@@ -1196,19 +1241,37 @@ body {
     color: #F5F0F5;
 }
 
-.formLoginTitulo {
-    margin: auto;
-    width: 80vh;
-    font-family: 'TT Norms', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 2vw;
-    line-height: 38px;
-    text-align: center;
-
-
-    color: #F5F0F5;
+@media  (min-width: 1810px){
+    .formLoginTitulo {
+        margin: auto;
+        width: 80vh;
+        font-family: 'TT Norms', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 38px;
+        text-align: center;
+        margin-top: 6vw;
+    
+        color: #F5F0F5;
+    }
 }
+@media  (max-width: 1809px){
+    .formLoginTitulo {
+        margin: auto;
+        width: 80vh;
+        font-family: 'TT Norms', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 38px;
+        text-align: center;
+        margin-top: 3vw;
+    
+        color: #F5F0F5;
+    }
+}
+
 
 .linkRegistrarse {
     font-family: 'Be Vietnam';

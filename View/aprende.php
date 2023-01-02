@@ -73,10 +73,10 @@
                         <div class="filaTemas">
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/18.jpeg" alt="">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="tituloTema">¿Entonces, ¿Qué es el crowdfunding?</h5>
+                                    <h5 class="tituloTema">¿Qué es el crowdfunding?</h5>
                                     <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
@@ -84,7 +84,7 @@
                             </div>
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/21.jpeg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿Cómo elegir la plataforma adecuada para tu campaña?</h5>
@@ -97,7 +97,7 @@
                         <div class="filaTemas">
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/22.jpg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿Qué tipo de crowdfunding existe?</h5>
@@ -108,7 +108,7 @@
                             </div>
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/19.jpeg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿De qué depende el éxito de mi campaña?</h5>
@@ -121,7 +121,7 @@
                         <div class="filaTemas">
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/imagenTema1.svg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/20.jpeg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿Por qué hacer una campaña para financiar un proyecto de la industria creativa?</h5>

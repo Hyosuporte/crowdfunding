@@ -15,6 +15,7 @@
 }
 .imagenMenu{
     width: 20vw;
+    
 }
 
 .principalAprende {
@@ -84,27 +85,48 @@
     font-style: normal;
     font-weight: 900;
     font-size: 1.5vw;
-    line-height: 38px;
+    line-height: 1vw;
 
     color: #031C54;
 }
+@media  (min-width: 1810px) {
+    .botonCardTema {
+        margin-left: 10vh;
+        padding-left: 8vh;
+        font-family:  'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.5vw;
+        line-height: 1vw;
+        width: 30vh;
+        height: 50px;
+        border-width: 0px;
+        background: #DCF763;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        color: #031C54;
+    }
+}
 
-.botonCardTema {
-    margin-left: 10vh;
-    padding-left: 10vh;
-    font-family:  'TT Norms';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1vw;
-    line-height: 29px;
-    width: 30vh;
-    height: 50px;
-    border-width: 0px;
-    background: #DCF763;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    color: #031C54;
+@media  (max-width: 1809px){
+    .botonCardTema {
+        margin-left: 10vh;
+        padding-left: 7vh;
+        font-family:  'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.5vw;
+        line-height: 1vw;
+        width: 30vh;
+        height: 50px;
+        border-width: 0px;
+        background: #DCF763;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        color: #031C54;
+    }
 }
 
 .botonCardTema img {
@@ -128,6 +150,7 @@
     font-weight: 900;
     font-size: 3vw;
 
+    margin-bottom: 1vw;
     color: #031C54;
 }
 

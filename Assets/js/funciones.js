@@ -162,7 +162,7 @@ function crearFila(numFil) {
 
 function crearCadGaleria(element) {
   let divCardGal = document.createElement("div");
-  divCardGal.setAttribute("class", "card cardGaleria");
+  divCardGal.setAttribute("class", "card cardGaleria ");
   divCardGal.setAttribute("id", element.id_proyecto);
   let divImg = document.createElement("div");
   let img = document.createElement("img");
@@ -223,10 +223,10 @@ function creacionCardBody(element) {
   let divProgress = document.createElement("div");
   let ver = document.createElement("a");
   divBody.setAttribute("class", "card-body");
-  h5.setAttribute("class", "tituloCardDestacado");
+  h5.setAttribute("class", "tituloCardDestacado titulos");
   h5.innerHTML =
     element.titulo +
-    ` <p style="text-indent:22vw;"><img src="` +
+    ` <p style="text-indent:1vw;"><img src="` +
     base_url +
     `Assets/img/personas.svg" alt="">  ${element["COUNT(d.monto)"]}/D</p>`;
   p1.setAttribute("class", "textoCard");
