@@ -363,7 +363,7 @@ function subirProyecto() {
         })
           .then((response) => response.json())
           .then((data) => {
-            console.log("Tod bien");
+            console.log(data);
           });
       } else {
         Swal.fire({

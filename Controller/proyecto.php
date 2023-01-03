@@ -37,7 +37,6 @@ class proyecto extends Controller
     public function subirArchivo($name)
     {
         $fichero_subido = dir_subida . basename($_FILES[$name]['name']);
-        echo $_FILES[$name]['name'];
         if (move_uploaded_file($_FILES[$name]['tmp_name'], $fichero_subido)) {
             $fichero_subido = 'http:\\localhost\\crowdfunding\\uploadeddocuments\\' . basename($_FILES[$name]['name']);
         }
