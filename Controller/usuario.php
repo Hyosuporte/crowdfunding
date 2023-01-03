@@ -17,10 +17,12 @@ class usuario extends Controller
             $data = $this->model->getEmail($email);
             if ($data) {
                 if (password_verify($password, $data['password'])) {
+                    $miToken = bin2hex(random_bytes(32));
                     $_SESSION['id'] = $data['id_usuario'];
                     $_SESSION['nombre'] = $data['primer_nombre'];
                     $_SESSION['usuario'] = $data['correo'];
                     $_SESSION['rol'] = $data['rol'];
+                    $_SESSION['miToken'] = $miToken;
                     $msg = $data['rol'];
                 } else {
                     $msg = "Usuario o contraseña incorrecta";

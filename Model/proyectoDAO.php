@@ -48,4 +48,17 @@ class proyectoDAO extends Query
     $datos = $this->selectAll($sql);
     return $datos;
   }
+
+  public function insertarProy($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional, $id, $id_organizacion)
+  {
+    $sql = "INSERT INTO proyecto(camara_comercio, RUT,rep_legal,cedula,bancario,aprob_donacion, form_declaraciones,keywords,tiempo_ejecucion,titulo,foto,duracion_campana,fecha_comienzo,fecha_final, abstrac, indicador_impacto,monto_financiacion,video,informacion_adicional,id_usuario,id_organizacion) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    $datos = array($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional, $id, $id_organizacion);
+    $data = $this->save($sql, $datos);
+    if ($data == 1) {
+      $res = "ok";
+    } else {
+      $res = "error";
+    }
+    return $res;
+  }
 }

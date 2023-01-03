@@ -4,6 +4,7 @@ class proyecto extends Controller
 {
     public function __construct()
     {
+        session_start();
         parent::__construct();
     }
 
@@ -27,7 +28,7 @@ class proyecto extends Controller
                 </select>';
             }
             $data[$i]['observaciones'] = '<div>
-                <textarea id="observaciones'. $i . '" cols="18" rows="2" onchange="UpdateObser(' . $data[$i]['id_proyecto'] . ',' . $i . ')">' . $data[$i]['observaciones'] . '</textarea></div>';
+                <textarea id="observaciones' . $i . '" cols="18" rows="2" onchange="UpdateObser(' . $data[$i]['id_proyecto'] . ',' . $i . ')">' . $data[$i]['observaciones'] . '</textarea></div>';
         }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
@@ -45,41 +46,36 @@ class proyecto extends Controller
 
     public function insertarproyecto()
     {
-        $keywords = strClean($_POST['keywords']);
-        $tiempo_ejecucion = strClean($_POST['ejecucion']);
         $titulo = strClean($_POST['titulo']);
-        $duracion_campaña = strClean($_POST['ejecucion']); //pendiente actualizar
-        $fecha_comienzo = strClean($_POST['ejecucion']); //pendiente actualizar
-        $fecha_final = strClean($_POST['final']);
-        $abstrac = strClean($_POST['Abstract']);
         $indicador = strClean($_POST['impacto']);
         $monto = strClean($_POST['monto']);
+        $fecha_comienzo = strClean($_POST['comienzo']);
+        $tiempo_ejecucion = strClean($_POST['ejecucion']);
+        $keywords = strClean($_POST['palabras']);
         $video = strClean($_POST['video']);
-        $foto = $this->subirArchivo($_POST['foto']);
-        $info_adicional = strClean($_POST['info']);
-        $camara = $this->subirArchivo($_POST['camara']);
-        $RUT = $this->subirArchivo($_POST['RUT']);
-        $rep_legal = $this->subirArchivo($_POST['rep_legal']);
-        $cedula = $this->subirArchivo($_POST['cedula']);
-        $bancario = $this->subirArchivo($_POST['bancario']);
-        $aprob_donacion = $this->subirArchivo($_POST['aprob_donacion']);
-        $form_declaraciones = $this->subirArchivo($_POST['form_declaraciones']);
-
-        if (
-            empty($camara) || empty($RUT) || empty($rep_legal) || empty($cedula) || empty($bancario) || empty($aprob_donacion) || empty($form_declaraciones) || empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($foto) ||
-            empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador)
-            || empty($monto) || empty($video) || empty($info_adicional)
-        ) {
+        $fecha_final = strClean($_POST['final']);
+        $abstrac = strClean($_POST['resumen']);
+        $info_adicional = strClean($_POST['adicional']);
+        $duracion_campaña = strClean($_POST['duracion']);
+        $foto = $this->subirArchivo('fotoPro');
+        $RUT = $this->subirArchivo('tributario');
+        $cedula = $this->subirArchivo('cedula');
+        $aprob_donacion = $this->subirArchivo('acta');
+        $camara = $this->subirArchivo('camara');
+        $rep_legal = $this->subirArchivo('existenciaYrepresentacion');
+        $form_declaraciones = $this->subirArchivo('formulario');
+        $bancario = $this->subirArchivo('bancario');
+        $id_organizacion = 1;
+        if (empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador) || empty($monto) || empty($video) || empty($foto) || empty($info_adicional) || empty($camara) || empty($RUT) || empty($rep_legal) || empty($cedula) || empty($bancario) || empty($aprob_donacion) || empty($form_declaraciones)) {
             $msg = "Todos los campos son obligatorios";
         } else {
-            $data = $this->model->insertarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional);
+            $data = $this->model->insertarProy($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional, $_SESSION['id'], $id_organizacion);
             if ($data === "ok") {
-                $msg = "registrado";
+                $msg = "pro registrada";
             } else {
-                $msg = $data;
+                $msg = "Error";
             }
         }
-
         echo json_encode($msg, JSON_UNESCAPED_UNICODE);
         die();
     }
@@ -165,5 +161,4 @@ class proyecto extends Controller
         $this->views->getView("Home", "vistaProyecto", $data);
         die();
     }
-
 }

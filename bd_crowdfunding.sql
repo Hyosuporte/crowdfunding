@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2022 at 04:24 AM
+-- Generation Time: Dec 23, 2022 at 06:48 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `bd_crowdfunding`
 --
+DROP DATABASE IF EXISTS `bd_crowdfunding`;
+CREATE DATABASE IF NOT EXISTS `bd_crowdfunding` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `bd_crowdfunding`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +30,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `ciudad`
 --
 
+DROP TABLE IF EXISTS `ciudad`;
 CREATE TABLE `ciudad` (
   `id_ciudad` varchar(15) NOT NULL,
   `ciudad` varchar(30) NOT NULL,
@@ -72,6 +76,7 @@ INSERT INTO `ciudad` (`id_ciudad`, `ciudad`, `id_pais`) VALUES
 -- Table structure for table `donacion`
 --
 
+DROP TABLE IF EXISTS `donacion`;
 CREATE TABLE `donacion` (
   `id_donacion` varchar(250) NOT NULL,
   `monto` double NOT NULL,
@@ -82,12 +87,22 @@ CREATE TABLE `donacion` (
   `tipoPago` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `donacion`
+--
+
+INSERT INTO `donacion` (`id_donacion`, `monto`, `id_usuario`, `id_proyecto`, `fecha_donacion`, `estadoDonacion`, `tipoPago`) VALUES
+('2', 23000, 2, 1, '2022-12-22 06:40:26.000000', 'En proceso', 'Debito'),
+('donacion  1', 12000, 1, 1, '2022-12-21 02:49:12.000000', 'En proceso', 'Debito'),
+('Donacion 2', 20000, 1, 2, '2022-12-20 02:49:12.000000', 'Confirmada', 'Credito');
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `estado`
 --
 
+DROP TABLE IF EXISTS `estado`;
 CREATE TABLE `estado` (
   `id_estado` int(11) NOT NULL,
   `estado` varchar(20) NOT NULL
@@ -106,9 +121,22 @@ INSERT INTO `estado` (`id_estado`, `estado`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `interesados`
+--
+
+DROP TABLE IF EXISTS `interesados`;
+CREATE TABLE `interesados` (
+  `id_interesados` bigint(20) NOT NULL,
+  `correo` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `organizacion`
 --
 
+DROP TABLE IF EXISTS `organizacion`;
 CREATE TABLE `organizacion` (
   `id_organizacion` int(11) NOT NULL,
   `nombre_org` varchar(30) CHARACTER SET utf8 NOT NULL,
@@ -119,12 +147,21 @@ CREATE TABLE `organizacion` (
   `nro_cuenta` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `organizacion`
+--
+
+INSERT INTO `organizacion` (`id_organizacion`, `nombre_org`, `pagina_web`, `redes_sociales`, `telefono_contacto`, `id_tipo`, `nro_cuenta`) VALUES
+(1, 'Famizanar', '', 0, '', 3, ''),
+(2, 'Exito', '', 0, '', 3, '');
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `pais`
 --
 
+DROP TABLE IF EXISTS `pais`;
 CREATE TABLE `pais` (
   `id_pais` int(11) NOT NULL,
   `pais` varchar(30) NOT NULL
@@ -169,19 +206,20 @@ INSERT INTO `pais` (`id_pais`, `pais`) VALUES
 -- Table structure for table `proyecto`
 --
 
+DROP TABLE IF EXISTS `proyecto`;
 CREATE TABLE `proyecto` (
   `id_proyecto` int(11) NOT NULL,
-  `camara_comercio` varchar(255) NOT NULL,
-  `RUT` varchar(250) NOT NULL,
-  `rep_legal` varchar(250) NOT NULL,
-  `cedula` varchar(250) NOT NULL,
-  `bancario` varchar(250) NOT NULL,
-  `aprob_donacion` varchar(250) NOT NULL,
-  `form_declaraciones` varchar(250) NOT NULL,
+  `camara_comercio` varchar(255) DEFAULT NULL,
+  `RUT` varchar(250) DEFAULT NULL,
+  `rep_legal` varchar(250) DEFAULT NULL,
+  `cedula` varchar(250) DEFAULT NULL,
+  `bancario` varchar(250) DEFAULT NULL,
+  `aprob_donacion` varchar(250) DEFAULT NULL,
+  `form_declaraciones` varchar(250) DEFAULT NULL,
   `keywords` varchar(100) NOT NULL,
   `tiempo_ejecucion` varchar(15) NOT NULL,
   `titulo` varchar(50) NOT NULL,
-  `foto` int(255) NOT NULL,
+  `foto` varchar(255) NOT NULL,
   `duracion_campana` varchar(10) NOT NULL,
   `fecha_comienzo` date NOT NULL DEFAULT current_timestamp(),
   `fecha_final` date NOT NULL,
@@ -189,9 +227,26 @@ CREATE TABLE `proyecto` (
   `indicador_impacto` varchar(80) NOT NULL,
   `monto_financiacion` double NOT NULL,
   `video` varchar(250) NOT NULL,
-  `id_estado` int(11) NOT NULL,
-  `informacion_adicional` varchar(250) NOT NULL
+  `id_estado` int(11) NOT NULL DEFAULT 3,
+  `informacion_adicional` varchar(250) NOT NULL,
+  `id_usuario` bigint(20) NOT NULL,
+  `id_organizacion` int(11) NOT NULL,
+  `observaciones` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `proyecto`
+--
+
+INSERT INTO `proyecto` (`id_proyecto`, `camara_comercio`, `RUT`, `rep_legal`, `cedula`, `bancario`, `aprob_donacion`, `form_declaraciones`, `keywords`, `tiempo_ejecucion`, `titulo`, `foto`, `duracion_campana`, `fecha_comienzo`, `fecha_final`, `abstrac`, `indicador_impacto`, `monto_financiacion`, `video`, `id_estado`, `informacion_adicional`, `id_usuario`, `id_organizacion`, `observaciones`) VALUES
+(1, '', '', '', '', '', '', '', 'territorio', '3', 'mi proyecto', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\2.jpg', '3', '2022-10-19', '2022-12-20', 'hGASFJGfjFS', '3', 45000, '', 1, 'SDFSDFCSC', 1, 1, 'zzzzz'),
+(2, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\2.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\2.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\2.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\2.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\2.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\2.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\2.jpg', 'Salud,EPS,Seguridad', '12', 'Famizanar', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\2.jpg', '12', '2022-12-16', '2022-12-23', 'Centro de salud para los colombianos', '80000', 80000, 'https://www.youtube.com', 1, 'Ninguna', 1, 2, ''),
+(3, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\3.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\3.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\3.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\3.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\3.jpg', 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\3.jpg', 'VideoJuegos,Recreacion', '15', 'Nintendo', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\2.jpg', '16', '2022-12-16', '2022-12-29', 'Empresa de videojuegos con enfoque infantil para la comunidad joven', '7000', 95000, 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\3.jpg', 1, 'C:\\xampp\\htdocs\\crowdfunding\\uploadeddocuments\\3.jpg', 1, 1, ''),
+(4, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'Proyecto de Ganyu', '12', 'UwU Ganyu', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', '12', '2022-12-22', '2022-12-22', 'Besto reina ganyu', '12', 75000, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 1, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 1, 1, ''),
+(5, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 'No se wey', '176', 'Exito', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', '16', '2022-12-14', '2022-12-22', 'Aqui podemos ver a una humilde cabrita', '45', 95000, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 1, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\3.jpg', 1, 1, ''),
+(6, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'Aleluya', '45', 'Left of dead 4', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', '15', '2022-12-22', '2022-12-22', 'un videojuego de zombies y no se que mas', '15', 45000, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 1, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 1, 2, 'Muy barato'),
+(7, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 'LOL', '25', 'Liga de legendas', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', '67', '2022-12-14', '2022-12-22', 'Un lugar donde todos los inadactados sociales se reunen', '546', 48620, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 2, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\4.jpg', 1, 2, 'Ninguna'),
+(8, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', 'Mucho texto', '13', 'Asus', 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', '67', '2022-12-15', '2022-12-30', 'Empresa de computadores de oficina y de gamen', '5', 86500, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', 1, 'http:\\\\localhost\\\\crowdfunding\\\\uploadeddocuments\\\\5.jpg', 1, 2, 'Por favor subir su video de youtube');
 
 -- --------------------------------------------------------
 
@@ -199,10 +254,18 @@ CREATE TABLE `proyecto` (
 -- Table structure for table `telefono`
 --
 
+DROP TABLE IF EXISTS `telefono`;
 CREATE TABLE `telefono` (
   `id_telefono` varchar(12) NOT NULL,
   `id_usuario_telefono` bigint(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `telefono`
+--
+
+INSERT INTO `telefono` (`id_telefono`, `id_usuario_telefono`) VALUES
+('3142005697', 1);
 
 -- --------------------------------------------------------
 
@@ -210,6 +273,7 @@ CREATE TABLE `telefono` (
 -- Table structure for table `tipos_organizacion`
 --
 
+DROP TABLE IF EXISTS `tipos_organizacion`;
 CREATE TABLE `tipos_organizacion` (
   `id_tipos` int(11) NOT NULL,
   `tipos` varchar(20) NOT NULL
@@ -231,6 +295,7 @@ INSERT INTO `tipos_organizacion` (`id_tipos`, `tipos`) VALUES
 -- Table structure for table `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id_usuario` bigint(255) NOT NULL,
   `primer_nombre` varchar(20) NOT NULL,
@@ -242,6 +307,14 @@ CREATE TABLE `usuarios` (
   `rol` int(11) NOT NULL,
   `direccion` varchar(250) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `primer_nombre`, `primer_apellido`, `correo`, `password`, `id_ciudad`, `id_pais`, `rol`, `direccion`) VALUES
+(1, ' Carlos Andres', ' Cuervo Galeano', 'cacuervo120@gmail.com', '$2y$12$tBNzEcqp6oXXNUuOhOtSD.wJc0eS2edzZ.d8VAef629uV/zH3hdgS', 'Col-1', 1, 2, 'calle'),
+(2, 'Daniel Mauricio', 'Torres Martinez', 'ejemplo@gmail.com', '$2y$12$tBNzEcqp6oXXNUuOhOtSD.wJc0eS2edzZ.d8VAef629uV/zH3hdgS', 'Chi-1', 9, 1, 'Calle 2');
 
 --
 -- Indexes for dumped tables
@@ -269,6 +342,12 @@ ALTER TABLE `estado`
   ADD PRIMARY KEY (`id_estado`);
 
 --
+-- Indexes for table `interesados`
+--
+ALTER TABLE `interesados`
+  ADD PRIMARY KEY (`id_interesados`);
+
+--
 -- Indexes for table `organizacion`
 --
 ALTER TABLE `organizacion`
@@ -286,7 +365,10 @@ ALTER TABLE `pais`
 -- Indexes for table `proyecto`
 --
 ALTER TABLE `proyecto`
-  ADD PRIMARY KEY (`id_proyecto`);
+  ADD PRIMARY KEY (`id_proyecto`),
+  ADD KEY `id_estado` (`id_estado`),
+  ADD KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_organizacion` (`id_organizacion`);
 
 --
 -- Indexes for table `telefono`
@@ -314,10 +396,16 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT for table `interesados`
+--
+ALTER TABLE `interesados`
+  MODIFY `id_interesados` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -341,6 +429,14 @@ ALTER TABLE `donacion`
 --
 ALTER TABLE `organizacion`
   ADD CONSTRAINT `organizacion_ibfk_1` FOREIGN KEY (`id_tipo`) REFERENCES `tipos_organizacion` (`id_tipos`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `proyecto`
+--
+ALTER TABLE `proyecto`
+  ADD CONSTRAINT `proyecto_ibfk_1` FOREIGN KEY (`id_estado`) REFERENCES `estado` (`id_estado`) ON DELETE CASCADE,
+  ADD CONSTRAINT `proyecto_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE,
+  ADD CONSTRAINT `proyecto_ibfk_3` FOREIGN KEY (`id_organizacion`) REFERENCES `organizacion` (`id_organizacion`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `telefono`

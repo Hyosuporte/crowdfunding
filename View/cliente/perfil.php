@@ -55,12 +55,13 @@
       </div>
       <div class="tab-pane fade  fondoDashboard" id="v-pills-subir-proyecto-1" role="tabpanel" aria-labelledby="v-pills-subir-proyecto-1" tabindex="0">
         <div class="contenido">
-          <form action="">
+          <form id="frmOrganiza" enctype="multipart/form-data" method="POST">
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 1 de 3</p>
             </div>
             <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
+            <input class="inputGrandeForm" type="hidden" name="miToken" id="miToken" value="<?php echo $_SESSION['miToken']; ?>">
             <input class="inputGrandeForm" type="number" name="nit" id="nit" placeholder="NIT">
             <input class="inputGrandeForm" type="text" name="nombre" id="nombre" placeholder="Nombre de la organización*">
             <div class="grupoInputsForm">
@@ -93,7 +94,7 @@
       </div>
       <div class="tab-pane fade fondoDashboard" role="tabpanel1" id="v-pills-subir-proyecto-2">
         <div class="contenido">
-          <form action="">
+          <form id="frmProyec" enctype="multipart/form-data" method="POST">
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 2 de 3</p>
@@ -101,7 +102,7 @@
             <p class="subtituloFormSubirProyecto">Datos del proyecto</p>
             <input class="inputGrandeForm" type="text" name="titulo" id="titulo" placeholder="Titulo del proyecto*">
             <div class="grupoInputsForm">
-              <input type="text" class="grupoInput1" placeholder="Palabras Clave**" required id="palabras" id="palabras" name="palabras">
+              <input type="text" class="grupoInput1" placeholder="Palabras Clave*" required id="palabras" name="palabras">
               <input type="number" class="grupoInput1" placeholder="Indicador Impacto*" required id="impacto" name="impacto">
             </div>
             <textarea class="inputTextArea" name="resumen" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
@@ -109,21 +110,21 @@
               <label class="labelInputs labelFoto" for="comienzo">Foto</label>
             </div>
             <div class="grupoInputsForm">
-              <input class="inputFileForm" type="file" name="foto" id="foto" style="width: 100%;">
+              <input class="inputFileForm" type="file" name="fotoPro" id="foto" style="width: 100%;">
               <input class="grupoInput1" type="text" name="video" id="video" placeholder="URL Video*">
             </div>
             <div class="grupoInputsForm">
               <input class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
-              <input type="number" class="grupoInput1" id="duracion" name="duracion" name="duracion" placeholder="Duración de la campaña">
+              <input type="number" class="grupoInput1" id="duracion" name="duracion" placeholder="Duración de la campaña">
             </div>
             <div class="grupoInputsForm">
               <label class="labelInputs" for="comienzo">Fecha Comienzo</label>
               <label class="labelInputs2" for="final">Fecha Final</label>
             </div>
             <div class="grupoInputsForm">
-              <input type="date" class="grupoInput1" id="comienzo" name="comienzo" name="comienzo">
+              <input type="date" class="grupoInput1" id="comienzo" name="comienzo">
               <input class="grupoInput1" type="date" name="final" id="final">
-              <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
+              <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
             </div>
             <div class="grupoInputsForm">
               <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10" placeholder="Informacion Adicional"></textarea>
@@ -135,7 +136,7 @@
       </div>
       <div class="tab-pane fade fondoDashboard" role="tabpanel1" id="v-pills-subir-proyecto-3">
         <div class="contenido">
-          <form action="">
+          <form id="frmDocuments" enctype="multipart/form-data" method="post">
             <div class="headerForm">
               <p class="tituloFormSubirProyecto">Subir Proyecto </p>
               <p class="textoPaso">Paso 3 de 3</p>
@@ -171,7 +172,7 @@
             <div class="grupoInputsForm2">
               <input class="inputFileForm" type="file" name="camara" id="camara">
             </div>
-            <button class="botonFormFinal" type="submit" onclick=" fingirArchivos()">Subir Proyecto>></button>
+            <button class="botonFormFinal" type="button" onclick="subirProyecto()">Subir Proyecto>></button>
           </form>
         </div>
       </div>

@@ -37,17 +37,6 @@ if (document.getElementById("tblProyectosAdm") != null) {
   });
 }
 
-function fingirArchivos(){
-  Swal.fire({
-    position: "center",
-    icon: "succes",
-    title: "Proyecto Subido",
-    showConfirmButton: false,
-    timer: 1500,
-  });
-}
-
-
 if (document.getElementById("tblProyectos") != null) {
   $(document).ready(function () {
     desaparecerVista("v-pills-subir-proyecto-1");
@@ -308,8 +297,7 @@ function updateEstado(id, name) {
 
 function UpdateObser(id, name) {
   const obser = document.getElementById(`observaciones${name}`).value;
-  const url =
-    base_url + `admin/UpdateObser?id_proyecto=${id}&obser=${obser}`;
+  const url = base_url + `admin/UpdateObser?id_proyecto=${id}&obser=${obser}`;
   const http = new XMLHttpRequest();
   http.open("GET", url, true);
   http.send();
@@ -338,4 +326,53 @@ function UpdateObser(id, name) {
       }
     }
   };
+}
+
+function newFromProyec(from1, from2) {
+  const frmProyecto = document.createElement("form");
+  for (let i = 0; i < 4; i++) {
+    for (const field of from1.elements) {
+      frmProyecto.appendChild(field);
+    }
+  }
+  for (let i = 0; i < 3; i++) {
+    for (const field of from2.elements) {
+      frmProyecto.appendChild(field);
+    }
+  }
+  return frmProyecto;
+}
+
+function subirProyecto() {
+  const frmOrganiza = new FormData(document.forms.frmOrganiza);
+  const newFrom = newFromProyec(
+    document.forms.frmProyec,
+    document.forms.frmDocuments
+  );
+  const frmProyec = new FormData(newFrom);
+  fetch(base_url + "organizacion/insertarorg", {
+    method: "POST",
+    body: frmOrganiza,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data == "org registrada") {
+        fetch(base_url + "proyecto/insertarproyecto", {
+          method: "POST",
+          body: frmProyec,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Tod bien");
+          });
+      } else {
+        Swal.fire({
+          position: "top-end",
+          icon: "warning",
+          title: "Error al registrar la org",
+          showConfirmButton: false,
+          timer: 2500,
+        });
+      }
+    });
 }

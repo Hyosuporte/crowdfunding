@@ -7,7 +7,7 @@ if (document.getElementById("bodyGaleria") != null) {
 if (document.getElementById("configPerfil") != null) {
   document
     .getElementById("configPerfil")
-    .addEventListener("onLoad", listarPais().then(listarDatos()), false);
+    .addEventListener("onLoad", listarDatos(), false);
 }
 
 if (document.getElementById("cardsDestacados") != null) {
@@ -84,7 +84,7 @@ function listarGaleriaDes() {
   };
 }
 
-async function listarPais() {
+function listarPais(id) {
   const url = base_url + "pais/obtenerPaises";
   const selectorPais = $("#paisUser");
   const http = new XMLHttpRequest();
@@ -103,9 +103,10 @@ async function listarPais() {
       });
     }
   };
+  $(`#paisUser option[value=${id}]`).attr("selected", true);
 }
 
-function listarCiudad() {
+function listarCiudad(id) {
   const id_pais = document.getElementById("paisUser").value;
   const selectorCiudad = $("#ciudadUser");
   for (let i = selectorCiudad.children.length; i >= 0; i--) {
@@ -145,10 +146,7 @@ function listarDatos(e) {
       document.getElementById("correo").value = res.correo;
       document.getElementById("direccion").value = res.direccion;
       document.getElementById("telefonoUser").value = res.id_telefono;
-      document
-        .getElementById("paisUser")
-        .options.item(res.id_pais - 1).selected = "selected";
-      listarCiudad();
+      listarPais(res.id_pais);
     }
   };
 }
