@@ -2,6 +2,7 @@ if (document.getElementById("tblProyectosAdm") != null) {
   $(document).ready(function () {
     $("#tblProyectosAdm").DataTable({
       scrollY: "50vh",
+      scrollX: "10vw",
       scrollCollapse: true,
       paging: false,
       ordering: false,
@@ -55,6 +56,7 @@ if (document.getElementById("tblProyectos") != null) {
     desaparecerVista("v-pills-subir-proyecto-3");
     $("#tblProyectos").DataTable({
       scrollY: "50vh",
+      scrollX: "10vw",
       scrollCollapse: true,
       paging: false,
       ordering: false,
