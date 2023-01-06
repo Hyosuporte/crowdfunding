@@ -39,7 +39,7 @@
     margin-bottom: 5vh;
     margin-top: 2vh;
     overflow: auto;
-    height: 18.5vw;
+    height: 20vw;
 }
 
 .seccionPreguntas {
@@ -192,7 +192,7 @@
 }
 .cuerpoRespuestas{
     padding: 1vw;
-    height: 10vw;
+    height: 12vw;
 }
 
 .cabeceraCardDudas p {
@@ -211,11 +211,19 @@
     font-weight: 900;
     font-size: 2vh;
 }
-
-.posicionTextoImagenBannerProyecto1 {
-    margin-top: 5vh;
-    margin-left: 1vw;
-    font-size: 4vh;
+@media  (min-width: 1810px){
+    .posicionTextoImagenBannerProyecto1 {
+        margin-top: 5vh;
+        margin-left: 1vw;
+        font-size: 4vh;
+    }
+}
+@media  (max-width: 1809px){
+    .posicionTextoImagenBannerProyecto1 {
+        margin-top: 1vh;
+        margin-left: 1vw;
+        font-size: 4vh;
+    }
 }
 
 .colorTextoImagenBanner2 {
@@ -229,7 +237,7 @@
 .backGroundImage {
     margin-left: 10vw;
     background-repeat: no-repeat;
-    height: 45vh;
+    height: 46vh;
     width: 30vw;
     background-size: 30vw;
 }
@@ -264,25 +272,50 @@
     grid-auto-rows: minmax(200px, auto);
 }
 
-.textoImagenBannerAplicar {
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vh;
-    line-height: 26px;
-    margin-top: 23vh;
-    margin-left: 1vw;
-    color: #F5F0F5;
+@media  (min-width: 1810px){
+    .textoImagenBannerAplicar2 {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3vh;
+        line-height: 26px;
+        margin-top: 15vh;
+        margin-left: 1vw;
+        color: #F5F0F5;
+    }
+    .textoImagenBannerAplicar {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3vh;
+        line-height: 26px;
+        margin-top: 23vh;
+        margin-left: 1vw;
+        color: #F5F0F5;
+    }
 }
-.textoImagenBannerAplicar2 {
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3vh;
-    line-height: 26px;
-    margin-top: 15vh;
-    margin-left: 1vw;
-    color: #F5F0F5;
+@media  (max-width: 1809px){
+    .textoImagenBannerAplicar2 {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3vh;
+        line-height: 26px;
+        margin-top: 10vh;
+        margin-left: 1vw;
+        color: #F5F0F5;
+    }
+    .textoImagenBannerAplicar {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3vh;
+        line-height: 26px;
+        margin-top: 15vh;
+        margin-left: 1vw;
+        color: #F5F0F5;
+    }
+    
 }
 
 .card img {

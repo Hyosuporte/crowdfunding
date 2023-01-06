@@ -107,10 +107,26 @@
 .bannerLanding-2 {
     padding: 1rem;
     width: 100%;
-    height: 30vh;
+    height: 40vh;
     background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
     border-radius: 5vh;
     z-index: -1;
+}
+
+.botonBannerLanding-2 {
+    width: 50vh;
+    height: 7vh;
+    color: #031C54;
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3vh;
+    line-height: 29px;
+    border-width: 0;
+    background: #DCF763;
+    border-radius: 30px;
+    margin-top: 3vw;
+    margin-left: 40vw;
 }
 
 .subirProyectoTitulo {

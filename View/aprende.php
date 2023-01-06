@@ -73,22 +73,23 @@
                         <div class="filaTemas">
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/18.jpeg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/18.jpeg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿Qué es el crowdfunding?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
+                                    <p class="textoCard">El crowdfunding es la práctica de financiar un proyecto o empresa
+                                        recaudando dinero de un gran número de personas.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
                             </div>
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/21.jpeg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/21.jpeg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿Cómo elegir la plataforma adecuada para tu campaña?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
+                                    <p class="textoCard">Elegir la plataforma de crowdfunding adecuada es crucial para tu éxito.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem2" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
@@ -97,22 +98,24 @@
                         <div class="filaTemas">
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/22.jpg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/22.jpg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿Qué tipo de crowdfunding existe?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
+                                    <p class="textoCard">Existen cuatro tipos de crowdfunding
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem3" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
                             </div>
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/19.jpeg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/19.jpeg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿De qué depende el éxito de mi campaña?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
+                                    <p class="textoCard">Las campañas de crowdfunding exitosas suelen ser aquellas que cuentan
+                                        una buena historia, se conectan con una comunidad y tienen un buen plan
+                                        de comunicación.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem4" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
@@ -121,11 +124,12 @@
                         <div class="filaTemas">
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>uploadeddocuments/20.jpeg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/20.jpeg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿Por qué hacer una campaña para financiar un proyecto de la industria creativa?</h5>
-                                    <p class="textoCard">Resumen del tema que se encontrara en la base de conocimiento
+                                    <p class="textoCard">En los últimos años, el crowdfunding se ha convertido en una forma cada
+                                        vez más popular para que artistas y creativos financien sus proyectos.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem5" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
@@ -141,10 +145,10 @@
                     <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa
                     </p>
                     <div class="iconosFooter">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-youtube"></i>
+                        <a href="https://www.instagram.com/tfilatam/?hl=es-la"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/tfi-latam/?trk=similar-pages"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://ms-my.facebook.com/TFIlatam/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/channel/UCKUhC33ox9DzH4dhuaTVpPQ"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
@@ -177,7 +181,7 @@
                     <ul>
                         <li class="textoInformacionesFooter">Telefono +57 317 4336722</li>
                         <li class="textoInformacionesFooter">Whatsapp +57 315 8475169</li>
-                        <li class="textoInformacionesFooter">info@fundtur.com</li>
+                        <li class="textoInformacionesFooter">info@tfilatam.com</li>
                         <li class="textoInformacionesFooter">Cr 13 # 90 - 17, Bogotá D.C.</li>
                     </ul>
                 </div>
