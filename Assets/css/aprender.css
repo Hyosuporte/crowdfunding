@@ -31,7 +31,12 @@
 
 .menu {
     grid-area: menu;
-    width: 20vw;
+    width: 24vw;
+}
+
+.menu li{
+    padding-right: 1.5vh;
+    margin-bottom: 1vh;
 }
 
 .cartas {

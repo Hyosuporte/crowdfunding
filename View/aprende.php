@@ -57,11 +57,11 @@
                         <input class="buscar" placeholder="Buscar" type="text" name="" id="">
                         <ul>
                             <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprender">General</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem">Tema 1</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem2">Tema 2</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem3">Tema 3</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem4">Tema 4</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem5">Tema 5</a></li>
+                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem">¿Qué es el crowdfunding?</a></li>
+                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem2">¿Cómo elegir la plataforma adecuada para tu campaña?</a></li>
+                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem3">¿Qué tipo de crowdfunding existe?</a></li>
+                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem4">¿De qué depende el éxito de mi campaña?</a></li>
+                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem5">¿Por qué hacer una campaña para financiar un proyecto de la industria creativa?</a></li>
                         </ul>
                     </div>
                 </div>
