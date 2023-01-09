@@ -65,53 +65,51 @@
                 <p class="subirProyectoTexto">Sigue este paso a paso para empezar a materializar tu proyecto:</p>
                 <ul>
                     <li>
-                        <div class="pasosSubirProyecto">
+                        <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p class="textoInstruccionesSubir">Registrate e Inicia Sesión</p>
+                        <p class="textoSubirProyecto">Registrate e Inicia Sesión</p>
                     </li>
                     <li>
-                        <div class="pasosSubirProyecto">
+                        <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p class="textoInstruccionesSubir">En tu perfil, Ingresa a la sección de proyectos subidos y da
-                            click en subir proyecto</p>
+                        <p class="textoSubirProyecto">En tu perfil, Ingresa a la sección de proyectos subidos y da click en subir proyecto</p>
                     </li>
                     <li>
-                        <div class="pasosSubirProyecto">
+                        <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p class="textoInstruccionesSubir">Llena el formulario con tus datos y descripción del proyecto.
-                        </p>
+                        <p class="textoSubirProyecto">Llena el formulario con tus datos y descripción del proyecto.</p>
                     </li>
                     <li>
-                        <div class="pasosSubirProyecto">
+                        <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p class="textoInstruccionesSubir">Se verificará la veracidad de la organización o persona a
-                            cargo del proyecto, este proceso tarda de 15 días a 1 mes en aprobación del equipo experto.
-                        </p>
+                        <p class="textoSubirProyecto">Se verificará la veracidad de la organización o persona a cargo del proyecto, este proceso tarda de 15 días a 1 mes en aprobación del equipo experto.</p>
                     </li>
                     <li>
-                        <div class="pasosSubirProyecto">
+                        <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p class="textoInstruccionesSubir">En caso de ser aprobado se subirá inmediatamente tu proyecto.
-                            En caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer
-                            cambios a tu proyecto. Este tendrá un tiempo determinado para su revisión.</p>
+                        <p class="textoSubirProyecto">En caso de ser aprobado se subirá inmediatamente tu proyecto. En caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer cambios a tu proyecto. Este tendrá un tiempo determinado para su revisión.</p>
                     </li>
+                    <div>
+                        <a href="<?php echo BASE_URL; ?>Home/login/">
+                            <button class="botonBannerLanding" type="button">Subir Proyecto </button>
+                        </a>
+                    </div>
                 </ul>
             </div>
             <div class="subirSecondColumn">
                 <img class="imagenComoSubirProyecto" src="<?php echo BASE_URL; ?>Assets/img/subirProyecto.svg" alt="">
             </div>
         </div>
-        <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonSubirProyecto" type="button">Subir Proyecto</button></a></div>
     </div>
 
     <div class="bannerFooter">
