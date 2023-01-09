@@ -133,24 +133,110 @@
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 5vh;
-    line-height: 9vh;
-
-    color: #031C54;
-}
-
-
-
-.subirProyectoTexto {
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 400;
     font-size: 3vh;
-    line-height: 26px;
-    /* identical to box height */
+    line-height: 29px;
+    border-width: 0;
+    background: #DCF763;
+    border-radius: 30px;
+    margin-top: 3vw;
+    margin-left: 40vw;
+}
+@media  (min-width: 1810px){
+    .imagenComoSubirProyecto {
+        width: 40vw;
+        margin-left: 10vw;
+    }
+    .subirProyectoTitulo {
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 3vw;
+        line-height: 5vh;
+    
+    
+        color: #031C54;
+    }
+    .subirProyectoTexto {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5vw;
+        line-height: 4vh;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+    
+        color: #031C54;
+    }
+    .checkCirculo {
+        width: 2vw;
+        position: absolute;
+        margin-top: 1%;
+        margin-left: 0.3%;
+    }
 
+    .cicrucloBackground{
+        width: 3vw;
+        margin-bottom: 1vw;
+    }
+    .bloqueSubirProyecto li p {
+        margin-left: 2%;
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        line-height: 1.5vw;
+    
+        color: #031C54;
+    }
+}
+@media  (max-width: 1809px){
+    .imagenComoSubirProyecto {
+        width: 35vw;
+        margin-left: 10vw;
+    }
 
-    color: #031C54;
+    .subirProyectoTitulo {
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 3vw;
+        line-height: 5.5vh;
+    
+    
+        color: #031C54;
+    }
+    .subirProyectoTexto {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3vw;
+        line-height: 4vh;
+        margin-top: 1.5vh;
+        margin-bottom: 2vh;
+    
+        color: #031C54;
+    }
+    .checkCirculo {
+        width: 1vw;
+        position: absolute;
+        margin-top: 1.3%;
+        margin-left: 0.5%;
+    }
+
+    .cicrucloBackground{
+        width: 2vw;
+    }
+    
+    .bloqueSubirProyecto li p {
+        margin-left: 2%;
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        line-height: 1.5vw;
+        margin-bottom: 1vh;
+        color: #031C54;
+    }
 }
 
 .textoInstruccionesSubir{
@@ -180,10 +266,6 @@
 }
 
 
-.subirProyectoTitulo{
-    color: #031C54;
-    font-size: 10vh;
-}
 
 .botonGaleriaProyecto{
     font-family: 'Signika Negative', sans-serif;
