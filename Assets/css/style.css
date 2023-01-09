@@ -126,11 +126,6 @@ body {
 
 
 
-.listaBannerLanding2 {
-    font-size: 1vw;
-    line-height: 1.5vw;
-}
-
 .itemsNavbar {
     margin-left: 15vw;
 }
@@ -150,7 +145,7 @@ body {
 
 .navbarLogo {
     width: 50vh;
-
+    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
@@ -158,14 +153,14 @@ body {
 }
 
 .navbarContent {
-
+    
     transform: translatex(-50%);
 }
 
 .main {
     padding-top: 8rem;
     padding-bottom: 5rem;
-
+    
 }
 
 .formulario {
@@ -181,6 +176,7 @@ body {
     width: 50vh;
     height: 40vh;
 }
+
 @media  (min-width: 1810px){    
     .botonFormRegistro {
         font-family: 'TT Norms';
@@ -200,6 +196,35 @@ body {
         margin: auto;
         margin-bottom: 1vw;
         padding-left: 4.5vw;
+    }
+    .imagen1Paso2 {
+        width: 30vw;
+        margin-top: -6vw;
+        margin-left: -5vw;
+    }
+    
+    .imagen2Paso2 {
+        width: 35vw;
+        margin-top: -2vw;
+        margin-left: -25vw;
+    }
+
+    .listaBannerLanding2 {
+        font-size: 1.5vw;
+        line-height: 1.5vw;
+        margin-top: 2vw;
+    }
+    .bannerLanding3 {
+    
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+        border-radius: 30px;
+        z-index: -1;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 5rem;
+        grid-auto-rows: minmax(200px, auto);
     }
 }
 @media  (max-width: 1809px){    
@@ -222,18 +247,34 @@ body {
         margin-bottom: 1vw;
         padding-left: 4vw;
     }
-}
-
-.imagen1Paso2 {
-    width: 30vw;
-    margin-top: -6vw;
-    margin-left: -5vw;
-}
-
-.imagen2Paso2 {
-    width: 35vw;
-    margin-top: -2vw;
-    margin-left: -25vw;
+    .imagen1Paso2 {
+        width: 25vw;
+        margin-top: -6vw;
+        margin-left: -5vw;
+    }
+    
+    .imagen2Paso2 {
+        width: 30vw;
+        margin-top: -2vw;
+        margin-left: -15vw;
+    }
+    .listaBannerLanding2 {
+        font-size: 1.2vw;
+        line-height: 1.6vw;
+        margin-top: 1vw;
+    }
+    .bannerLanding3 {
+    
+        width: 100%;
+        height: 95vh;
+        background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+        border-radius: 30px;
+        z-index: -1;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 5rem;
+        grid-auto-rows: minmax(200px, auto);
+    }
 }
 
 .botonDonador {
@@ -555,16 +596,16 @@ body {
 
 .beneficioTexto {
     position: absolute;
-    width: 40%;
+    width: 35%;
     height: 10%;
-    margin-top: 40vw;
+    margin-top: 35vw;
     margin-left: 2%;
 
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    font-size: 1.5vw;
-    line-height: 1.5vw;
+    font-size: 2vw;
+    line-height: 2vw;
 
     color: #F5F0F5;
 }
@@ -801,8 +842,8 @@ body {
         font-weight: 900;
         font-size: 2.5vw;
         line-height: 29px;
-        width: 30vh;
-        height: 50px;
+        width: 35vh;
+        height: 4vw;
         border-width: 0px;
         background: #DCF763;
         border-radius: 30px;
@@ -819,10 +860,10 @@ body {
         font-family: 'TT Norms', sans-serif;
         font-style: normal;
         font-weight: 900;
-        font-size: 1.5vw;
+        font-size: 2vw;
         line-height: 29px;
-        width: 30vh;
-        height: 50px;
+        width: 40vh;
+        height: 5vw;
         border-width: 0px;
         background: #DCF763;
         border-radius: 30px;
@@ -830,11 +871,33 @@ body {
         text-align: center;
         align-items: center;
         color: #031C54;
-        padding-left: 5vw;
+        padding-left: 6vw;
         margin: auto;
     }
 }
 
+.bloqueRecuperar{
+    margin-left: 20vw;
+    margin-top: 5vw;
+    width: 100vw;
+}
+.tituloTecuperar {
+    font-family: 'TT Norms';
+    color: #031C54;
+}
+.textoRecuperar{
+    font-size: 1.5vw;
+    font-family: 'Be Vietnam';
+    color: #031C54;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+.inputRecuperar{
+    width: 100%;
+    border: 0.5vh #031C54 solid;
+    border-radius: 1vw;
+    color: #031C54;
+}
 .imagenBannerLanding {
     width: 20vw;
     height: 20vw;
@@ -855,7 +918,7 @@ body {
         font-family: 'TT Norms';
         font-style: normal;
         font-weight: 900;
-        font-size: 5vw;
+        font-size: 3vw;
         line-height: 4vw;
         margin-top: 2vw;
     
@@ -867,8 +930,8 @@ body {
         font-family: 'TT Norms';
         font-style: normal;
         font-weight: 900;
-        font-size: 3vw;
-        line-height: 2.5vw;
+        font-size: 3.5vw;
+        line-height: 3vw;
         margin-top: 2vw;
     
         color: #F5F0F5;
@@ -924,7 +987,7 @@ body {
 }
 
 .subirFirstColumn {
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-left: 3vw;
     grid-column: 1/2;
     grid-row: 1;
@@ -951,10 +1014,102 @@ body {
     margin-left: 2vw;
     margin-top: 3vw;
 }
+@media  (min-width: 1810px){
+    .imagenComoSubirProyecto {
+        width: 40vw;
+        margin-left: 10vw;
+    }
+    .subirProyectoTitulo {
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 3vw;
+        line-height: 5vh;
+    
+    
+        color: #031C54;
+    }
+    .subirProyectoTexto {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5vw;
+        line-height: 4vh;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+    
+        color: #031C54;
+    }
+    .checkCirculo {
+        width: 2vw;
+        position: absolute;
+        margin-top: 1%;
+        margin-left: 0.3%;
+    }
 
-.imagenComoSubirProyecto {
-    width: 50vw;
-    margin-left: 10vw;
+    .cicrucloBackground{
+        width: 3vw;
+        margin-bottom: 1vw;
+    }
+    .bloqueSubirProyecto li p {
+        margin-left: 2%;
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        line-height: 1.5vw;
+    
+        color: #031C54;
+    }
+}
+@media  (max-width: 1809px){
+    .imagenComoSubirProyecto {
+        width: 35vw;
+        margin-left: 10vw;
+    }
+
+    .subirProyectoTitulo {
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 3vw;
+        line-height: 5.5vh;
+    
+    
+        color: #031C54;
+    }
+    .subirProyectoTexto {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3vw;
+        line-height: 4vh;
+        margin-top: 1.5vh;
+        margin-bottom: 2vh;
+    
+        color: #031C54;
+    }
+    .checkCirculo {
+        width: 1vw;
+        position: absolute;
+        margin-top: 1.3%;
+        margin-left: 0.5%;
+    }
+
+    .cicrucloBackground{
+        width: 2vw;
+    }
+    
+    .bloqueSubirProyecto li p {
+        margin-left: 2%;
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        line-height: 1.5vw;
+        margin-bottom: 1vh;
+        color: #031C54;
+    }
 }
 
 .subirSecondColumn {
@@ -973,22 +1128,9 @@ body {
     display: flex;
 }
 
-.bloqueSubirProyecto li p {
-    margin-left: 2%;
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
 
-    color: #031C54;
-}
 
-.checkCirculo {
-    position: absolute;
-    margin-top: 1%;
-    margin-left: 0.3%;
-}
+
 
 .bloqueImagnes {
     margin-top: 2%;
@@ -1044,13 +1186,13 @@ body {
 }
 
 .iconosFooter i {
-    margin-left: 5%;
+    margin-left: 1vw;
     background-color: #CC59D2;
     color: #FFFFFF;
     width: 3.5vw;
     height: 3.5vw;
     padding-top: 0.7vw;
-    padding-left: 0.7vw;
+    padding-left: 0.8vw;
     border-radius: 2vw;
 }
 
@@ -1062,26 +1204,46 @@ body {
     margin-top: 5%;
     width: 40vw;
 }
+@media  (min-width: 1810px){
+    .botonFormFooter {
+        width: 20vw;
+        height: 7vh;
+        color: #031C54;
+        font-family: 'TT Norms', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.3vw;
+        line-height: 29px;
+        border-width: 0;
+        background: #DCF763;
+        border-radius: 30px;
+        margin-left: 15vw;
+        margin-top: 10vh;
+    }
 
-.botonFormFooter {
-    width: 20vw;
-    height: 7vh;
-    color: #031C54;
-    font-family: 'TT Norms', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1.3vw;
-    line-height: 29px;
-    border-width: 0;
-    background: #DCF763;
-    border-radius: 30px;
-    margin-left: 15vw;
-    margin-top: 10vh;
+}
+@media  (max-width: 1809px){
+    .botonFormFooter {
+        width: 20vw;
+        height: 7vh;
+        color: #031C54;
+        font-family: 'TT Norms', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.6vw;
+        line-height: 29px;
+        border-width: 0;
+        background: #DCF763;
+        border-radius: 30px;
+        margin-left: 15vw;
+        margin-top: 10vh;
+    }
+
 }
 
 .bloqueInfoFooter {
     font-family: 'TT Norms', sans-serif;
-    margin-top: 5vw;
+    margin-top: 1vw;
     margin-bottom: 3%;
     display: flex;
     color: #F5F0F5;
@@ -1113,17 +1275,7 @@ body {
     color: #031C54;
 }
 
-.subirProyectoTexto {
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2vw;
-    line-height: 4vh;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
 
-    color: #031C54;
-}
 
 .caruselMeta {
     font-family: 'TT Norms', sans-serif;
@@ -1161,6 +1313,17 @@ body {
 }
 
 @media  (max-width: 1809px){
+    .formLogin {
+        width: 50vw;
+        height: 80vh;
+        background: linear-gradient(113.43deg, #031C54 17.28%, #540D6E 80.61%);
+        border-radius: 30px;
+        display: block;
+        padding: 1vw;
+        padding-right: 1vw;
+    }    
+}
+@media  (max-width: 1200px){
     .formLogin {
         width: 50vw;
         height: 80vh;
@@ -1219,20 +1382,38 @@ body {
     display: flex;
     padding: 1vw;
 }
+@media  (min-width: 1810px){
+    .textoLoginIzquierda {
+        position: absolute;
+        margin: auto;
+        width: 50vw;
+        margin-top: 62vh;
+        margin-left: 2%;
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        line-height: 26px;
+    
+        color: #F5F0F5;
+    }
+}
+@media  (max-width: 1809px){
+    .textoLoginIzquierda {
+        position: absolute;
+        margin: auto;
+        width: 50vw;
+        margin-top: 58vh;
+        margin-left: 2%;
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        line-height: 26px;
+    
+        color: #F5F0F5;
+    }
 
-.textoLoginIzquierda {
-    position: absolute;
-    margin: auto;
-    width: 50vw;
-    margin-top: 68vh;
-    margin-left: 2%;
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1vw;
-    line-height: 26px;
-
-    color: #F5F0F5;
 }
 
 .recordarme {
@@ -1294,7 +1475,7 @@ body {
     margin-left: 2%;
     height: 15%;
     margin-top: 5%;
-    font-size: 2rem;
+    font-size: 1.5vw;
 }
 
 .formInputCheck {
@@ -1350,27 +1531,33 @@ label {
     height: 2vw;
 }
 
-.subirProyectoTitulo {
-    font-family: 'TT Norms';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 4vw;
-    line-height: 8vh;
 
-
-    color: #031C54;
+@media  (min-width: 1810px){
+    .textoSigue {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        line-height: 26px;
+        text-align: center;
+        margin-left: 6vw;
+    
+        color: #031C54;
+    }
 }
+@media  (max-width: 1809px){
+    .textoSigue {
+        font-family: 'Be Vietnam';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2vw;
+        line-height: 26px;
+        text-align: center;
+        margin-left: 6vw;
+    
+        color: #031C54;
+    }
 
-.textoSigue {
-    font-family: 'Be Vietnam';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1vw;
-    line-height: 26px;
-    text-align: center;
-    margin-left: 6vw;
-
-    color: #031C54;
 }
 
 .tablaDashboard {

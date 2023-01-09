@@ -29,7 +29,7 @@
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
+                <a href="https://www.tfilatam.com"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText itemsNavbar">Descubre</a>
@@ -88,7 +88,7 @@
                             <div class="progress">
                                 <div class="progress-bar barraMeta" id="barraMeta0"></div>
                             </div>
-                            <a class="botonCardDestacado mt-5" id="btnCarusel0" >Ver Proyecto</a>
+                            <a class="botonCardDestacado mt-5" id="btnCarusel0">Ver Proyecto</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                             <div class="progress">
                                 <div class="progress-bar barraMeta" id="barraMeta1"></div>
                             </div>
-                            <a class="botonCardDestacado mt-5" id="btnCarusel1" >Ver Proyecto</a>
+                            <a class="botonCardDestacado mt-5" id="btnCarusel1">Ver Proyecto</a>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                             <div class="progress">
                                 <div class="progress-bar barraMeta" id="barraMeta2"></div>
                             </div>
-                            <a class="botonCardDestacado mt-5" id="btnCarusel2" >Ver Proyecto</a>
+                            <a class="botonCardDestacado mt-5" id="btnCarusel2">Ver Proyecto</a>
                         </div>
                     </div>
                 </div>
@@ -156,69 +156,69 @@
         </div>
 
 
-        <div class="bloqueDestacados" id="cardsDestacados" >
+        <div class="bloqueDestacados" id="cardsDestacados">
             <p class="tituloSecundario">Nuestros proyectos destacados</p>
             <div class="cardsDestacados">
                 <div class="card">
                     <div>
-                        <img class="imageDestacado" id="imagenDes0" >
+                        <img class="imageDestacado" id="imagenDes0">
                     </div>
                     <div class="card-body">
-                        <h5 class="tituloCardDestacado" id="tituloDes0" ></h5>
-                        <p class="textoCard" id="absText0" ></p>
-                        <p class="metaCardDestacado" id="metaDes0" ></p>
+                        <h5 class="tituloCardDestacado" id="tituloDes0"></h5>
+                        <p class="textoCard" id="absText0"></p>
+                        <p class="metaCardDestacado" id="metaDes0"></p>
                         <div class="progress">
                             <div class="progress-bar barraMeta" id="barraDes0"></div>
                         </div>
-                        <a class="botonCardDestacado" id="btnCardDes0" >Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
+                        <a class="botonCardDestacado" id="btnCardDes0">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img class="imageDestacado" id="imagenDes1" >
+                        <img class="imageDestacado" id="imagenDes1">
                     </div>
                     <div class="card-body">
-                        <h5 class="tituloCardDestacado" id="tituloDes1" ></h5>
-                        <p class="textoCard" id="absText1" ></p>
-                        <p class="metaCardDestacado" id="metaDes1" ></p>
+                        <h5 class="tituloCardDestacado" id="tituloDes1"></h5>
+                        <p class="textoCard" id="absText1"></p>
+                        <p class="metaCardDestacado" id="metaDes1"></p>
                         <div class="progress">
-                                <div class="progress-bar barraMeta" id="barraDes1"></div>
-                            </div>
-                        <a class="botonCardDestacado" id="btnCardDes1" >Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
+                            <div class="progress-bar barraMeta" id="barraDes1"></div>
+                        </div>
+                        <a class="botonCardDestacado" id="btnCardDes1">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img class="imageDestacado" id="imagenDes2" >
+                        <img class="imageDestacado" id="imagenDes2">
                     </div>
                     <div class="card-body">
-                        <h5 class="tituloCardDestacado" id="tituloDes2" ></h5>
-                        <p class="textoCard" id="absText2" ></p>
-                        <p class="metaCardDestacado" id="metaDes2" ></p>
+                        <h5 class="tituloCardDestacado" id="tituloDes2"></h5>
+                        <p class="textoCard" id="absText2"></p>
+                        <p class="metaCardDestacado" id="metaDes2"></p>
                         <div class="progress">
-                                <div class="progress-bar barraMeta" id="barraDes2"></div>
-                            </div>
-                        <a class="botonCardDestacado" id="btnCardDes2" >Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
+                            <div class="progress-bar barraMeta" id="barraDes2"></div>
+                        </div>
+                        <a class="botonCardDestacado" id="btnCardDes2">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img class="imageDestacado" id="imagenDes3" >
+                        <img class="imageDestacado" id="imagenDes3">
                     </div>
                     <div class="card-body">
-                        <h5 class="tituloCardDestacado" id="tituloDes3" ></h5>
-                        <p class="textoCard" id="absText3" ></p>
-                        <p class="metaCardDestacado" id="metaDes3" ></p>
+                        <h5 class="tituloCardDestacado" id="tituloDes3"></h5>
+                        <p class="textoCard" id="absText3"></p>
+                        <p class="metaCardDestacado" id="metaDes3"></p>
                         <div class="progress">
-                                <div class="progress-bar barraMeta" id="barraDes3"></div>
-                            </div>
-                        <a class="botonCardDestacado" id="btnCardDes3" >Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
+                            <div class="progress-bar barraMeta" id="barraDes3"></div>
+                        </div>
+                        <a class="botonCardDestacado" id="btnCardDes3">Ver Proyecto <img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20"></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="bannerLanding">
+        <div class="bannerLanding3">
             <div class="oneColumnBanner2 imagenBannerLanding1">
                 <div>
                     <img class="imagen1Paso2" src="<?php echo BASE_URL; ?>Assets/img/imagenBanner2.svg" alt="" width="500">
@@ -253,37 +253,37 @@
                     <li>
                         <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p>Registrate e Inicia Sesión</p>
+                        <p class="textoSubirProyecto">Registrate e Inicia Sesión</p>
                     </li>
                     <li>
                         <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p>En tu perfil, Ingresa a la sección de proyectos subidos y da click en subir proyecto</p>
+                        <p class="textoSubirProyecto">En tu perfil, Ingresa a la sección de proyectos subidos y da click en subir proyecto</p>
                     </li>
                     <li>
                         <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p>Llena el formulario con tus datos y descripción del proyecto.</p>
+                        <p class="textoSubirProyecto">Llena el formulario con tus datos y descripción del proyecto.</p>
                     </li>
                     <li>
                         <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p>Se verificará la veracidad de la organización o persona a cargo del proyecto, este proceso tarda de 15 días a 1 mes en aprobación del equipo experto.</p>
+                        <p class="textoSubirProyecto">Se verificará la veracidad de la organización o persona a cargo del proyecto, este proceso tarda de 15 días a 1 mes en aprobación del equipo experto.</p>
                     </li>
                     <li>
                         <div class="">
                             <img class="checkCirculo" src="<?php echo BASE_URL; ?>Assets/img/checkCirculo.svg" alt="">
-                            <img src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
+                            <img class="cicrucloBackground" src="<?php echo BASE_URL; ?>Assets/img/circulo.svg" alt="">
                         </div>
-                        <p>En caso de ser aprobado se subirá inmediatamente tu proyecto. En caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer cambios a tu proyecto. Este tendrá un tiempo determinado para su revisión.</p>
+                        <p class="textoSubirProyecto">En caso de ser aprobado se subirá inmediatamente tu proyecto. En caso de estar en revisión, el equipo te enviará observaciones y asesoría para hacer cambios a tu proyecto. Este tendrá un tiempo determinado para su revisión.</p>
                     </li>
                     <div>
                         <a href="<?php echo BASE_URL; ?>Home/login/">
@@ -308,17 +308,18 @@
                     <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa
                     </p>
                     <div class="iconosFooter">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-youtube"></i>
+                        <a href="https://www.instagram.com/tfilatam/?hl=es-la"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/tfi-latam/?trk=similar-pages"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://ms-my.facebook.com/TFIlatam/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/channel/UCKUhC33ox9DzH4dhuaTVpPQ"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
-                    <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
-                    <input class="txtFooter" type="text" name="" id="">
-                    <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar
-                            conectado</button></a>
+                    <form id="frminteresado" action="<?php echo BASE_URL; ?>usuario/reginteresado" method="post">
+                        <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
+                        <input class="txtFooter" type="text" name="correo" id="correo">
+                        <button class="botonFormFooter" type="submit">Quiero estar conectado</button>
+                    </form>
                 </div>
             </div>
             <div class="bloqueInfoFooter">
@@ -344,7 +345,7 @@
                     <ul>
                         <li class="textoInformacionesFooter">Telefono +57 317 4336722</li>
                         <li class="textoInformacionesFooter">Whatsapp +57 315 8475169</li>
-                        <li class="textoInformacionesFooter">info@fundtur.com</li>
+                        <li class="textoInformacionesFooter">info@tfilatam.com</li>
                         <li class="textoInformacionesFooter">Cr 13 # 90 - 17, Bogotá D.C.</li>
                     </ul>
                 </div>

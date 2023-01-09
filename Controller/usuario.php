@@ -112,4 +112,23 @@ class usuario extends Controller
         session_destroy();
         header("location: " . BASE_URL);
     }
+
+    public function reginteresado()
+    {
+        $correo = strClean($_POST['correo']);
+
+        if (empty($correo) ) {
+            $msg = "Todos los campos son obligatorios";
+        }
+        else{
+            $data = $this->model->reginteresado($correo);
+            if ($data === "ok") {
+                  header("location:" .BASE_URL);
+            } else if ($data === "existe") {
+                $msg = "correo repetido";
+            } else {
+                $msg = "Error";
+            }
+        }
+    }
 }

@@ -69,7 +69,7 @@
         <div class="bloqueVistaProyecto">
             <p class="tituloVistaProyecto" id="nombre" name="nombre"><?php echo $data['titulo']; ?></p>
             <p><?php echo $data['abstrac']; ?></p>
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/<?php echo explode("=", $data['video'])[1]; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="imagenYutu" width="640" height="360" src="https://www.youtube.com/embed/<?php echo explode("=", $data['video'])[1]; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="informacionVistaProyecto">
                 <div class="detallesProyecto">
                     <div class="Meta">
@@ -173,10 +173,10 @@
                     <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa
                     </p>
                     <div class="iconosFooter">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-youtube"></i>
+                        <a href="https://www.instagram.com/tfilatam/?hl=es-la"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/tfi-latam/?trk=similar-pages"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://ms-my.facebook.com/TFIlatam/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/channel/UCKUhC33ox9DzH4dhuaTVpPQ"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
@@ -209,7 +209,7 @@
                     <ul>
                         <li class="textoInformacionesFooter">Telefono +57 317 4336722</li>
                         <li class="textoInformacionesFooter">Whatsapp +57 315 8475169</li>
-                        <li class="textoInformacionesFooter">info@fundtur.com</li>
+                        <li class="textoInformacionesFooter">info@tfilatam.com</li>
                         <li class="textoInformacionesFooter">Cr 13 # 90 - 17, Bogotá D.C.</li>
                     </ul>
                 </div>

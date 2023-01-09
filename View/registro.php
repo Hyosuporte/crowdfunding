@@ -7,7 +7,7 @@
                 oportunidades.</p>
         </div>
         <div class="formLogin">
-            <p class="formLoginTitulo">Registrate</p>
+            <p class="formLoginTitulo">Regpístrate</p>
             <div class="linkRegistrarse">
                 <p class="subtitulo">Bienvenida</p>
             </div>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="grupoInputsRegistro">
                     <div class="grupoInputsRegistroSimbolo">
-                        <span class="input-group-text">Pais</span>
+                        <span class="input-group-text">País</span>
                         <select name="pais" id="pais" class="form-control" onclick="listarCiudad();">
                         </select>
                     </div>

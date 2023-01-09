@@ -50,4 +50,21 @@ class usuarioDAO extends Query
         return $res;
     }
 
+    public function reginteresado($correo)
+    {
+        if(empty($validar)){
+        $sql = "INSERT INTO interesados (correo) VALUES (?)";
+        $datos = array($correo);
+        $data = $this->save($sql,$datos);
+        if($data == 1){
+            $res = "ok";
+        } else {
+            $res = "error";
+        }
+    } else {
+        $res = "existe";
+    }
+    return $res;
+}
+
 }

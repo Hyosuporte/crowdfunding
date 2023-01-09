@@ -174,6 +174,7 @@ class cliente extends Controller
                             $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2">Actualizar</button>';
                         }
                     }
+                    
                 }
                 echo json_encode($data, JSON_UNESCAPED_UNICODE);
                 die();

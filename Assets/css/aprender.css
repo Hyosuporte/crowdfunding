@@ -31,7 +31,12 @@
 
 .menu {
     grid-area: menu;
-    width: 20vw;
+    width: 24vw;
+}
+
+.menu li{
+    padding-right: 1.5vh;
+    margin-bottom: 1vh;
 }
 
 .cartas {
@@ -85,7 +90,7 @@
     font-style: normal;
     font-weight: 900;
     font-size: 1.5vw;
-    line-height: 1vw;
+    line-height: 1.5vw;
 
     color: #031C54;
 }

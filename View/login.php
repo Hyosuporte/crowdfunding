@@ -9,7 +9,7 @@
     <div class="formLogin">
         <p class="formLoginTitulo">Iniciar Sesión</p>
         <div class="linkRegistrarse">
-            <p class="aunRegistrarse">¿Aún no tienes una cuenta? <a class="aunRegistrarse" href="<?php echo BASE_URL; ?>Home/registro/">REGISTRATE</a></p>
+            <p class="aunRegistrarse">¿Aún no tienes una cuenta? <a class="aunRegistrarse" href="<?php echo BASE_URL; ?>Home/registro/">REGÍSTRATE</a></p>
         </div>
         <form action="" id="frmLogin">
             <input type="text" placeholder="Email" class="formLoginInput" id="email" name="email">

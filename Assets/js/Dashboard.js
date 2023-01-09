@@ -2,6 +2,7 @@ if (document.getElementById("tblProyectosAdm") != null) {
   $(document).ready(function () {
     $("#tblProyectosAdm").DataTable({
       scrollY: "50vh",
+      scrollX: "10vw",
       scrollCollapse: true,
       paging: false,
       ordering: false,
@@ -44,6 +45,7 @@ if (document.getElementById("tblProyectos") != null) {
     desaparecerVista("v-pills-subir-proyecto-3");
     $("#tblProyectos").DataTable({
       scrollY: "50vh",
+      scrollX: "10vw",
       scrollCollapse: true,
       paging: false,
       ordering: false,
@@ -138,6 +140,8 @@ if (document.getElementById("tblInteresados") != null) {
       ordering: false,
       info: false,
       searching: false,
+      dom: "Bfrtip",
+      buttons: ["csv", "excel", "pdf"],
       ajax: {
         url: base_url + "admin/getInteresados",
         dataSrc: "",
@@ -327,7 +331,6 @@ function UpdateObser(id, name) {
     }
   };
 }
-
 function newFromProyec(from1, from2) {
   const frmProyecto = document.createElement("form");
   for (let i = 0; i < 4; i++) {
@@ -376,3 +379,38 @@ function subirProyecto() {
       }
     });
 }
+function reginteresado(e) {
+  const correo = document.getElementById("correo");
+
+    const url = base_url + "usuario/reginteresado";
+    const frm = document.getElementById("frminteresado");
+    const http = new XMLHttpRequest();
+    http.open("POST", url, true);
+    http.send(new FormData(frm));
+    http.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        const res = JSON.parse(this.responseText);
+        console.log(res);
+        if (res === "registrado") {
+          //TODO: Agregar notificacion de registro exitoso
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Correo registrado con éxito',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
+        }else{
+          //TODO: Agregar notificacion de que hubo un error al registrar
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Hubo un error al registrar el correo',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+      }
+    };
+  }
