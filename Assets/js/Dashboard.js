@@ -45,7 +45,7 @@ if (document.getElementById("tblProyectos") != null) {
     desaparecerVista("v-pills-subir-proyecto-3");
     $("#tblProyectos").DataTable({
       scrollY: "50vh",
-      scrollX: "10vw",
+      scrollX: "90vw",
       scrollCollapse: true,
       paging: false,
       ordering: false,
@@ -69,6 +69,60 @@ if (document.getElementById("tblProyectos") != null) {
         },
         {
           data: "ver",
+        },
+        {
+          data: "camara_comercio",
+        },
+        {
+          data: "RUT",
+        },
+        {
+          data: "rep_legal",
+        },
+        {
+          data: "cedula",
+        },
+        {
+          data: "bancario",
+        },
+        {
+          data: "aprob_donacion",
+        },
+        {
+          data: "form_declaraciones",
+        },
+        {
+          data: "abstrac",
+        },
+        {
+          data: "keywords",
+        },
+        {
+          data: "tiempo_ejecucion",
+        },
+        {
+          data: "foto",
+        },
+        {
+          data: "duracion_campana",
+        },
+        {
+          data: "indicador_impacto",
+        },
+        {
+          data: "monto_financiacion",
+        },
+        {
+          data: "video",
+        },
+        {
+          data: "informacion_adicional",
+        },
+        {
+          data: "id_usuario",
+        },
+        {
+          data: "id_organizacion",
         },
       ],
     });

@@ -159,22 +159,40 @@ class cliente extends Controller
             if ($_SESSION['rol'] == 2) {
                 $data = $this->model->getProyectos($_SESSION['id']);
                 for ($i = 0; $i < count($data); $i++) {
-                    if ($data[$i]['estado'] == "Aprovado") {
+                    if ($data[$i]['estado'] == "Aprobado") {
                         $data[$i]['observaciones'];
                         $data[$i]['fecha_final'] <= date('Y-m-d') ? $data[$i]['estado'] = "Finalizado" : $data[$i]['estado'] = "En campaña";
                         $data[$i]['ver'] = '<a class="botonDonador" style="padding:5px; margin-left:20%" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '" >Ver Proyecto</a>';
                     } else {
-                        if ($data[$i]['estado'] == "NoAprovado") {
+                        if ($data[$i]['estado'] == "NoAprobado") {
                             $data[$i]['observaciones'];
-                            $data[$i]['estado'] = "No Aprovado";
+                            $data[$i]['estado'] = "No Aprobado";
                             $data[$i]['ver'] = '';
                         } else {
-                            $data[$i]['estado'] = "En Revision";
+                            $data[$i]['estado'] = "En Revisión";
                             $data[$i]['observaciones'];
                             $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2">Actualizar</button>';
                         }
                     }
-                    
+                    $data[$i]['camara_comercio'];
+                    $data[$i]['RUT'];
+                    $data[$i]['rep_legal'];
+                    $data[$i]['cedula'];
+                    $data[$i]['bancario'];
+                    $data[$i]['aprob_donacion'];
+                    $data[$i]['form_declaraciones'];
+                    $data[$i]['abstrac'];
+                    $data[$i]['keywords'];
+                    $data[$i]['tiempo_ejecucion'];
+                    $data[$i]['foto'];
+                    $data[$i]['duracion_campana'];
+                    $data[$i]['indicador_impacto'];
+                    $data[$i]['monto_financiacion'];
+                    $data[$i]['video'];
+                    $data[$i]['informacion_adicional'];
+                    $data[$i]['id_usuario'];
+                    $data[$i]['id_organizacion'];
+               
                 }
                 echo json_encode($data, JSON_UNESCAPED_UNICODE);
                 die();
