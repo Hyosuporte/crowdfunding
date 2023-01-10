@@ -30,9 +30,9 @@ class clienteDAO extends Query
     
     public function getProyectos($id)
     {
-        $sql = "SELECT p.id_proyecto,p.titulo,e.estado,p.observaciones,p.fecha_comienzo,p.fecha_final,p.camara_comercio,p.RUT,p.rep_legal,p.cedula,p.bancario,p.aprob_donacion,p.form_declaraciones,p.abstrac,p.keywords,p.tiempo_ejecucion,
-        p.foto,p.duracion_campana,p.indicador_impacto,p.monto_financiacion,p.video,p.informacion_adicional,u.nombre,o.nombre FROM 
-        proyecto AS p JOIN estado AS e ON p.id_estado = e.id_estado WHERE p.id_usuario='$id' JOIN usuarios AS u ON p.id_usuario = u.id_usuario JOIN organizacion AS o ON p.id_organizacion = o.id_organizacion";
+        $sql = "SELECT p.id_proyecto,p.titulo,e.estado,p.observaciones,p.fecha_comienzo,p.fecha_final,p.camara_comercio,p.RUT,p.rep_legal, p.cedula,p.bancario,p.aprob_donacion,
+        p.form_declaraciones,p.abstrac,p.keywords,p.tiempo_ejecucion,p.foto,p.duracion_campana,p.indicador_impacto, p.monto_financiacion,p.video,p.informacion_adicional,u.primer_nombre,
+        o.nombre_org FROM proyecto p JOIN estado e ON p.id_estado = e.id_estado JOIN usuarios u ON p.id_usuario = u.id_usuario JOIN organizacion o ON p.id_organizacion = o.id_organizacion where u.id_usuario = '$id'";
         $data = $this->selectAll($sql);
         return $data;
     }

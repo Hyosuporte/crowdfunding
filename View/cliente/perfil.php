@@ -62,6 +62,7 @@
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Información Adicional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Usuario</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Organización</strong></th>
+              
                  <th data-class-name="bordeAbajo "></th>
                 </tr>
               </thead>

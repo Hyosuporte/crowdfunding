@@ -33,6 +33,60 @@ if (document.getElementById("tblProyectosAdm") != null) {
         {
           data: "observaciones",
         },
+        {
+          data: "camara_comercio",
+        },
+        {
+          data: "RUT",
+        },
+        {
+          data: "rep_legal",
+        },
+        {
+          data: "cedula",
+        },
+        {
+          data: "bancario",
+        },
+        {
+          data: "aprob_donacion",
+        },
+        {
+          data: "form_declaraciones",
+        },
+        {
+          data: "abstrac",
+        },
+        {
+          data: "keywords",
+        },
+        {
+          data: "tiempo_ejecucion",
+        },
+        {
+          data: "foto",
+        },
+        {
+          data: "duracion_campana",
+        },
+        {
+          data: "indicador_impacto",
+        },
+        {
+          data: "monto_financiacion",
+        },
+        {
+          data: "video",
+        },
+        {
+          data: "informacion_adicional",
+        },
+        {
+          data: "primer_nombre",
+        },
+        {
+          data: "nombre_org",
+        },
       ],
     });
   });
@@ -69,9 +123,6 @@ if (document.getElementById("tblProyectos") != null) {
         },
         {
           data: "observaciones",
-        },
-        {
-          data: "ver",
         },
         {
           data: "camara_comercio",
@@ -122,10 +173,13 @@ if (document.getElementById("tblProyectos") != null) {
           data: "informacion_adicional",
         },
         {
-          data: "id_usuario",
+          data: "primer_nombre",
         },
         {
-          data: "id_organizacion",
+          data: "nombre_org",
+        },
+        {
+          data: "ver",
         },
       ],
     });

@@ -162,37 +162,72 @@ class cliente extends Controller
                     if ($data[$i]['estado'] == "Aprobado") {
                         $data[$i]['observaciones'];
                         $data[$i]['fecha_final'] <= date('Y-m-d') ? $data[$i]['estado'] = "Finalizado" : $data[$i]['estado'] = "En campaña";
+                        $data[$i]['camara_comercio'];
+                        $data[$i]['RUT'];
+                        $data[$i]['rep_legal'];
+                        $data[$i]['cedula'];
+                        $data[$i]['bancario'];
+                        $data[$i]['aprob_donacion'];
+                        $data[$i]['form_declaraciones'];
+                        $data[$i]['abstrac'];
+                        $data[$i]['keywords'];
+                        $data[$i]['tiempo_ejecucion'];
+                        $data[$i]['foto'];
+                        $data[$i]['duracion_campana'];
+                        $data[$i]['indicador_impacto'];
+                        $data[$i]['monto_financiacion'];
+                        $data[$i]['video'];
+                        $data[$i]['informacion_adicional'];
+                        $data[$i]['primer_nombre'];
+                        $data[$i]['nombre_org'];
                         $data[$i]['ver'] = '<a class="botonDonador" style="padding:5px; margin-left:20%" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '" >Ver Proyecto</a>';
                     } else {
                         if ($data[$i]['estado'] == "NoAprobado") {
                             $data[$i]['observaciones'];
                             $data[$i]['estado'] = "No Aprobado";
+                            $data[$i]['camara_comercio'];
+                            $data[$i]['RUT'];
+                            $data[$i]['rep_legal'];
+                            $data[$i]['cedula'];
+                            $data[$i]['bancario'];
+                            $data[$i]['aprob_donacion'];
+                            $data[$i]['form_declaraciones'];
+                            $data[$i]['abstrac'];
+                            $data[$i]['keywords'];
+                            $data[$i]['tiempo_ejecucion'];
+                            $data[$i]['foto'];
+                            $data[$i]['duracion_campana'];
+                            $data[$i]['indicador_impacto'];
+                            $data[$i]['monto_financiacion'];
+                            $data[$i]['video'];
+                            $data[$i]['informacion_adicional'];
+                            $data[$i]['primer_nombre'];
+                            $data[$i]['nombre_org'];
                             $data[$i]['ver'] = '';
                         } else {
                             $data[$i]['estado'] = "En Revisión";
                             $data[$i]['observaciones'];
+                            $data[$i]['camara_comercio'];
+                            $data[$i]['RUT'];
+                            $data[$i]['rep_legal'];
+                            $data[$i]['cedula'];
+                            $data[$i]['bancario'];
+                            $data[$i]['aprob_donacion'];
+                            $data[$i]['form_declaraciones'];
+                            $data[$i]['abstrac'];
+                            $data[$i]['keywords'];
+                            $data[$i]['tiempo_ejecucion'];
+                            $data[$i]['foto'];
+                            $data[$i]['duracion_campana'];
+                            $data[$i]['indicador_impacto'];
+                            $data[$i]['monto_financiacion'];
+                            $data[$i]['video'];
+                            $data[$i]['informacion_adicional'];
+                            $data[$i]['primer_nombre'];
+                            $data[$i]['nombre_org'];
                             $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2">Actualizar</button>';
                         }
                     }
-                    $data[$i]['camara_comercio'];
-                    $data[$i]['RUT'];
-                    $data[$i]['rep_legal'];
-                    $data[$i]['cedula'];
-                    $data[$i]['bancario'];
-                    $data[$i]['aprob_donacion'];
-                    $data[$i]['form_declaraciones'];
-                    $data[$i]['abstrac'];
-                    $data[$i]['keywords'];
-                    $data[$i]['tiempo_ejecucion'];
-                    $data[$i]['foto'];
-                    $data[$i]['duracion_campana'];
-                    $data[$i]['indicador_impacto'];
-                    $data[$i]['monto_financiacion'];
-                    $data[$i]['video'];
-                    $data[$i]['informacion_adicional'];
-                    $data[$i]['id_usuario'];
-                    $data[$i]['id_organizacion'];
-               
                 }
                 echo json_encode($data, JSON_UNESCAPED_UNICODE);
                 die();

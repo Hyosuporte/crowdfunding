@@ -29,7 +29,26 @@ class proyecto extends Controller
             }
             $data[$i]['observaciones'] = '<div>
                 <textarea id="observaciones' . $i . '" cols="18" rows="2" onchange="UpdateObser(' . $data[$i]['id_proyecto'] . ',' . $i . ')">' . $data[$i]['observaciones'] . '</textarea></div>';
-        }
+                $data[$i]['camara_comercio'];
+                $data[$i]['RUT'];
+                $data[$i]['rep_legal'];
+                $data[$i]['cedula'];
+                $data[$i]['bancario'];
+                $data[$i]['aprob_donacion'];
+                $data[$i]['form_declaraciones'];
+                $data[$i]['abstrac'];
+                $data[$i]['keywords'];
+                $data[$i]['tiempo_ejecucion'];
+                $data[$i]['foto'];
+                $data[$i]['duracion_campana'];
+                $data[$i]['indicador_impacto'];
+                $data[$i]['monto_financiacion'];
+                $data[$i]['video'];
+                $data[$i]['informacion_adicional'];
+                $data[$i]['primer_nombre'];
+                $data[$i]['nombre_org'];
+                
+            }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
     }
