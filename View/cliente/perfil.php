@@ -38,31 +38,31 @@
               <p class="tituloFormSubirProyecto">Proyectos Subidos</p>
               <p class="subtituloFormSubirProyecto">Los proyectos que has creado y su estado</p>
             </div>
-            <table id="tblProyectos" class="display tablita" style="width:100%">
+            <table id="tblProyectos" class="display tablita">
               <thead>
                 <tr>
-                  <th data-class-name="bordeDerecha bordeAbajo columnaProyecto"><strong>Proyecto</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo columnaEstado"><strong>Estado</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Observaciones</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Cámara de Comercio</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>RUT</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Representante Legal</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Cédula</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Certificado Bancario</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Aprobación de Donación</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Formulario de Declaraciones</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Abstract</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Keywords</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Tiempo de Ejecución</strong></th>            
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Foto</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Duración campaña</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Indicador Impacto</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Monto Financiación</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Link Video</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Información Adicional</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Usuario</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo comentar"><strong>Organización</strong></th>
-                 <th data-class-name="bordeAbajo"></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Proyecto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Estado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Observaciones&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Cámara de Comercio <i class="fa-solid fa-cloud-arrow-down"></i></strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>RUT</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Representante Legal</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Cédula</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Certificado Bancario</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Aprobación de Donación</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Formulario de Declaraciones</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Abstract&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Keywords&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Tiempo de Ejecución</strong></th>            
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Foto</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Duración campaña</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Indicador Impacto</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Monto Financiación</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Link Video</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Información Adicional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Usuario</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Organización</strong></th>
+                 <th data-class-name="bordeAbajo "></th>
                 </tr>
               </thead>
               <tbody>
@@ -202,10 +202,10 @@
         <table class="display tablita " style="width:100% !important;" id="Donaciones">
           <thead>
             <tr>
-              <th data-class-name="bordeDerecha bordeAbajo "><strong>Proyecto</strong></th>
-              <th data-class-name="bordeDerecha bordeAbajo "><strong>Cantidad</strong></th>
-              <th data-class-name="bordeDerecha bordeAbajo "><strong>Fecha</strong></th>
-              <th data-class-name="bordeAbajo"></th>
+              <th data-class-name="bordeDerecha bordeAbajo  "><strong>Proyecto</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo  "><strong>Cantidad</strong></th>
+              <th data-class-name="bordeDerecha bordeAbajo  "><strong>Fecha</strong></th>
+              <th data-class-name="bordeAbajo "></th>
             </tr>
           </thead>
           <tbody>

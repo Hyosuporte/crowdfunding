@@ -57,6 +57,9 @@ if (document.getElementById("tblProyectos") != null) {
         url: base_url + "cliente/getProyectos",
         dataSrc: "",
       },
+      columnsDefs:[
+        {width : 1, targets:1}
+      ],
       columns: [
         {
           data: "titulo",

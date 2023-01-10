@@ -219,6 +219,7 @@ input[type=number] { -moz-appearance:textfield; }
     font-family: 'Be Vietnam';
     width: 6.5vw;
     height: 2vw;
+    color: #031C54 !important;
     font-size: 0.1vh !important;
     padding-top: 0.7vw !important;
     background: #DCF763 !important;
@@ -231,7 +232,7 @@ input[type=number] { -moz-appearance:textfield; }
     align-items: center;
 }
 .columnaProyecto{
-    width: 25%;
+    width: 50vw !important;
 }
 .columnaEstado{
     width: 18%;
@@ -243,6 +244,7 @@ input[type=number] { -moz-appearance:textfield; }
 
 .scrollTablita{
     overflow-y: scroll;
+    overflow-x: scroll;
 }
 
 .bloqueDashboard {
@@ -426,4 +428,12 @@ input[type=number] { -moz-appearance:textfield; }
 .iconoMenu{
     margin-right: 0.5vw;
     width: 1vw;
+}
+
+.textoTabla{
+    white-space: nowrap;
+}
+
+.tablita th td{
+    width: 10px !important;
 }
