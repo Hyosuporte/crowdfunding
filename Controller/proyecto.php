@@ -11,7 +11,7 @@ class proyecto extends Controller
     public function obtenerProyectos()
     {
         $data = $this->model->getProyectos();
-        for ($i = 0; $i < count($data); $i++) {
+     for ($i = 0; $i < count($data); $i++) {
             if ($data[$i]['id_estado'] == 1) {
                 $data[$i]['acciones'] = '
                <select name="acciones" disabled>
@@ -29,7 +29,8 @@ class proyecto extends Controller
             }
             $data[$i]['observaciones'] = '<div>
                 <textarea id="observaciones' . $i . '" cols="18" rows="2" onchange="UpdateObser(' . $data[$i]['id_proyecto'] . ',' . $i . ')">' . $data[$i]['observaciones'] . '</textarea></div>';
-                $data[$i]['camara_comercio'];
+               
+               /* $data[$i]['camara_comercio'];
                 $data[$i]['RUT'];
                 $data[$i]['rep_legal'];
                 $data[$i]['cedula'];
@@ -46,8 +47,7 @@ class proyecto extends Controller
                 $data[$i]['video'];
                 $data[$i]['informacion_adicional'];
                 $data[$i]['primer_nombre'];
-                $data[$i]['nombre_org'];
-                
+                $data[$i]['nombre_org']; */
             }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();

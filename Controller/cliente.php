@@ -225,7 +225,7 @@ class cliente extends Controller
                             $data[$i]['informacion_adicional'];
                             $data[$i]['primer_nombre'];
                             $data[$i]['nombre_org'];
-                            $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2">Actualizar</button>';
+                            $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '">Actualizar</button>';
                         }
                     }
                 }

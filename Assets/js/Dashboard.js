@@ -2,7 +2,7 @@ if (document.getElementById("tblProyectosAdm") != null) {
   $(document).ready(function () {
     $("#tblProyectosAdm").DataTable({
       scrollY: "50vh",
-      scrollX: "10vw",
+      scrollX: "90vw",
       scrollCollapse: true,
       paging: false,
       ordering: false,
@@ -14,6 +14,7 @@ if (document.getElementById("tblProyectosAdm") != null) {
         url: base_url + "proyecto/obtenerProyectos",
         dataSrc: "",
       },
+      
       columns: [
         {
           data: "titulo",
@@ -25,7 +26,7 @@ if (document.getElementById("tblProyectosAdm") != null) {
           data: "fecha_final",
         },
         {
-          data: "id_estado",
+          data: "estado",
         },
         {
           data: "acciones",
@@ -91,6 +92,7 @@ if (document.getElementById("tblProyectosAdm") != null) {
     });
   });
 }
+
 
 if (document.getElementById("tblProyectos") != null) {
   $(document).ready(function () {
