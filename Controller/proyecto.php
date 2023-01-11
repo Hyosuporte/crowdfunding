@@ -180,9 +180,9 @@ class proyecto extends Controller
         die();
     }
 
-    public function proyectoData()
+    public function proyectoData($id_proyecto)
     {
-        $data = $this->model->getProyectoData('id_proyecto');
+        $data = $this->model->getProyectoData($id_proyecto);
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
     }

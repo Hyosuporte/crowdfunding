@@ -528,7 +528,8 @@ function reginteresado(e) {
     };
   }
 
-  function listarDatosProy(e) {
+  function listarDatosProy(id_proyecto) {
+    console.log(id_proyecto);
     const frmProyec = new FormData(document.forms.frmProyec);
     const url = base_url + "proyecto/proyectoData";
     const http = new XMLHttpRequest();
@@ -544,8 +545,6 @@ function reginteresado(e) {
         document.getElementById("video").value = res.video;
         document.getElementById("monto").value = res.monto_financiacion;
         document.getElementById("duracion").value = res.duracion_campana;
-        document.getElementById("comienzo").value = res.fecha_comienzo;
-        document.getElementById("final").value = res.fecha_final;
         document.getElementById("ejecucion").value = res.tiempo_ejecucion;
         document.getElementById("adicional").value = res.informacion_adicional;
       }

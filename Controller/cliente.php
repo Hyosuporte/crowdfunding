@@ -227,7 +227,7 @@ class cliente extends Controller
                             $data[$i]['nombre_org'];
                             $cuenta = "'cuenta'";
                             $formulario = "'v-pills-subir-proyecto-2'";
-                            $data[$i]['ver'] = '<div class="list-group "><a href="#v-pills-subir-proyecto-2" class="btnActual" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVista('. $cuenta. '),aparecerVista('. $formulario.')">Actualizar</a></div>';
+                            $data[$i]['ver'] = '<div class="list-group "><a href="#v-pills-subir-proyecto-2" class="btnActual" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVista('. $cuenta. '),aparecerVista('. $formulario.'),listarDatosProy('.$data[$i]['id_proyecto'].')">Actualizar</a></div>';
                         }
                     }
                 }
