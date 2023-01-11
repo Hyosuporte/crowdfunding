@@ -179,4 +179,11 @@ class proyecto extends Controller
         $this->views->getView("Home", "vistaProyecto", $data);
         die();
     }
+
+    public function proyectoData()
+    {
+        $data = $this->model->getProyectoData('id_proyecto');
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        die();
+    }
 }
