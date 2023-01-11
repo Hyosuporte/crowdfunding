@@ -225,7 +225,9 @@ class cliente extends Controller
                             $data[$i]['informacion_adicional'];
                             $data[$i]['primer_nombre'];
                             $data[$i]['nombre_org'];
-                            $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '">Actualizar</button>';
+                            $cuenta = "'cuenta'";
+                            $formulario = "'v-pills-subir-proyecto-1'";
+                            $data[$i]['ver'] = '<div class="list-group "><a href="#v-pills-subir-proyecto-1" class="btnActual" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVista('. $cuenta. '),aparecerVista('. $formulario.')">Actualizar</a></div>';
                         }
                     }
                 }
