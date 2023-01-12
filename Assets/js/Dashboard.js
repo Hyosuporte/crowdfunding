@@ -528,24 +528,24 @@ function reginteresado(e) {
     };
   }
 
-  function listarDatosProy(id_proyecto) {
+  function listarDatosProy($id_proyecto) {
     const frmProyec = new FormData(document.forms.frmProyec);
     const url = base_url + "proyecto/proyectoData";
     const http = new XMLHttpRequest();
     http.open("GET", url, true);
     http.send();
     http.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4 && this.status == 200) {       
         const res = JSON.parse(this.responseText);
+        console.log(res);
         document.getElementById("titulo").value = res.titulo;
         document.getElementById("palabras").value = res.keywords;
-        //document.getElementById("impacto").value = res.indicador_impacto;
-        console.log(res);
+        document.getElementById("impacto").value = res.indicador_impacto;      
         document.getElementById("resumen").value = res.abstrac;
         document.getElementById("video").value = res.video;
         document.getElementById("monto").value = res.monto_financiacion;
-        //document.getElementById("duracion").value = res.duracion_campana;
-        //document.getElementById("ejecucion").value = res.tiempo_ejecucion;
+        document.getElementById("duracion").value = res.duracion_campana;
+        document.getElementById("ejecucion").value = res.tiempo_ejecucion;
         document.getElementById("adicional").value = res.informacion_adicional;
       }
     };

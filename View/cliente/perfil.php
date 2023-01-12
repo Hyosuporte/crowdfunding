@@ -123,7 +123,7 @@
             <input class="inputGrandeForm" type="text" name="titulo" id="titulo" placeholder="Titulo del proyecto*">
             <div class="grupoInputsForm">
               <input type="text" class="grupoInput1" placeholder="Palabras Clave*" required id="palabras" name="palabras">
-              <input type="number" class="grupoInput1" placeholder="Indicador Impacto*" required id="impacto" name="impacto">
+              <input type="text" class="grupoInput1" placeholder="Indicador Impacto*" required id="impacto" name="impacto">
             </div>
             <textarea class="inputTextArea" name="resumen" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
             <div class="grupoInputsForm">
@@ -135,7 +135,7 @@
             </div>
             <div class="grupoInputsForm">
               <input class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
-              <input type="number" class="grupoInput1" id="duracion" name="duracion" placeholder="Duración de la campaña">
+              <input type="text" class="grupoInput1" id="duracion" name="duracion" placeholder="Duración de la campaña">
             </div>
             <div class="grupoInputsForm">
               <label class="labelInputs" for="comienzo">Fecha Comienzo</label>
@@ -144,7 +144,7 @@
             <div class="grupoInputsForm">
               <input type="date" class="grupoInput1" id="comienzo" name="comienzo">
               <input class="grupoInput1" type="date" name="final" id="final">
-              <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
+              <input type="text" class="grupoInput1" id="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
             </div>
             <div class="grupoInputsForm">
               <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10" placeholder="Informacion Adicional"></textarea>

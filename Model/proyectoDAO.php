@@ -35,10 +35,10 @@ class proyectoDAO extends Query
     return $data;
   }
 
-  public function getProyectoData($id)
+  public function getProyectoData($id_proyecto)
     {
         $sql = "SELECT id_proyecto,titulo,abstrac,keywords,tiempo_ejecucion,duracion_campana,indicador_impacto, 
-        monto_financiacion,video,informacion_adicional FROM proyecto where id_proyecto = '$id'";
+        monto_financiacion,video,informacion_adicional FROM proyecto where id_proyecto = '$id_proyecto'";
         $data = $this->select($sql);
         return $data;
     }
