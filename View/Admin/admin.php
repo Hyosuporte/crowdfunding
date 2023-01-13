@@ -43,7 +43,6 @@
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Link Video</strong></th>              
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Información Adicional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>        
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Usuario</strong></th>
-
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Organización</strong></th>
               </tr>
             </thead>

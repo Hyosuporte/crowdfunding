@@ -30,14 +30,14 @@ class proyecto extends Controller
             $data[$i]['observaciones'] = '<div>
                 <textarea id="observaciones' . $i . '" cols="18" rows="2" onchange="UpdateObser(' . $data[$i]['id_proyecto'] . ',' . $i . ')">' . $data[$i]['observaciones'] . '</textarea></div>';
 
-            $data[$i]['desc_comercio'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['camara_comercio'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
-            $data[$i]['RUT'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['RUT'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
-            $data[$i]['rep_legal'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['rep_legal'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
-            $data[$i]['cedula'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['cedula'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
-            $data[$i]['bancario'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['bancario'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
-            $data[$i]['aprob_donacion'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['aprob_donacion'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
-            $data[$i]['form_declaraciones'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['form_declaraciones'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
-            $data[$i]['foto'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['foto'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['desc_comercio'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['camara_comercio'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['RUT'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['RUT'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['rep_legal'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['rep_legal'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['cedula'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['cedula'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['bancario'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['bancario'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['aprob_donacion'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['aprob_donacion'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['form_declaraciones'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['form_declaraciones'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['foto'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['foto'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
 
         }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);

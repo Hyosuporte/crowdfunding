@@ -528,3 +528,13 @@ function reginteresado(e) {
       }
     };
 }
+
+function alertaExitosa(){
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Archivo descargado',
+    showConfirmButton: false,
+    timer: 1500
+  })
+}
