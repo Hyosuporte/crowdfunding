@@ -281,14 +281,14 @@ body {
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 700;
-    font-size: 1.5vw;
-    line-height: 26px;
+    font-size: 1vw;
+    line-height: 1vw;
     text-align: center;
     padding-top: 0.5vw;
     color: #031C54;
     background: #DCF763;
-    width: 15vw;
-    height: 2.5vw;
+    width: 5vw;
+    height: 3vw;
     border-radius: 3vw;
 }
 
@@ -305,7 +305,8 @@ body {
     background: #CC59D2;
     border-radius: 3vw;
     border-color: #ffffff;
-    width: 10vw;
+    width: 7vw;
+    height: 2vw;
 }
 
 .comentar{
@@ -1564,4 +1565,12 @@ label {
     background: #FFFFFF;
     box-shadow: 0px 5px 5px rgba(3, 28, 84, 0.5);
     border-radius: 30px;
+}
+
+.ImagenDefault{
+    margin-left: 10vw;
+    width: 80%;
+    height: 40vw;
+    border: 1vw #D9D9D9 solid;
+    border-radius: 1vw;
 }

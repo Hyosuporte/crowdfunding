@@ -30,9 +30,15 @@ function listarCarousel() {
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
-      res.forEach((element, i) => {
-        crearCardCaro(element, i);
-      });
+      if(res.element != null){
+        res.forEach((element, i) => {
+          crearCardCaro(element, i);
+        });
+      }else{
+        const newCarousel = document.getElementById("carouselExampleIndicators");
+        newCarousel.innerHTML= ` <img class="ImagenDefault" src='${base_url}Assets/img/11.jpg'>` ;
+        
+      }
     }
   };
 }
@@ -47,24 +53,29 @@ function listarGaleria() {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
       let numFil = 1;
-      res.forEach((element) => {
-        if (document.getElementById(`numFil${numFil}`) == null) {
-          divFila = crearFila(numFil);
-          divCardGal = crearCadGaleria(element);
-          divFila.appendChild(divCardGal);
-          divGaleria.appendChild(divFila);
-        } else {
-          if (
-            document
-              .querySelector(`#numFil${numFil}`)
-              .querySelectorAll("div.cardGaleria").length < 2
-          ) {
+      if(res.element != null){
+        res.forEach((element) => {
+          if (document.getElementById(`numFil${numFil}`) == null) {
+            divFila = crearFila(numFil);
             divCardGal = crearCadGaleria(element);
-            document.getElementById(`numFil${numFil}`).appendChild(divCardGal);
-            numFil++;
+            divFila.appendChild(divCardGal);
+            divGaleria.appendChild(divFila);
+          } else {
+            if (
+              document
+                .querySelector(`#numFil${numFil}`)
+                .querySelectorAll("div.cardGaleria").length < 2
+            ) {
+              divCardGal = crearCadGaleria(element);
+              document.getElementById(`numFil${numFil}`).appendChild(divCardGal);
+              numFil++;
+            }
           }
-        }
-      });
+        });
+      }else{
+        const newCarousel = document.getElementById("galeriaProyectos");
+        newCarousel.innerHTML = ` <img class="ImagenDefault" src='${base_url}Assets/img/15.jpg'>` ;        
+      }
     }
   };
 }
@@ -77,9 +88,14 @@ function listarGaleriaDes() {
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
-      res.forEach((element, i) => {
-        crearCardDes(element, i);
-      });
+      if(res.element != null){
+        res.forEach((element, i) => {
+          crearCardDes(element, i);
+        });
+      }else{
+        const newCarousel = document.getElementById("cardsDestacados");
+        newCarousel.innerHTML = ` <img class="ImagenDefault" src='${base_url}Assets/img/12.jpg'>` ;        
+      }
     }
   };
 }

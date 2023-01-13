@@ -180,7 +180,7 @@ class cliente extends Controller
                         $data[$i]['informacion_adicional'];
                         $data[$i]['primer_nombre'];
                         $data[$i]['nombre_org'];
-                        $data[$i]['ver'] = '<a class="botonDonador" style="padding:5px; margin-left:20%" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '" >Ver Proyecto</a>';
+                        $data[$i]['ver'] = '<a class="botonDonador" style="padding:5px;" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '" >Ver Proyecto</a>';
                     } else {
                         if ($data[$i]['estado'] == "NoAprobado") {
                             $data[$i]['observaciones'];

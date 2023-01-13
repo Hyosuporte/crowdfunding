@@ -30,7 +30,7 @@
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
+                <a href="https://www.fundtur.com"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText activeNavbar itemsNavbar">Descubre</a>
@@ -50,7 +50,7 @@
         <div class="bannerLanding-2">
             <p class="titulo-2">Ayuda a que un proyecto creativo hecho por mujeres se convierta en realidad</p>
             <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonBannerLanding-2" type="button">Quiero aportar</button></a>
-                </div>
+            </div>
         </div>
         <div class="botonesGaleria">
             <div class="bloqueBotonBuscar">

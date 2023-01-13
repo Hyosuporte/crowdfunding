@@ -30,7 +30,7 @@
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
+                <a href="https://www.fundtur.com"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText itemsNavbar">Descubre</a>
@@ -59,7 +59,7 @@
                             <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprender">General</a></li>
                             <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem">Guía sobre lo que es el crowdfunding y cómo iniciar tu propia campaña exitosa</a></li>
                             <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem2">¿Cómo crear una comunidad para financiar un proyecto?</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem3">3 razones por las que deberías apoyar proyectos de mujeres</a></li>                            
+                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem3">3 razones por las que deberías apoyar proyectos de mujeres</a></li>
                         </ul>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">Guía sobre lo que es el crowdfunding y cómo iniciar tu propia campaña exitosa</h5>
-                                    <p class="textoCard">Es el momento de buscar otras alternativas para financiar tus proyectos culturales, artísticos y turísticos. 
+                                    <p class="textoCard">Es el momento de buscar otras alternativas para financiar tus proyectos culturales, artísticos y turísticos.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
@@ -86,7 +86,7 @@
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">¿Cómo crear una comunidad para financiar un proyecto?</h5>
-                                    <p class="textoCard">Una gran parte del éxito que tiene una campaña de crowdfunding radica en la comunidad que lo respalda, por ello siempre recomendamos conectar con tu audiencia antes de iniciar tu proyecto. 
+                                    <p class="textoCard">Una gran parte del éxito que tiene una campaña de crowdfunding radica en la comunidad que lo respalda, por ello siempre recomendamos conectar con tu audiencia antes de iniciar tu proyecto.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem2" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
@@ -99,12 +99,12 @@
                                 </div>
                                 <div class="card-body">
                                     <h5 class="tituloTema">3 razones por las que deberías apoyar proyectos de mujeres</h5>
-                                    <p class="textoCard">Vivimos en un mundo donde las mujeres no son tratadas por igual, no tienen las mismas oportunidades de educación, empleo o puestos de liderazgo. 
+                                    <p class="textoCard">Vivimos en un mundo donde las mujeres no son tratadas por igual, no tienen las mismas oportunidades de educación, empleo o puestos de liderazgo.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem3" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>

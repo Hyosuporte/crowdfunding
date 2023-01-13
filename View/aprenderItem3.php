@@ -40,7 +40,7 @@
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
+                <a href="https://www.fundtur.com"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li class="descubre">
                 <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText itemsNavbar">Descubre</a>
@@ -62,7 +62,7 @@
         </div>
         <div class="principalAprende">
             <div class="menu">
-                <img class="imagenMenu" src="<?php echo BASE_URL; ?>Assets/img/22.jpg" alt="">
+                <img class="imagenMenu" src="<?php echo BASE_URL; ?>Assets/img/Picture3.svg" alt="">
             </div>
             <div class="cartas">
                 <div class="card">
@@ -70,22 +70,22 @@
                         <h5 class="card-title">Aprende / General / 3 razones por las que deberías apoyar proyectos de mujeres</h5>
                         <h2 class="tituloItem">3 razones por las que deberías apoyar proyectos de mujeres </h2>
                         <p class="textoItem">
-                            <p class="textoAprende">Vivimos en un mundo donde las mujeres no son tratadas por igual, no tienen las mismas oportunidades de educación, empleo o puestos de liderazgo. A menudo son discriminadas, abusadas e incluso asesinadas por su género. Lastimosamente, según la ONU las mujeres tienen un mayor riesgo de pobreza e inseguridad económica y suelen tener menor acceso a recursos para hacer realidad sus proyectos. En esta sección, hablaremos de las mejores razones por las que deberías apoyar proyectos de mujeres.</p> <br>
-                            <ol>
-                                <li>Las mujeres constituyen la mitad de la población del mundo, pero todavía no reciben el mismo trato. Somos nosotras las que nos enfrentamos a mayor desigualdad en nuestra vida cotidiana. La brecha de género es real y se evidencia en estadísticas que recuerdan que aún no existe paridad en los puestos de decisión y en los roles de acción de los proyectos que lideran la economía.</li>
-                                <li>Las mujeres tienen menos probabilidades de tener acceso a recursos financieros. Este es el resultado de una combinación de factores, incluida la discriminación de género, la falta de educación y habilidades, y la falta de educación financiera. Banco Mundial estima que si las mujeres tuvieran el mismo acceso a los recursos que los hombres, sus ingresos aumentarían en $12 billones de dólares durante la próxima década</li>
-                                <li>La pobreza tiene género. Según la CEPAL el número de mujeres que viven en la pobreza es mayor que el número de hombres que viven en la pobreza. La UNWOMEN menciona que tan sólo en América látina por cada 100 hombres hay 124 mujeres en pobreza extrema.</li>
-                            </ol>
-                            <p class="subtituloAprende">¿Cómo puedes dar tu apoyo a las mujeres?</p>
-                            <p class="textoAprende">Es verdad que podemos estar subrepresentadas en el lugar de trabajo y en las organizaciones Sin embargo, aún hay muchos proyectos de mujeres que necesitan tu apoyo para marcar la diferencia. Te cuento tan sólo 4 formas en las que puedes mostrar tu apoyo a los proyectos de mujeres:</p> <br>
-                            <ol>
-                                <li>Donar directamente a un proyecto de mujeres a través de una plataforma de crowdfunding o directamente a la página de su organización.</li>
-                                <li>Compartir contenido de un proyecto de mujeres en las redes sociales y etiquetar la organización o el proyecto.</li>
-                                <li>Haz voluntariado con una organización o proyecto de mujeres, donando tiempo y talento para ayudarlas a lograr sus objetivos. ¡Esta es una excelente manera de conocer a otras personas que también se preocupan por estos temas! Puede usar sitios web como VolunteerMatch o Idealist para encontrar oportunidades de voluntariado cerca de usted. También puede contactar a las organizaciones directamente en su sitio web si tienen oportunidades de voluntariado disponibles.</li>
-                                <li>Apoyar a las empresas que son propiedad de mujeres o emplean principalmente a mujeres.</li>
-                            </ol>
-                            <br>
-                            <p class="textoAprende">Ahora que ya conoces por qué deberías estar apoyando a un proyecto liderado por una mujer, es el momento de que conozcas los proyectos que las chicas de TFInancia han empezado a través de sus campañas de financiación. Ingresa a www.tfilatam.com/tfinancia y conoce más.</p> <br>
+                        <p class="textoAprende">Vivimos en un mundo donde las mujeres no son tratadas por igual, no tienen las mismas oportunidades de educación, empleo o puestos de liderazgo. A menudo son discriminadas, abusadas e incluso asesinadas por su género. Lastimosamente, según la ONU las mujeres tienen un mayor riesgo de pobreza e inseguridad económica y suelen tener menor acceso a recursos para hacer realidad sus proyectos. En esta sección, hablaremos de las mejores razones por las que deberías apoyar proyectos de mujeres.</p> <br>
+                        <ol>
+                            <li>Las mujeres constituyen la mitad de la población del mundo, pero todavía no reciben el mismo trato. Somos nosotras las que nos enfrentamos a mayor desigualdad en nuestra vida cotidiana. La brecha de género es real y se evidencia en estadísticas que recuerdan que aún no existe paridad en los puestos de decisión y en los roles de acción de los proyectos que lideran la economía.</li>
+                            <li>Las mujeres tienen menos probabilidades de tener acceso a recursos financieros. Este es el resultado de una combinación de factores, incluida la discriminación de género, la falta de educación y habilidades, y la falta de educación financiera. Banco Mundial estima que si las mujeres tuvieran el mismo acceso a los recursos que los hombres, sus ingresos aumentarían en $12 billones de dólares durante la próxima década</li>
+                            <li>La pobreza tiene género. Según la CEPAL el número de mujeres que viven en la pobreza es mayor que el número de hombres que viven en la pobreza. La UNWOMEN menciona que tan sólo en América látina por cada 100 hombres hay 124 mujeres en pobreza extrema.</li>
+                        </ol>
+                        <p class="subtituloAprende">¿Cómo puedes dar tu apoyo a las mujeres?</p>
+                        <p class="textoAprende">Es verdad que podemos estar subrepresentadas en el lugar de trabajo y en las organizaciones Sin embargo, aún hay muchos proyectos de mujeres que necesitan tu apoyo para marcar la diferencia. Te cuento tan sólo 4 formas en las que puedes mostrar tu apoyo a los proyectos de mujeres:</p> <br>
+                        <ol>
+                            <li>Donar directamente a un proyecto de mujeres a través de una plataforma de crowdfunding o directamente a la página de su organización.</li>
+                            <li>Compartir contenido de un proyecto de mujeres en las redes sociales y etiquetar la organización o el proyecto.</li>
+                            <li>Haz voluntariado con una organización o proyecto de mujeres, donando tiempo y talento para ayudarlas a lograr sus objetivos. ¡Esta es una excelente manera de conocer a otras personas que también se preocupan por estos temas! Puede usar sitios web como VolunteerMatch o Idealist para encontrar oportunidades de voluntariado cerca de usted. También puede contactar a las organizaciones directamente en su sitio web si tienen oportunidades de voluntariado disponibles.</li>
+                            <li>Apoyar a las empresas que son propiedad de mujeres o emplean principalmente a mujeres.</li>
+                        </ol>
+                        <br>
+                        <p class="textoAprende">Ahora que ya conoces por qué deberías estar apoyando a un proyecto liderado por una mujer, es el momento de que conozcas los proyectos que las chicas de TFInancia han empezado a través de sus campañas de financiación. Ingresa a www.tfilatam.com/tfinancia y conoce más.</p> <br>
                     </div>
                 </div>
             </div>
