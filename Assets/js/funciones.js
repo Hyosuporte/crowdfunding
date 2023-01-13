@@ -30,7 +30,7 @@ function listarCarousel() {
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
-      if(res.element != null){
+      if(res.length != 0){
         res.forEach((element, i) => {
           crearCardCaro(element, i);
         });
@@ -53,7 +53,7 @@ function listarGaleria() {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
       let numFil = 1;
-      if(res.element != null){
+      if(res.length != 0){
         res.forEach((element) => {
           if (document.getElementById(`numFil${numFil}`) == null) {
             divFila = crearFila(numFil);
@@ -88,7 +88,7 @@ function listarGaleriaDes() {
   http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       const res = JSON.parse(this.responseText);
-      if(res.element != null){
+      if(res.length != 0){
         res.forEach((element, i) => {
           crearCardDes(element, i);
         });
@@ -181,7 +181,11 @@ function crearCadGaleria(element) {
   let divImg = document.createElement("div");
   let img = document.createElement("img");
   img.setAttribute("class", "imageGaleria");
-  img.setAttribute("src", element.foto);
+  if(element.foto!=""){
+    img.setAttribute("src", element.foto);
+  }else{
+    img.setAttribute("src", `${base_url}Assets/img/40796.svg`);
+  }
   divImg.appendChild(img);
   divCardGal.appendChild(divImg);
   let divBody = creacionCardBody(element);
@@ -190,7 +194,12 @@ function crearCadGaleria(element) {
 }
 
 function crearCardDes(element, i) {
-  document.getElementById(`imagenDes${i}`).setAttribute("src", element.foto);
+  console.log(i+" elmento"+ element.foto);
+  if(element.foto!=""){
+    document.getElementById(`imagenDes${i}`).setAttribute("src", element.foto);
+  }else{
+    document.getElementById(`imagenDes${i}`).setAttribute("src", `${base_url}Assets/img/40796.svg`);    
+  }
   document.getElementById(`tituloDes${i}`).innerText = element.titulo;
   document.getElementById(`absText${i}`).innerText = element.abstrac;
   document.getElementById(
@@ -210,7 +219,11 @@ function crearCardDes(element, i) {
 }
 
 function crearCardCaro(element, i) {
-  document.getElementById(`imgCarusel${i}`).setAttribute("src", element.foto);
+  if(element.foto!=""){
+    document.getElementById(`imgCarusel${i}`).setAttribute("src", element.foto);
+  }else{
+    document.getElementById(`imgCarusel${i}`).setAttribute("src", `${base_url}Assets/img/40796.svg`);    
+  }
   document.getElementById(`caruselTitulo${i}`).innerText = element.titulo;
   document.getElementById(`caruselAbs${i}`).innerText = element.abstrac;
   document.getElementById(
