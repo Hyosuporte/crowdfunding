@@ -71,4 +71,17 @@ class proyectoDAO extends Query
     }
     return $res;
   }
+
+  public function editarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional,$id_proyecto)
+  {
+    $sql = "UPDATE proyecto SET camara_comercio=?,RUT=?,rep_legal=?,cedula=?,bancario=?,aprob_donacion=?,form_declaraciones=?,keywords=?,tiempo_ejecucion=?,titulo=?,foto=?,duracion_campana=?,fecha_comienzo=?,fecha_final=?,abstrac=?,indicador_impacto=?,monto_financiacion=?,video=?,informacion_adicional=? WHERE id_proyecto=?";
+    $datos = array($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional, $id_proyecto);
+    $data = $this->save($sql, $datos);
+    if ($data == 1) {
+      $res = "ok";
+    } else {
+      $res = "error";
+    }
+    return $res;
+  }
 }

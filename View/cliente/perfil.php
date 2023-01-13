@@ -8,7 +8,7 @@
           Donados</a>
         <a href="#misProtectos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
           Datos</a>
-        <a href="#v-pills-subir-proyecto-1" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="aparecerVista('v-pills-subir-proyecto-1'),desaparecerVistas(['cuenta','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])">
+        <a href="#v-pills-subir-proyecto-1" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="aparecerVista('v-pills-subir-proyecto-1'),desaparecerVistas(['cuenta','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3']),btnSubir()">
           <img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/file-arrow-up-solid.svg" alt="">Subir Proyecto</a>
       </div>
       <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
@@ -130,6 +130,7 @@
               <label class="labelInputs labelFoto" for="comienzo">Foto</label>
             </div>
             <div class="grupoInputsForm">
+              <input type="hidden" name="id_proyecto" id="id_proyectoUpd" >
               <input class="inputFileForm" type="file" name="fotoPro" id="foto" style="width: 100%;">
               <input class="grupoInput1" type="text" name="video" id="video" placeholder="URL Video*">
             </div>
@@ -192,7 +193,8 @@
             <div class="grupoInputsForm2">
               <input class="inputFileForm" type="file" name="camara" id="camara">
             </div>
-            <button class="botonFormFinal" type="button" onclick="subirProyecto()">Subir Proyecto>></button>
+            <button class="botonFormFinal" type="button" id="btn-subirProy" onclick="subirProyecto()">Subir Proyecto>></button>
+            <button class="botonFormFinal" type="button" id="btn-updataDatos" onclick="UpdateProyecto()">Subir Proyecto>></button>
           </form>
         </div>
       </div>
