@@ -84,4 +84,19 @@ class clienteDAO extends Query
         $data = $this->select($sql);
         return $data;
     }
+
+    public function InsertPago($id_user,$id_proyecto,$id_dona,$metod,$status,$cost)
+    {   
+        $fecha = date("Y-n-d \ h:i:s");
+        $sql = "INSERT INTO donacion(id_donacion,monto,id_usuario,id_proyecto,fecha_donacion,estadoDonacion,tipoPago) VALUES (?,?,?,?,?,?,?)";
+        $datos = array($id_dona,$cost, $id_user, $id_proyecto, $fecha, $status, $metod);
+        $data = $this->save($sql, $datos);
+        if($data == 1){
+            $res = "ok";
+        }else{
+            $res = "error";
+        }
+        return $res;
+    }
+
 }

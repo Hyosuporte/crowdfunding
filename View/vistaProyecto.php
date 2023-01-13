@@ -1,5 +1,3 @@
-<?php require_once("mercado_pago.php") ?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -138,9 +136,26 @@
                 <div class="inputsDonar">
                     <div>
                         <p>Cantidad. $ COP</p>
-                        <input class="cantidadDonar" type="text" name="cantidad" id="cantidad">
+                        <input class="cantidadDonar" type="number" name="cantDona" id="cantDona">
                     </div>
-                    <div class="checkout-btn cantidadDonar" style="margin-top: 1.5vw; margin-left: 1vw;"></div>
+                    <button type="button" class="btn btn-primary" id="btnDonar">
+                        Donar
+                    </button>
+                    <div class="modal fade" id="ModalDona" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalDonaLabel">Confirmar Datos Donacion</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="checkout-btn"></div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
                 <?php } else { ?>
@@ -221,15 +236,44 @@
             locale: 'es-CO'
         });
 
-        mp.checkout({
-            preference: {
-                id: '<?php echo $preference->id; ?>'
-            },
-            render: {
-                container: '.checkout-btn',
-                label: 'Donar'
-            }
-        })
+        document.getElementById("btnDonar").addEventListener("click", function() {
+            $("#checkout-btn").attr("disabled", true);
+
+            const orderData = {
+                id: <?php echo $data['id_proyecto']; ?>,
+                description: "<?php echo $data['title']; ?>",
+                price: document.getElementById("cantDona").value,
+            };
+
+            fetch("http://localhost/crowdfunding/mercado_pago.php/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(orderData),
+                })
+                .then(function(response) {
+                    console.log(response);
+                    return response.json();
+                })
+                .then(function(preference) {
+                    createCheckoutButton(preference.id);
+                    $("#ModalDona").modal("show");
+                })
+        });
+
+
+        function createCheckoutButton(preferenceId) {
+            mp.checkout({
+                preference: {
+                    id: preferenceId,
+                },
+                render: {
+                    container: ".checkout-btn",
+                    label: "Donar",
+                },
+            });
+        }
     </script>
     <?php require_once("View/Template/footer.php") ?>
 </body>

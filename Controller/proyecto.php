@@ -11,7 +11,7 @@ class proyecto extends Controller
     public function obtenerProyectos()
     {
         $data = $this->model->getProyectos();
-     for ($i = 0; $i < count($data); $i++) {
+        for ($i = 0; $i < count($data); $i++) {
             if ($data[$i]['id_estado'] == 1) {
                 $data[$i]['acciones'] = '
                <select name="acciones" disabled>
@@ -29,28 +29,30 @@ class proyecto extends Controller
             }
             $data[$i]['observaciones'] = '<div>
                 <textarea id="observaciones' . $i . '" cols="18" rows="2" onchange="UpdateObser(' . $data[$i]['id_proyecto'] . ',' . $i . ')">' . $data[$i]['observaciones'] . '</textarea></div>';
-               
-               /* $data[$i]['camara_comercio'];
-                $data[$i]['RUT'];
-                $data[$i]['rep_legal'];
-                $data[$i]['cedula'];
-                $data[$i]['bancario'];
-                $data[$i]['aprob_donacion'];
-                $data[$i]['form_declaraciones'];
-                $data[$i]['abstrac'];
-                $data[$i]['keywords'];
-                $data[$i]['tiempo_ejecucion'];
-                $data[$i]['foto'];
-                $data[$i]['duracion_campana'];
-                $data[$i]['indicador_impacto'];
-                $data[$i]['monto_financiacion'];
-                $data[$i]['video'];
-                $data[$i]['informacion_adicional'];
-                $data[$i]['primer_nombre'];
-                $data[$i]['nombre_org']; */
-            }
+
+            $data[$i]['desc_comercio'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['camara_comercio'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['RUT'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['RUT'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['rep_legal'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['rep_legal'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['cedula'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['cedula'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['bancario'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['bancario'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['aprob_donacion'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['aprob_donacion'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['form_declaraciones'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['form_declaraciones'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['foto'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['foto'] . '"><button class="boton" type="button"><i class="fa-solid fa-file-arrow-down"></i></button></a>';
+
+        }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
+    }
+
+    public function downloadsArchivos()
+    {
+        $document = explode('\\', $_GET['camara']);
+        $rutaArchivo = "C:/xampp/htdocs/crowdfunding/uploadeddocuments/" . $document[8];
+        $nombreArchivo = basename($rutaArchivo);
+        header('Content-Type: application/octet-stream');
+        header("Content-Transfer-Encoding: Binary");
+        header("Content-disposition: attachment; filename=$nombreArchivo");
+        readfile($rutaArchivo);
     }
 
     public function subirArchivo($name)

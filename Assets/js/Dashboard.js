@@ -35,7 +35,7 @@ if (document.getElementById("tblProyectosAdm") != null) {
           data: "observaciones",
         },
         {
-          data: "camara_comercio",
+          data: "desc_comercio",
         },
         {
           data: "RUT",
@@ -492,6 +492,7 @@ function subirProyecto() {
       }
     });
 }
+
 function reginteresado(e) {
   const correo = document.getElementById("correo");
 
@@ -526,4 +527,4 @@ function reginteresado(e) {
         }
       }
     };
-  }
+}
