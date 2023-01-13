@@ -8,7 +8,7 @@
           Donados</a>
         <a href="#misProtectos" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVistas(['cuenta','v-pills-subir-proyecto-1','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/actualizarDatosDashboard.svg" alt="">Actualización
           Datos</a>
-        <a href="#v-pills-subir-proyecto-1" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="aparecerVista('v-pills-subir-proyecto-1'),desaparecerVistas(['cuenta','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3'])">
+        <a href="#v-pills-subir-proyecto-1" class="  textoMenu" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="aparecerVista('v-pills-subir-proyecto-1'),desaparecerVistas(['cuenta','v-pills-subir-proyecto-2','v-pills-subir-proyecto-3']),btnSubir()">
           <img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/file-arrow-up-solid.svg" alt="">Subir Proyecto</a>
       </div>
       <div class="ultimaOpcion"><a href="<?php echo BASE_URL; ?>usuario/salir" class="textoMenuAbajo"><img class="iconoMenu" src="<?php echo BASE_URL; ?>Assets/img/cerrarSesionDashboard.svg" alt="">Cerrar Sesión</a></div>
@@ -120,22 +120,23 @@
               <p class="textoPaso">Paso 2 de 3</p>
             </div>
             <p class="subtituloFormSubirProyecto">Datos del proyecto</p>
-            <input class="inputGrandeForm" type="text" name="titulo" id="titulo" placeholder="Titulo del proyecto*">
+            <input title="Utiliza un nombre corto, conciso y que llame la atención" class="inputGrandeForm" type="text" name="titulo" id="titulo" placeholder="Titulo del proyecto*" >
             <div class="grupoInputsForm">
-              <input type="text" class="grupoInput1" placeholder="Palabras Clave*" required id="palabras" name="palabras">
-              <input type="number" class="grupoInput1" placeholder="Indicador Impacto*" required id="impacto" name="impacto">
+              <input title="Entre 2 a 5 palabras favorecerá tu campaña. Ten en cuenta que las palabras clave dan una idea breve sobre tu campaña y ayudará al momento de filtrar los intereses de los donantes" type="text" class="grupoInput1" placeholder="Palabras Clave*" required id="palabras" name="palabras">
+              <input title="Te recomendamos resaltar 3 cifras relevantes que deja tu proyecto al cumplir con la meta de recaudación. Estas cifras se relacionan con resultados y metas esperadas, productos desarrollados, etc. Los porcentajes funcionan muy bien." type="text" class="grupoInput1" placeholder="Indicador Impacto*" required id="impacto" name="impacto">
             </div>
-            <textarea class="inputTextArea" name="resumen" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
+            <textarea title="Resalta brevemente el ¿qué? ¿para qué? ¿para quienes? ¿cómo?. Cuenta una historia y finaliza con un llamado a la acción.  No superes 1000 caracteres. Te recomendamos máximo 2 párrafos." class="inputTextArea" name="resumen" id="resumen" cols="30" rows="5" placeholder="Resumen*"></textarea>
             <div class="grupoInputsForm">
               <label class="labelInputs labelFoto" for="comienzo">Foto</label>
             </div>
             <div class="grupoInputsForm">
+              <input type="hidden" name="id_proyecto" id="id_proyectoUpd" >
               <input class="inputFileForm" type="file" name="fotoPro" id="foto" style="width: 100%;">
               <input class="grupoInput1" type="text" name="video" id="video" placeholder="URL Video*">
             </div>
             <div class="grupoInputsForm">
-              <input class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
-              <input type="number" class="grupoInput1" id="duracion" name="duracion" placeholder="Duración de la campaña">
+              <input title="Hasta $30.000.000" class="grupoInput1" type="text" name="monto" id="monto" placeholder="Monto a Recaudar">
+              <input type="text" class="grupoInput1" id="duracion" name="duracion" placeholder="Duración de la campaña">
             </div>
             <div class="grupoInputsForm">
               <label class="labelInputs" for="comienzo">Fecha Comienzo</label>
@@ -143,8 +144,8 @@
             </div>
             <div class="grupoInputsForm">
               <input type="date" class="grupoInput1" id="comienzo" name="comienzo">
-              <input class="grupoInput1" type="date" name="final" id="final">
-              <input type="number" class="grupoInput1" id="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
+              <input title="30 días de campaña es el tiempo ideal" class="grupoInput1" type="date" name="final" id="final">
+              <input title="Es recomendable que el alcance de tu proyecto no supere los 6 meses de ejecución." type="text" class="grupoInput1" id="ejecucion" name="ejecucion" placeholder="Tiempo Ejecución">
             </div>
             <div class="grupoInputsForm">
               <textarea class="inputTextArea" name="adicional" id="adicional" cols="30" rows="10" placeholder="Informacion Adicional"></textarea>
@@ -192,7 +193,8 @@
             <div class="grupoInputsForm2">
               <input class="inputFileForm" type="file" name="camara" id="camara">
             </div>
-            <button class="botonFormFinal" type="button" onclick="subirProyecto()">Subir Proyecto>></button>
+            <button class="botonFormFinal" type="button" id="btn-subirProy" onclick="subirProyecto()">Subir Proyecto>></button>
+            <button class="botonFormFinal" type="button" id="btn-updataDatos" onclick="UpdateProyecto()">Subir Proyecto>></button>
           </form>
         </div>
       </div>

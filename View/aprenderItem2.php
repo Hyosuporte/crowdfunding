@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="icon" href="https://static.wixstatic.com/media/df72ce_9438b428c20d483789e4a085e71f91d1%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/df72ce_9438b428c20d483789e4a085e71f91d1%7Emv2.png" type="image/x-icon">
     <style>
         @font-face {
             font-family: 'TT Norms';
@@ -40,7 +41,7 @@
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
+                <a href="https://www.fundtur.com"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li class="descubre">
                 <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText itemsNavbar">Descubre</a>
@@ -62,19 +63,27 @@
         </div>
         <div class="principalAprende">
             <div class="menu">
-                <img class="imagenMenu" src="<?php echo BASE_URL; ?>Assets/img/21.jpeg" alt="">
+                <img class="imagenMenu" src="<?php echo BASE_URL; ?>Assets/img/Picture2.svg" alt="">
             </div>
             <div class="cartas">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Aprende / General / ¿Cómo elegir la plataforma adecuada para tu campaña?</h5>
-                        <h2 class="tituloItem">¿Cómo elegir la plataforma adecuada para tu campaña?</h2>
-                        <p class="textoItem">Elegir la plataforma de crowdfunding adecuada es crucial para tu éxito. Es
-                            importante elegir un sitio con la audiencia adecuada, un sitio que pueda
-                            atraer los fondos necesarios y un sitio que pueda manejar las necesidades
-                            de tu campaña. La mejor plataforma de financiación colectiva que puedes
-                            utilizar también dependerá de los objetivos de su campaña, la cantidad de
-                            dinero que intenta recaudar y el tipo de recompensas que ofrece
+                        <h2 class="tituloItem">¿Cómo crear una comunidad para financiar un proyecto?</h2>
+                        <p class="textoItem">Una gran parte del éxito que tiene una campaña de crowdfunding radica en la comunidad que lo respalda, por ello siempre recomendamos conectar con tu audiencia antes de iniciar tu proyecto. Aquí te contamos algunas pautas que puedes seguir para la creación de esta.
+                        <p class="textoAprende">La construcción de una comunidad trata de involucrar a una audiencia, comprender sus necesidades y deseos, y brindarles una experiencia valiosa que los hará volver por más. El objetivo de la gestión comunitaria es construir comunidades en torno a productos o servicios o proyectos que sean significativos para los clientes. Las comunidades se pueden construir en torno a ciertas actividades como la cocina o los deportes. También se pueden construir en torno a valores compartidos como el medio ambiente o la política.</p> <br>
+                        <p class="textoAprende">Para empezar a comprender a tu audiencia te recomendamos la herramienta del mapa de la empatía, esta es útil para ayudarte a comprender mejor a tu audiencia. Es una representación visual de lo que tu público objetivo podría estar pensando y sintiendo.</p> <br>
+                        <p class="textoAprende">Para construir una comunidad es importante:</p> <br>
+                        <ol>
+                            <li>Proporcionar valor a los miembros que forman parte de la comunidad.</li>
+                            <li>Ser proactivo para llegar a los miembros que no son tan activos.</li>
+                            <li>Encontrar formas de relacionarte con ellos y hacerlos sentir que son parte de algo más grande que ellos mismos.</li>
+                        </ol>
+                        <br>
+                        <p class="textoAprende">Algunas de las claves para crear comunidad es crear hábitos que estén impulsados por las motivaciones intrínsecas y/o extrínsecas, cuando evaluamos qué motiva a una comunidad podemos crear disparadores que fomentan ese estímulo. Nosotras recomendamos que utilices la técnica SNAP: Status, Networking, Access y Perks, para fomentar esas motivaciones.</p> <br>
+
+                        <p class="textoAprende">Cuéntanos si quieres saber más sobre cómo puedes fortalecer a tu comunidad y sigue conectado con tu comunidad a través de TFInancia.</p> <br>
+
                     </div>
                 </div>
             </div>

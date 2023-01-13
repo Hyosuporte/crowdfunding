@@ -14,7 +14,7 @@ if (document.getElementById("tblProyectosAdm") != null) {
         url: base_url + "proyecto/obtenerProyectos",
         dataSrc: "",
       },
-      
+
       columns: [
         {
           data: "titulo",
@@ -93,7 +93,6 @@ if (document.getElementById("tblProyectosAdm") != null) {
   });
 }
 
-
 if (document.getElementById("tblProyectos") != null) {
   $(document).ready(function () {
     desaparecerVista("v-pills-subir-proyecto-1");
@@ -113,9 +112,7 @@ if (document.getElementById("tblProyectos") != null) {
         url: base_url + "cliente/getProyectos",
         dataSrc: "",
       },
-      columnsDefs:[
-        {width : 1, targets:1}
-      ],
+      columnsDefs: [{ width: 1, targets: 1 }],
       columns: [
         {
           data: "titulo",
@@ -268,6 +265,10 @@ if (document.getElementById("tblInteresados") != null) {
   });
 }
 
+if (document.getElementById("btn-updataDatos" != null)) {
+  $("#btn-updataDatos").hide();
+}
+
 function consultarProyectos() {
   const url = base_url + "proyecto/obtenerProyectos";
   const http = new XMLHttpRequest();
@@ -359,7 +360,6 @@ function verificarCampos2(parametro1, parametro2) {
     resumen.value != "" &&
     foto.value != "" &&
     video.value != "" &&
-    banco.value != "" &&
     final.value != ""
   ) {
     //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
@@ -444,6 +444,33 @@ function UpdateObser(id, name) {
     }
   };
 }
+
+function UpdateProyecto(e) {
+  const frmOrganiza = new FormData(document.forms.frmOrganiza);
+  const newFrom = newFromProyec(
+    document.forms.frmProyec,
+    document.forms.frmDocuments
+  );
+  const frmProyec = new FormData(newFrom);
+  fetch(base_url + "proyecto/editarproyecto", {
+    method: "POST",
+    body: frmProyec,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Se Actualizaron correctamente los datos del proyecto",
+        showConfirmButton: false,
+        timer: 2500,
+      });
+      setTimeout(function () {
+        window.location.reload();
+      }, 2700);
+    });
+}
+
 function newFromProyec(from1, from2) {
   const frmProyecto = document.createElement("form");
   for (let i = 0; i < 4; i++) {
@@ -495,38 +522,66 @@ function subirProyecto() {
 
 function reginteresado(e) {
   const correo = document.getElementById("correo");
-
-    const url = base_url + "usuario/reginteresado";
-    const frm = document.getElementById("frminteresado");
-    const http = new XMLHttpRequest();
-    http.open("POST", url, true);
-    http.send(new FormData(frm));
-    http.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        const res = JSON.parse(this.responseText);
-        console.log(res);
-        if (res === "registrado") {
-          //TODO: Agregar notificacion de registro exitoso
-          Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Correo registrado con éxito',
-            showConfirmButton: false,
-            timer: 1500
-          })
-
-        }else{
-          //TODO: Agregar notificacion de que hubo un error al registrar
-          Swal.fire({
-            position: 'top-end',
-            icon: 'error',
-            title: 'Hubo un error al registrar el correo',
-            showConfirmButton: false,
-            timer: 1500
-          })
-        }
+  const url = base_url + "usuario/reginteresado";
+  const frm = document.getElementById("frminteresado");
+  const http = new XMLHttpRequest();
+  http.open("POST", url, true);
+  http.send(new FormData(frm));
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      console.log(res);
+      if (res === "registrado") {
+        //TODO: Agregar notificacion de registro exitoso
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Correo registrado con éxito",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      } else {
+        //TODO: Agregar notificacion de que hubo un error al registrar
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "Hubo un error al registrar el correo",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       }
-    };
+    }
+  };
+}
+
+function btnSubir() {
+  $("#btn-updataDatos").hide();
+  $("#btn-subirProy").show();
+}
+
+function listarDatosProy(id_proyecto) {
+  const frmProyec = new FormData(document.forms.frmProyec);
+  const url = base_url + "proyecto/proyectoData?id_proyecto=" + id_proyecto;
+  const http = new XMLHttpRequest();
+  http.open("GET", url, true);
+  http.send();
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      $("#btn-updataDatos").show();
+      $("#btn-subirProy").hide();
+      document.getElementById("titulo").value = res.titulo;
+      document.getElementById("id_proyectoUpd").value = res.id_proyecto;
+      document.getElementById("palabras").value = res.keywords;
+      document.getElementById("impacto").value = res.indicador_impacto;
+      document.getElementById("resumen").value = res.abstrac;
+      document.getElementById("video").value = res.video;
+      document.getElementById("monto").value = res.monto_financiacion;
+      document.getElementById("duracion").value = res.duracion_campana;
+      document.getElementById("ejecucion").value = res.tiempo_ejecucion;
+      document.getElementById("adicional").value = res.informacion_adicional;
+    }
+  };
 }
 
 function alertaExitosa(){

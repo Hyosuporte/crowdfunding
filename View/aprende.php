@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="icon" href="https://static.wixstatic.com/media/df72ce_9438b428c20d483789e4a085e71f91d1%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/df72ce_9438b428c20d483789e4a085e71f91d1%7Emv2.png" type="image/x-icon">
     <style>
         @font-face {
             font-family: 'TT Norms';
@@ -30,7 +31,7 @@
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href="<?php echo BASE_URL; ?>"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
+                <a href="https://www.fundtur.com"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText itemsNavbar">Descubre</a>
@@ -57,11 +58,9 @@
                         <input class="buscar" placeholder="Buscar" type="text" name="" id="">
                         <ul>
                             <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprender">General</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem">¿Qué es el crowdfunding?</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem2">¿Cómo elegir la plataforma adecuada para tu campaña?</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem3">¿Qué tipo de crowdfunding existe?</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem4">¿De qué depende el éxito de mi campaña?</a></li>
-                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem5">¿Por qué hacer una campaña para financiar un proyecto de la industria creativa?</a></li>
+                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem">Guía sobre lo que es el crowdfunding y cómo iniciar tu propia campaña exitosa</a></li>
+                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem2">¿Cómo crear una comunidad para financiar un proyecto?</a></li>
+                            <li><a class="textoMenu" href="<?php echo BASE_URL; ?>Home/aprenderItem3">3 razones por las que deberías apoyar proyectos de mujeres</a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,20 +75,19 @@
                                     <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/18.jpeg" alt="">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="tituloTema">¿Qué es el crowdfunding?</h5>
-                                    <p class="textoCard">El crowdfunding es la práctica de financiar un proyecto o empresa
-                                        recaudando dinero de un gran número de personas.
+                                    <h5 class="tituloTema">Guía sobre lo que es el crowdfunding y cómo iniciar tu propia campaña exitosa</h5>
+                                    <p class="textoCard">Es el momento de buscar otras alternativas para financiar tus proyectos culturales, artísticos y turísticos.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
                             </div>
                             <div class="card2 fondoBlanco">
                                 <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/21.jpeg" alt="">
+                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/Picture2.svg" alt="">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="tituloTema">¿Cómo elegir la plataforma adecuada para tu campaña?</h5>
-                                    <p class="textoCard">Elegir la plataforma de crowdfunding adecuada es crucial para tu éxito.
+                                    <h5 class="tituloTema">¿Cómo crear una comunidad para financiar un proyecto?</h5>
+                                    <p class="textoCard">Una gran parte del éxito que tiene una campaña de crowdfunding radica en la comunidad que lo respalda, por ello siempre recomendamos conectar con tu audiencia antes de iniciar tu proyecto.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem2" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
@@ -101,37 +99,10 @@
                                     <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/22.jpg" alt="">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="tituloTema">¿Qué tipo de crowdfunding existe?</h5>
-                                    <p class="textoCard">Existen cuatro tipos de crowdfunding
+                                    <h5 class="tituloTema">3 razones por las que deberías apoyar proyectos de mujeres</h5>
+                                    <p class="textoCard">Vivimos en un mundo donde las mujeres no son tratadas por igual, no tienen las mismas oportunidades de educación, empleo o puestos de liderazgo.
                                     </p>
                                     <a href="<?php echo BASE_URL; ?>Home/aprenderItem3" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="card2 fondoBlanco">
-                                <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/19.jpeg" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="tituloTema">¿De qué depende el éxito de mi campaña?</h5>
-                                    <p class="textoCard">Las campañas de crowdfunding exitosas suelen ser aquellas que cuentan
-                                        una buena historia, se conectan con una comunidad y tienen un buen plan
-                                        de comunicación.
-                                    </p>
-                                    <a href="<?php echo BASE_URL; ?>Home/aprenderItem4" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filaTemas">
-                            <div class="card2 fondoBlanco">
-                                <div>
-                                    <img class="imagenTema" src="<?php echo BASE_URL; ?>Assets/img/20.jpeg" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="tituloTema">¿Por qué hacer una campaña para financiar un proyecto de la industria creativa?</h5>
-                                    <p class="textoCard">En los últimos años, el crowdfunding se ha convertido en una forma cada
-                                        vez más popular para que artistas y creativos financien sus proyectos.
-                                    </p>
-                                    <a href="<?php echo BASE_URL; ?>Home/aprenderItem5" class="botonCardTema">Ver Tema<img src="<?php echo BASE_URL; ?>Assets/img/Ojo.svg" width="20" alt=""></a>
                                 </div>
                             </div>
                         </div>

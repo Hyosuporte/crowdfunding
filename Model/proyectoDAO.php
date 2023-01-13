@@ -35,6 +35,14 @@ class proyectoDAO extends Query
     return $data;
   }
 
+  public function getProyectoData($id_proyecto)
+    {
+        $sql = "SELECT id_proyecto,titulo,abstrac,keywords,tiempo_ejecucion,duracion_campana,indicador_impacto, 
+        monto_financiacion,video,informacion_adicional FROM proyecto where id_proyecto = '$id_proyecto'";
+        $data = $this->select($sql);
+        return $data;
+    }
+
   public function getProyectos()
   {
     $sql = "SELECT p.id_proyecto,p.titulo,e.estado,p.id_estado,p.observaciones,p.fecha_comienzo,p.fecha_final,p.camara_comercio,p.RUT,p.rep_legal, p.cedula,p.bancario,p.aprob_donacion,
@@ -55,6 +63,19 @@ class proyectoDAO extends Query
   {
     $sql = "INSERT INTO proyecto(camara_comercio, RUT,rep_legal,cedula,bancario,aprob_donacion, form_declaraciones,keywords,tiempo_ejecucion,titulo,foto,duracion_campana,fecha_comienzo,fecha_final, abstrac, indicador_impacto,monto_financiacion,video,informacion_adicional,id_usuario,id_organizacion) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     $datos = array($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional, $id, $id_organizacion);
+    $data = $this->save($sql, $datos);
+    if ($data == 1) {
+      $res = "ok";
+    } else {
+      $res = "error";
+    }
+    return $res;
+  }
+
+  public function editarproyecto($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional,$id_proyecto)
+  {
+    $sql = "UPDATE proyecto SET camara_comercio=?,RUT=?,rep_legal=?,cedula=?,bancario=?,aprob_donacion=?,form_declaraciones=?,keywords=?,tiempo_ejecucion=?,titulo=?,foto=?,duracion_campana=?,fecha_comienzo=?,fecha_final=?,abstrac=?,indicador_impacto=?,monto_financiacion=?,video=?,informacion_adicional=? WHERE id_proyecto=?";
+    $datos = array($camara, $RUT, $rep_legal, $cedula, $bancario, $aprob_donacion, $form_declaraciones, $keywords, $tiempo_ejecucion, $titulo, $foto, $duracion_campaña, $fecha_comienzo, $fecha_final, $abstrac, $indicador, $monto, $video, $info_adicional, $id_proyecto);
     $data = $this->save($sql, $datos);
     if ($data == 1) {
       $res = "ok";

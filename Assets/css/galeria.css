@@ -129,7 +129,7 @@
     margin-left: 40vw;
 }
 
-.subirProyectoTitulo {
+/*.subirProyectoTitulo {
     font-family: 'Signika Negative', sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -140,7 +140,7 @@
     border-radius: 30px;
     margin-top: 3vw;
     margin-left: 40vw;
-}
+}*/
 @media  (min-width: 1810px){
     .imagenComoSubirProyecto {
         width: 40vw;
