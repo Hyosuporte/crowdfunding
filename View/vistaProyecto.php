@@ -279,7 +279,7 @@
                 price: document.getElementById("cantDona").value,
             };
 
-        fetch("http://localhost/crowdfunding/mercado_pago.php/", {
+        fetch("http://localhost/crowdfunding/MercadoPago/pagar/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

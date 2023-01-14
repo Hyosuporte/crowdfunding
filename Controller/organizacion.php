@@ -74,9 +74,9 @@ class organizacion extends Controller
 
     public function listarOrg()
     {
-        $id_org = strClean($_POST['id_organización']);
+        $id_org = strClean($_POST['nit']);
         $data = $this->model->VerorgExistente($id_org);
-        $msg = $data == 1 ? "org registrada" : "no existe";
+        $msg = !empty($data) ? "org registrada" : "no existe";
         echo json_encode($msg, JSON_UNESCAPED_UNICODE);
         die();
     }

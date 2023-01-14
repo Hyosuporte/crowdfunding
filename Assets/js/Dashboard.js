@@ -315,7 +315,7 @@ function verificarCampos(parametro1, parametro2) {
   const banco = document.getElementById("banco");
   const cuenta = document.getElementById("cuenta");
   const organizacion = document.getElementById("organizacion");
-  const orgExis = document.getElementById("organizacion"); //FIXME: Cambiar el id por el del check
+  const orgExis = document.getElementById("organizacionExistente").checked;
   if (
     nit.value != "" &&
     nombre.value != "" &&
@@ -364,8 +364,6 @@ function verificarCampos2(parametro1, parametro2) {
     video.value != "" &&
     final.value != ""
   ) {
-    //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
-
     desaparecerVista(parametro1);
     aparecerVista(parametro2);
   } else {
@@ -494,19 +492,18 @@ function newFromProyec(from1, from2, from3) {
 }
 
 function subirProyecto() {
-  const frmOrganiza = new FormData(document.forms.frmOrganiza);
   const newFrom = newFromProyec(
     document.forms.frmProyec,
     document.forms.frmDocuments,
     document.forms.frmOrganiza
   );
-  const orgExis = document.getElementById("organizacionExistente"); //FIXME:Cambiar el id por el del check
+  const orgExis = newFrom.elements[22].checked;
   const frmProyec = new FormData(newFrom);
   const urls =
     orgExis == true ? "organizacion/listarOrg" : "organizacion/insertarorg";
   fetch(base_url + urls, {
     method: "POST",
-    body: frmOrganiza,
+    body: frmProyec,
   })
     .then((response) => response.json())
     .then((data) => {
@@ -552,7 +549,6 @@ function reginteresado(e) {
       const res = JSON.parse(this.responseText);
       console.log(res);
       if (res === "registrado") {
-        //TODO: Agregar notificacion de registro exitoso
         Swal.fire({
           position: "top-end",
           icon: "success",
@@ -561,7 +557,6 @@ function reginteresado(e) {
           timer: 1500,
         });
       } else {
-        //TODO: Agregar notificacion de que hubo un error al registrar
         Swal.fire({
           position: "top-end",
           icon: "error",
