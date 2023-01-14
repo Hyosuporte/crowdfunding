@@ -390,7 +390,7 @@ function updateEstado(id, name) {
       const res = JSON.parse(this.responseText);
       if (res === "exito") {
         Swal.fire({
-          position: "top-end",
+          position: "center",
           icon: "success",
           title: "Se cambio correctamente el estado",
           showConfirmButton: false,
@@ -401,7 +401,7 @@ function updateEstado(id, name) {
         }, 2700);
       } else {
         Swal.fire({
-          position: "top-end",
+          position: "center",
           icon: "warning",
           title: "Error al actualizar el estado intente mas tarde",
           showConfirmButton: false,
@@ -423,7 +423,7 @@ function UpdateObser(id, name) {
       const res = JSON.parse(this.responseText);
       if (res === "exito") {
         Swal.fire({
-          position: "top-end",
+          position: "center",
           icon: "success",
           title: "Se enviaron correctamente las observaciones",
           showConfirmButton: false,
@@ -434,7 +434,7 @@ function UpdateObser(id, name) {
         }, 2700);
       } else {
         Swal.fire({
-          position: "top-end",
+          position: "center",
           icon: "warning",
           title: "Error al subir las observaciones intente mas tarde",
           showConfirmButton: false,
@@ -459,7 +459,7 @@ function UpdateProyecto(e) {
     .then((response) => response.json())
     .then((data) => {
       Swal.fire({
-        position: "top-end",
+        position: "center",
         icon: "success",
         title: "Se Actualizaron correctamente los datos del proyecto",
         showConfirmButton: false,
@@ -510,7 +510,7 @@ function subirProyecto() {
           });
       } else {
         Swal.fire({
-          position: "top-end",
+          position: "center",
           icon: "warning",
           title: "Error al registrar la org",
           showConfirmButton: false,
@@ -534,7 +534,7 @@ function reginteresado(e) {
       if (res === "registrado") {
         //TODO: Agregar notificacion de registro exitoso
         Swal.fire({
-          position: "top-end",
+          position: "center",
           icon: "success",
           title: "Correo registrado con éxito",
           showConfirmButton: false,
@@ -543,7 +543,7 @@ function reginteresado(e) {
       } else {
         //TODO: Agregar notificacion de que hubo un error al registrar
         Swal.fire({
-          position: "top-end",
+          position: "center",
           icon: "error",
           title: "Hubo un error al registrar el correo",
           showConfirmButton: false,
