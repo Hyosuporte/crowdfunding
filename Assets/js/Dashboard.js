@@ -470,7 +470,7 @@ function UpdateProyecto(e) {
     });
 }
 
-function newFromProyec(from1, from2, from3) {
+function newFromProyec(from1, from2, from3 = null) {
   const frmProyecto = document.createElement("form");
   for (let i = 0; i < 4; i++) {
     for (const field of from1.elements) {
@@ -482,31 +482,34 @@ function newFromProyec(from1, from2, from3) {
       frmProyecto.appendChild(field);
     }
   }
-  for (let i = 0; i < 2; i++) {
-    for (const field of from3.elements) {
-      frmProyecto.appendChild(field);
+  if (from3 != null) {
+    for (let i = 0; i < 2; i++) {
+      for (const field of from3.elements) {
+        frmProyecto.appendChild(field);
+      }
     }
   }
   return frmProyecto;
 }
 
 function subirProyecto() {
-  const newFrom = newFromProyec(
-    document.forms.frmProyec,
-    document.forms.frmDocuments,
-    document.forms.frmOrganiza
-  );
-  const orgExis = newFrom.elements[22].checked;
-  const frmProyec = new FormData(newFrom);
+  const orgExis = document.forms.frmOrganiza.elements[2].checked;
+  const frmOrganiza = new FormData(document.forms.frmOrganiza);
   const urls =
     orgExis == true ? "organizacion/listarOrg" : "organizacion/insertarorg";
   fetch(base_url + urls, {
     method: "POST",
-    body: frmProyec,
+    body: frmOrganiza,
   })
     .then((response) => response.json())
     .then((data) => {
       if (data == "org registrada") {
+        const newFrom = newFromProyec(
+          document.forms.frmProyec,
+          document.forms.frmDocuments,
+          document.forms.frmOrganiza
+        );
+        const frmProyec = new FormData(newFrom);
         fetch(base_url + "proyecto/insertarproyecto", {
           method: "POST",
           body: frmProyec,
