@@ -192,7 +192,9 @@ class cliente extends Controller
                             $data[$i]['aprob_donacion'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['aprob_donacion'] . '"><button class="boton" type="button">Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
                             $data[$i]['form_declaraciones'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['form_declaraciones'] . '"><button class="boton" type="button">Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
                             $data[$i]['foto'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['foto'] . '"><button class="boton" type="button">Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
-                            $data[$i]['ver'] = '<button type="button" class="btnActual" data-toggle="modal" data-target="#Modal2" href="' . BASE_URL . 'proyecto/listarProyecto?id_proyecto=' . $data[$i]['id_proyecto'] . '">Actualizar</button>';
+                             $cuenta = "'cuenta'";
+                            $formulario = "'v-pills-subir-proyecto-2'";
+                            $data[$i]['ver'] = '<div class="list-group "><a href="#v-pills-subir-proyecto-2" class="btnActual" data-bs-toggle="tab" aria-selected="false" role="tab" onclick="desaparecerVista('. $cuenta. '),aparecerVista('. $formulario.'),listarDatosProy('.$data[$i]['id_proyecto'].')">Actualizar</a></div>';
                         }
                     }
                 }

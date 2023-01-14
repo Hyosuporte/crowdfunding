@@ -85,7 +85,7 @@ class proyecto extends Controller
         $rep_legal = $this->subirArchivo('existenciaYrepresentacion');
         $form_declaraciones = $this->subirArchivo('formulario');
         $bancario = $this->subirArchivo('bancario');
-        $id_organizacion = 1;
+        $id_organizacion = strClean($_POST['nit']);
         if (empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador) || empty($monto) || empty($video) || empty($foto) || empty($info_adicional) || empty($camara) || empty($RUT) || empty($rep_legal) || empty($cedula) || empty($bancario) || empty($aprob_donacion) || empty($form_declaraciones)) {
             $msg = "Todos los campos son obligatorios";
         } else {

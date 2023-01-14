@@ -71,4 +71,14 @@ class organizacion extends Controller
             $msg = "Error";
         }
     }
+
+    public function listarOrg()
+    {
+        $id_org = strClean($_POST['id_organización']);
+        $data = $this->model->VerorgExistente($id_org);
+        $msg = $data == 1 ? "org registrada" : "no existe";
+        echo json_encode($msg, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
 }

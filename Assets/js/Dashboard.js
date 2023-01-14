@@ -315,6 +315,7 @@ function verificarCampos(parametro1, parametro2) {
   const banco = document.getElementById("banco");
   const cuenta = document.getElementById("cuenta");
   const organizacion = document.getElementById("organizacion");
+  const orgExis = document.getElementById("organizacion"); //FIXME: Cambiar el id por el del check
   if (
     nit.value != "" &&
     nombre.value != "" &&
@@ -325,8 +326,9 @@ function verificarCampos(parametro1, parametro2) {
     cuenta.value != "" &&
     organizacion.value != "0"
   ) {
-    //TODO: Agregar css para indicar que todos los campos del registro son obligatorios
-
+    desaparecerVista(parametro1);
+    aparecerVista(parametro2);
+  } else if (nit.value != "" && orgExis == true) {
     desaparecerVista(parametro1);
     aparecerVista(parametro2);
   } else {
@@ -471,7 +473,7 @@ function UpdateProyecto(e) {
     });
 }
 
-function newFromProyec(from1, from2) {
+function newFromProyec(from1, from2, from3) {
   const frmProyecto = document.createElement("form");
   for (let i = 0; i < 4; i++) {
     for (const field of from1.elements) {
@@ -483,6 +485,11 @@ function newFromProyec(from1, from2) {
       frmProyecto.appendChild(field);
     }
   }
+  for (let i = 0; i < 2; i++) {
+    for (const field of from3.elements) {
+      frmProyecto.appendChild(field);
+    }
+  }
   return frmProyecto;
 }
 
@@ -490,10 +497,14 @@ function subirProyecto() {
   const frmOrganiza = new FormData(document.forms.frmOrganiza);
   const newFrom = newFromProyec(
     document.forms.frmProyec,
-    document.forms.frmDocuments
+    document.forms.frmDocuments,
+    document.forms.frmOrganiza
   );
+  const orgExis = document.getElementById("organizacion"); //FIXME:Cambiar el id por el del check
   const frmProyec = new FormData(newFrom);
-  fetch(base_url + "organizacion/insertarorg", {
+  const urls =
+    orgExis == true ? "organizacion/listarOrg" : "organizacion/insertarorg";
+  fetch(base_url + urls, {
     method: "POST",
     body: frmOrganiza,
   })
@@ -506,7 +517,16 @@ function subirProyecto() {
         })
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: data,
+              showConfirmButton: false,
+              timer: 2500,
+            });
+            setTimeout(function () {
+              window.location.reload();
+            }, 2700);
           });
       } else {
         Swal.fire({
@@ -584,12 +604,12 @@ function listarDatosProy(id_proyecto) {
   };
 }
 
-function alertaExitosa(){
+function alertaExitosa() {
   Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: 'Archivo descargado',
+    position: "center",
+    icon: "success",
+    title: "Archivo descargado",
     showConfirmButton: false,
-    timer: 1500
-  })
+    timer: 1500,
+  });
 }

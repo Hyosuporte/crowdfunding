@@ -48,4 +48,12 @@ class organizacionDAO extends Query
     $data = $this->select($sql);
     return $data;
   }
+
+  public function verorgExistente($id_org)
+  {
+    $sql = "SELECT * FROM organizacion WHERE id_organizacion= '$id_org'";
+    $data = $this->select($sql);
+    return $data;
+  }
+
 }
