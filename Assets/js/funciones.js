@@ -201,7 +201,7 @@ function crearCardDes(element, i) {
     document.getElementById(`imagenDes${i}`).setAttribute("src", `${base_url}Assets/img/40796.svg`);    
   }
   document.getElementById(`tituloDes${i}`).innerText = element.titulo;
-  document.getElementById(`absText${i}`).innerText = element.abstrac;
+  document.getElementById(`absText${i}`).innerText = element.abstrac.substring(0,100)+"...";
   document.getElementById(
     `metaDes${i}`
   ).innerText = `Meta ${element.monto_financiacion} cop`;
@@ -225,7 +225,7 @@ function crearCardCaro(element, i) {
     document.getElementById(`imgCarusel${i}`).setAttribute("src", `${base_url}Assets/img/40796.svg`);    
   }
   document.getElementById(`caruselTitulo${i}`).innerText = element.titulo;
-  document.getElementById(`caruselAbs${i}`).innerText = element.abstrac;
+  document.getElementById(`caruselAbs${i}`).innerText = element.abstrac.substring(0,266)+"...";
   document.getElementById(
     `caruselMeta${i}`
   ).innerText = `Meta ${element.monto_financiacion} cop`;
@@ -257,7 +257,7 @@ function creacionCardBody(element) {
     base_url +
     `Assets/img/personas.svg" alt="">  ${element["COUNT(d.monto)"]}/D</p>`;
   p1.setAttribute("class", "textoCard");
-  p1.innerHTML = element.abstrac;
+  p1.innerHTML = element.abstrac.substring(0,266)+"...";
   divMeta.setAttribute("class", "meta");
   divMeta.innerHTML = `<p class="metaCardDestacado">Recibido $ ${
     element["SUM(d.monto)"] == null ? 0 : element["SUM(d.monto)"]
@@ -287,7 +287,7 @@ function UpdateCorreo() {
   const correo = $("#newCorreo").val().trim();
   if (correo == "") {
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "warning",
       title: "El correo no puede estar vacio",
       showConfirmButton: false,
@@ -304,7 +304,7 @@ function UpdateCorreo() {
         const res = JSON.parse(this.responseText);
         if (res === "Correo actualizado con exito") {
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "success",
             title: res,
             showConfirmButton: false,
@@ -315,7 +315,7 @@ function UpdateCorreo() {
           }, 4000);
         } else if (res === "El correo no se encuentra disponible") {
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "warning",
             title: res,
             showConfirmButton: false,
@@ -323,7 +323,7 @@ function UpdateCorreo() {
           });
         } else {
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "warning",
             title: "El correo nuevo no puede ser igual al actual",
             showConfirmButton: false,
@@ -345,7 +345,7 @@ function UpdatePassword() {
     newPasswordTry.value == ""
   ) {
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "warning",
       title: "Las contraseñas no pueden estar vacias",
       showConfirmButton: false,
@@ -363,7 +363,7 @@ function UpdatePassword() {
           const res = JSON.parse(this.responseText);
           if (res === "exito") {
             Swal.fire({
-              position: "top-end",
+              position: "center",
               icon: "success",
               title: "Contraseña Actualizada con exito",
               showConfirmButton: false,
@@ -374,7 +374,7 @@ function UpdatePassword() {
             }, 4000);
           } else if (res === "La contraseña actual es incorrecta") {
             Swal.fire({
-              position: "top-end",
+              position: "center",
               icon: "warning",
               title: res,
               showConfirmButton: false,
@@ -382,7 +382,7 @@ function UpdatePassword() {
             });
           } else if (res === "fallo") {
             Swal.fire({
-              position: "top-end",
+              position: "center",
               icon: "warning",
               title:
                 "No se pudo actualizar la contraseña intente de nuevo mas tarde.",
@@ -391,7 +391,7 @@ function UpdatePassword() {
             });
           } else {
             Swal.fire({
-              position: "top-end",
+              position: "center",
               icon: "warning",
               title: res,
               showConfirmButton: false,
@@ -402,7 +402,7 @@ function UpdatePassword() {
       };
     } else {
       Swal.fire({
-        position: "top-end",
+        position: "center",
         icon: "warning",
         title: "Las contraseñas no coinciden",
         showConfirmButton: false,
@@ -426,7 +426,7 @@ function UpdateDates() {
     telefono == ""
   ) {
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "warning",
       title: "Todos los campos son obligatorios",
       showConfirmButton: false,
@@ -443,7 +443,7 @@ function UpdateDates() {
         const res = JSON.parse(this.responseText);
         if (res === "exito") {
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "success",
             title: "Datos Actualizados",
             showConfirmButton: false,
@@ -454,7 +454,7 @@ function UpdateDates() {
           }, 3500);
         } else if (res === "fallo") {
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "warning",
             title: "Error al actualizar los datos intentelo mas tarde",
             showConfirmButton: false,
@@ -462,7 +462,7 @@ function UpdateDates() {
           });
         } else {
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "warning",
             title: res,
             showConfirmButton: false,

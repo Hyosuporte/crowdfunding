@@ -113,7 +113,7 @@ function frmRegistro(e) {
   } else if (password.value !== passwordConf.value) {
     //TODO: Agregar css para indicar que las contraseñas deben ser iguales
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'error',
       title: 'Las contraseñas no coinciden',
       showConfirmButton: false,
@@ -132,7 +132,7 @@ function frmRegistro(e) {
         if (res === "registrado") {
           //TODO: Agregar notificacion de registro exitoso
           Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'success',
             title: 'Registrado exitosamente',
             showConfirmButton: false,
@@ -144,7 +144,7 @@ function frmRegistro(e) {
         } else if (res === "Usuario no disponible") {
           //TODO: Agregar notificacion de que ya existe el usuario
           Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'error',
             title: 'El usuario ya existe',
             showConfirmButton: false,
@@ -153,7 +153,7 @@ function frmRegistro(e) {
         } else{
           //TODO: Agregar notificacion de que hubo un error al registrar
           Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'error',
             title: 'Hubo un error al registrarse',
             showConfirmButton: false,

@@ -62,6 +62,7 @@
 
 .imagenYutu{
     margin-top: 2vw;
+    margin-left: 25vw;
 }
 
 svg {
@@ -190,3 +191,4 @@ tr:last-child td:last-child {
     margin-top: 2vw;
     margin-left: 1vw;
 }
+

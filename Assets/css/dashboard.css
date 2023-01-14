@@ -438,6 +438,10 @@ input[type=number] { -moz-appearance:textfield; }
     width: 10px !important;
 }
 
+.limiteAbstract{
+    width: 10vw !important;
+}
+
 .checkBoxOrganizacionExistente{
     margin-right: 2vw;
     margin-left: 2vw;
