@@ -107,7 +107,13 @@ class cliente extends Controller
                 $direccion = strClean($_POST['direccion']);
                 $telefono = strClean($_POST['telefonoUser']);
                 if (empty($nombreCompleto) || empty($pais) || empty($ciudad) || !empty($direccion) || empty($telefono)) {
-                    list($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido) = explode(" ", $nombreCompleto);
+                    if(count(explode(" ", $nombreCompleto)) >2){
+                        list($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido) = explode(" ", $nombreCompleto);
+                    }else{
+                        list($primer_nombre, $segundo_nombre) = explode(" ", $nombreCompleto);
+                        $primer_apellido = "";
+                        $segundo_apellido = "";
+                    } 
                     $nombre = $primer_nombre . " " . $segundo_nombre;
                     $apellido = $primer_apellido . " " . $segundo_apellido;
                     $data = $this->model->UpdateData($nombre, $apellido, $ciudad, $pais, $direccion, $telefono, $_SESSION['id']);

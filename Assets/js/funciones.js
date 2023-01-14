@@ -124,10 +124,7 @@ function listarPais(id) {
 
 function listarCiudad(id) {
   const id_pais = document.getElementById("paisUser").value;
-  const selectorCiudad = $("#ciudadUser");
-  for (let i = selectorCiudad.children.length; i >= 0; i--) {
-    document.getElementById("ciudadUser").remove(i);
-  }
+  let selectorCiudad = $("#ciudadUser").empty();
   const url = base_url + "ciudad/obtenerCiudades?id_pais=" + id_pais;
   const http = new XMLHttpRequest();
   http.open("GET", url, true);
