@@ -500,7 +500,7 @@ function subirProyecto() {
     document.forms.frmDocuments,
     document.forms.frmOrganiza
   );
-  const orgExis = document.getElementById("organizacion"); //FIXME:Cambiar el id por el del check
+  const orgExis = document.getElementById("organizacionExistente"); //FIXME:Cambiar el id por el del check
   const frmProyec = new FormData(newFrom);
   const urls =
     orgExis == true ? "organizacion/listarOrg" : "organizacion/insertarorg";
