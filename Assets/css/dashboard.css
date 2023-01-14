@@ -437,3 +437,7 @@ input[type=number] { -moz-appearance:textfield; }
 .tablita th td{
     width: 10px !important;
 }
+
+.limiteAbstract{
+    width: 10vw !important;
+}

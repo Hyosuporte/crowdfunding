@@ -51,7 +51,7 @@
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Certificado Bancario</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Aprobación de Donación</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Formulario de Declaraciones</strong></th>
-                  <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Abstract&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
+                  <th data-class-name="bordeDerecha bordeAbajo   limiteAbstract "><strong>Abstract&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Keywords&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Tiempo de Ejecución</strong></th>            
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Foto</strong></th>
@@ -81,8 +81,8 @@
               <p class="textoPaso">Paso 1 de 3</p>
             </div>
             <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
-            <input class="inputGrandeForm" type="hidden" name="miToken" id="miToken" value="<?php echo $_SESSION['miToken']; ?>">
-            <input class="inputGrandeForm" type="number" name="nit" id="nit" placeholder="NIT">
+            <input class="inputGrandeForm" type="hidden" name="miToken" id="miToken" value="<?php echo $_SESSION['miToken']; ?>">            
+            <input title='¿Ya tienes una organización registrada? Digita el NIT y haz click en la casilla "ya tengo una organización registrada" para saltar al siguiente paso.' class="inputGrandeForm" type="number" name="nit" id="nit" placeholder="NIT">
             <input class="inputGrandeForm" type="text" name="nombre" id="nombre" placeholder="Nombre de la organización*">
             <div class="grupoInputsForm">
               <select class="grupoInput1" name="organizacion" id="organizacion" style="margin-right: 3rem;">
