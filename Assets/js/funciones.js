@@ -201,7 +201,7 @@ function crearCardDes(element, i) {
     document.getElementById(`imagenDes${i}`).setAttribute("src", `${base_url}Assets/img/40796.svg`);    
   }
   document.getElementById(`tituloDes${i}`).innerText = element.titulo;
-  document.getElementById(`absText${i}`).innerText = element.abstrac;
+  document.getElementById(`absText${i}`).innerText = element.abstrac.substring(0,100)+"...";
   document.getElementById(
     `metaDes${i}`
   ).innerText = `Meta ${element.monto_financiacion} cop`;
@@ -225,7 +225,7 @@ function crearCardCaro(element, i) {
     document.getElementById(`imgCarusel${i}`).setAttribute("src", `${base_url}Assets/img/40796.svg`);    
   }
   document.getElementById(`caruselTitulo${i}`).innerText = element.titulo;
-  document.getElementById(`caruselAbs${i}`).innerText = element.abstrac;
+  document.getElementById(`caruselAbs${i}`).innerText = element.abstrac.substring(0,266)+"...";
   document.getElementById(
     `caruselMeta${i}`
   ).innerText = `Meta ${element.monto_financiacion} cop`;
@@ -257,7 +257,7 @@ function creacionCardBody(element) {
     base_url +
     `Assets/img/personas.svg" alt="">  ${element["COUNT(d.monto)"]}/D</p>`;
   p1.setAttribute("class", "textoCard");
-  p1.innerHTML = element.abstrac;
+  p1.innerHTML = element.abstrac.substring(0,266)+"...";
   divMeta.setAttribute("class", "meta");
   divMeta.innerHTML = `<p class="metaCardDestacado">Recibido $ ${
     element["SUM(d.monto)"] == null ? 0 : element["SUM(d.monto)"]
