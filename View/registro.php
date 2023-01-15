@@ -7,7 +7,7 @@
                 oportunidades.</p>
         </div>
         <div class="formLogin">
-            <p class="formLoginTitulo">Regpístrate</p>
+            <p class="formLoginTitulo">Regístrate</p>
             <div class="linkRegistrarse">
                 <p class="subtitulo">Bienvenida</p>
             </div>
