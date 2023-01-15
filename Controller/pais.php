@@ -1,6 +1,6 @@
 <?php
 
-    class pais extends Controller
+    class Pais extends Controller
     {
         public function __construct()
         {

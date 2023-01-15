@@ -1,6 +1,6 @@
 <?php
 
-class proyecto extends Controller
+class Proyecto extends Controller
 {
     public function __construct()
     {

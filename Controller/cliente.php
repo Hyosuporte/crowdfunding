@@ -1,6 +1,6 @@
 <?php
-include_once "proyecto.php";
-class cliente extends Controller
+include_once "Proyecto.php";
+class Cliente extends Controller
 {
     public function __construct()
     {

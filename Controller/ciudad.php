@@ -1,6 +1,6 @@
 <?php
 
-    class ciudad extends Controller
+    class Ciudad extends Controller
     {
         public function __construct()
         {

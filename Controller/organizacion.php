@@ -1,5 +1,5 @@
 <?php
-class organizacion extends Controller
+class Organizacion extends Controller
 {
     public function __construct()
     {
