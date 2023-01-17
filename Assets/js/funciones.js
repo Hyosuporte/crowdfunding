@@ -473,3 +473,38 @@ function UpdateDates() {
     };
   }
 }
+
+
+function reginteresado(e) {
+  const correo = document.getElementById("correo");
+  const url = base_url + "usuario/reginteresado";
+  const frm = document.getElementById("frminteresado");
+  const http = new XMLHttpRequest();
+  http.open("POST", url, true);
+  http.send(new FormData(frm));
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const res = JSON.parse(this.responseText);
+      console.log(res);
+      if (res === "registrado") {
+        //TODO: Agregar notificacion de registro exitoso
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Correo registrado con éxito",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      } else {
+        //TODO: Agregar notificacion de que hubo un error al registrar
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Hubo un error al registrar el correo",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    }
+  };
+}

@@ -119,7 +119,7 @@
             </div>
             <div class="bloqueInfoFooter">
                 <div>
-                    <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
+                <a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt=""></a>
                 </div>
                 <div class="contactanos">
                     <h2>Nosotros</h2>

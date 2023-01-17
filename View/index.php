@@ -316,16 +316,16 @@
                     </div>
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
-                    <form id="frminteresado" action="<?php echo BASE_URL; ?>usuario/reginteresado" method="post">
+                    <form id="frminteresado"  method="post">
                         <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
                         <input class="txtFooter" type="text" name="correo" id="correo">
-                        <button class="botonFormFooter" type="submit">Quiero estar conectado</button>
+                        <button class="botonFormFooter" type="button" onclick="reginteresado()">Quiero estar conectado</button>
                     </form>
                 </div>
             </div>
             <div class="bloqueInfoFooter">
                 <div>
-                    <img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt="">
+                <a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>Assets//img//logoFooter.svg" alt=""></a>
                 </div>
                 <div class="contactanos">
                     <h2>Nosotros</h2>

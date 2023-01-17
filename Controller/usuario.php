@@ -123,12 +123,14 @@ class usuario extends Controller
         else{
             $data = $this->model->reginteresado($correo);
             if ($data === "ok") {
-                  header("location:" .BASE_URL);
+                  $msg = "registrado";
             } else if ($data === "existe") {
                 $msg = "correo repetido";
             } else {
                 $msg = "Error";
             }
         }
+        echo json_encode($msg,JSON_UNESCAPED_UNICODE);
+        die();
     }
 }
