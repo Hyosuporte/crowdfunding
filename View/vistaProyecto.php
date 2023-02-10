@@ -1,5 +1,3 @@
-<?php require_once("mercado_pago.php") ?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="icon" href="https://static.wixstatic.com/media/df72ce_9438b428c20d483789e4a085e71f91d1%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/df72ce_9438b428c20d483789e4a085e71f91d1%7Emv2.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="icon"
+        href="https://static.wixstatic.com/media/df72ce_9438b428c20d483789e4a085e71f91d1%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/df72ce_9438b428c20d483789e4a085e71f91d1%7Emv2.png"
+        type="image/x-icon">
     <style>
         @font-face {
             font-family: 'TT Norms';
@@ -34,21 +35,26 @@
     </style>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/vistaProyecto.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
     <meta http-equiv="Content-Security-Policy" content="">
     <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <title><?php echo $data['title']; ?></title>
+    <title>
+        <?php echo $data['title']; ?>
+    </title>
 </head>
 
 <body>
     <nav class="navbar fixed-top">
         <ul class="navbarList">
             <li>
-                <a href="https://www.fundtur.com"><img class="navbarLogo" src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
+                <a href="https://www.fundtur.com"><img class="navbarLogo"
+                        src="<?php echo BASE_URL; ?>Assets/img/LOGO_21.svg" alt=""></a>
             </li>
             <li>
-                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos" class="navbarText activeNavbar itemsNavbar">Descubre</a>
+                <a href="<?php echo BASE_URL; ?>Home/galeriaProyectos"
+                    class="navbarText activeNavbar itemsNavbar">Descubre</a>
             </li>
             <li>
                 <a href="<?php echo BASE_URL; ?>Home/aplicar" class="navbarText">Aplica</a>
@@ -57,7 +63,8 @@
                 <a href="<?php echo BASE_URL; ?>Home/aprende" class="navbarText">Aprende</a>
             </li>
             <li>
-                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="boton" type="button">Iniciar Sesión</button></a></div>
+                <div><a href="<?php echo BASE_URL; ?>Home/login/"><button class="boton" type="button">Iniciar
+                            Sesión</button></a></div>
             </li>
         </ul>
     </nav>
@@ -68,9 +75,15 @@
         </div>
 
         <div class="bloqueVistaProyecto">
-            <p class="tituloVistaProyecto" id="nombre" name="nombre"><?php echo $data['titulo']; ?></p>
-            <p class="abstractVistaIndividual"><?php echo $data['abstrac']; ?></p>
-            <iframe class="imagenYutu" width="640" height="360" src="https://www.youtube.com/embed/<?php echo explode("=", $data['video'])[1]; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="tituloVistaProyecto" id="nombre" name="nombre">
+                <?php echo $data['titulo']; ?>
+            </p>
+            <p><?php echo $data['abstrac']; ?></p>
+            <iframe class="imagenYutu" width="640" height="360"
+                src="https://www.youtube.com/embed/<?php echo explode("=", $data['video'])[1]; ?>"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             <div class="informacionVistaProyecto">
                 <div class="detallesProyecto">
                     <div class="Meta">
@@ -79,12 +92,12 @@
                                 <div style="display: flex;">
                                     <p class="fuentePrincipal">Recibido: </p>
                                     <p class="fuenteSecundaria"> $<?php
-                                                                    if ($data['SUM(d.monto)'] != null) {
-                                                                        echo $data['SUM(d.monto)'];
-                                                                    } else {
-                                                                        echo 0;
-                                                                    }
-                                                                    ?></p>
+                                    if ($data['SUM(d.monto)'] != null) {
+                                        echo $data['SUM(d.monto)'];
+                                    } else {
+                                        echo 0;
+                                    }
+                                    ?></p>
                                 </div>
                                 <div style="display: flex; margin-left: 15vw;">
                                     <p class="fuentePrincipal">Meta: </p>
@@ -92,7 +105,9 @@
                                 </div>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar colorBarraProgreso" style="width: <?php echo (($data['SUM(d.monto)'] * 100) / $data['monto_financiacion']); ?>%" role="progressbar"></div>
+                                <div class="progress-bar colorBarraProgreso"
+                                    style="width: <?php echo (($data['SUM(d.monto)'] * 100) / $data['monto_financiacion']); ?>%"
+                                    role="progressbar"></div>
                             </div>
                         </div>
                     </div>
@@ -100,16 +115,21 @@
                     <div class="Donadores">
                         <div class="montoDonadores">
                             <img src="<?php echo BASE_URL; ?>Assets/img/people.svg" alt="" width="50">
-                            <p class="fuentePrincipal" style="margin-top: 1vw; margin-left: 1vw;"><?php echo $data['COUNT(d.monto)']; ?> Donadores</p>
+                            <p class="fuentePrincipal" style="margin-top: 1vw; margin-left: 1vw;">
+                                <?php echo $data['COUNT(d.monto)']; ?> Donadores
+                            </p>
                             <p class="fuenteSecundaria" style="margin-left: 1vw;margin-top: 1vw;">Ver todos</p>
-                            <img style="margin-left: 15%;" src="<?php echo BASE_URL; ?>Assets/img/compartir.svg" alt="" width="40">
+                            <img style="margin-left: 15%;" src="<?php echo BASE_URL; ?>Assets/img/compartir.svg" alt=""
+                                width="40">
                         </div>
                     </div>
                     <div class="fechas">
                         <div class="FechaInicio">
                             <div class="fechaInicio">
                                 <p class="fuentePrincipal">Fecha de Inicio</p>
-                                <p class="fuenteSecundaria"><?php echo $data['fecha_comienzo']; ?></p>
+                                <p class="fuenteSecundaria">
+                                    <?php echo $data['fecha_comienzo']; ?>
+                                </p>
                             </div>
                         </div>
                         <div class="FechaCierre">
@@ -139,9 +159,29 @@
                 <div class="inputsDonar">
                     <div>
                         <p>Cantidad. $ COP</p>
-                        <input class="cantidadDonar" type="text" name="cantidad" id="cantidad">
+                        <input class="cantidadDonar" type="number" name="cantDona" id="cantDona">
                     </div>
-                    <div class="checkout-btn cantidadDonar" style="margin-top: 1.5vw; margin-left: 1vw;"></div>
+                    <button type="button" class="btn btn-primary" id="btnDonar">
+                        Donar
+                    </button>
+                    <div class="modal fade" id="ModalDona" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalDonaLabel">Confirmar Datos Donacion</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <label for="namePro">La donacion se realizara al proyecto : <?php echo $data['title']; ?></label>
+                                    <label id="costDon">La cantidad a donar es de: </label>
+                                    <div class="checkout-btn"></div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
                 <?php } else { ?>
@@ -165,7 +205,7 @@
                         ?>
                     </tbody>
                 </table>
-                </div>
+            </div>
         </div>
 
         <div class="bannerFooter">
@@ -174,16 +214,20 @@
                     <p class="tituloFormFooter">Con tu aporte impulsas y empoderas a una mujer de la industria creativa
                     </p>
                     <div class="iconosFooter">
-                        <a href="https://www.instagram.com/tfilatam/?hl=es-la"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/tfi-latam/?trk=similar-pages"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/tfilatam/?hl=es-la"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/tfi-latam/?trk=similar-pages"><i
+                                class="fa-brands fa-linkedin"></i></a>
                         <a href="https://ms-my.facebook.com/TFIlatam/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/channel/UCKUhC33ox9DzH4dhuaTVpPQ"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/channel/UCKUhC33ox9DzH4dhuaTVpPQ"><i
+                                class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="subirSecondColumn" style="margin-top: 10%;">
                     <p class="textoSigue">Sigue en contacto con nosotros, escribe tu correo aquí.</p>
                     <input class="txtFooter" type="text" name="" id="">
-                    <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero estar
+                    <a href="<?php echo BASE_URL; ?>Home/login/"><button class="botonFormFooter" type="button">Quiero
+                            estar
                             conectado</button></a>
                 </div>
             </div>
@@ -198,10 +242,12 @@
                             <a class="textoInformacionesFooter" href="">Sobre TFI</a>
                         </li>
                         <li>
-                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aprende">Aprende más</a>
+                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aprende">Aprende
+                                más</a>
                         </li>
                         <li>
-                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo funciona?</a>
+                            <a class="textoInformacionesFooter" href="<?php echo BASE_URL; ?>Home/aplicar">¿Cómo
+                                funciona?</a>
                         </li>
                     </ul>
                 </div>
@@ -222,15 +268,45 @@
             locale: 'es-CO'
         });
 
-        mp.checkout({
-            preference: {
-                id: '<?php echo $preference->id; ?>'
+        document.getElementById("btnDonar").addEventListener("click", function () {
+            $("#checkout-btn").attr("disabled", true);
+
+            document.getElementById("costDon").innerHTML += document.getElementById("cantDona").value
+
+            const orderData = {
+                id: <?php echo $data['id_proyecto']; ?>,
+                description: "<?php echo $data['title']; ?>",
+                price: document.getElementById("cantDona").value,
+            };
+
+        fetch("http://localhost/crowdfunding/MercadoPago/pagar/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
             },
-            render: {
-                container: '.checkout-btn',
-                label: 'Donar'
-            }
+            body: JSON.stringify(orderData),
         })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (preference) {
+                createCheckoutButton(preference.id);
+                $("#ModalDona").modal("show");
+            })
+        });
+
+
+        function createCheckoutButton(preferenceId) {
+            mp.checkout({
+                preference: {
+                    id: preferenceId,
+                },
+                render: {
+                    container: ".checkout-btn",
+                    label: "Donar",
+                },
+            });
+        }
     </script>
     <?php require_once("View/Template/footer.php") ?>
 </body>

@@ -25,7 +25,7 @@
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Final</strong></th>
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Estado</strong></th>
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Acciones</strong></th>
-                <th data-class-name="bordeAbajo textoTabla"><strong>Observaciones</strong></th>
+                <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Observaciones</strong></th>
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Cámara de Comercio</strong></th>           
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>RUT</strong></th>
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Representante Legal</strong></th>
@@ -43,10 +43,7 @@
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Link Video</strong></th>              
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Información Adicional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>        
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Usuario</strong></th>
-                
                 <th data-class-name="bordeDerecha bordeAbajo textoTabla"><strong>Organización</strong></th>
- 
-                
               </tr>
             </thead>
             <tbody>

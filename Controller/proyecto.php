@@ -1,6 +1,6 @@
 <?php
 
-class proyecto extends Controller
+class Proyecto extends Controller
 {
     public function __construct()
     {
@@ -11,7 +11,7 @@ class proyecto extends Controller
     public function obtenerProyectos()
     {
         $data = $this->model->getProyectos();
-     for ($i = 0; $i < count($data); $i++) {
+        for ($i = 0; $i < count($data); $i++) {
             if ($data[$i]['id_estado'] == 1) {
                 $data[$i]['acciones'] = '
                <select name="acciones" disabled>
@@ -29,9 +29,30 @@ class proyecto extends Controller
             }
             $data[$i]['observaciones'] = '<div>
                 <textarea id="observaciones' . $i . '" cols="18" rows="2" onchange="UpdateObser(' . $data[$i]['id_proyecto'] . ',' . $i . ')">' . $data[$i]['observaciones'] . '</textarea></div>';
-            }
+
+            $data[$i]['desc_comercio'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['camara_comercio'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['RUT'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['RUT'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['rep_legal'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['rep_legal'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['cedula'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['cedula'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['bancario'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['bancario'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['aprob_donacion'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['aprob_donacion'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['form_declaraciones'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['form_declaraciones'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+            $data[$i]['foto'] = '<a href="' . BASE_URL . 'proyecto/downloadsArchivos?camara=' . $data[$i]['foto'] . '"><button class="boton" type="button" onclick="alertaExitosa()" >Descargar <i class="fa-solid fa-file-arrow-down"></i></button></a>';
+
+        }
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
+    }
+
+    public function downloadsArchivos()
+    {
+        $document = explode('\\', $_GET['camara']);
+        $rutaArchivo = "C:/xampp/htdocs/crowdfunding/uploadeddocuments/" . $document[8];
+        $nombreArchivo = basename($rutaArchivo);
+        header('Content-Type: application/octet-stream');
+        header("Content-Transfer-Encoding: Binary");
+        header("Content-disposition: attachment; filename=$nombreArchivo");
+        readfile($rutaArchivo);
     }
 
     public function subirArchivo($name)
@@ -64,7 +85,7 @@ class proyecto extends Controller
         $rep_legal = $this->subirArchivo('existenciaYrepresentacion');
         $form_declaraciones = $this->subirArchivo('formulario');
         $bancario = $this->subirArchivo('bancario');
-        $id_organizacion = 1;
+        $id_organizacion = strClean($_POST['nit']);
         if (empty($keywords) || empty($tiempo_ejecucion) || empty($titulo) || empty($duracion_campaña) || empty($fecha_comienzo) || empty($fecha_final) || empty($abstrac) || empty($indicador) || empty($monto) || empty($video) || empty($foto) || empty($info_adicional) || empty($camara) || empty($RUT) || empty($rep_legal) || empty($cedula) || empty($bancario) || empty($aprob_donacion) || empty($form_declaraciones)) {
             $msg = "Todos los campos son obligatorios";
         } else {

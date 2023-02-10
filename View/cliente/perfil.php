@@ -63,8 +63,6 @@
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Usuario</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Organización</strong></th>
                   <th data-class-name="bordeDerecha bordeAbajo   textoTabla"><strong>Ver</strong></th>
-              
-                 
                 </tr>
               </thead>
               <tbody>
@@ -81,8 +79,12 @@
               <p class="textoPaso">Paso 1 de 3</p>
             </div>
             <p class="subtituloFormSubirProyecto">Datos de la Organización</p>
-            <input class="inputGrandeForm" type="hidden" name="miToken" id="miToken" value="<?php echo $_SESSION['miToken']; ?>">            
-            <input title='¿Ya tienes una organización registrada? Digita el NIT y haz click en la casilla "ya tengo una organización registrada" para saltar al siguiente paso.' class="inputGrandeForm" type="number" name="nit" id="nit" placeholder="NIT">
+            <input class="inputGrandeForm" type="hidden" name="miToken" id="miToken" value="<?php echo $_SESSION['miToken']; ?>">
+            <div class="grupoInputsForm">
+              <input class="grupoInput1" type="number" name="nit" id="nit" placeholder="NIT">
+              <input class="checkBoxOrganizacionExistente" type="checkbox" name="organizacionExistente" id="organizacionExistente">
+              <p class="textoCheckBox">Ya tengo una organización registrada</p>
+            </div>
             <input class="inputGrandeForm" type="text" name="nombre" id="nombre" placeholder="Nombre de la organización*">
             <div class="grupoInputsForm">
               <select class="grupoInput1" name="organizacion" id="organizacion" style="margin-right: 3rem;">

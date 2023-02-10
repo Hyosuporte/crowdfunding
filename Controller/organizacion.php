@@ -1,5 +1,5 @@
 <?php
-class organizacion extends Controller
+class Organizacion extends Controller
 {
     public function __construct()
     {
@@ -71,4 +71,14 @@ class organizacion extends Controller
             $msg = "Error";
         }
     }
+
+    public function listarOrg()
+    {
+        $id_org = strClean($_POST['nit']);
+        $data = $this->model->VerorgExistente($id_org);
+        $msg = !empty($data) ? "org registrada" : "no existe";
+        echo json_encode($msg, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
 }

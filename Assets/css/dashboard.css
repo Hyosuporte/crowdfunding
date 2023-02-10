@@ -441,3 +441,17 @@ input[type=number] { -moz-appearance:textfield; }
 .limiteAbstract{
     width: 10vw !important;
 }
+
+.checkBoxOrganizacionExistente{
+    margin-right: 2vw;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+.textoCheckBox{
+    font-family: 'Be Vietnam';
+    font-size: 1.3vw;
+    color: #031C54;
+    font-weight: 900;
+    width: 50vw;
+}
